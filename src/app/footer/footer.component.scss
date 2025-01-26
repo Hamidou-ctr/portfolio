@@ -1,0 +1,51 @@
+footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+  height: 291px;
+}
+
+section {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 42px;
+}
+
+img {
+  width: 30px;
+  height: 30px;
+  top: 5px;
+  left: 144px;
+}
+
+span {
+  display: none;
+}
+
+@media screen and (max-width: 568px) {
+  footer {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  section {
+    gap: auto;
+  }
+
+  span {
+    display: flex;
+  }
+
+  p {
+    display: none;
+  }
+}
+
+/* h1::after {
+    content: 'i';
+    color: red; /* Change this to your desired color 
+    position: absolute;
+    margin-left: -10px; /* Adjust this value to position the dot correctly 
+} */

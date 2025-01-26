@@ -1,0 +1,38 @@
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+
+
+<nav>
+  <h1 [class.hidden]="isHidden">Hamidou</h1>
+
+  <div class="navbar-header">
+    <a class="navbar-brand" href="#">About me</a>
+    <a href="#">Skills</a>
+    <a href="#">Portfolio</a>
+  </div>
+
+  <img
+    [class.hidden]="isHidden"
+    src="./../../assets/img/burger_menu.png"
+    alt=""
+    (click)="toggleMenu()"
+  />
+</nav>
+
+<div class="overlay" *ngIf="showMenu">
+  <div class="overlay-header">
+    <h1>Hamidou</h1>
+    <p class="close" (click)="toggleMenu()">X</p>
+  </div>
+
+  <div class="overlay-content">
+    <a href="#">About me</a>
+    <a href="#">My skills</a>
+    <a href="#">Portfolio</a>
+    <a href="">Contact</a>
+  </div>
+</div>

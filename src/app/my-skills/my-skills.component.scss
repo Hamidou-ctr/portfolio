@@ -1,0 +1,31 @@
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  flex-wrap: wrap;
+  left: 100px;
+  gap: 88px;
+
+  > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    > img {
+        width: 100px;
+        height: 100px;
+    }
+    > p {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #fff;
+      margin: 0;
+    }
+  }
+}
