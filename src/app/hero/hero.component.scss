@@ -1,3 +1,27 @@
-p{
-    margin-top: 109px;
+section {
+  margin-top: 109px;
+  > img {
+    width: 646px;
+    height: 705px;
+    top: 106px;
+    left: 47px;
+  }
+}
+
+button {
+  padding: 15px 30px 15px 30px;
+  border-radius: 10px;
+  background: #70e61c;
+  box-shadow: 4px 4px 4px 0px #00000040;
+ 
+
+    &:hover {
+      background: rgb(151,71,255);
+      scale: 1.1;
+      animation-timing-function: ease-out;
+      animation-duration: 300ms;
+    }
+    // On click
+  // Scroll to: "anchor 4";
+  // Animate: Animate;
 }
