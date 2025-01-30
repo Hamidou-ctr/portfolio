@@ -1,23 +1,24 @@
-<div>
+<header>
   <p></p>
   <h1>Contact</h1>
-</div>
+</header>
 
-<section>
-  <div>
-    <h2>Get in touch</h2>
-    <p>
+<section class="contact-section">
+  <div class="contact-section__intro">
+    <h2 class="contact-section__title">Got a problem to solve?</h2>
+    <p class="contact-section__description">
       Feel free to drop me a message if you have any questions or just want to
       say hi!
     </p>
-    <p>
-       Need a Frotend Developer? <b>Contact me!</b>
+    <p class="contact-section__description">
+       Need a Frontend Developer? <b>Contact me!</b>
     </p>
   </div>
-  <form action="">
-    <input placeholder="Your name" type="text" id="name" name="name" required />
+  <form class="contact-form" ngSubmit="onSubmit()">
+    <input class="contact-form__input" placeholder="Your name" type="text" id="name" name="name" required />
 
     <input
+      class="contact-form__input"
       placeholder="Your email"
       type="email"
       id="email"
@@ -26,14 +27,15 @@
     />
 
     <textarea
-      placeholder="Your massage"
+      class="contact-form__textarea"
+      placeholder="Your message"
       id="message"
       name="message"
       required
     ></textarea>
-    <input type="checkbox" value="Send" />
-    <button type="submit">Send message :&rpar;</button>
+    <input class="contact-form__checkbox" type="checkbox" value="Send" />
+    <button class="contact-form__button" type="submit">Send message :)</button>
   </form>
 </section>
 
-<img src="" alt="" />
+<img class="contact-image" src="" alt="" />
