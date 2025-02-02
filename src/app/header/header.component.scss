@@ -58,7 +58,7 @@ img {
 
   .overlay {
     display: flex;
-    background-color: rgb(66, 72, 86);
+    background-color: rgba(0, 0, 0, 0.8); // Slightly darkened background
     flex-direction: column;
     position: fixed;
     top: 0;
@@ -103,3 +103,7 @@ img {
   text-decoration-skip-ink: none;
   color: #FFFFFF;
 }
+
+
+   //opacity: calc(1 - 0.9);
+    //background-color: rgb(66, 72, 86);

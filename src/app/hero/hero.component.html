@@ -1,21 +1,15 @@
 <section>
- 
-    <img src="./../../assets/img/profil.png" alt="" />
-
-    <div class="profile-image-div">
-  </div>
+  <img src="./../../assets/img/profil.png" alt="" />
 
   <div class="intro">
     <div class="intro-text">
-      <span class="writing-mode-Inverse "> 
-        <span>I</span>am
-      </span>
+      <span class="writing-mode-Inverse"> <span>I</span>am </span>
       <div class="name-title">
         <h1>Hamidou Diallo</h1>
         <h3 class="">FRONTEND DEVELOPER</h3>
       </div>
     </div>
-    <button>Let's talk!</button>
+    <button (click)="scrollToContact()">Let's talk!</button>
   </div>
 </section>
 
@@ -24,11 +18,17 @@
     <p class="separator"></p>
     <div class="contact-buttons">
       <img src="./../../assets/img/github_button.png" alt="GitHub" />
-      <img src="./../../assets/img/email_button.png" alt="Email" />
+      <img
+        (click)="scrollToContact()"
+        src="./../../assets/img/email_button.png"
+        alt="Email"
+      />
       <img src="./../../assets/img/linkedin_button.png" alt="LinkedIn" />
       <a href="mailto:hamiduguinea@gmail.com">hamiduguinea&#64;gmail.com</a>
     </div>
   </div>
-  <p class="scroll-down">Scroll down <img src="./../../assets/img/scroll_down.png" alt="Scroll down" /></p>
+  <p class="scroll-down">
+    Scroll down &#10132;
+    <img src="./../../assets/img/scroll_down.png" alt="Scroll down" />
+  </p>
 </main>
-

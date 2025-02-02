@@ -10,4 +10,10 @@ import { Component } from '@angular/core';
 })
 export class MySkillsComponent {
 
+  scrollToContact() {
+    const contactSection = document.getElementById('contact-section');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
 }

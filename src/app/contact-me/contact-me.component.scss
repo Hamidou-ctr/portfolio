@@ -38,11 +38,11 @@ form {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 50%;
+  max-width: 50%;
   gap: 20px;
   margin-top: 50px;
   color: white;
-  >input{
+  > input {
     background-color: rgb(20, 29, 47);
     color: white;
     border: solid 2px #9747ff;
@@ -50,12 +50,48 @@ form {
     height: 50px;
     border-radius: 10px;
   }
-    >textarea{
-        background-color: rgb(20, 29, 47);
-        color: white;
-        border: solid 2px #9747ff;
-        padding: 10px 25px 15px 25px;
-        height: 202px;
-        border-radius: 10px;
-    }
+  > textarea {
+    background-color: rgb(20, 29, 47);
+    color: white;
+    border: solid 2px #9747ff;
+    padding: 10px 25px 15px 25px;
+    height: 202px;
+    border-radius: 10px;
+  }
+}
+
+button {
+  background-color: rgb(182, 182, 182);
+  color: white;
+  border: none;
+  height: 50px;
+  width: 200px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+  &:hover {
+    background-color: rgb(151, 71, 255);
+  }
+}
+
+.go_up_button {
+  display: flex;
+  left: 90%;
+  cursor: pointer;
+  transition: 0.3s;
+  &:hover {
+    background-color: #6e2fbb;
+  }
+}
+
+.checkbox-container {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  > input {
+    cursor: pointer;
+  }
+  > p {
+    color: white;
+  }
 }

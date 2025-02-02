@@ -1,16 +1,17 @@
 section {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: center;
+  padding-left: 10%;
+  gap: 100px;
+  margin-top: 100px;
 }
 
 menu {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 50%;
+  max-width: 50%;
   flex-wrap: wrap;
-  left: 100px;
   gap: 88px;
 
   > div {
@@ -18,14 +19,27 @@ menu {
     flex-direction: column;
     align-items: center;
     > img {
-        width: 100px;
-        height: 100px;
-    }
-    > p {
-      font-size: 1.5rem;
-      font-weight: bold;
-      color: #fff;
-      margin: 0;
+        width: 88px;
+        height: 101px;
     }
   }
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  max-width: 50%;
+}
+
+button {
+  width: 200px;
+  background-color: rgb(112,231,26);
+  color: white;
+  border: none;
+  padding: 10px 25px 15px 25px;
+  height: 50px;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
 }

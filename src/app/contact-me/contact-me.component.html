@@ -1,9 +1,9 @@
-<header>
+<header id="contact-section">
   <p></p>
   <h1>Contact</h1>
 </header>
 
-<section class="contact-section">
+<section  class="contact-section">
   <div class="contact-section__intro">
     <h2 class="contact-section__title">Got a problem to solve?</h2>
     <p class="contact-section__description">
@@ -14,28 +14,116 @@
        Need a Frontend Developer? <b>Contact me!</b>
     </p>
   </div>
-  <form class="contact-form" ngSubmit="onSubmit()">
-    <input class="contact-form__input" placeholder="Your name" type="text" id="name" name="name" required />
 
-    <input
-      class="contact-form__input"
-      placeholder="Your email"
-      type="email"
-      id="email"
-      name="email"
-      required
-    />
 
-    <textarea
-      class="contact-form__textarea"
-      placeholder="Your message"
-      id="message"
-      name="message"
-      required
-    ></textarea>
-    <input class="contact-form__checkbox" type="checkbox" value="Send" />
-    <button class="contact-form__button" type="submit">Send message :)</button>
-  </form>
+
+
+
+   <form class="contact-form" (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+
+      <input [(ngModel)]="contactData.name" class="contact-form__input" placeholder="Günter Wagner" type="text" id="name" name="name" required #name="ngModel" />
+      @if(!name.valid && name.touched && !name.disabled){
+        <span  class="contact-form__error">
+          Your name is required
+        </span>
+      }
+
+      <input [(ngModel)]="contactData.email" class="contact-form__input" placeholder="Your email" type="email" id="email" name="email" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" #email="ngModel" />
+     @if(!email.valid && email.touched && !email.disabled){
+        <span  class="contact-form__error">
+          Your email is required
+        </span>
+      }
+  
+      <textarea [(ngModel)]="contactData.message" class="contact-form__textarea" placeholder="Your message" id="message" name="message" required #message="ngModel" minlength="9" 
+      ></textarea>
+      @if(!message.valid && message.touched && !message.disabled){
+        <span  class="contact-form__error">
+          Your message is empty
+        </span>
+      }
+
+      <div class="checkbox-container">
+      <input type="checkbox" id="privacy" name="privacy" required />
+      <label for="privacy">
+        I've read the <a href="#" class="privacy-link">privacy policy</a> and agree to the processing of my data as outlined.
+      </label>
+      <span  class="contact-form__error">
+        Please accept the privacy policy.
+      </span>
+      </div>
+  
+    <button class="contact-form__button" type="submit" value="submit">
+      Send message :)
+    </button>
+  </form> 
+
+
+
+
+
+
+
+
+
+
+
+  
 </section>
 
-<img class="contact-image" src="" alt="" />
+<img class="go_up_button" src="./../../assets/img/4. go_up_button.png" alt="" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+  <form class="contact-form" (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+    <div class="input-container" [ngClass]="{'error': name.invalid && name.touched, 'valid': name.valid}">
+      <input [(ngModel)]="contactData.name" class="contact-form__input" placeholder="Your name" type="text" id="name" name="name" required #name="ngModel" />
+      <span *ngIf="name.invalid && name.touched" class="contact-form__error">
+        Your name is required
+      </span>
+    </div>
+    
+    <div class="input-container" [ngClass]="{'error': email.invalid && email.touched, 'valid': email.valid}">
+      <input [(ngModel)]="contactData.email" class="contact-form__input" placeholder="Your email" type="email" id="email" name="email" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" #email="ngModel" />
+      <span *ngIf="email.invalid && email.touched" class="contact-form__error">
+        Your email is invalid
+      </span>
+    </div>
+  
+    <div class="input-container" [ngClass]="{'error': message.invalid && message.touched, 'valid': message.valid}">
+      <textarea [(ngModel)]="contactData.message" class="contact-form__textarea" placeholder="Your message" id="message" name="message" required #message="ngModel" minlength="9"></textarea>
+      <span *ngIf="message.invalid && message.touched" class="contact-form__error">
+        Your message is required
+      </span>
+    </div>
+    
+    <div class="checkbox-container">
+      <input type="checkbox" id="privacy" name="privacy" [(ngModel)]="contactData.privacy" required #privacy="ngModel" />
+
+
+      <label for="privacy">
+        I've read the <a href="#" class="privacy-link">privacy policy</a> and agree to the processing of my data.
+      </label>
+      <span *ngIf="contactForm.controls['privacy']?.invalid && contactForm.controls['privacy']?.touched" class="contact-form__error">
+
+        Please accept the privacy policy.
+      </span>
+    </div>
+  
+    <button class="contact-form__button" type="submit">
+      Send message :)
+    </button>
+  </form>
+  -->
