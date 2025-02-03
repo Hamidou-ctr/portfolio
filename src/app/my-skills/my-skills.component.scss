@@ -11,8 +11,6 @@ menu {
   justify-content: center;
   align-items: center;
   max-width: 50%;
-  //width: 644px;
-  //height: 404px;
   flex-wrap: wrap;
   gap: 88px;
 
@@ -25,7 +23,7 @@ menu {
       width: 60px;
       height: 60px;
       &:hover {
-        animation: moveUpAndBack 0.8s ease;
+        animation: moveUpAndBack 1s ease;
       }
     }
   }
@@ -33,19 +31,19 @@ menu {
 
 @keyframes moveUpAndBack {
   0% {
-    transform: translateY(0); /* Startposition */
+    transform: translateY(0); 
   }
   25% {
-    transform: translateY(-5px); /* Nach oben verschieben */
+    transform: translateY(-5px); 
   }
   50% {
-    transform: translateY(-10px); /* Nach oben verschieben */
+    transform: translateY(-15px); 
   }
   75% {
-    transform: translateY(-5px); /* Nach oben verschieben */
+    transform: translateY(-5px); 
   }
   100% {
-    transform: translateY(0); /* Zurück zur Startposition */
+    transform: translateY(0); 
   }
 }
 
