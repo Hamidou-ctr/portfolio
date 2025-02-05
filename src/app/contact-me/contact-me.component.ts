@@ -23,6 +23,14 @@ export class ContactMeComponent {
 
   mailTest = true;
 
+
+  onPrivacyChange(value: boolean, privacyControl: any) {
+    this.contactData.privacy = value;
+    if (privacyControl) {
+      privacyControl.control.markAsTouched();
+    }
+  }
+
   post = {
     endPoint: 'https://deineDomain.de/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),

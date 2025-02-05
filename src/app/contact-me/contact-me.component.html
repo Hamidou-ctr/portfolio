@@ -145,27 +145,28 @@
             id="privacy"
             name="privacy"
             [(ngModel)]="contactData.privacy"
+            (ngModelChange)="onPrivacyChange($event, privacy)"
             required
             #privacy="ngModel"
           />
           <label for="privacy">
             <div>
-            <img
-              *ngIf="contactData.privacy"
-              src="./../../assets/img/checked.png"
-              alt="Checked"
-            />
-            <img
-              *ngIf="!contactData.privacy"
-              src="./../../assets/img/default.png"
-              alt="Unchecked"
-            />
-          </div>
-          <span>
-            I've read the
-            <a href="#" class="privacy-link">privacy policy</a> and agree to the
-            processing of my data as outlined.
-          </span>
+              <img
+                *ngIf="contactData.privacy"
+                src="./../../assets/img/checked.png"
+                alt="Checked"
+              />
+              <img
+                *ngIf="!contactData.privacy"
+                src="./../../assets/img/default.png"
+                alt="Unchecked"
+              />
+            </div>
+            <span>
+              I've read the
+              <a href="#" class="privacy-link">privacy policy</a> and agree to
+              the processing of my data as outlined.
+            </span>
           </label>
         </div>
         @if(privacy.invalid && privacy.touched){
