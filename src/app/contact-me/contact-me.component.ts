@@ -24,7 +24,7 @@ export class ContactMeComponent {
   mailTest = true;
 
 
-  onPrivacyChange(value: boolean, privacyControl: any) {
+  onPrivacyChange(value: boolean, privacyControl: { control: { markAsTouched: () => void } }) {
     this.contactData.privacy = value;
     if (privacyControl) {
       privacyControl.control.markAsTouched();
