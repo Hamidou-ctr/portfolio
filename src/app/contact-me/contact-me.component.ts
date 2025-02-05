@@ -30,6 +30,7 @@ export class ContactMeComponent {
       headers: {
         'Content-Type': 'text/plain',
         responseType: 'text',
+        console: true,
       },
     },
   };
