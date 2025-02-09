@@ -152,12 +152,12 @@
             />
             <label for="privacy">
               <div>
-                <img
+                <img class="clickable"
                   *ngIf="contactData.privacy"
                   src="./../../assets/img/checked.png"
                   alt="Checked"
                 />
-                <img
+                <img class="clickable"
                   *ngIf="!contactData.privacy"
                   src="./../../assets/img/default.png"
                   alt="Unchecked"
@@ -178,14 +178,14 @@
         </div>
       </div>
 
-      <button class="contact-form__button" type="submit" value="submit">
+      <button class="contact-form__button clickable" type="submit" value="submit">
         Send message :)
       </button>
     </form>
   </section>
 
   <img
-    class="go_up_button"
+    class="go_up_button clickable"
     src="./../../assets/img/4. go_up_button.png"
     alt=""
   />

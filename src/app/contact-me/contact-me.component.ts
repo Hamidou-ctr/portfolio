@@ -32,7 +32,7 @@ export class ContactMeComponent {
   }
 
   post = {
-    endPoint: 'https://deineDomain.de/sendMail.php',
+    endPoint: 'https://hamidou-diallo.com/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {

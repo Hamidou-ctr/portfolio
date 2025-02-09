@@ -14,18 +14,13 @@ body {
   background-color: rgb(20,29,47);
   color: white;
   margin: 0 auto;
-}
-
-
-@font-face {
-  src: url(./assets/fonts/OFL.txt);
-  font-family: 'Poppins';
+  font-family: "Poppins", sans-serif;
 }
 
 @font-face {
   src: url(./assets/fonts/Poppins-Black.ttf);
   font-family: 'Poppins';
-  font-weight: 100;
+  font-weight: 900;
   font-style: normal;
 }
 
@@ -133,6 +128,12 @@ body {
 }
 
 
-.font-family-poppins {
-  font-family: "Poppins";
+
+.clickable {
+  transition: background-color 0.3s ease;
+}
+
+.clickable.hover-effect {
+  background-color: rgb(82, 143, 160); /* Beispiel für einen Hover-Effekt */
+  border: 1px solid rgb(78, 132, 151);
 }
