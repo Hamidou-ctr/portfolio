@@ -15,5 +15,11 @@ export class HeaderComponent {
   toggleMenu() {
     this.showMenu = !this.showMenu;
     this.isHidden = !this.isHidden;
+
+/*     if (this.showMenu) {
+      document.body.style.overflow = 'hidden'; // Scrollen verhindern
+    } else {
+      document.body.style.overflow = ''; // Scrollen wieder aktivieren
+    } */
   }
 }

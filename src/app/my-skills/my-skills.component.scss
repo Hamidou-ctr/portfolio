@@ -4,26 +4,29 @@ section {
   padding-left: 10%;
   gap: 100px;
   margin-top: 100px;
-  //position: relative;
-    background-image: url("./../../assets/img/green_shadow_skills_portfolio.png");
+  position: relative;
+  display: inline-block;
+/*     background-image: url("./../../assets/img/green_shadow_skills_portfolio.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-size: 428.5940076561137px 951.4411310774191px;
   //background-position: bottom -650px left -260px;
-  background-position-y: bottom; 
+  background-position: bottom -650px left -230px;  */
 
 
-/*   &::before {
+  &::before {
     content: "";
     position: absolute;
     width: 428.5940076561137px;
-    height: 951.4411310774191px;
+    height: 551.4411310774191px;
     background-image: url("./../../assets/img/green_shadow_skills_portfolio.png");
     background-size: cover;
     z-index: -1;
     bottom: -500px;
     left: -250px;
-  } */
+    background-position-x: 506px;
+    background-position-y: 0px;
+  }
 }
 
 menu {

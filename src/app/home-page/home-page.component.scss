@@ -32,13 +32,15 @@ section {
 
 .image-container {
   position: relative;
-  display: inline-block; // Sorgt dafür, dass das Schattenbild sich ans Bild anpasst
+  //display: inline-block; // Sorgt dafür, dass das Schattenbild sich ans Bild anpasst
 
   &::before {
     content: "";
     position: absolute;
-    width: 650px;
-    height: 650px;
+    //width: 650px;
+    //height: 650px;
+    width: 400px;
+    height: 400px;
     background-image: url("./../../assets/img/photo_shadows.png");
     background-size: cover;
     z-index: -1;
@@ -48,9 +50,12 @@ section {
   }
 
   > img {
-    width: 646px;
-    height: 705px;
+    //width: 646px;
+    //height: 705px;
+    width: 400px;
+    height: 400px;
     display: block;
+    z-index: -1;
   }
 }
 
