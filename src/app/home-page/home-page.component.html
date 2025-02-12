@@ -1,37 +1,50 @@
 <section>
-  <img src="./../../assets/img/profil.png" alt="" />
-
-  <div class="intro">
-    <div class="intro-text">
-      <span class="writing-mode-Inverse"> <span>I</span>am </span>
-      <div class="name-title">
-        <h1 class="  ">Hamidou Diallo</h1>
-        <h3 class="">FRONTEND DEVELOPER</h3>
-      </div>
+  <menu>
+    <div class="image-container">
+      <img src="./../../assets/img/profil.png" alt="Profilbild" />
     </div>
-    <button class="clickable" (click)="scrollToContact()">Let's talk!</button>
-  </div>
+
+    <div class="intro">
+      <div class="intro-text">
+        <span class="writing-mode-Inverse"> <span>I</span> am </span>
+        <div class="name-title">
+          <h1>Hamidou Diallo</h1>
+          <h3>FRONTEND DEVELOPER</h3>
+        </div>
+      </div>
+      <button class="clickable" (click)="scrollToContact()">Let's talk!</button>
+    </div>
+  </menu>
 </section>
+
 
 <main class="contact-section">
   <div class="contact-info">
     <p class="separator"></p>
     <div class="contact-buttons">
-      <img src="./../../assets/img/github_button.png" alt="GitHub" />
+      <a href="https://github.com/Hamidou-ctr">
+        <img src="./../../assets/img/github_button.png" alt="GitHub" />
+      </a>
+      
       <img
         (click)="scrollToContact()"
         src="./../../assets/img/email_button.png"
         alt="Email"
       />
       <img src="./../../assets/img/linkedin_button.png" alt="LinkedIn" />
-      <a class="clickable" href="mailto:hamiduguinea@gmail.com">hamiduguinea&#64;gmail.com</a>
+      <a class="clickable" href="mailto:hamiduguinea@gmail.com"
+        >hamiduguinea&#64;gmail.com</a
+      >
     </div>
   </div>
   <p class="scroll-down">
     Scroll down
-     <img class="clickable" src="./../../assets/img/scroll_down.png" alt="Scroll down" /> 
+    <img
+      class="clickable"
+      src="./../../assets/img/scroll_down.png"
+      alt="Scroll down"
+    />
   </p>
 </main>
 
-
- <!--   &#10132; -->
+<!--   &#10132; -->
