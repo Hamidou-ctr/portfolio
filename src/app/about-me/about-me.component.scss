@@ -3,6 +3,7 @@ section {
   overflow: hidden;
   width: 100%;
   padding-left: 100px;
+  position: relative;
   gap: 10%;
   > menu {
     width: 50%;
@@ -59,8 +60,8 @@ main {
   justify-content: center;
   align-items: center;
   > img {
-    width: 453px;
-    height: 453px;
+    width: 250px;
+    height: 250px;
     border-radius: 50%;
     border: 4px solid #70e61c;
     margin-top: -100px;
