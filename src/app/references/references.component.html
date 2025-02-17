@@ -1,29 +1,27 @@
 <div class="container">
-  <section>
+  <section *ngFor="let section of sections; let i = index" [ngClass]="{'active': currentIndex === i}">
     <main>
-      <img src="./../../assets/img/purple_reference.png" alt="">
-      <span
-        >Michael really kept the team together with his great organization and
-        clear communication. We wouldn't have got this far without his
-        commitment.</span
-      >
+      <img [src]="section.image" alt="">
+      <span>{{ section.text }}</span>
       <div>
-        <h1></h1>
-        <p>V. Schuster - Team Partner</p>
+        <h1>{{ section.title }}</h1>
+        <p>{{ section.author }}</p>
       </div>
     </main>
     <div>
-      <img src="./../../assets/img/profil.png" alt="" />
-      <h2></h2>
+      <img [src]="section.profileImage" alt="" />
+      <h2>{{ section.name }}</h2>
     </div>
   </section>
 </div>
 
-
 <menu>
-  <img src="./../../assets/img/left.png" alt="" />
-  <p></p>
-  <p></p>
-  <p></p>
-  <img src="./../../assets/img/right.png" alt="" />
+  <img src="./../../assets/img/left.png" alt="" (click)="previousSection()" [ngClass]="{'disabled': currentIndex === 0}" />
+  <p *ngFor="let section of sections; let i = index" [ngClass]="{'active': currentIndex === i}"></p>
+  <img 
+    src="./../../assets/img/right.png" 
+    alt="" 
+    (click)="nextSection()" 
+    [ngClass]="{'disabled': currentIndex === sections.length - 1}" 
+  />
 </menu>
