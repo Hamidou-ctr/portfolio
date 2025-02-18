@@ -10,7 +10,6 @@ section {
     display: flex;
     margin: 20px auto;
     padding: 20px;
-    border: 1px solid #ccc;
     text-align: center;
     gap: 20px;
 
@@ -42,7 +41,7 @@ section {
     gap: 20px;
 
 
-    word-wrap: break-word;  // Zeilenumbruch für lange Wörter
+    word-wrap: break-word; // Zeilenumbruch für lange Wörter
     overflow-wrap: break-word;
     text-align: justify;
 }
@@ -57,18 +56,33 @@ section {
     border-radius: 5px;
 
     &.test {
-        background-color: #5a32a3;
+
+        width: 137;
+        height: 58;
+        border-radius: 10px;
+        border-width: 1px;
+        padding: 15px 30px;
+
+        background-color: #9747FF;
 
         &:hover {
-            background-color: #70e71a;
+            background-color: #70E61C;
         }
     }
 
     &.GitHub {
-        border: 1px solid #28a745;
+        width: 137;
+        height: 58;
+        border-radius: 10px;
+        border-width: 1px;
+        padding: 15px 30px;
+
+
+        margin-left: 86px;
+        border: 1px solid #70E61C;
 
         &:hover {
-            background-color: #70e71a; 
+            background-color: #70E61C;
         }
     }
 }
@@ -78,6 +92,7 @@ section {
     section {
         padding: 20px;
     }
+
     .project-container {
         align-items: center;
         flex-direction: column;
