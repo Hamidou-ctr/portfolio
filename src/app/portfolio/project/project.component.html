@@ -1,16 +1,14 @@
 <section>
-  <img src="./../../../assets/img/Pollo loco 1.png" alt="" />
-  <div>
-    <h1>name project</h1>
-    <p>lenguage</p>
-    <span>description</span>
-    <div>
-      <a
-        href="https://diallo-hamidou.developerakademie.net/pollo-loco-game/#game"
-        ><button>Live test</button></a
-      >
-
-      <a href="https://github.com/Hamidou-ctr"><button>Github</button></a>
+  <div *ngFor="let project of projects; let i = index" class="project-container" [ngClass]="{'left': i % 2 === 0, 'right': i % 2 !== 0}">
+    <img [src]="project.imageUrl" alt="{{ project.name }}" class="project-image" />
+    <div class="project-content">
+      <h2>{{ project.name }}</h2>
+      <p> {{ project.language }}</p>
+      <p class="description">{{ project.description }}</p>
+      <span>
+      <a [href]="project.liveTestUrl" class="project-link" [ngClass]="{'test': true}">Live Test</a>
+      <a [href]="project.githubUrl" class="project-link" [ngClass]="{'GitHub': true}">GitHub</a>
+      </span>
     </div>
   </div>
 </section>
