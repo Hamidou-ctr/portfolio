@@ -14,14 +14,14 @@ section {
     gap: 20px;
 
     &.left {
-        flex-direction: row; // Bild links, Inhalt rechts
+        flex-direction: row;
         text-align: justify;
         text-align-last: left;
 
     }
 
     &.right {
-        flex-direction: row-reverse; // Bild rechts, Inhalt links
+        flex-direction: row-reverse;
         text-align: justify;
         text-align-last: right;
     }
@@ -41,7 +41,7 @@ section {
     gap: 20px;
 
 
-    word-wrap: break-word; // Zeilenumbruch für lange Wörter
+    word-wrap: break-word;
     overflow-wrap: break-word;
     text-align: justify;
 }
@@ -62,7 +62,6 @@ section {
         border-radius: 10px;
         border-width: 1px;
         padding: 15px 30px;
-
         background-color: #9747FF;
 
         &:hover {
