@@ -11,7 +11,6 @@ import { CommonModule } from '@angular/common';
 export class ReferencesComponent {
   sections = [
     {
-      image: './../../assets/img/purple_reference.png',
       text: 'Michael really kept the team together with his great organization and clear communication. We wouldn\'t have got this far without his commitment.',
       title: '',
       author: 'V. Schuster - Team Partner',
@@ -19,7 +18,6 @@ export class ReferencesComponent {
       name: ''
     },
     {
-      image: './../../assets/img/purple_reference.png',
       text: 'Another reference text here.',
       title: '',
       author: 'Another Author - Team Partner 11111111',
@@ -27,7 +25,6 @@ export class ReferencesComponent {
       name: ''
     },
     {
-      image: './../../assets/img/purple_reference.png',
       text: 'Another reference text here.',
       title: '',
       author: 'Another Author - Team Partner 22222222',
@@ -35,7 +32,6 @@ export class ReferencesComponent {
       name: ''
     },
     {
-      image: './../../assets/img/purple_reference.png',
       text: 'Another reference text here.',
       title: '',
       author: 'Another Author - Team Partner 33333333',

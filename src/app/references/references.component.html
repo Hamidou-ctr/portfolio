@@ -1,7 +1,7 @@
 <div class="container">
   <section *ngFor="let section of sections; let i = index" [ngClass]="{'active': currentIndex === i}">
     <main>
-      <img [src]="section.image" alt="">
+      <img src="./../../assets/img/purple_reference.png" alt="">
       <span>{{ section.text }}</span>
       <div>
         <h1>{{ section.title }}</h1>
