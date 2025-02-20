@@ -1,17 +1,7 @@
 section {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 35px;
-    padding: 136px;
-}
-
-.project-container {
-    display: flex;
-    margin: 20px auto;
     padding: 20px;
-    text-align: center;
-    gap: 20px;
+    gap: 35px;
 
     &.left {
         flex-direction: row;
@@ -27,41 +17,52 @@ section {
     }
 }
 
-.project-image {
-    max-width: 50%;
+img{
+    width: 50%;
     height: auto;
-    border-radius: 8px;
 }
 
 .project-content {
-    flex-grow: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 20px;
+    width: 50%;
 
-
-    word-wrap: break-word;
+    /*   word-wrap: break-word;
     overflow-wrap: break-word;
-    text-align: justify;
+    text-align: justify; */
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 32px;
+    color: #9747FF;
+}
+
+h4 {
+    font-weight: 400;
+    font-size: 23px;
+    color: #70E61C;
+}
+
+p {
+    font-weight: 400;
+    font-size: 16px;
+    color: #FFFFFF;
 }
 
 
 .project-link {
     display: inline-block;
-    margin: 10px;
-    padding: 10px 20px;
+    padding: 15px 30px 15px 30px;
     color: white;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 10px;
+    font-weight: 400;
+    font-size: 23px;
 
     &.test {
-
-        width: 137;
-        height: 58;
-        border-radius: 10px;
-        border-width: 1px;
-        padding: 15px 30px;
         background-color: #9747FF;
 
         &:hover {
@@ -70,13 +71,6 @@ section {
     }
 
     &.GitHub {
-        width: 137;
-        height: 58;
-        border-radius: 10px;
-        border-width: 1px;
-        padding: 15px 30px;
-
-
         margin-left: 86px;
         border: 1px solid #70E61C;
 
@@ -87,27 +81,70 @@ section {
 }
 
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 830px) {
     section {
-        padding: 20px;
-    }
-
-    .project-container {
+        justify-content: center;
         align-items: center;
         flex-direction: column;
+        padding: 1px;
 
         &.left {
             flex-direction: column;
+            text-align-last: center;
         }
 
         &.right {
             flex-direction: row;
             flex-direction: column;
-            text-align-last: left;
+            text-align-last: center;
         }
     }
 
-    .project-image {
-        min-width: 80%;
+    img {
+        min-width: 95%;
     }
+
+    .project-content {
+        width: 95%;
+    }
+}
+
+@media screen and (max-width: 401px) {
+    h1 {
+        font-size: 28px;
+    }
+
+    h4 {
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    .project-link {
+        padding: 10px 20px 10px 20px;
+        font-size: 20px;
+    }
+    
+}
+
+@media screen and (max-width: 340px) {
+    h1 {
+        font-size: 24px;
+    }
+
+    h4 {
+        font-size: 17px;
+    }
+
+    p {
+        font-size: 12px;
+    }
+
+    .project-link {
+        padding: 8px 16px 8px 16px;
+        font-size: 17px;
+    }
+    
 }
