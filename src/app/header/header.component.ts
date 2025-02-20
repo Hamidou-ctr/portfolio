@@ -16,10 +16,25 @@ export class HeaderComponent {
     this.showMenu = !this.showMenu;
     this.isHidden = !this.isHidden;
 
-/*     if (this.showMenu) {
-      document.body.style.overflow = 'hidden'; // Scrollen verhindern
-    } else {
-      document.body.style.overflow = ''; // Scrollen wieder aktivieren
-    } */
+    /*     if (this.showMenu) {
+          document.body.style.overflow = 'hidden'; // Scrollen verhindern
+        } else {
+          document.body.style.overflow = ''; // Scrollen wieder aktivieren
+        } */
+  }
+
+  
+  closeMenu() {
+    this.showMenu = false;
+    this.isHidden = false;
+  }
+
+
+  scrollToSection(sectionId: string) {
+    this.closeMenu();
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
   }
 }

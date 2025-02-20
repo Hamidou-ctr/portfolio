@@ -4,15 +4,15 @@
   AOS.init();
 </script> -->
 
-
-
 <nav>
   <h1 class="clickable" [class.hidden]="isHidden">Hamidou</h1>
 
   <div class="navbar-header">
-    <a class="navbar-brand clickable" href="#">About me</a>
-    <a class="clickable" href="#">Skills</a>
-    <a class="clickable" href="#">Portfolio</a>
+    <a class="navbar-brand clickable" (click)="scrollToSection('aboutMe')"
+      >About me</a
+    >
+    <a class="clickable" (click)="scrollToSection('skills')">Skills</a>
+    <a class="clickable" (click)="scrollToSection('portfolio')">Portfolio</a>
   </div>
 
   <img
@@ -30,9 +30,9 @@
   </div>
 
   <div class="overlay-content">
-    <a href="#">About me</a>
-    <a href="#">My skills</a>
-    <a href="#">Portfolio</a>
-    <a href="">Contact</a>
+    <a (click)="scrollToSection('aboutMe')">About me</a>
+    <a (click)="scrollToSection('skills')">My skills</a>
+    <a (click)="scrollToSection('portfolio')">Portfolio</a>
+    <a (click)="scrollToSection('contact')">Contact</a>
   </div>
 </div>
