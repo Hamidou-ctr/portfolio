@@ -34,14 +34,14 @@
           alt="Email"
         />
         <img src="./../../assets/img/linkedin_button.png" alt="LinkedIn" />
-        <a class="clickable" href="mailto:hamiduguinea@gmail.com"
+        <a class="clickable email-link" href="mailto:hamiduguinea@gmail.com"
           >hamiduguinea&#64;gmail.com</a
         >
       </div>
     </div>
-    <p class="scroll-down">
+    <p class="scroll-down" (click)="scrollToBottom()">
       Scroll down
-      <img
+      <img (click)="scrollToBottom()"
         class="clickable"
         src="./../../assets/img/scroll_down.png"
         alt="Scroll down"

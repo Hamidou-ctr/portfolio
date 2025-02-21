@@ -1,6 +1,6 @@
-.background{
+.background {
   position: relative;
-/*   background-image: url("./../../assets/img/hero_background1.png");
+  /*   background-image: url("./../../assets/img/hero_background1.png");
   background-size: 100% 70%;
   background-position: bottom;
   background-repeat: no-repeat; */
@@ -22,9 +22,9 @@
 section {
   width: 100%;
   display: flex;
-  padding: 0 50px;
   box-sizing: border-box;
   margin-top: 100px;
+
   >menu {
     margin-top: 313px;
     display: flex;
@@ -36,6 +36,7 @@ section {
       flex-direction: column;
       align-items: center;
       max-width: 50%;
+
       >div {
         box-sizing: border-box;
         display: flex;
@@ -64,6 +65,7 @@ h1 {
 .image-container {
   position: relative;
   display: inline-block; // Sorgt dafür, dass das Schattenbil sich ans Bild anpasst
+
   &::before {
     content: "";
     position: absolute;
@@ -81,7 +83,7 @@ h1 {
     width: 500px;
     height: 500px;
     top: 0px;
-    margin-top: -358px;
+    margin-top: -321px;
     z-index: -2;
   }
 }
@@ -118,9 +120,6 @@ main {
   align-items: center;
   justify-content: space-between;
   gap: 50px;
-
-  //padding: 0 50px 0 0px;
-  //margin-top: -200px;
   >div {
     display: flex;
     gap: 50px;
@@ -169,29 +168,186 @@ a {
   }
 }
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 1200px) {
   section {
     >menu {
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      gap: 70px;
-
       >div {
-        max-width: 90%;
-        margin-left: 0;
-
         >div {
-          h1 {
+
+          h3 {
+            font-size: 40px;
+          }
+        }
+      }
+    }
+  }
+
+
+  h1 {
+    font-size: 60px;
+  }
+
+  .writing-mode-Inverse {
+    font-size: 48px;
+  }
+
+  .image-container {
+    &::before {
+      width: 400px;
+      height: 400px;
+    }
+
+    >img {
+      width: 450px;
+      height: 450px;
+    }
+  }
+}
+
+@media screen and (max-width: 1060px) {
+  section {
+    >menu {
+      >div {
+        >div {
+          h3 {
             font-size: 32px;
           }
+        }
+      }
+    }
+  }
 
+  h1 {
+    font-size: 50px;
+  }
+
+  .writing-mode-Inverse {
+    font-size: 48px;
+  }
+
+  .image-container {
+    &::before {
+      width: 350px;
+      height: 350px;
+    }
+
+    >img {
+      width: 400px;
+      height: 400px;
+    }
+  }
+}
+
+@media screen and (max-width: 945px) {
+  section {
+    >menu {
+      >div {
+        >div {
+          h3 {
+            font-size: 28px;
+          }
+        }
+      }
+    }
+  }
+  h1 {
+    font-size: 40px;
+  }
+
+  .writing-mode-Inverse {
+    font-size: 38px;
+  }
+}
+
+@media screen and (max-width: 890px) {
+  h1{
+    font-size: 36px;
+  }
+}
+
+@media screen and (max-width: 828px){
+  section {
+    >menu {
+      >div {
+        >div {
           h3 {
             font-size: 24px;
           }
         }
       }
     }
+  }
+
+  h1{
+    font-size: 32px;
+  }
+
+  .writing-mode-Inverse {
+    font-size: 32px;
+  }
+}
+
+@media screen and (max-width: 725px) {
+
+  .background {
+    &::before {
+      content: "";
+      position: absolute;
+      background-image: url("./../../assets/img/hero_background1.png");
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      background-position: bottom;
+      width: 100%;
+      height: 50%;
+      z-index: -1;
+      margin-top: 200px;
+    }
+  }
+
+  section {
+    >menu {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      >div {
+        max-width: 90%;
+        margin-left: 0;
+
+        >div {
+          margin-top: 0;
+
+          h3 {
+            font-size: 45px;
+          }
+
+          h1 {
+            font-size: 60px;
+          }
+        }
+      }
+    }
+  }
+
+  .image-container {
+    width: 100%;
+
+    &::before {
+      width: 350px;
+      height: 350px;
+      top: -80%;
+      left: 50%;
+      transform: translate(-60%, -90%);
+    }
+
+    >img {
+      width: 350px;
+      height: 350px;
+    }
+  }
+
+  .writing-mode-Inverse {
+    font-size: 48px;
   }
 
   main {
@@ -214,4 +370,158 @@ a {
   .scroll-down {
     display: none;
   }
+}
+
+@media screen and (max-width: 630px){
+
+
+
+  .background {
+    &::before {
+      content: "";
+      position: absolute;
+      background-image: url("./../../assets/img/hero_background1.png");
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      background-position: bottom;
+      width: 100%;
+      height: 50%;
+      z-index: -1;
+      margin-top: 200px;
+    }
+  }
+
+
+
+
+
+  section {
+    >menu {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      >div {
+        max-width: 90%;
+        margin-left: 0;
+
+        >div {
+          margin-top: 0;
+
+          h3 {
+            font-size: 35px;
+          }
+
+          h1 {
+            font-size: 50px;
+          }
+        }
+      }
+    }
+  }
+
+  .writing-mode-Inverse {
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-width: 500px){
+  section {
+    >menu {
+      >div {
+        >div {
+          h3 {
+            font-size: 30px;
+          }
+
+          h1 {
+            font-size: 40px;
+          }
+        }
+      }
+    }
+  }
+
+  .writing-mode-Inverse {
+    font-size: 30px;
+  }
+
+  .image-container {
+    &::before {
+      width: 300px;
+      height: 300px;
+    }
+
+    >img {
+      width: 350px;
+      height: 350px;
+    }
+  }
+
+  main {
+    >div {
+      >div {
+        h3 {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+
+  .separator {
+    width: 40px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  section {
+    >menu {
+      >div {
+        >div {
+          h1 {
+            font-size: 24px;
+          }
+
+          h3 {
+            font-size: 24px;
+          }
+        }
+      }
+    }
+  }
+
+  .writing-mode-Inverse {
+    font-size: 26px;
+  }
+
+  .image-container {
+    margin-top: 5vh;
+    &::before {
+      width: 250px;
+      height: 250px;
+    }
+    >img {
+      width: 300px;
+      height: 300px;
+    }
+  }
+
+  main {
+    >div {
+      >div {
+        h3 {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+
+  .separator {
+    width: 30px;
+  }
+
+  .email-link {
+    display: none;
+  }
+
 }
