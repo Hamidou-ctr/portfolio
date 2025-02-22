@@ -1,7 +1,9 @@
 section {
     display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 20px;
-    gap: 35px;
+    gap: 120px;
 
     &.left {
         flex-direction: row;

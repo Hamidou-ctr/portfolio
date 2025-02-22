@@ -255,14 +255,17 @@ button {
   }
 }
 
+main{
+  >a{
+    width: 100%;
+  }
+}
+
 .go_up_button {
   display: flex;
   margin-left: 90%;
   cursor: pointer;
   transition: 0.3s;
-  &:hover {
-    color: #107d27;
-  }
 }
 
 .green-line {
