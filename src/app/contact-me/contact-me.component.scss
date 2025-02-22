@@ -21,7 +21,7 @@ main {
   flex-direction: column;
   align-items: center;
   position: relative;
-  //overflow: hidden;
+  overflow: hidden;
 
   &::before {
     content: "";
@@ -277,28 +277,6 @@ main{
   padding: 0;
 }
 
-@media screen and (max-width: 720px) {
-  header {
-    gap: 20px;
-    > h1 {
-      font-size: 50px;
-      line-height: 84px;
-    }
-  }
-
-  section {
-    flex-direction: column;
-    gap: 20px;
-    > div {
-      padding: 15%;
-    }
-  }
-
-  .contact-form {
-    max-width: 100%;
-  }
-}
-
 .checkbox-container {
   display: flex;
   gap: 10px;
@@ -347,6 +325,47 @@ main{
       color: red;
       font-size: 14px;
       margin-top: 5px;
+    }
+  }
+}
+
+@media screen and (max-width: 1000px){
+  main{
+    &::before {
+      width: 90%;
+      height: 60%;
+      left: -280px;
+    }
+  }
+}
+
+@media screen and (max-width: 720px) {
+  header {
+    gap: 2%;
+    padding-right: 10%;
+    > h1 {
+      font-size: 350%;
+    }
+  }
+
+  section {
+    flex-direction: column;
+    gap: 20px;
+    > div {
+      padding: 15%;
+    }
+  }
+
+  .contact-form {
+    max-width: 100%;
+  }
+
+  main{
+    &::before {
+      width: 120%;
+      height: 26%;
+      left: -280px;
+      bottom: -50px;
     }
   }
 }
