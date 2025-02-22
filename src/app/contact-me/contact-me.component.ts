@@ -53,6 +53,12 @@ export class ContactMeComponent {
           },
           error: (error: any) => {
             console.error(error);
+            console.log('Form submitted:', ngForm.submitted);
+            console.log('Form valid:', ngForm.form.valid);
+            console.log('Name valid:', ngForm.form.controls['name'].valid);
+            console.log('Email valid:', ngForm.form.controls['email'].valid);
+            console.log('Message valid:', ngForm.form.controls['message'].valid);
+            console.log('Privacy valid:', ngForm.form.controls['privacy'].valid);
           },
           complete: () => console.info('send post complete'),
         });

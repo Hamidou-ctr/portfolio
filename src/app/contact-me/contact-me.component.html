@@ -112,7 +112,7 @@
             name="message"
             required
             #message="ngModel"
-            minlength="9"
+            minlength="10"
           ></textarea>
           <span
             class="checkbox"
@@ -184,22 +184,23 @@
         class="contact-form__button clickable"
         type="submit"
         value="submit"
+        [disabled]="!contactForm.form.valid || !contactData.privacy"
       >
         Send message :)
       </button>
     </form>
   </section>
 
-  <a href="#header-component">
-    <img
-      class="go_up_button clickable"
-      src="./../../assets/img/4. go_up_button.png"
-      alt=""
-    />
-  </a>
-
+  <menu class="go_up_menu">
+    <a href="#header-component">
+      <img
+        class="go_up_button clickable"
+        src="./../../assets/img/4. go_up_button.png"
+        alt=""
+      />
+    </a>
+  </menu>
   <div class="green-line"></div>
 </main>
-
 
 <!-- window.scrollTo({ top: 0, behavior: 'instant' }) Empfehlung für legal notice -->

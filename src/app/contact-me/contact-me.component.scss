@@ -89,7 +89,7 @@ section {
     }
 
     &:focus {
-      border-color: #107d27;
+      border-color: red !important;
     }
 
     &:hover {
@@ -98,6 +98,10 @@ section {
 
     &--invalid {
       border-color: red;
+
+      &:hover{
+        border-color: red;
+      }
     }
 
     &--valid {
@@ -240,8 +244,8 @@ label {
   display: flex;
 }
 
-button {
-  background-color: rgb(182, 182, 182);
+.contact-form__button {
+  background-color: #70e71a;
   color: white;
   border: none;
   height: 50px;
@@ -249,21 +253,32 @@ button {
   border-radius: 10px;
   cursor: pointer;
   transition: 0.3s;
+  font-size: 23px;
+  margin-left: 30%;
 
   &:hover {
-    background-color: rgb(151, 71, 255);
+    background-color: rgb(130, 50, 230);
+  }
+
+  &:disabled {
+    background-color: rgb(182, 182, 182);
+    cursor: not-allowed;
+    opacity: 0.7;
   }
 }
 
-main{
+menu {
+  display: flex;
+  align-items: center;
+  width: 100%;
+
   >a{
-    width: 100%;
+    margin-left: 90%;
   }
 }
 
 .go_up_button {
   display: flex;
-  margin-left: 90%;
   cursor: pointer;
   transition: 0.3s;
 }
@@ -351,9 +366,6 @@ main{
   section {
     flex-direction: column;
     gap: 20px;
-    > div {
-      padding: 15%;
-    }
   }
 
   .contact-form {

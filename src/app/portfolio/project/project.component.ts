@@ -20,7 +20,7 @@ export class ProjectComponent {
       githubUrl: 'https://github.com/Hamidou-ctr/pollo-loco',
     },
     {
-      imageUrl: './../../../assets/img/Pollo loco 1.png',
+      imageUrl: './../../../assets/img/join_photo.png',
       name: 'Join',
       language: 'JavaScript | HTML | CSS | Firebase ',
       description: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories. ',
