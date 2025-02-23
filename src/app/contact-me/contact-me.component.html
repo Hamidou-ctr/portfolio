@@ -190,17 +190,11 @@
       </button>
     </form>
   </section>
-
-  <menu class="go_up_menu">
-    <a href="#header-component">
-      <img
-        class="go_up_button clickable"
-        src="./../../assets/img/4. go_up_button.png"
-        alt=""
-      />
-    </a>
-  </menu>
+  <img
+    (click)="scrollToTop()"
+    class="go_up_button clickable"
+    src="./../../assets/img/4. go_up_button.png"
+    alt=""
+  />
   <div class="green-line"></div>
 </main>
-
-<!-- window.scrollTo({ top: 0, behavior: 'instant' }) Empfehlung für legal notice -->

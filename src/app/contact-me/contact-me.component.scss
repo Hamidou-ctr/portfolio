@@ -267,18 +267,9 @@ label {
   }
 }
 
-menu {
-  display: flex;
-  align-items: center;
-  width: 100%;
-
-  >a{
-    margin-left: 90%;
-  }
-}
-
 .go_up_button {
   display: flex;
+  margin-left: 90%;
   cursor: pointer;
   transition: 0.3s;
 }

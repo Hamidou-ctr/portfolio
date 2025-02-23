@@ -67,4 +67,10 @@ export class ContactMeComponent {
       ngForm.resetForm();
     }
   }
+
+  scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+
+    // window.scrollTo({ top: 0, behavior: 'instant' })   <!-- window.scrollTo({ top: 0, behavior: 'instant' }) Empfehlung für legal notice -->
+  }
 }

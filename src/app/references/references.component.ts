@@ -17,7 +17,7 @@ export class ReferencesComponent {
       profileImage: './../../assets/img/profil.png',
       name: ''
     },
-    {
+/*     {
       text: 'Another reference text here.',
       title: '',
       author: 'Another Author - Team Partner 11111111',
@@ -37,7 +37,7 @@ export class ReferencesComponent {
       author: 'Another Author - Team Partner 33333333',
       profileImage: './../../assets/img/another_profile.png',
       name: ''
-    },
+    }, */
     // Weitere Sections hier hinzufügen
   ];
 
