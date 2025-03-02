@@ -69,13 +69,13 @@ h1 {
   &::before {
     content: "";
     position: absolute;
-    width: 450px;
-    height: 450px;
+    width: 100%;
+    //height: 550px;
     background-image: url("./../../assets/img/photo_shadows.png");
     background-size: cover;
     z-index: -3;
     top: -50%;
-    left: 50%;
+    left: 40%;
     transform: translate(-50%, -50%);
   }
 
@@ -298,9 +298,9 @@ a {
       background-size: 100% 100%;
       background-position: bottom;
       width: 100%;
-      height: 50%;
+      height: 35%;
       z-index: -1;
-      margin-top: 200px;
+      margin-top: 236px;
     }
   }
 
@@ -333,16 +333,18 @@ a {
     width: 100%;
 
     &::before {
-      width: 350px;
+      margin-top: 100px;
+      width: 100%;
       height: 350px;
       top: -80%;
       left: 50%;
       transform: translate(-60%, -90%);
+      z-index: -2;
     }
 
     >img {
-      width: 350px;
-      height: 350px;
+      width: 450px;
+      height: 450px;
     }
   }
 
@@ -355,16 +357,19 @@ a {
     padding: 0;
 
     >div {
-      gap: 16px;
-
+      width: 100%;
+      gap: 56px;
+      padding-right: 6%;
       >div {
-        gap: 10px;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
       }
     }
   }
 
   .separator {
-    width: 50px;
+    width: 30%;
   }
 
   .scroll-down {
@@ -447,9 +452,10 @@ a {
   }
 
   .image-container {
+
     &::before {
-      width: 300px;
-      height: 300px;
+      width: 160%;
+      top: -150%;
     }
 
     >img {
@@ -468,8 +474,32 @@ a {
     }
   }
 
+/*   .contact-info {
+    display: flex;
+    width: 100%;
+  } */
+
+  main {
+    gap: 20px;
+    padding: 0;
+
+    >div {
+      gap: 50px;
+      padding-right: 16%;
+      >div {
+        gap: 35%;
+        width: 50%;
+      }
+    }
+  }
+
+  .email-link {
+    display: none;
+  }
+
+
   .separator {
-    width: 40px;
+    width: 50%;
   }
 }
 
@@ -496,10 +526,10 @@ a {
 
   .image-container {
     margin-top: 5vh;
-    &::before {
-      width: 250px;
-      height: 250px;
-    }
+     &::before {
+      width: 125%;
+      top: -100%;
+    } 
     >img {
       width: 300px;
       height: 300px;
@@ -517,11 +547,6 @@ a {
   }
 
   .separator {
-    width: 30px;
+    width: 35%;
   }
-
-  .email-link {
-    display: none;
-  }
-
 }
