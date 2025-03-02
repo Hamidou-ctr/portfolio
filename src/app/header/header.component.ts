@@ -11,26 +11,20 @@ import { Component } from '@angular/core';
 export class HeaderComponent {
   showMenu = false;
   isHidden = false;
+  selectedSection: string | null = null;
 
   toggleMenu() {
     this.showMenu = !this.showMenu;
     this.isHidden = !this.isHidden;
-
-    /*     if (this.showMenu) {
-          document.body.style.overflow = 'hidden'; // Scrollen verhindern
-        } else {
-          document.body.style.overflow = ''; // Scrollen wieder aktivieren
-        } */
+    //document.body.style.overflow = this.showMenu ? 'hidden' : '';
   }
 
-  
   closeMenu() {
     this.showMenu = false;
-    this.isHidden = false;
   }
 
-
   scrollToSection(sectionId: string) {
+    this.selectedSection = sectionId;
     this.closeMenu();
     const element = document.getElementById(sectionId);
     if (element) {

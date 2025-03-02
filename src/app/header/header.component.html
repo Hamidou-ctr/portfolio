@@ -4,21 +4,25 @@
   AOS.init();
 </script> -->
 
-<nav>
-  <h1 class="clickable" [class.hidden]="isHidden">Hamidou</h1>
+
+<nav >
+  <h1 [class.hidden]="showMenu" class="clickable">Hamidou</h1>
 
   <div class="navbar-header">
-    <a class="navbar-brand clickable" (click)="scrollToSection('aboutMe')"
-      >About me</a
-    >
-    <a class="clickable" (click)="scrollToSection('skills')">Skills</a>
-    <a class="clickable" (click)="scrollToSection('portfolio')">Portfolio</a>
+    <a class="navbar-brand clickable" 
+       [class.active]="selectedSection === 'aboutMe'"
+       (click)="scrollToSection('aboutMe')">About me</a>
+    <a class="clickable" 
+       [class.active]="selectedSection === 'skills'"
+       (click)="scrollToSection('skills')">Skills</a>
+    <a class="clickable" 
+       [class.active]="selectedSection === 'portfolio'"
+       (click)="scrollToSection('portfolio')">Portfolio</a>
   </div>
 
-  <img
-    [class.hidden]="isHidden"
+  <img [class.hidden]="showMenu" class="clickable" 
     src="./../../assets/img/burger_menu.png"
-    alt=""
+    alt="Menu"
     (click)="toggleMenu()"
   />
 </nav>
@@ -26,7 +30,7 @@
 <div class="overlay" *ngIf="showMenu">
   <div class="overlay-header">
     <h1>Hamidou</h1>
-    <p class="close" (click)="toggleMenu()">X</p>
+    <img class="close clickable" (click)="toggleMenu()" src="./../../assets/img/close_medium.png" alt="Close">
   </div>
 
   <div class="overlay-content">
