@@ -46,6 +46,19 @@ export class ReferencesComponent {
 
   currentIndex = 0;
 
+    // Injiziere den Service
+    constructor(private service: service) {}
+
+    // Nach der Initialisierung der View
+    ngAfterViewInit() {
+      // Reagiere auf das Scrollen
+      this.service.scrollToReference$.subscribe(() => {
+        if (this.refereceSection) {
+          this.refereceSection.nativeElement.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    }
+
   nextSection() {
     if (this.currentIndex < this.sections.length - 1) {
       this.currentIndex++;

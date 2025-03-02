@@ -11,11 +11,15 @@ import { service } from '../service/service.component';
   styleUrl: './my-skills.component.scss'
 })
 export class MySkillsComponent {
-
+  isHovered: boolean = false;
 
   constructor(private service: service) {}
 
   // Funktion zum Scrollen zur Referenzsektion
+  scrollToReference() {
+    this.service.scrollToReference(); // Trigger das Scrollen über den Service
+  }
+
 
   /* 
   

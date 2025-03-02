@@ -15,5 +15,13 @@ import { Subject } from 'rxjs';
 })
 
 export class service {
+  private scrollToReferenceSubject = new Subject<void>();
 
+  // Observable, um das Scrollen auszulösen
+  scrollToReference$ = this.scrollToReferenceSubject.asObservable();
+
+  // Methode, um das Scrollen zu triggern
+  scrollToReference() {
+    this.scrollToReferenceSubject.next();
+  }
 }
