@@ -138,3 +138,23 @@ body {
   background-color: rgb(82, 143, 160);
   border: 0.2px solid rgb(78, 132, 151);
 }
+
+
+.show-desktop {
+  display: flex;
+}
+
+.show-mobile {
+  display: none;
+}
+
+@media screen and (max-width: 720px) {
+
+  .show-desktop {
+    display: none;
+  }
+
+  .show-mobile {
+    display: flex;
+  }
+}

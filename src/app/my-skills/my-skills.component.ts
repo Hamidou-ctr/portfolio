@@ -1,5 +1,7 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, ViewChild, ElementRef } from '@angular/core';
+import { service } from '../service/service.component';
+
 
 @Component({
   selector: 'app-my-skills',
@@ -10,10 +12,19 @@ import { Component } from '@angular/core';
 })
 export class MySkillsComponent {
 
-  scrollToContact() {
+
+  constructor(private service: service) {}
+
+  // Funktion zum Scrollen zur Referenzsektion
+
+  /* 
+  
+    scrollToReference() {
     const contactSection = document.getElementById('contact-section');
     if (contactSection) {
       contactSection.scrollIntoView({ behavior: 'smooth' });
     }
   }
+  
+  */
 }

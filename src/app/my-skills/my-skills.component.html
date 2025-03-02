@@ -1,62 +1,138 @@
 <section id="skills">
   <menu>
     <div>
-      <img src="./../../assets/img/html_icons.png" alt="" />
+      <img
+        class="language-image"
+        src="./../../assets/img/html_icons.png"
+        alt=""
+      />
       <p>HTML</p>
     </div>
     <div>
-      <img src="./../../assets/img/css_icons.png" alt="" />
+      <img
+        class="language-image"
+        src="./../../assets/img/css_icons.png"
+        alt=""
+      />
       <p>CSS</p>
     </div>
     <div>
-      <img src="./../../assets/img/javascript_icons.png" alt="" />
+      <img
+        class="language-image"
+        src="./../../assets/img/javascript_icons.png"
+        alt=""
+      />
       <p>JavaScript</p>
     </div>
     <div>
-      <img src="./../../assets/img/typescript_icons.png" alt="" />
+      <img
+        class="language-image"
+        src="./../../assets/img/typescript_icons.png"
+        alt=""
+      />
       <p>TypeScript</p>
     </div>
     <div>
-      <img src="./../../assets/img/angular_icons.png" alt="" />
+      <img
+        class="language-image"
+        src="./../../assets/img/angular_icons.png"
+        alt=""
+      />
       <p>Angular</p>
     </div>
     <div>
-      <img src="./../../assets/img/firebase_icons.png" alt="" />
+      <img
+        class="language-image"
+        src="./../../assets/img/firebase_icons.png"
+        alt=""
+      />
       <p>Firebase</p>
     </div>
     <div>
-      <img src="./../../assets/img/git_icons.png" alt="" />
+      <img
+        class="language-image"
+        src="./../../assets/img/git_icons.png"
+        alt=""
+      />
       <p>Git</p>
     </div>
     <div>
-      <img src="./../../assets/img/rest_api_icons.png" alt="" />
+      <img
+        class="language-image"
+        src="./../../assets/img/rest_api_icons.png"
+        alt=""
+      />
       <p>Res Api</p>
     </div>
     <div>
-      <img src="./../../assets/img/scrum_icons.png" alt="" />
+      <img
+        class="language-image"
+        src="./../../assets/img/scrum_icons.png"
+        alt=""
+      />
       <p>Scrum</p>
     </div>
     <div>
-      <img src="./../../assets/img/material_design_icons.png" alt="" />
+      <img
+        class="language-image"
+        src="./../../assets/img/material_design_icons.png"
+        alt=""
+      />
       <p>Material Design</p>
     </div>
-    <div>
-      <img src="./../../assets/img/continually_learning_icons.png" alt="" />
-      <p>Continually learning</p>
+
+    <div class="skill-item" (mouseenter)="isHovered = true" (mouseleave)="isHovered = false">
+      @if (!isHovered) {
+        <div class="skill-subitem1" >
+            <img class="continually-learning-image" src="./../../assets/img/continually_learning_icons.png" alt="" />
+          <p>Continually learning</p>
+        </div>
+      } @else {
+        <div class="skill-subitem2" >
+          <img class="hovered-image" src="./../../assets/img/Group 18.png" alt="" />
+          <img class="continually-learning-image"  src="./../../assets/img/Icons s2.png" alt="" />
+          <p>Continually learning</p>
+        </div>
+      }
     </div>
+
+    <span class="show-mobile content-show-mobile">
+      <h2>
+        Lookking for
+        <h2>another skill</h2>
+        ?
+      </h2>
+      <p>
+        Reveal enthusiasm for learning new technologies and frameworks.
+      </p>
+      <button class="clickable" (click)="scrollToReference()">
+        Get in touch
+      </button>
+    </span>
   </menu>
 
-
   <main>
-    <div>
+    <div class="content">
       <h1>My skills</h1>
-      <p></p>
+      <span>
+        Show that you have used a variety of front-end technologies in your
+        projects.
+      </span>
+
+      <div class="show-desktop content-show-desktop">
+        <h2>
+          Lookking for
+          <h2>another skill</h2>
+          ?
+        </h2>
+        <span>
+          Reveal enthusiasm for learning new technologies and frameworks.
+        </span>
+        <button class="clickable" (click)="scrollToReference()">
+          Get in touch
+        </button>
+      </div>
     </div>
-    
-    <p>I have gained experience in building projects with different frontend technologies and concepts.</p>
-    <h2>Lookking for <h2> another skill</h2>?</h2>
-    <p> Feel free to contact me. I look forward to expanding on my previous knowledge.</p>
-    <button class="clickable" (click)="scrollToContact()">Get in touch</button>
+    <p class="bright-lavender-line"></p>
   </main>
-  
 </section>

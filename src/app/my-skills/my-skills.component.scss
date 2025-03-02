@@ -1,12 +1,12 @@
 section {
   display: flex;
   justify-content: center;
-  padding-left: 10%;
+  padding-left: 100px;
   gap: 100px;
-  margin-top: 100px;
+  margin-top: 70px;
   position: relative;
-  display: inline-block;
-/*     background-image: url("./../../assets/img/green_shadow_skills_portfolio.png");
+  //display: inline-block;
+  /*     background-image: url("./../../assets/img/green_shadow_skills_portfolio.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-size: 428.5940076561137px 951.4411310774191px;
@@ -29,6 +29,14 @@ section {
   }
 }
 
+h1 {
+  font-weight: 700;
+  font-size: 90px;
+  text-align: right;
+  text-wrap: nowrap;
+  margin-bottom: 50px;
+}
+
 menu {
   display: flex;
   justify-content: center;
@@ -36,21 +44,63 @@ menu {
   max-width: 50%;
   flex-wrap: wrap;
   gap: 88px;
+  margin-top: 30px;
 
   >div {
     display: flex;
+    width: 88px;
+    height: 120px;
     flex-direction: column;
     align-items: center;
     gap: 10px;
+    font-weight: 700;
+    font-size: 16px;
+  }
+}
 
-    >img {
-      width: 60px;
-      height: 60px;
+.skill-item {
+  position: relative;
+  display: inline-block;
+  justify-content: center;
+  width: 88px;
+  height: 120px;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  font-size: 16px;
+  color: #9747ff;
 
-      &:hover {
-        animation: moveUpAndBack 1s ease;
-      }
-    }
+  &:hover {
+    color: white;
+  }
+}
+
+.skill-subitem1, .skill-subitem2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.continually-learning-image{
+  width: 60px;
+  height: 60px;
+}
+
+.hovered-image {
+  position: absolute;
+  bottom: 90px;
+  left: 100%;
+  transform: translateX(-50%);
+}
+
+.language-image {
+  width: 60px;
+  height: 60px;
+
+  &:hover {
+    animation: moveUpAndBack 0.5s ease;
   }
 }
 
@@ -60,7 +110,7 @@ menu {
   }
 
   25% {
-    transform: translateY(-5px);
+    transform: translateY(-15px);
   }
 
   50% {
@@ -68,7 +118,7 @@ menu {
   }
 
   75% {
-    transform: translateY(-5px);
+    transform: translateY(-15px);
   }
 
   100% {
@@ -76,25 +126,41 @@ menu {
   }
 }
 
+
 main {
   display: flex;
-  flex-direction: column;
+  justify-content: flex-start;
   max-width: 50%;
   gap: 16px;
+}
 
-  >div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 32px;
-    width: 100%;
+.bright-lavender-line {
+  flex: 1;
+  height: 4px;
+  background-color: #9747ff;
+  margin-top: 75px;
+}
 
-    >p {
-      flex: 1;
-      border: 2px solid #9747ff;
-      color: #9747ff;
-    }
-  }
+.content {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: end;
+}
+
+.content-show-desktop {
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: end;
+  gap: 24px;
+}
+
+.content-show-mobile {
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 24px;
 }
 
 h2 {
@@ -102,7 +168,8 @@ h2 {
   justify-content: center;
   align-items: center;
   white-space: nowrap;
-  font-size: 38px;
+  font-size: 32px;
+
   h2 {
     color: #9747ff;
     margin-left: 8px;
@@ -122,22 +189,85 @@ button {
   cursor: pointer;
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 955px){
+ 
+  h1{
+    font-size: 70px;
+  }
+  h2{
+    font-size: 26px;
+  }
+
+  .bright-lavender-line {
+    margin-top: 60px;
+  }
+}
+
+@media screen and (max-width: 870px) {
   section {
     flex-direction: column-reverse;
     align-items: center;
     padding: 0;
+  }
 
+  h1 {
+    font-size: 90px;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .bright-lavender-line {
+    margin-top: 70px;
+    width: 130px;
   }
 
   menu {
     max-width: 100%;
     gap: 50px;
-    padding: 5%;
+    padding: 0 13%;
+    margin-top: -30px;
   }
 
   main {
     max-width: 100%;
     padding-left: 15%;
+  }
+
+  .show-desktop {
+    display: none;
+  }
+
+  .show-mobile {
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 550px){
+  h1{
+    font-size: 70px;
+  }
+  h2{
+    font-size: 26px;
+  }
+
+  .bright-lavender-line {
+    margin-top: 60px;
+    width: auto;
+  }
+}
+
+@media screen and (max-width: 450px){
+
+  menu{
+    padding: 0 6%;
+  }
+  .bright-lavender-line {
+    margin-top: 45px;
+  }
+  h1{
+    font-size: 50px;
+  }
+  h2{
+    font-size: 22px;
   }
 }
