@@ -2,21 +2,21 @@
   display: flex;
   width: 100%;
   position: relative;
-  overflow: hidden;
-
+  padding-top: 50px;
   &::before {
     content: "";
     position: absolute;
-    right: -140px;
-    width: 400px;
-    height: 400px;
+    width: 452px;
+    height: 489px;
+    top: -206px;
+    left: 86%;
+    transform: translateX(20%);
     background-image: url("./../../assets/img/green_shadow_skills_portfolio.png");
     background-size: cover;
     z-index: -1;
     rotate: 144.5deg;
+    background-position: 50% 50%;
   }
-
-  padding-top: 50px;
 }
 
 section {
@@ -109,10 +109,8 @@ menu {
     }
 
     &.disabled {
-      opacity: 0.5;
-      /* Macht das Bild halbtransparent */
-      pointer-events: none;
-      /* Deaktiviert Klick-Events */
+      opacity: 0.5; // Macht das Bild halbtransparent 
+      pointer-events: none; // Deaktiviert Klick-Events 
     }
   }
 

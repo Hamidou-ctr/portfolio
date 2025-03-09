@@ -1,10 +1,6 @@
 .background {
   position: relative;
-  /*   background-image: url("./../../assets/img/hero_background1.png");
-  background-size: 100% 70%;
-  background-position: bottom;
-  background-repeat: no-repeat; */
-
+  //overflow: hidden;
   &::before {
     content: "";
     position: absolute;
@@ -43,9 +39,10 @@ section {
         justify-content: center;
         align-items: center;
         margin-top: -250px;
+        
 
         h3 {
-          font-size: 55px;
+          font-size: clamp(1.25rem, 6vw, 3.7rem);
           font-weight: 400;
           white-space: nowrap;
           color: rgb(151, 71, 255);
@@ -56,33 +53,50 @@ section {
 }
 
 h1 {
-  font-size: 70px;
   font-weight: 700;
-  color: #ffffff;
   white-space: nowrap;
+  font-size: clamp(1.25rem, 8vw, 5rem);
+}
+
+.writing-mode-Inverse {
+  transform: rotate(-90deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-size: clamp(1.25rem, 6vw, 4rem);
+  font-weight: 400;
 }
 
 .image-container {
   position: relative;
   display: inline-block; // Sorgt dafür, dass das Schattenbil sich ans Bild anpasst
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   &::before {
     content: "";
     position: absolute;
     width: 100%;
-    //height: 550px;
+    height: 42vh;
     background-image: url("./../../assets/img/photo_shadows.png");
     background-size: cover;
     z-index: -3;
-    top: -50%;
-    left: 40%;
+    top: 0;
+    left: 60%;
     transform: translate(-50%, -50%);
+
+
+    //width: clamp(200px, 120%, 900px);; // 100% of the parent container
+    //height: clamp(200px, 110vh, 500px); // 100% of the parent container
   }
 
   >img {
     width: 500px;
     height: 500px;
-    top: 0px;
+    //width: clamp(200px, 100%, 700px);
+    //height: clamp(200px, 100%, 700px);
     margin-top: -321px;
     z-index: -2;
   }
@@ -102,17 +116,6 @@ button {
     animation-timing-function: ease-out;
     animation-duration: 300ms;
   }
-}
-
-.writing-mode-Inverse {
-  transform: rotate(-90deg);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  font-size: 64px;
-  font-weight: 400;
-  color: #ffffff;
 }
 
 main {
@@ -158,44 +161,23 @@ a {
   justify-content: center;
   align-items: center;
   gap: 10px;
-  margin-top: 50px;
+  //margin-top: -50px;
   font-size: 24px;
   font-weight: 500;
   transform: rotate(90deg);
+  cursor: pointer;
 
   >img {
     transform: rotate(270deg);
   }
 }
 
-@media screen and (max-width: 1200px) {
-  section {
-    >menu {
-      >div {
-        >div {
-
-          h3 {
-            font-size: 40px;
-          }
-        }
-      }
-    }
-  }
-
-
-  h1 {
-    font-size: 60px;
-  }
-
-  .writing-mode-Inverse {
-    font-size: 48px;
-  }
-
+/* @media screen and (max-width: 1200px) {
   .image-container {
-    &::before {
+    /* &::before {
       width: 400px;
       height: 400px;
-    }
+    } *
 
     >img {
       width: 450px;
@@ -205,87 +187,18 @@ a {
 }
 
 @media screen and (max-width: 1060px) {
-  section {
-    >menu {
-      >div {
-        >div {
-          h3 {
-            font-size: 32px;
-          }
-        }
-      }
-    }
-  }
-
-  h1 {
-    font-size: 50px;
-  }
-
-  .writing-mode-Inverse {
-    font-size: 48px;
-  }
-
   .image-container {
-    &::before {
+  /*   &::before {
       width: 350px;
       height: 350px;
-    }
+    } *
 
     >img {
       width: 400px;
       height: 400px;
     }
   }
-}
-
-@media screen and (max-width: 945px) {
-  section {
-    >menu {
-      >div {
-        >div {
-          h3 {
-            font-size: 28px;
-          }
-        }
-      }
-    }
-  }
-  h1 {
-    font-size: 40px;
-  }
-
-  .writing-mode-Inverse {
-    font-size: 38px;
-  }
-}
-
-@media screen and (max-width: 890px) {
-  h1{
-    font-size: 36px;
-  }
-}
-
-@media screen and (max-width: 828px){
-  section {
-    >menu {
-      >div {
-        >div {
-          h3 {
-            font-size: 24px;
-          }
-        }
-      }
-    }
-  }
-
-  h1{
-    font-size: 32px;
-  }
-
-  .writing-mode-Inverse {
-    font-size: 32px;
-  }
-}
+} */
 
 @media screen and (max-width: 725px) {
 
@@ -298,7 +211,7 @@ a {
       background-size: 100% 100%;
       background-position: bottom;
       width: 100%;
-      height: 35%;
+      height: 50%;
       z-index: -1;
       margin-top: 236px;
     }
@@ -315,29 +228,21 @@ a {
         margin-left: 0;
 
         >div {
-          margin-top: 0;
-
-          h3 {
-            font-size: 45px;
-          }
-
-          h1 {
-            font-size: 60px;
-          }
+          margin-top: -120px;
         }
       }
     }
   }
 
-  .image-container {
+/*   .image-container {
     width: 100%;
 
     &::before {
       margin-top: 100px;
-      width: 100%;
-      height: 350px;
+      width: 89%;
+      height: 31vh;
       top: -80%;
-      left: 50%;
+      left: 66%;
       transform: translate(-60%, -90%);
       z-index: -2;
     }
@@ -346,12 +251,7 @@ a {
       width: 450px;
       height: 450px;
     }
-  }
-
-  .writing-mode-Inverse {
-    font-size: 48px;
-  }
-
+  } */
   main {
     gap: 20px;
     padding: 0;
@@ -379,8 +279,6 @@ a {
 
 @media screen and (max-width: 630px){
 
-
-
   .background {
     &::before {
       content: "";
@@ -390,15 +288,18 @@ a {
       background-size: 100% 100%;
       background-position: bottom;
       width: 100%;
-      height: 50%;
+      height: 60%;
       z-index: -1;
       margin-top: 200px;
     }
   }
 
-
-
-
+  main {
+    >div {
+      gap: 32px;
+      padding-right: 0;
+    }
+  }
 
   section {
     >menu {
@@ -411,47 +312,15 @@ a {
         margin-left: 0;
 
         >div {
-          margin-top: 0;
-
-          h3 {
-            font-size: 35px;
-          }
-
-          h1 {
-            font-size: 50px;
-          }
+          margin-top: -135px;
         }
       }
     }
-  }
-
-  .writing-mode-Inverse {
-    font-size: 40px;
   }
 }
 
 @media screen and (max-width: 500px){
-  section {
-    >menu {
-      >div {
-        >div {
-          h3 {
-            font-size: 30px;
-          }
-
-          h1 {
-            font-size: 40px;
-          }
-        }
-      }
-    }
-  }
-
-  .writing-mode-Inverse {
-    font-size: 30px;
-  }
-
-  .image-container {
+/*   .image-container {
 
     &::before {
       width: 160%;
@@ -462,21 +331,6 @@ a {
       width: 350px;
       height: 350px;
     }
-  }
-
-  main {
-    >div {
-      >div {
-        h3 {
-          font-size: 20px;
-        }
-      }
-    }
-  }
-
-/*   .contact-info {
-    display: flex;
-    width: 100%;
   } */
 
   main {
@@ -504,27 +358,7 @@ a {
 }
 
 @media screen and (max-width: 420px) {
-  section {
-    >menu {
-      >div {
-        >div {
-          h1 {
-            font-size: 24px;
-          }
-
-          h3 {
-            font-size: 24px;
-          }
-        }
-      }
-    }
-  }
-
-  .writing-mode-Inverse {
-    font-size: 26px;
-  }
-
-  .image-container {
+/*   .image-container {
     margin-top: 5vh;
      &::before {
       width: 125%;
@@ -534,17 +368,7 @@ a {
       width: 300px;
       height: 300px;
     }
-  }
-
-  main {
-    >div {
-      >div {
-        h3 {
-          font-size: 16px;
-        }
-      }
-    }
-  }
+  } */
 
   .separator {
     width: 35%;

@@ -2,36 +2,28 @@ section {
   display: flex;
   justify-content: center;
   padding-left: 100px;
-  gap: 100px;
+  gap: 13%;
   margin-top: 70px;
   position: relative;
-  //display: inline-block;
-  /*     background-image: url("./../../assets/img/green_shadow_skills_portfolio.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-size: 428.5940076561137px 951.4411310774191px;
-  //background-position: bottom -650px left -260px;
-  background-position: bottom -650px left -230px;  */
-
 
   &::before {
     content: "";
     position: absolute;
-    width: 428.5940076561137px;
-    height: 551.4411310774191px;
+    width: 500px;
+    height: 800px;
     background-image: url("./../../assets/img/green_shadow_skills_portfolio.png");
     background-size: cover;
     z-index: -1;
-    bottom: -500px;
-    left: -250px;
+    bottom: -470px;
+    left: -178px;
     background-position-x: 506px;
     background-position-y: 0px;
   }
 }
 
 h1 {
+  font-size: clamp(2rem, 8vw, 8rem);
   font-weight: 700;
-  font-size: 90px;
   text-align: right;
   text-wrap: nowrap;
   margin-bottom: 50px;
@@ -54,7 +46,7 @@ menu {
     align-items: center;
     gap: 10px;
     font-weight: 700;
-    font-size: 16px;
+    font-size: clamp(1rem, 1.5vw, 1.5rem);
   }
 }
 
@@ -76,14 +68,15 @@ menu {
   }
 }
 
-.skill-subitem1, .skill-subitem2 {
+.skill-subitem1,
+.skill-subitem2 {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
 
-.continually-learning-image{
+.continually-learning-image {
   width: 60px;
   height: 60px;
 }
@@ -96,8 +89,8 @@ menu {
 }
 
 .language-image {
-  width: 60px;
-  height: 60px;
+  width: 80px;
+  height: 80px;
 
   &:hover {
     animation: moveUpAndBack 0.5s ease;
@@ -138,7 +131,7 @@ main {
   flex: 1;
   height: 4px;
   background-color: #9747ff;
-  margin-top: 75px;
+  margin-top: 6vw;
 }
 
 .content {
@@ -147,6 +140,10 @@ main {
   flex-direction: column;
   align-items: flex-end;
   text-align: end;
+}
+
+span {
+  font-size: clamp(1rem, 1.5vw, 1.7rem);
 }
 
 .content-show-desktop {
@@ -168,7 +165,7 @@ h2 {
   justify-content: center;
   align-items: center;
   white-space: nowrap;
-  font-size: 32px;
+  font-size: clamp(1rem, 2.7vw, 2.9rem);
 
   h2 {
     color: #9747ff;
@@ -189,48 +186,62 @@ button {
   cursor: pointer;
 }
 
-@media screen and (max-width: 955px){
- 
-  h1{
-    font-size: 70px;
-  }
-  h2{
-    font-size: 26px;
-  }
-
-  .bright-lavender-line {
-    margin-top: 60px;
-  }
-}
-
 @media screen and (max-width: 870px) {
   section {
     flex-direction: column-reverse;
     align-items: center;
     padding: 0;
+
+
+    &::before {
+      width: 500px;
+      height: 700px;
+      z-index: -1;
+      bottom: -300px;
+      left: -178px;
+    }
   }
 
   h1 {
-    font-size: 90px;
+    font-size: clamp(2rem, 10vw, 9rem);
     text-align: center;
     margin-bottom: 30px;
   }
 
+  h2 {
+    font-size: clamp(1rem, 6vw, 6rem);
+  }
+
   .bright-lavender-line {
-    margin-top: 70px;
+    margin-top: 7vw;
     width: 130px;
   }
 
   menu {
     max-width: 100%;
     gap: 50px;
-    padding: 0 13%;
     margin-top: -30px;
+
+    >div {
+      width: 20%;
+      gap: 20px;
+      font-size: clamp(1rem, 2.5vw, 1.6rem);
+
+      img {
+        width: 80px;
+        height: 80px;
+      }
+    }
   }
 
   main {
     max-width: 100%;
     padding-left: 15%;
+    margin-bottom: 60px;
+  }
+
+  span {
+    font-size: clamp(1rem, 3.5vw, 1.7rem);
   }
 
   .show-desktop {
@@ -242,32 +253,44 @@ button {
   }
 }
 
-@media screen and (max-width: 550px){
-  h1{
-    font-size: 70px;
-  }
-  h2{
-    font-size: 26px;
-  }
-
-  .bright-lavender-line {
-    margin-top: 60px;
-    width: auto;
+@media screen and (max-width: 700px) {
+  section {
+    &::before {
+      bottom: -50px;
+      left: -300px;
+    }
   }
 }
 
-@media screen and (max-width: 450px){
+@media screen and (max-width: 400px) {
+  section {
+    &::before {
+      bottom: -50px;
+      left: -300px;
+    }
+  }
 
-  menu{
-    padding: 0 6%;
+  menu {
+    padding: 0 5% 0 5%;
+
+    >div {
+      width: 30%;
+      gap: 10px;
+      font-size: clamp(1rem, 5.5vw, 4.6rem);
+    }
   }
+}
+
+@media (min-width: 1440px) {
+  h1 {
+    font-size: 7rem;
+  }
+
+  h2 {
+    font-size: 2.3rem;
+  }
+
   .bright-lavender-line {
-    margin-top: 45px;
-  }
-  h1{
-    font-size: 50px;
-  }
-  h2{
-    font-size: 22px;
+    margin-top: 6vw;
   }
 }
