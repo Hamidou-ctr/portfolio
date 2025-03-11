@@ -20,7 +20,7 @@ section {
 }
 
 img {
-    width: 50%;
+    width: 80%;
     height: auto;
 }
 
@@ -111,7 +111,7 @@ p {
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        padding: 1px;
+        padding: 5%;
 
         &.left {
             flex-direction: column;
@@ -126,13 +126,13 @@ p {
     }
 
     img {
-        min-width: 95%;
+        width: 90%;
     }
 
      .project-content {
         width: 100%;
         padding: 20px;
-        margin-top: -30%;
+        //margin-top: -30%;
     } 
 
     .project-link {
@@ -158,9 +158,9 @@ p {
         font-size: 20px;
     }
 
-    .project-content{
-        margin-top: -50%;
-    }
+    /* .project-content{
+        //margin-top: -50%;
+    } */
 }
 
 @media screen and (max-width: 340px) {

@@ -11,7 +11,7 @@ import { service } from '../service/service.component';
   styleUrl: './references.component.scss'
 })
 export class ReferencesComponent {
-  @ViewChild('refereceSection') refereceSection!: ElementRef; // Template-Referenz
+  @ViewChild('refereceSection') refereceSection!: ElementRef;
   sections = [
     {
       text: 'Michael really kept the team together with his great organization and clear communication. We wouldn\'t have got this far without his commitment.',
@@ -20,44 +20,40 @@ export class ReferencesComponent {
       profileImage: './../../assets/img/profil.png',
       name: ''
     },
-     /* {
+    {
       text: 'Another reference text here.',
       title: '',
       author: 'Another Author - Team Partner 11111111',
-      profileImage: './../../assets/img/another_profile.png',
+      profileImage: './../../assets/img/profile1.png',
       name: ''
     },
     {
       text: 'Another reference text here.',
       title: '',
       author: 'Another Author - Team Partner 22222222',
-      profileImage: './../../assets/img/another_profile.png',
+      profileImage: './../../assets/img/profile2.png',
       name: ''
     },
     {
       text: 'Another reference text here.',
       title: '',
       author: 'Another Author - Team Partner 33333333',
-      profileImage: './../../assets/img/another_profile.png',
+      profileImage: './../../assets/img/profile3.png',
       name: ''
-    },  */
-    // Weitere Sections hier hinzufügen
+    },
   ];
 
   currentIndex = 0;
 
-    // Injiziere den Service
-    constructor(private service: service) {}
+  constructor(private service: service) { }
 
-    // Nach der Initialisierung der View
-    ngAfterViewInit() {
-      // Reagiere auf das Scrollen
-      this.service.scrollToReference$.subscribe(() => {
-        if (this.refereceSection) {
-          this.refereceSection.nativeElement.scrollIntoView({ behavior: 'smooth' });
-        }
-      });
-    }
+  ngAfterViewInit() {
+    this.service.scrollToReference$.subscribe(() => {
+      if (this.refereceSection) {
+        this.refereceSection.nativeElement.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  }
 
   nextSection() {
     if (this.currentIndex < this.sections.length - 1) {

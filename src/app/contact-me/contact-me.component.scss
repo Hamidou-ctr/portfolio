@@ -89,11 +89,11 @@ section {
     }
 
     &:focus {
-      border-color: red !important;
+      border: solid 2px red;
     }
 
     &:hover {
-      border-color: #107d27;
+      border-color: #70E61C;
     }
 
     &--invalid {
@@ -105,7 +105,7 @@ section {
     }
 
     &--valid {
-      border-color: green;
+      border-color: #70E61C;
     }
   }
 
@@ -130,7 +130,7 @@ section {
   .checkbox {
     position: absolute;
     right: 10px;
-    top: 50%;
+    top: 58%;
     transform: translateY(-50%);
     display: flex;
     align-items: center;
@@ -163,8 +163,8 @@ section {
     position: relative;
 
     .checkbox {
-      margin-top: 10%;
-      transform: translateY(-10%);
+      margin-top: -50px;
+      transform: translateY(-50%);
     }
   }
 
@@ -216,8 +216,8 @@ section {
     }
 
     &:checked + .custom-checkbox::before {
-      border-color: green;
-      background-color: green;
+      border-color: #70E61C;
+      background-color: #70E61C;
     }
 
     &:checked + .custom-checkbox::after {
