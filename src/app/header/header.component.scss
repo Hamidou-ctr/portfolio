@@ -5,17 +5,20 @@ nav {
   width: 100%;
   max-width: 1440px;
   height: 109.03px;
-  padding: 37px 100px 37px 100px;
+  //padding: 37px 100px 37px 100px;
+  //padding: 2rem 6.25rem 2.3rem 6.25rem;
+  padding-left: 5.25rem;
+  padding-right: 6.25rem;
   position: fixed;
   top: 0;
   background-color: rgb(20, 29, 47);
   z-index: 10;
   box-sizing: border-box;
+  color: #FFFFFF;
 }
 
 h1 {
-  font-size: 32px;
-  color: white;
+  font-size: clamp(2rem, 6vw, 9rem);
 }
 
 div {
@@ -26,9 +29,8 @@ div {
 }
 
 a {
-  color: #FFFFFF;
   font-weight: 400;
-  font-size: 23px;
+  font-size: clamp(1rem, 3vw, 2.5rem);
   position: relative;
 
   &:hover {
@@ -53,24 +55,25 @@ a {
 
 img {
   display: none;
-  width: 40px;
-  height: 40px;
+  width: clamp(24px, 6vw, 80px);
+  height: clamp(24px, 6vw, 80px);
+  cursor: pointer;
 }
 
 .overlay {
   display: none;
 }
 
-@media screen and (max-width: 700px){
+/* @media screen and (max-width: 700px){
   nav {
     padding: 30px 30px 30px 20px;
   }
-}
+} */
 
 @media screen and (max-width: 568px) {
-  nav {
+ /*  nav {
     padding: 37px 50px 37px 24px;
-  }
+  } */
 
   img {
     display: flex;
