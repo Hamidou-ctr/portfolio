@@ -21,7 +21,7 @@ export class ReferencesComponent {
       name: ''
     },
     {
-      text: 'Another reference text here.',
+      text: 'Michael really kept the team together  We wouldn\'t have got this far without his commitment.',
       title: '',
       author: 'Another Author - Team Partner 11111111',
       profileImage: './../../assets/img/profile1.png',
@@ -35,7 +35,7 @@ export class ReferencesComponent {
       name: ''
     },
     {
-      text: 'Another reference text here.',
+      text: 'Michael really kept the team together with his great organization and clear communication. We wouldn\'t have got this far without his commitment.',
       title: '',
       author: 'Another Author - Team Partner 33333333',
       profileImage: './../../assets/img/profile3.png',
