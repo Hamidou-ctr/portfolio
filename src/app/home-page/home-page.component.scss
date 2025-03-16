@@ -276,12 +276,13 @@ a {
         display: flex;
         justify-content: space-between;
         width: 100%;
+        padding-right: 1%;
       }
     }
   }
 
   .separator {
-    width: 30%;
+    width: 18%;
   }
 
   .scroll-down {
@@ -317,7 +318,8 @@ a {
     padding: 0;
 
     >div {
-      gap: 50px;
+      justify-content: flex-start;
+      gap: 20%;
       padding-right: 16%;
 
       >div {
@@ -332,13 +334,7 @@ a {
   }
 
   .separator {
-    width: 50%;
-  }
-}
-
-@media screen and (max-width: 420px) {
-  .separator {
-    width: 35%;
+    width: 20%;
   }
 }
 
