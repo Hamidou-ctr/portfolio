@@ -11,11 +11,13 @@ body {
    display: flex;
   justify-content: center;
   align-items: center; 
-  flex-direction: column;
   background-color: rgb(20,29,47);
   color: #ffffff;
   margin: 0 auto;
   font-family: "Poppins", sans-serif;
+
+  //position: absolute;
+  //overflow-x: hidden;
 }
 
 @font-face {

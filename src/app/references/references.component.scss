@@ -3,20 +3,22 @@
   width: 100%;
   position: relative;
   padding-top: 50px;
-  &::before {
+
+/*   &::before {
     content: "";
     position: absolute;
     width: 452px;
     height: 489px;
     top: -206px;
-    left: 86%;
+    left: 80%;
+    right: 0;
     transform: translateX(20%);
-    background-image: url("./../../assets/img/green_shadow_skills_portfolio.png");
+    background-image: url("./../../assets/img/54. Green shadow 3 (skills and portfolio section).png");
     background-size: cover;
     z-index: -1;
-    rotate: 144.5deg;
+    rotate: 75deg;
     background-position: 50% 50%;
-  }
+  } */
 }
 
 section {

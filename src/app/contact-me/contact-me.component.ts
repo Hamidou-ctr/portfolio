@@ -65,6 +65,7 @@ export class ContactMeComponent {
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
 
       ngForm.resetForm();
+      ngForm.controls['privacy'].markAsUntouched();
     }
   }
 

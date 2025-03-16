@@ -1,5 +1,13 @@
 .background {
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  //border: 2px solid #9747ff;
+  width: 100%;
+  max-width: 1440px;
+
   &::before {
     content: "";
     position: absolute;
@@ -7,10 +15,12 @@
     background-repeat: no-repeat;
     background-size: 100% 100%;
     background-position: bottom;
-    width: 100%;
+    width: 100vw;
     height: 100%;
+    top: 16rem;
     z-index: -1;
-    margin-top: 200px;
+    max-width: 1440px;
+    //margin-top: 200px;
   }
 }
 
@@ -21,10 +31,9 @@ section {
   margin-top: 100px;
 
   >menu {
-    margin-top: 313px;
     display: flex;
     width: 100%;
-    gap: 3rem;
+    margin-top: 16px;
 
     >div {
       display: flex;
@@ -37,11 +46,11 @@ section {
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-top: -250px;
-        
+        margin-top: 2.5rem;
 
         h3 {
-          font-size: clamp(1.25rem, 6vw, 3.7rem);
+          //font-size: clamp(2.26rem, 4.3vw, 6rem);
+          font-size: clamp(25px, 4.3vw, 100px);
           font-weight: 400;
           white-space: nowrap;
           color: rgb(151, 71, 255);
@@ -51,10 +60,15 @@ section {
   }
 }
 
+.intro {
+  margin-left: -3rem;
+}
+
 h1 {
   font-weight: 700;
   white-space: nowrap;
-  font-size: clamp(1.25rem, 8vw, 5rem);
+  font-size: clamp(25px, 5.7vw, 90px);
+  //font-size: clamp(3rem, 5.7vw, 9rem);
 }
 
 .writing-mode-Inverse {
@@ -63,13 +77,13 @@ h1 {
   justify-content: center;
   align-items: center;
   gap: 10px;
-  font-size: clamp(1.25rem, 4vw, 4rem);
+  font-size: clamp(1.25rem, 5vw, 4rem);
   font-weight: 400;
 }
 
 .image-container {
   position: relative;
-  display: inline-block; // Sorgt dafür, dass das Schattenbil sich ans Bild anpasst
+  display: inline-block;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -77,32 +91,31 @@ h1 {
   &::before {
     content: "";
     position: absolute;
-    //width: 100%;
-    //height: 42vh;
+    width: 45vw;
+    height: 70vh;
+    max-width: 300vw;
+    max-height: 50vh;
     background-image: url("./../../assets/img/photo_shadows.png");
     background-size: cover;
     z-index: -3;
-    top: 25%;
-    left: 50%;
+    left: 60%;
     transform: translate(-50%, -50%);
-
-
-    width: clamp(100px, 100%, 700px);; // 100% of the parent container
-    height: clamp(100px, 100vh, 600px); // 100% of the parent container
+    top: 18rem;
   }
 
   >img {
-    width: 90%;
-    height: 80vh;
-    //width: clamp(300px, 100%, 1100px);
-    //height: clamp(300px, 100%, 1400px);
-    margin-top: -421px;
+    max-width: 800px;
+    max-height: 800px;
+    width: 45vw;
+    height: 82vh;
     z-index: -2;
+    margin-top: -5rem;
   }
 }
 
 
 button {
+  font-size: 1.5rem;
   padding: 15px 30px 15px 30px;
   border-radius: 10px;
   background: #70e61c;
@@ -121,7 +134,10 @@ main {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 100%;
   gap: 50px;
+  //margin-top: -10rem;
+
   >div {
     display: flex;
     gap: 50px;
@@ -160,7 +176,6 @@ a {
   justify-content: center;
   align-items: center;
   gap: 10px;
-  //margin-top: -50px;
   font-size: 24px;
   font-weight: 500;
   transform: rotate(90deg);
@@ -171,49 +186,33 @@ a {
   }
 }
 
-/* @media screen and (max-width: 1200px) {
-  .image-container {
-    /* &::before {
-      width: 400px;
-      height: 400px;
-    } *
-
-    >img {
-      width: 450px;
-      height: 450px;
+@media screen and (max-width: 1100px){
+  section {
+    >menu {
+      >div {
+        >div {
+          margin-top: 10%;
+          
+        }
+      }
     }
   }
 }
 
-@media screen and (max-width: 1060px) {
-  .image-container {
-  /*   &::before {
-      width: 350px;
-      height: 350px;
-    } *
-
-    >img {
-      width: 400px;
-      height: 400px;
-    }
-  }
-} */
-
-@media screen and (max-width: 725px) {
-
+@media screen and (max-width: 850px) {
   .background {
     &::before {
-      content: "";
-      position: absolute;
-      background-image: url("./../../assets/img/hero_background1.png");
-      background-repeat: no-repeat;
-      background-size: 100% 100%;
-      background-position: bottom;
-      width: 100%;
-      height: 50%;
-      z-index: -1;
-      margin-top: 236px;
+      height: 45vh;
+      margin-top: 10rem;
     }
+  }
+
+  h1 {
+    font-size: clamp(1.5rem, 9vw, 9rem);
+  }
+
+  .writing-mode-Inverse {
+    font-size: clamp(2rem, 8vw, 4rem);
   }
 
   section {
@@ -223,34 +222,40 @@ a {
       align-items: center;
 
       >div {
-        max-width: 90%;
-        margin-left: 0;
-
         >div {
-          margin-top: -120px;
+          margin-top: 0;
+          h3 {
+            font-size: clamp(1.5rem, 7vw, 6rem);
+          }
         }
       }
     }
   }
 
-/*   .image-container {
-    width: 100%;
+  .intro {
+    margin-left: 0rem;
+    padding-top: 0rem;
+  }
+
+  .image-container {
+    width: 100vw;
 
     &::before {
-      margin-top: 100px;
-      width: 89%;
-      height: 31vh;
-      top: -80%;
-      left: 66%;
-      transform: translate(-60%, -90%);
-      z-index: -2;
+      max-width: 80vw;
+      max-height: 70vh;
+      width: 800vw;
+      height: 800vh;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      top: 18rem;
     }
 
     >img {
-      width: 450px;
-      height: 450px;
+      width: 80vw;
+      height: 77vh;
     }
-  } */
+  }
+
   main {
     gap: 20px;
     padding: 0;
@@ -259,6 +264,7 @@ a {
       width: 100%;
       gap: 56px;
       padding-right: 6%;
+
       >div {
         display: flex;
         justify-content: space-between;
@@ -276,9 +282,9 @@ a {
   }
 }
 
-@media screen and (max-width: 630px){
+@media screen and (max-width: 630px) {
 
-  .background {
+  /*   .background {
     &::before {
       content: "";
       position: absolute;
@@ -291,7 +297,7 @@ a {
       z-index: -1;
       margin-top: 200px;
     }
-  }
+  } */
 
   main {
     >div {
@@ -309,29 +315,12 @@ a {
       >div {
         max-width: 90%;
         margin-left: 0;
-
-        >div {
-          margin-top: -135px;
-        }
       }
     }
   }
 }
 
-@media screen and (max-width: 500px){
-/*   .image-container {
-
-    &::before {
-      width: 160%;
-      top: -150%;
-    }
-
-    >img {
-      width: 350px;
-      height: 350px;
-    }
-  } */
-
+@media screen and (max-width: 500px) {
   main {
     gap: 20px;
     padding: 0;
@@ -339,6 +328,7 @@ a {
     >div {
       gap: 50px;
       padding-right: 16%;
+
       >div {
         gap: 35%;
         width: 50%;
@@ -350,26 +340,32 @@ a {
     display: none;
   }
 
-
   .separator {
     width: 50%;
   }
 }
 
 @media screen and (max-width: 420px) {
-/*   .image-container {
-    margin-top: 5vh;
-     &::before {
-      width: 125%;
-      top: -100%;
-    } 
-    >img {
-      width: 300px;
-      height: 300px;
-    }
-  } */
-
   .separator {
     width: 35%;
+  }
+}
+
+
+@media screen and (min-width: 1440px) {
+  h1 {
+    font-size: 4.5rem;
+  }
+
+  section {
+    >menu {
+      >div {
+        >div {
+          h3 {
+            font-size: 3.5rem;
+          }
+        }
+      }
+    }
   }
 }

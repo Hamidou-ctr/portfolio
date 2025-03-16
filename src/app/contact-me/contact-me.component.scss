@@ -83,17 +83,16 @@ section {
     width: 100%;
     margin-top: 24px;
     margin-bottom: 8px;
+    outline: none;
+    transition: 0.35s;
 
     &::placeholder {
       color: white;
     }
 
-    &:focus {
-      border: solid 2px red;
-    }
-
     &:hover {
       border-color: #70E61C;
+      cursor: pointer;
     }
 
     &--invalid {
