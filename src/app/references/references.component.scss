@@ -112,8 +112,8 @@ menu {
     }
 
     &.disabled {
-      opacity: 0.5; // Macht das Bild halbtransparent 
-      pointer-events: none; // Deaktiviert Klick-Events 
+      opacity: 0.5; 
+      pointer-events: none; 
     }
   }
 
