@@ -16,7 +16,7 @@ export class ProjectComponent {
       name: 'Pollo Loco Game',
       language: 'JavaScript | HTML | CSS',
       description: 'Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.',
-      liveTestUrl: 'https://diallo-hamidou.developerakademie.net/pollo-loco-game/#game',
+      liveTestUrl: 'https://hamidou-diallo.com/all-projects/pollo-loco/',
       githubUrl: 'https://github.com/Hamidou-ctr/pollo-loco',
     },
     {

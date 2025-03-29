@@ -1,3 +1,32 @@
+/* 
+
+
+$colors: (
+  primary: #ff0000,
+  secondary: #00ff00,
+  accent: #0000ff
+);
+
+$new-colors: map-remove($colors, 'secondary', 'accent');
+
+body {
+  background-color: map-get($new-colors, 'primary'); // #ff0000
+}
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
 .container {
   display: flex;
   width: 100%;

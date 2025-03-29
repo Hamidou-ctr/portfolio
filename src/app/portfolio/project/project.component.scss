@@ -3,13 +3,12 @@ section {
     justify-content: center;
     align-items: center;
     padding: 20px;
-    gap: 120px;
-
+    gap: 10%;
+    margin-top: -75px;
     &.left {
         flex-direction: row;
         text-align: justify;
         text-align-last: left;
-
     }
 
     &.right {
@@ -20,7 +19,7 @@ section {
 }
 
 img {
-    width: 80%;
+    width: 50%;
     height: auto;
 }
 
@@ -29,12 +28,7 @@ img {
     flex-direction: column;
     justify-content: center;
     gap: 20px;
-    
-    //width: 50%;
-
-    /*   word-wrap: break-word;
-    overflow-wrap: break-word;
-    text-align: justify; */
+    width: 50%;
 }
 
 h1 {
@@ -112,7 +106,7 @@ p {
         align-items: center;
         flex-direction: column;
         padding: 5%;
-
+        margin-top: -24px;
         &.left {
             flex-direction: column;
             text-align-last: center;
@@ -132,7 +126,7 @@ p {
      .project-content {
         width: 100%;
         padding: 20px;
-        //margin-top: -30%;
+        margin-top: -15%;
     } 
 
     .project-link {
