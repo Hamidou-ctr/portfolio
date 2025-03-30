@@ -20,18 +20,11 @@
             "outputPath": "dist/portfolio",
             "index": "src/index.html",
             "browser": "src/main.ts",
-            "polyfills": [
-              "zone.js"
-            ],
+            "polyfills": ["zone.js"],
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
-            "assets": [
-              "src/favicon.ico",
-              "src/assets"
-            ],
-            "styles": [
-              "src/styles.scss"
-            ],
+            "assets": ["src/favicon.ico", "src/assets"],
+            "styles": ["src/styles.scss"],
             "scripts": []
           },
           "configurations": {
@@ -79,19 +72,11 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "polyfills": [
-              "zone.js",
-              "zone.js/testing"
-            ],
+            "polyfills": ["zone.js", "zone.js/testing"],
             "tsConfig": "tsconfig.spec.json",
             "inlineStyleLanguage": "scss",
-            "assets": [
-              "src/favicon.ico",
-              "src/assets"
-            ],
-            "styles": [
-              "src/styles.scss"
-            ],
+            "assets": ["src/favicon.ico", "src/assets"],
+            "styles": ["src/styles.scss"],
             "scripts": []
           }
         }
@@ -114,18 +99,14 @@
             "outputPath": "dist/pokemon",
             "index": "projects/pokemon/src/index.html",
             "browser": "projects/pokemon/src/main.ts",
-            "polyfills": [
-              "zone.js"
-            ],
+            "polyfills": ["zone.js"],
             "tsConfig": "projects/pokemon/tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": [
               "projects/pokemon/src/favicon.ico",
               "projects/pokemon/src/assets"
             ],
-            "styles": [
-              "projects/pokemon/src/styles.scss"
-            ],
+            "styles": ["projects/pokemon/src/styles.scss"],
             "scripts": []
           },
           "configurations": {
@@ -173,19 +154,14 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "polyfills": [
-              "zone.js",
-              "zone.js/testing"
-            ],
+            "polyfills": ["zone.js", "zone.js/testing"],
             "tsConfig": "projects/pokemon/tsconfig.spec.json",
             "inlineStyleLanguage": "scss",
             "assets": [
               "projects/pokemon/src/favicon.ico",
               "projects/pokemon/src/assets"
             ],
-            "styles": [
-              "projects/pokemon/src/styles.scss"
-            ],
+            "styles": ["projects/pokemon/src/styles.scss"],
             "scripts": []
           }
         }

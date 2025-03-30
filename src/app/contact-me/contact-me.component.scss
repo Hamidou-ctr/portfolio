@@ -3,12 +3,14 @@ header {
   justify-content: flex-start;
   align-items: center;
   gap: 10px;
-  > p {
+
+  >p {
     background-color: #9747ff;
     width: 35%;
     height: 4px;
   }
-  > h1 {
+
+  >h1 {
     font-size: 90px;
     font-weight: 700;
     line-height: 108px;
@@ -49,7 +51,8 @@ main {
 section {
   display: flex;
   gap: 20px;
-  > div {
+
+  >div {
     display: flex;
     padding-left: 50px;
     gap: 10px;
@@ -98,7 +101,7 @@ section {
     &--invalid {
       border-color: red;
 
-      &:hover{
+      &:hover {
         border-color: red;
       }
     }
@@ -176,202 +179,4 @@ section {
   }
 }
 
-.checkbox-container {
-  display: flex;
-  gap: 10px;
-  align-items: center;
-
-  input[type="checkbox"] {
-    + .custom-checkbox {
-      position: relative;
-      padding-left: 25px;
-      cursor: pointer;
-      color: white;
-
-      &::before {
-        content: "";
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 18px;
-        height: 18px;
-        border: 2px solid #9747ff;
-        border-radius: 4px;
-        background-color: rgb(20, 29, 47);
-        transition: border-color 0.3s, background-color 0.3s;
-      }
-
-      &::after {
-        content: "";
-        position: absolute;
-        left: 5px;
-        top: 5px;
-        width: 8px;
-        height: 8px;
-        background-color: transparent;
-        border-radius: 2px;
-        transition: background-color 0.3s;
-      }
-    }
-
-    &:checked + .custom-checkbox::before {
-      border-color: #70E61C;
-      background-color: #70E61C;
-    }
-
-    &:checked + .custom-checkbox::after {
-      background-color: white;
-    }
-
-    &:focus + .custom-checkbox::before {
-      border-color: #9747ff;
-    }
-  }
-
-  .contact-form__error {
-    color: red;
-    margin-top: -19px;
-  }
-}
-
-.checkbox-container-error {
-  display: flex;
-  flex-direction: column;
-}
-
-label {
-  display: flex;
-}
-
-.contact-form__button {
-  background-color: #70e71a;
-  color: white;
-  border: none;
-  height: 50px;
-  width: 200px;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: 0.3s;
-  font-size: 23px;
-  margin-left: 30%;
-
-  &:hover {
-    background-color: rgb(130, 50, 230);
-  }
-
-  &:disabled {
-    background-color: rgb(182, 182, 182);
-    cursor: not-allowed;
-    opacity: 0.7;
-  }
-}
-
-.go_up_button {
-  display: flex;
-  margin-left: 90%;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.green-line {
-  background-color: #33e259;
-  width: 100%;
-  height: 4px;
-  margin-top: 50px;
-  z-index: 1;
-  padding: 0;
-}
-
-.checkbox-container {
-  display: flex;
-  gap: 10px;
-  align-items: center;
-  margin-top: 20px;
-
-  .checkbox-container-error {
-    display: flex;
-    flex-direction: column;
-
-    .custom-checkbox {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      cursor: pointer;
-
-      input[type="checkbox"] {
-        display: none;
-      }
-
-      label {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        color: white;
-        font-size: 16px;
-        cursor: pointer;
-
-        img {
-          width: 20px;
-          height: 20px;
-        }
-
-        a.privacy-link {
-          color: #9747ff;
-          text-decoration: none;
-
-          &:hover {
-            text-decoration: underline;
-          }
-        }
-      }
-    }
-
-    .contact-form__error {
-      color: red;
-      font-size: 14px;
-      margin-top: 5px;
-    }
-  }
-}
-
-@media screen and (max-width: 1000px){
-  main{
-    &::before {
-      width: 90%;
-      height: 60%;
-      left: -280px;
-    }
-  }
-}
-
-@media screen and (max-width: 720px) {
-  header {
-    gap: 2%;
-    padding-right: 10%;
-    > h1 {
-      font-size: 350%;
-    }
-  }
-
-  section {
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .contact-form {
-    max-width: 100%;
-  }
-
-  main{
-    &::before {
-      width: 120%;
-      height: 26%;
-      left: -280px;
-      bottom: -50px;
-    }
-  }
-
-  .go_up_button {
-    margin-left: 80%;
-  }
-}
+@import './responsiv-contact-me';
