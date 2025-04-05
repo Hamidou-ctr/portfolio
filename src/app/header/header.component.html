@@ -4,13 +4,17 @@
   <div class="navbar-header">
     <a class="navbar-brand clickable" 
        [class.active]="selectedSection === 'aboutMe'"
-       (click)="scrollToSection('aboutMe')">About me</a>
+       (click)="scrollToSection('aboutMe')">{{ "HeaderComponent.ABOUT_ME" | translate }}</a>
     <a class="clickable" 
        [class.active]="selectedSection === 'skills'"
-       (click)="scrollToSection('skills')">Skills</a>
+       (click)="scrollToSection('skills')">{{ "HeaderComponent.SKILLS" | translate }}</a>
     <a class="clickable" 
        [class.active]="selectedSection === 'portfolio'"
-       (click)="scrollToSection('portfolio')">Portfolio</a>
+       (click)="scrollToSection('portfolio')">{{ "HeaderComponent.PORTFOLIO" | translate }}</a>
+
+      <button (click)="changeLanguage('de')" [class.active]="currentLanguage === 'de'">DE</button>
+      <button (click)="changeLanguage('en')" [class.active]="currentLanguage === 'en'">EN</button>
+      <button (click)="changeLanguage('fr')" [class.active]="currentLanguage === 'fr'">FR</button>
   </div>
 
   <img [class.hidden]="showMenu" class="clickable" 
@@ -27,9 +31,16 @@
   </div>
 
   <div class="overlay-content">
-    <a (click)="scrollToSection('aboutMe')">About me</a>
-    <a (click)="scrollToSection('skills')">My skills</a>
-    <a (click)="scrollToSection('portfolio')">Portfolio</a>
-    <a (click)="scrollToSection('contact')">Contact</a>
+    <a (click)="scrollToSection('aboutMe')">{{ "ABOUT_ME" | translate }}</a>
+    <a (click)="scrollToSection('skills')">{{ "SKILLS" | translate }}</a>
+    <a (click)="scrollToSection('portfolio')">{{ "PORTFOLIO" | translate }}</a>
+    <a (click)="scrollToSection('contact')">{{ "CONTACT" | translate }}</a>
   </div>
+
+  <div>
+    <button (click)="changeLanguage('de')" [class.active]="currentLanguage === 'de'">DE</button> /
+    <button (click)="changeLanguage('en')" [class.active]="currentLanguage === 'en'">EN</button>
+    <button (click)="changeLanguage('fr')" [class.active]="currentLanguage === 'fr'">FR</button>  
+  </div>
+
 </div>

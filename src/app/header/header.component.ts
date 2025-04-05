@@ -1,14 +1,32 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+
+import { TranslateService } from '@ngx-translate/core';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, TranslateModule],
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
-export class HeaderComponent {
+export class HeaderComponent implements OnInit {
+  currentLanguage: string = 'en';
+
+  constructor(private translate: TranslateService) {
+    this.translate.setDefaultLang('en');
+  }
+
+  changeLanguage(lang: string) {
+    this.translate.use(lang);
+    this.currentLanguage = lang;
+  }
+
+  ngOnInit() {
+    this.currentLanguage = this.translate.getDefaultLang();
+  }
+
   showMenu = false;
   isHidden = false;
   selectedSection: string | null = null;

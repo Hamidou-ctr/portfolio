@@ -1,0 +1,16 @@
+{
+  "HeaderComponent": {
+    "ABOUT_ME": "À propos de moi",
+    "SKILLS": "Compétences",
+    "PORTFOLIO": "Portfolio",
+    "CONTACT": "Contact"
+  },
+
+  "HomePageComponent": {
+    "i": "Je",
+    "am": "suis",
+    "frontend_developer": "DÉVELOPPEUR FRONTEND",
+    "Let's_talk!": "Discutons !",
+    "scroll_down": "vers le bas"
+  }
+}

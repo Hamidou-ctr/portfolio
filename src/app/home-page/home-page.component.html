@@ -7,14 +7,14 @@
 
       <div class="intro">
         <div class="intro-text">
-          <span class="writing-mode-Inverse"> <span>I</span> am </span>
+          <span class="writing-mode-Inverse"> <span>{{ "HomePageComponent.i" | translate}}</span> {{ "HomePageComponent.am" | translate}} </span>
           <div class="name-title">
             <h1>Hamidou Diallo</h1>
-            <h3>FRONTEND DEVELOPER</h3>
+            <h3>{{ "HomePageComponent.frontend_developer" | translate}}</h3>
           </div>
         </div>
         <button class="clickable" (click)="scrollToContact()">
-          Let's talk!
+          {{ "HomePageComponent.Let's_talk!" | translate }}
         </button>
       </div>
     </menu>
@@ -40,7 +40,7 @@
       </div>
     </div>
     <p class="scroll-down" (click)="scrollToBottom()">
-      Scroll down
+      {{ "HomePageComponent.scroll_down" | translate}}
       <img (click)="scrollToBottom()"
         src="./../../assets/img/scroll_down.png"
         alt="Scroll down"
