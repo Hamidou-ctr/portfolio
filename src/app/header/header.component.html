@@ -37,6 +37,12 @@
         [class.active]="currentLanguage === 'en'"
       >
         EN
+      </button> <button
+        class="clickable"
+        (click)="changeLanguage('fr')"
+        [class.active]="currentLanguage === 'fr'"
+      >
+        FR
       </button>
     </div>
   </div>
