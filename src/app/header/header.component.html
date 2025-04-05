@@ -1,23 +1,49 @@
-<nav >
+<nav>
   <h1 [class.hidden]="showMenu" class="clickable">Hamidou</h1>
 
-  <div class="navbar-header">
-    <a class="navbar-brand clickable" 
-       [class.active]="selectedSection === 'aboutMe'"
-       (click)="scrollToSection('aboutMe')">{{ "HeaderComponent.ABOUT_ME" | translate }}</a>
-    <a class="clickable" 
-       [class.active]="selectedSection === 'skills'"
-       (click)="scrollToSection('skills')">{{ "HeaderComponent.SKILLS" | translate }}</a>
-    <a class="clickable" 
-       [class.active]="selectedSection === 'portfolio'"
-       (click)="scrollToSection('portfolio')">{{ "HeaderComponent.PORTFOLIO" | translate }}</a>
+  <div class="navbar">
+    <div class="navbar-header">
+      <a
+        class="navbar-brand clickable"
+        [class.active]="selectedSection === 'aboutMe'"
+        (click)="scrollToSection('aboutMe')"
+        >{{ "HeaderComponent.ABOUT_ME" | translate }}</a
+      >
+      <a
+        class="clickable"
+        [class.active]="selectedSection === 'skills'"
+        (click)="scrollToSection('skills')"
+        >{{ "HeaderComponent.SKILLS" | translate }}</a
+      >
+      <a
+        class="clickable"
+        [class.active]="selectedSection === 'portfolio'"
+        (click)="scrollToSection('portfolio')"
+        >{{ "HeaderComponent.PORTFOLIO" | translate }}</a
+      >
+    </div>
 
-      <button (click)="changeLanguage('de')" [class.active]="currentLanguage === 'de'">DE</button>
-      <button (click)="changeLanguage('en')" [class.active]="currentLanguage === 'en'">EN</button>
-      <button (click)="changeLanguage('fr')" [class.active]="currentLanguage === 'fr'">FR</button>
+    <div>
+      <button
+        class="clickable"
+        (click)="changeLanguage('de')"
+        [class.active]="currentLanguage === 'de'"
+      >
+        DE
+      </button>
+      <button
+        class="clickable"
+        (click)="changeLanguage('en')"
+        [class.active]="currentLanguage === 'en'"
+      >
+        EN
+      </button>
+    </div>
   </div>
 
-  <img [class.hidden]="showMenu" class="clickable" 
+  <img
+    [class.hidden]="showMenu"
+    class="clickable"
     src="./../../assets/img/burger_menu.png"
     alt="Menu"
     (click)="toggleMenu()"
@@ -27,20 +53,45 @@
 <div class="overlay" *ngIf="showMenu">
   <div class="overlay-header">
     <h1>Hamidou</h1>
-    <img class="close clickable" (click)="toggleMenu()" src="./../../assets/img/close_medium.png" alt="Close">
+    <img
+      class="close clickable"
+      (click)="toggleMenu()"
+      src="./../../assets/img/close_medium.png"
+      alt="Close"
+    />
   </div>
 
-  <div class="overlay-content">
-    <a (click)="scrollToSection('aboutMe')">{{ "ABOUT_ME" | translate }}</a>
-    <a (click)="scrollToSection('skills')">{{ "SKILLS" | translate }}</a>
-    <a (click)="scrollToSection('portfolio')">{{ "PORTFOLIO" | translate }}</a>
-    <a (click)="scrollToSection('contact')">{{ "CONTACT" | translate }}</a>
-  </div>
+  <div class="overlay-divider">
+    <div class="overlay-content">
+      <a (click)="scrollToSection('aboutMe')">{{ "ABOUT_ME" | translate }}</a>
+      <a (click)="scrollToSection('skills')">{{ "SKILLS" | translate }}</a>
+      <a (click)="scrollToSection('portfolio')">{{
+        "PORTFOLIO" | translate
+      }}</a>
+      <a (click)="scrollToSection('contact')">{{ "CONTACT" | translate }}</a>
+    </div>
 
-  <div>
-    <button (click)="changeLanguage('de')" [class.active]="currentLanguage === 'de'">DE</button> /
-    <button (click)="changeLanguage('en')" [class.active]="currentLanguage === 'en'">EN</button>
-    <button (click)="changeLanguage('fr')" [class.active]="currentLanguage === 'fr'">FR</button>  
+    <div class="overlay-footer">
+      <span
+        (click)="changeLanguage('de')"
+        [class.active]="currentLanguage === 'de'"
+      >
+        DE
+      </span>
+      /
+      <span
+        (click)="changeLanguage('en')"
+        [class.active]="currentLanguage === 'en'"
+      >
+        EN
+      </span>
+      /
+      <span
+        (click)="changeLanguage('fr')"
+        [class.active]="currentLanguage === 'fr'"
+      >
+        FR
+      </span>
+    </div>
   </div>
-
 </div>
