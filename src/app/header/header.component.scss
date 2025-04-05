@@ -73,7 +73,7 @@ img {
   display: none;
 }
 span{
-  font-weight: 600;
+  
   &.active {
     color: greenyellow;
   }
@@ -81,7 +81,12 @@ span{
 .overlay-divider{
   display: flex;
   flex-direction: column;
-  
+  gap: 48px;
+
+
+  font-size: 2.5rem;
+  font-weight: 500;
+  line-height: 1.5rem;
 }
 
 button {
@@ -155,6 +160,7 @@ button {
   }
 
   a {
+    font-size: 2rem;
     &:hover {
       color: #FFFFFF;
     }
