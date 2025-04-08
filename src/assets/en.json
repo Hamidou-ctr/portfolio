@@ -12,5 +12,9 @@
     "frontend_developer": "FRONTEND DEVELOPER",
     "Let's_talk!": "Let's talk!",
     "scroll_down": "Scroll down"
+  },
+
+  "AboutMeComponent": {
+    "about_me": "About me"
   }
 }

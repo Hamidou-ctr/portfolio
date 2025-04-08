@@ -12,5 +12,9 @@
     "frontend_developer": "FRONTEND ENTWICKLER",
     "Let's_talk!": "Lass uns reden!",
     "scroll_down": "Nach unten"
+  },
+
+  "AboutMeComponent": {
+    "about_me": "Über mich"
   }
 }
