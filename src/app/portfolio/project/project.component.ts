@@ -24,7 +24,7 @@ export class ProjectComponent {
       name: 'Join',
       language: 'JavaScript | HTML | CSS | Firebase ',
       description: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories. ',
-      liveTestUrl: 'https://hamidou-diallo.com/angular-projects/ring-of-fire',
+      liveTestUrl: 'https://join.hamidoudiallo.de/',
       githubUrl: 'https://github.com/Hamidou-ctr',
     },
   /*   {
