@@ -1,20 +1,40 @@
 {
-    "HeaderComponent": {
-      "ABOUT_ME": "À propos de moi",
-      "SKILLS": "Compétences",
-      "PORTFOLIO": "Portfolio",
-      "CONTACT": "Contact"
-    },
-  
-    "HomePageComponent": {
-      "i": "Je",
-      "am": "suis",
-      "frontend_developer": "DÉVELOPPEUR FRONTEND",
-      "Let's_talk!": "Discutons !",
-      "scroll_down": "vers le bas"
-    },
+  "HeaderComponent": {
+    "ABOUT_ME": "À propos de moi",
+    "SKILLS": "Compétences",
+    "PORTFOLIO": "Portfolio",
+    "CONTACT": "Contact"
+  },
 
-    "AboutMeComponent": {
-      "about_me": "À propos de moi"
-    }
+  "HomePageComponent": {
+    "i": "Je",
+    "am": "suis",
+    "frontend_developer": "DÉVELOPPEUR FRONTEND",
+    "Let's_talk!": "Discutons !",
+    "scroll_down": "vers le bas"
+  },
+
+  "AboutMeComponent": {
+    "about_me": "À propos de moi"
+  },
+
+  "SkillsComponent": {
+    "skills": "Mes compétences"
+  },
+
+  "PortfolioComponent": {
+    "portfolio": "Mon portfolio"
+  },
+
+  "ContactComponent": {
+    "contact": "Contact",
+    "name": "Nom",
+    "email": "E-mail",
+    "message": "Message",
+    "send": "Envoyer"
+  },
+  
+  "FooterComponent": {
+    "footer_text": "Tous droits réservés © 2023"
   }
+}

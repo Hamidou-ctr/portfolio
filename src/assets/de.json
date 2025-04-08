@@ -16,5 +16,25 @@
 
   "AboutMeComponent": {
     "about_me": "Über mich"
+  },
+
+  "SkillsComponent": {
+    "skills": "Meine Fähigkeiten"
+  },
+
+  "PortfolioComponent": {
+    "portfolio": "Mein Portfolio"
+  },
+
+  "ContactComponent": {
+    "contact": "Kontakt",
+    "name": "Name",
+    "email": "E-Mail",
+    "message": "Nachricht",
+    "send": "Senden"
+  },
+  
+  "FooterComponent": {
+    "footer_text": "Alle Rechte vorbehalten © 2023"
   }
 }
