@@ -23,7 +23,7 @@
   },
 
   "PortfolioComponent": {
-    "portfolio": "Mon portfolio"
+    "portfolio": "Portfolio"
   },
 
   "ContactComponent": {
@@ -33,7 +33,7 @@
     "message": "Message",
     "send": "Envoyer"
   },
-  
+
   "FooterComponent": {
     "footer_text": "Tous droits réservés © 2023"
   }

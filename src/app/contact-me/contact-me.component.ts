@@ -2,11 +2,12 @@ import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Component, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-contact-me',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, TranslateModule, FormsModule],
   templateUrl: './contact-me.component.html',
   styleUrls: ['./contact-me.component.scss']
 })
