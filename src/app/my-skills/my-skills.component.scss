@@ -22,7 +22,7 @@ section {
 }
 
 h1 {
-  font-size: clamp(2rem, 8vw, 8rem);
+  font-size: clamp(2rem, 4vw, 8rem);
   font-weight: 700;
   text-align: right;
   text-wrap: nowrap;
@@ -131,7 +131,8 @@ main {
   flex: 1;
   height: 4px;
   background-color: #9747ff;
-  margin-top: 6vw;
+  margin-top: 3.5vw;
+  //margin-top: 6vw;
 }
 
 .content {
@@ -208,7 +209,8 @@ button {
   }
 
   h1 {
-    font-size: clamp(2rem, 10vw, 9rem);
+    //font-size: clamp(2rem, 10vw, 9rem);
+    font-size: clamp(1rem, 5vw, 9rem);
     text-align: center;
     margin-bottom: 30px;
   }
@@ -218,7 +220,7 @@ button {
   }
 
   .bright-lavender-line {
-    margin-top: 7vw;
+    margin-top: 4vw;
     width: 130px;
   }
 
