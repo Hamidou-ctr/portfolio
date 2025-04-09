@@ -16,7 +16,10 @@
 
   "AboutMeComponent": {
     "about_me": "À propos de moi",
-    "description": "Bonjour, je suis un développeur frontend germanophone vivant à Wuppertal. Motivé par les possibilités illimitées dans le domaine de l'informatique, je suis enthousiaste à l'idée de créer des sites Web et des applications visuellement captivants et intuitifs."
+    "description": "Bonjour, je suis un développeur frontend germanophone vivant à Wuppertal. Motivé par les possibilités illimitées dans le domaine de l'informatique, je suis enthousiaste à l'idée de créer des sites Web et des applications visuellement captivants et intuitifs.",
+    "description2": "Flexible en termes d'environnements de travail, je peux travailler efficacement à la fois sur site à Wuppertal et à distance.",
+    "description3": "Je suis ouvert d'esprit et toujours à la recherche de défis personnels pour améliorer constamment mes connaissances et mes compétences.",
+    "description4": "Dans ma profession, la programmation ne consiste pas seulement à écrire du code ; c'est une forme créative de résolution de problèmes. Je suis fier de ma capacité à transformer des défis techniques complexes en solutions simples et conviviales. De cette manière, je vous aide à atteindre vos objectifs et à donner vie à vos visions."
   },
 
   "SkillsComponent": {

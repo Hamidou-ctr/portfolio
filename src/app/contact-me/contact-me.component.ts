@@ -23,6 +23,7 @@ export class ContactMeComponent {
   };
 
   mailTest = true;
+  //mailTest = false;   // Uncomment this line to send real emails
 
 
   onPrivacyChange(value: boolean, privacyControl: { control: { markAsTouched: () => void } }) {
