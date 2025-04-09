@@ -15,7 +15,8 @@
   },
 
   "AboutMeComponent": {
-    "about_me": "About me"
+    "about_me": "About me",
+    "description": "Hi, I'm a german speaking Frontend Developer leaving in Wuppertal . Motivated by the limitless opportunities within IT, I am excited about crafting visually captivating and intuitive websites and applications."
   },
 
   "SkillsComponent": {

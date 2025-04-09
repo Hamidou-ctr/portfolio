@@ -15,7 +15,8 @@
   },
 
   "AboutMeComponent": {
-    "about_me": "Über mich"
+    "about_me": "Über mich",
+    "description": "Hallo, ich bin ein deutschsprachiger Frontend-Entwickler, der in Wuppertal lebt. Motiviert von den grenzenlosen Möglichkeiten in der IT freue ich mich darauf, visuell ansprechende und intuitive Websites und Anwendungen zu gestalten."
   },
 
   "SkillsComponent": {
