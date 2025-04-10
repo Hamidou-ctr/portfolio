@@ -23,7 +23,10 @@
   },
 
   "SkillsComponent": {
-    "skills": "Mes compétences"
+    "skills": "Mes compétences",
+    "skills_description": "Je maîtrise une variété de langages de programmation et de frameworks, notamment HTML, CSS, JavaScript, React et plus encore. Mon expertise s'étend à la conception réactive, garantissant que les applications sont superbes sur tous les appareils. Je suis également familiarisé avec les systèmes de contrôle de version comme Git, qui permettent une collaboration et une gestion du code efficaces.",
+    "skills_description2": "À la recherche de",
+    "skills_description3": "une autre compétence"
   },
 
   "PortfolioComponent": {

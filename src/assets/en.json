@@ -23,7 +23,10 @@
   },
 
   "SkillsComponent": {
-    "skills": "My Skills"
+    "skills": "My Skills",
+    "skills_description": "I am proficient in a variety of programming languages and frameworks, including HTML, CSS, JavaScript, React, and more. My expertise extends to responsive design, ensuring that applications look great on all devices. I am also familiar with version control systems like Git, which allows for efficient collaboration and code management.",
+    "skills_description2": "Looking for",
+    "skills_description3": "another skill"
   },
 
   "PortfolioComponent": {

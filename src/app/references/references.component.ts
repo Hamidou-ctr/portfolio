@@ -31,7 +31,7 @@ export class ReferencesComponent {
       text: 'Another reference text here.',
       title: '',
       author: 'Another Author - Team Partner 22222222',
-      profileImage: './../../assets/img/profile2.png',
+      profileImage: './../../assets/img/profil2.png',
       name: ''
     },
     {
