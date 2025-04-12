@@ -6,7 +6,3 @@ export const routes: Routes = [
   { path: 'privacy-policy', component: PrivacyPolicyComponent },
   { path: 'legal-notice', component: LegalNoticeComponent }
 ];
-
-
-
-//  { path: '', redirectTo: 'privacy-policy', pathMatch: 'full' }
