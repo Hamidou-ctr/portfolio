@@ -16,9 +16,7 @@ export class HomePageComponent {
       contactSection.scrollIntoView({ behavior: 'smooth' });
     }
   }
-
-
-
+  
   scrollToBottom() {
     window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
   }
