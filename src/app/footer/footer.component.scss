@@ -4,21 +4,20 @@ footer {
   align-items: center;
   color: white;
   height: 291px;
-
-  div{
-
-    p{
+  div {
+    p {
       text-wrap: nowrap;
       position: relative;
+      font-weight: 400;
+      font-size: 1.5rem;
+      cursor: pointer;
       &:hover {
-        cursor: pointer;
-        
         &::after {
           content: "";
           position: absolute;
           left: 0;
           bottom: 0;
-          width: 36%;
+          width: 55%;
           height: 2px;
           background: url('./../../assets/img/legal_notice_hover_effect.png') repeat-x;
           background-size: contain;
@@ -42,11 +41,34 @@ img {
   left: 144px;
 }
 
-span {
-  display: none;
+pre {
+  font-weight: 400;
+  font-size: 1.5rem;
 }
 
-@media screen and (max-width: 568px) {
+span {
+  display: none;
+  text-wrap: nowrap;
+  position: relative;
+  font-weight: 400;
+  font-size: 1.5rem;
+
+  &:hover {
+    cursor: pointer;
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 60%;
+      height: 2px;
+      background: url('./../../assets/img/legal_notice_hover_effect.png') repeat-x;
+      background-size: contain;
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
   footer {
     flex-direction: column;
     gap: 20px;
