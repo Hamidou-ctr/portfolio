@@ -4,6 +4,28 @@ footer {
   align-items: center;
   color: white;
   height: 291px;
+
+  div{
+
+    p{
+      text-wrap: nowrap;
+      position: relative;
+      &:hover {
+        cursor: pointer;
+        
+        &::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          width: 36%;
+          height: 2px;
+          background: url('./../../assets/img/legal_notice_hover_effect.png') repeat-x;
+          background-size: contain;
+        }
+      }
+    }
+  }
 }
 
 section {
@@ -42,10 +64,3 @@ span {
     display: none;
   }
 }
-
-/* h1::after {
-    content: 'i';
-    color: red; /* Change this to your desired color 
-    position: absolute;
-    margin-left: -10px; /* Adjust this value to position the dot correctly 
-} */
