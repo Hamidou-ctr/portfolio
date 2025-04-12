@@ -1,6 +1,6 @@
 import { Component, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterOutlet } from '@angular/router';
+import { RouterOutlet, Router } from '@angular/router';
 import { HeaderComponent } from "./header/header.component";
 import { HomePageComponent } from './home-page/home-page.component';
 import { AboutMeComponent } from "./about-me/about-me.component";
@@ -19,6 +19,14 @@ import { FooterComponent } from './footer/footer.component';
 })
 export class AppComponent {
   title = 'Portfolio';
+
+  constructor(private router: Router) { }
+
+  isSpecialPage(): boolean {
+    return this.router.url.includes('/privacy-policy') ||
+      this.router.url.includes('/legal-notice');
+  }
+
 
   @HostListener('document:click', ['$event'])
   handleDocumentClick(event: MouseEvent): void {
