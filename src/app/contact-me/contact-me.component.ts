@@ -78,3 +78,8 @@ export class ContactMeComponent {
     // window.scrollTo({ top: 0, behavior: 'instant' })   <!-- window.scrollTo({ top: 0, behavior: 'instant' }) Empfehlung für legal notice -->
   }
 }
+
+/* 
+    "success_message": "Your message has been sent successfully!",
+    "error_message_send": "An error occurred while sending your message. Please try again later."
+*/

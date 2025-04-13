@@ -52,10 +52,27 @@
 
   "ContactComponent": {
     "contact": "Contact",
-    "name": "Name",
-    "email": "Email",
-    "message": "Message",
-    "send": "Send"
+    "problem_to_solve": "Got a problem to solve?",
+    "message_prompt": "Feel free to drop me a message if you have any questions or just want to say hi!",
+    "need_frontend_developer": "Need a Frontend Developer ?",
+    "contact_me": "Contact me",
+
+    "name_placeholder": "your name",
+    "email_placeholder": "your email",
+    "message_placeholder": "your message",
+    "send_button": "Send",
+
+
+    "name_error": "Your name is required",
+    "email_error": "Your email is required",
+    "message_error": "Your message is empty",
+
+
+    "privacy_policy_acknowledgment": "I've read the",
+    "privacy_policy": "Privacy Policy",
+    "privacy_policy_agreement": "and agree to the processing of my data as outlined.",
+    "privacy_policy_error": "Please accept the privacy policy."
+    
   },
 
   "FooterComponent": {

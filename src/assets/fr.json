@@ -52,10 +52,26 @@
 
   "ContactComponent": {
     "contact": "Contact",
-    "name": "Nom",
-    "email": "E-mail",
-    "message": "Message",
-    "send": "Envoyer"
+    "problem_to_solve": "Vous avez un problème à résoudre ?",
+    "message_prompt": "N'hésitez pas à m'envoyer un message si vous avez des questions ou si vous voulez juste dire bonjour !",
+    "need_frontend_developer": "Besoin d'un développeur frontend ?",
+    "contact_me": "Contactez-moi",
+
+    "name_placeholder": "votre nom",
+    "email_placeholder": "votre e-mail",
+    "message_placeholder": "votre message",
+    "send_button": "Envoyer",
+
+
+    "name_error": "Votre nom est obligatoire",
+    "email_error": "Votre e-mail est obligatoire",
+    "message_error": "Votre message est vide",
+
+    "privacy_policy_acknowledgment": "J'ai lu la",
+    "privacy_policy": "Politique de confidentialité",
+    "privacy_policy_agreement": "et j'accepte le traitement de mes données tel que décrit.",
+    "privacy_policy_error": "Veuillez accepter la politique de confidentialité."
+
   },
 
   "FooterComponent": {
