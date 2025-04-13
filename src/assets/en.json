@@ -36,6 +36,20 @@
     "portfolio_description": "Explore a selection of my work here - Interact with projects to see my skills in action."
   },
 
+  "ProjectsComponent": {
+    "Pollo_Loco_Projects": {
+      "title": "Pollo Loco Game",
+      "description": "Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen."
+    },
+
+    "join_Projects": {
+      "title": "Join",
+      "description": "Together with other training participants, I co-developed a web-based task management tool inspired by the Kanban system. Using HTML, CSS, JavaScript, and Firebase, we built a collaborative app with drag-and-drop functionality and task assignment by user and category. Git was used for version control and teamwork coordination."
+    },
+
+    "live_test_button": "Live Test"
+  },
+
   "ContactComponent": {
     "contact": "Contact",
     "name": "Name",

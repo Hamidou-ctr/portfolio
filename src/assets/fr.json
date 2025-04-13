@@ -36,6 +36,20 @@
     "portfolio_description": "Découvrez ici une sélection de mes travaux - Interagissez avec les projets pour voir mes compétences en action."
   },
 
+  "ProjectsComponent": {
+    "Pollo_Loco_Projects": {
+      "title": "Jeu Pollo Loco",
+      "description": "Jeu de saut, de course et de lancer basé sur une approche orientée objet. Aidez Pepe à trouver des pièces de monnaie et de la salsa tabasco pour combattre la poule folle."
+    },
+
+    "join_Projects": {
+      "title": "Rejoindre",
+      "description": "Avec d'autres participants à la formation, j'ai co-développé un outil de gestion des tâches basé sur le Web inspiré du système Kanban. En utilisant HTML, CSS, JavaScript et Firebase, nous avons construit une application collaborative avec une fonctionnalité de glisser-déposer et une attribution des tâches par utilisateur et catégorie. Git a été utilisé pour le contrôle de version et la coordination du travail d'équipe."
+    },
+
+    "live_test_button": "Test en direct"
+  },
+
   "ContactComponent": {
     "contact": "Contact",
     "name": "Nom",

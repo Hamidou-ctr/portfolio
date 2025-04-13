@@ -36,6 +36,20 @@
     "portfolio_description": "Hier finden Sie eine Auswahl meiner Arbeiten - Interagieren Sie mit Projekten, um meine Fähigkeiten in Aktion zu sehen."
   },
 
+  "ProjectsComponent": {
+    "Pollo_Loco_Projects": {
+      "title": "Pollo Loco Spiel",
+      "description": "Spring-, Lauf- und Wurfspiel, das auf einem objektorientierten Ansatz basiert. Hilf Pepe, Münzen und Tabasco-Salsa zu finden, um gegen das verrückte Huhn zu kämpfen."
+    },
+
+    "join_Projects": {
+      "title": "Beitreten",
+      "description": "Gemeinsam mit anderen Ausbildungsteilnehmern habe ich ein webbasiertes Aufgabenverwaltungstool entwickelt, das vom Kanban-System inspiriert ist. Mit HTML, CSS, JavaScript und Firebase haben wir eine kollaborative App mit Drag-and-Drop-Funktionalität und Aufgabenverteilung nach Benutzer und Kategorie erstellt. Git wurde für die Versionskontrolle und die Koordination der Teamarbeit verwendet."
+    },
+
+    "live_test_button": "Live-Test"
+  },
+
   "ContactComponent": {
     "contact": "Kontakt",
     "name": "Name",

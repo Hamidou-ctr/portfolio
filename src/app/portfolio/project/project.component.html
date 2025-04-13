@@ -1,19 +1,12 @@
-<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-  AOS.init();
-</script> 
-
-
 <section *ngFor="let project of projects; let i = index" [ngClass]="{'left': i % 2 === 0, 'right': i % 2 !== 0}">
 
   <img [src]="project.imageUrl" alt="{{ project.name }}"/>
   <div class="project-content">
-    <h1> {{ project.name }} </h1>
+    <h1> {{ project.name | translate }} </h1>
     <h4> {{ project.language }} </h4>
-    <p> {{ project.description }} </p>
+    <p> {{ project.description | translate }} </p>
     <span>
-      <a [href]="project.liveTestUrl" class="project-link" [ngClass]="{'test': true}">Live Test</a>
+      <a [href]="project.liveTestUrl" class="project-link" [ngClass]="{'test': true}"> {{ "ProjectsComponent.live_test_button" | translate }} </a>
       <a [href]="project.githubUrl" class="project-link" [ngClass]="{'GitHub': true}">GitHub</a>
     </span>
   </div>
