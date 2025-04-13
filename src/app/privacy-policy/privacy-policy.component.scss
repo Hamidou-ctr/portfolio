@@ -1,13 +1,40 @@
+.back-button {
+  position: fixed;
+  margin-top: 8rem;
+  left: 90%;
+  cursor: pointer;
+  rotate: -95deg;
+
+  animation: rotate-out 1s ease-in-out infinite;
+  animation-direction: alternate;
+
+  &:hover {
+    transform: scale(1.5);
+  }
+}
+
+@keyframes rotate-out {
+  0% {
+    transform: rotate(-25deg);
+  }
+  100% {
+    transform: rotate(25deg);
+  }
+}
+
 .privacy-policy {
+  margin-top: 5rem;
   padding: 2rem;
   margin: 0 auto;
   font-family: 'Arial', sans-serif;
   line-height: 1.6;
+  background-color: #0066cc;
 
   h1 {
     font-size: 2rem;
     margin-bottom: 1.5rem;
     color: #00416d;
+    margin-top: 5rem;
   }
 
   h2 {
@@ -22,7 +49,8 @@
     color: #00314d;
   }
 
-  p, ul {
+  p,
+  ul {
     margin-top: 1rem;
   }
 
@@ -32,7 +60,7 @@
   }
 
   a {
-    color: #0066cc;
+    color: #052748;
     text-decoration: underline;
 
     &:hover {
@@ -43,6 +71,32 @@
   .last-updated {
     margin-top: 3rem;
     font-style: italic;
-    color: #666;
+    color: #867c7c;
+  }
+}
+
+
+@media screen and (max-width: 500px) {
+  .back-button {
+    left: 85%;
+  }
+  .privacy-policy {
+    margin-top: 5rem;
+    padding: 1rem;
+    font-size: 0.9rem;
+
+    h1 {
+      font-size: 1.5rem;
+    }
+
+    h2 {
+      font-size: 1.2rem;
+      margin-top: 1.5rem;
+    }
+
+    h3 {
+      font-size: 1rem;
+      margin-top: 1rem;
+    }
   }
 }
