@@ -28,25 +28,25 @@
   margin: 0 auto;
   font-family: 'Arial', sans-serif;
   line-height: 1.6;
-  background-color: #0066cc;
+  padding-left: 4rem;
 
   h1 {
     font-size: 2rem;
     margin-bottom: 1.5rem;
-    color: #00416d;
+    color: #0c76bd;
     margin-top: 5rem;
   }
 
   h2 {
     font-size: 1.4rem;
     margin-top: 2rem;
-    color: #00314d;
+    color: #0c76bd;
   }
 
   h3 {
     font-size: 1.2rem;
     margin-top: 1.5rem;
-    color: #00314d;
+    color: #0c76bd;
   }
 
   p,
@@ -60,7 +60,7 @@
   }
 
   a {
-    color: #052748;
+    color: #0c76bd;
     text-decoration: underline;
 
     &:hover {
@@ -71,7 +71,7 @@
   .last-updated {
     margin-top: 3rem;
     font-style: italic;
-    color: #867c7c;
+    color: #666;
   }
 }
 
@@ -81,9 +81,10 @@
     left: 85%;
   }
   .privacy-policy {
-    margin-top: 5rem;
+    margin-top: 2rem;
     padding: 1rem;
     font-size: 0.9rem;
+    padding-left: 2rem;
 
     h1 {
       font-size: 1.5rem;
