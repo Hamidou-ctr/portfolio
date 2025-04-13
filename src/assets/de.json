@@ -32,7 +32,8 @@
   },
 
   "PortfolioComponent": {
-    "portfolio": "Portfolio"
+    "portfolio": "Portfolio",
+    "portfolio_description": "Hier finden Sie eine Auswahl meiner Arbeiten - Interagieren Sie mit Projekten, um meine Fähigkeiten in Aktion zu sehen."
   },
 
   "ContactComponent": {

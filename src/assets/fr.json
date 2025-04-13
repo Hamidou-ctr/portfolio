@@ -32,7 +32,8 @@
   },
 
   "PortfolioComponent": {
-    "portfolio": "Portfolio"
+    "portfolio": "Portfolio",
+    "portfolio_description": "Découvrez ici une sélection de mes travaux - Interagissez avec les projets pour voir mes compétences en action."
   },
 
   "ContactComponent": {

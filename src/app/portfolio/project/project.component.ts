@@ -26,15 +26,6 @@ export class ProjectComponent {
       description: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories. ',
       liveTestUrl: 'https://join.hamidoudiallo.de/',
       githubUrl: 'https://github.com/Hamidou-ctr',
-    },
-  /*   {
-      imageUrl: './../../../assets/img/purple_reference.png',
-      name: 'Projekt 3',
-      language: 'React',
-      description: 'Ein Projekt mit React erstellt.',
-      liveTestUrl: 'https://hamidou-diallo.com/angular-projects/ring-of-fire',
-      githubUrl: 'https://github.com/Hamidou-ctr/project3',
-    },
-    */
+    }
   ];
 }

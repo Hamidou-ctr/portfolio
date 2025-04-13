@@ -79,11 +79,14 @@ main {
   main {
     >div {
       gap: 10px;
-      margin-left: 20%;
+      margin-left: 16vw;
 
       >h1 {
         font-size: 40px;
       }
+    }
+    >p {
+      margin-left: 20vw;
     }
   }
 }
