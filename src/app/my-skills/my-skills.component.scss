@@ -31,7 +31,6 @@ h1 {
 
 menu {
   display: flex;
-  //justify-content: center;
   align-items: center;
   max-width: 50%;
   flex-wrap: wrap;
@@ -88,13 +87,13 @@ menu {
   transform: translateX(-50%);
 }
 
+div:hover .language-image {
+  animation: moveUpAndBack 0.5s ease;
+}
+
 .language-image {
   width: 80px;
-  height: 80px;
-
-  &:hover {
-    animation: moveUpAndBack 0.5s ease;
-  }
+  height: auto;
 }
 
 @keyframes moveUpAndBack {
@@ -119,7 +118,6 @@ menu {
   }
 }
 
-
 main {
   display: flex;
   justify-content: flex-start;
@@ -132,7 +130,6 @@ main {
   height: 4px;
   background-color: #9747ff;
   margin-top: 3.5vw;
-  //margin-top: 6vw;
 }
 
 .content {
@@ -180,7 +177,6 @@ button {
   background-color: rgb(112, 231, 26);
   color: white;
   border: none;
-  padding: 10px 25px 15px 25px;
   border-radius: 10px;
   font-size: 1.5rem;
   font-weight: bold;
@@ -192,7 +188,6 @@ button {
     flex-direction: column-reverse;
     align-items: center;
     padding: 0;
-
 
     &::before {
       width: 500px;
@@ -209,7 +204,6 @@ button {
   }
 
   h1 {
-    //font-size: clamp(2rem, 10vw, 9rem);
     font-size: clamp(1rem, 5vw, 9rem);
     text-align: center;
     margin-bottom: 30px;
@@ -289,7 +283,7 @@ button {
   }
 
   h2 {
-    font-size: clamp(0.9rem, 3vw, 6rem);
+    font-size: clamp(0.8rem, 3vw, 6rem);
   }
 }
 
