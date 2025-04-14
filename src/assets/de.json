@@ -57,9 +57,9 @@
     "need_frontend_developer": "Brauchen Sie einen Frontend-Entwickler?",
     "contact_me": "Kontaktieren Sie mich",
 
-    "name_placeholder": "Ihr Name",
-    "email_placeholder": "Ihre E-Mail",
-    "message_placeholder": "Ihre Nachricht",
+    "name_placeholder": "ihr name",
+    "email_placeholder": "ihre e-mail",
+    "message_placeholder": "ihre nachricht",
     "send_button": "Senden",
 
     "name_error": "Ihr Name ist erforderlich",
