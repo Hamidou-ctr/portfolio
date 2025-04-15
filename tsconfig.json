@@ -22,7 +22,11 @@
     "lib": [
       "ES2022",
       "dom"
-    ]
+    ],
+    "baseUrl": "./src",      // This is the base URL for module resolution
+    "paths": {
+      "@assets/*": ["src/assets/*"]     // This is an example of how to set up path mapping
+    }
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,

@@ -17,28 +17,28 @@ export class ReferencesComponent {
       text: 'Michael really kept the team together with his great organization and clear communication. We wouldn\'t have got this far without his commitment.',
       title: '',
       author: 'V. Schuster - Team Partner',
-      profileImage: './../../assets/img/profil.png',
+      profileImage: 'assets/img/profil.png',
       name: ''
     },
     {
       text: 'Michael really kept the team together  We wouldn\'t have got this far without his commitment.',
       title: '',
       author: 'Another Author - Team Partner 11111111',
-      profileImage: './../../assets/img/profile1.png',
+      profileImage: 'assets/img/profile1.png',
       name: ''
     },
     {
       text: 'Another reference text here.',
       title: '',
       author: 'Another Author - Team Partner 22222222',
-      profileImage: './../../assets/img/profil2.png',
+      profileImage: 'assets/img/profil2.png',
       name: ''
     },
     {
       text: 'Michael really kept the team together with his great organization and clear communication. We wouldn\'t have got this far without his commitment.',
       title: '',
       author: 'Another Author - Team Partner 33333333',
-      profileImage: './../../assets/img/profile3.png',
+      profileImage: 'assets/img/profile3.png',
       name: ''
     },
   ];

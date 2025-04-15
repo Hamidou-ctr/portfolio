@@ -14,7 +14,7 @@ export class ProjectComponent {
 
   projects = [
     {     
-      imageUrl: './../../../assets/img/pollo_loco.png',
+      imageUrl: 'assets/img/pollo_loco.png',
       name: 'ProjectsComponent.Pollo_Loco_Projects.title',
       language: 'JavaScript | HTML | CSS',
       description:  'ProjectsComponent.Pollo_Loco_Projects.description',
@@ -22,7 +22,7 @@ export class ProjectComponent {
       githubUrl: 'https://github.com/Hamidou-ctr/pollo-loco',
     },
     {
-      imageUrl: './../../../assets/img/join.png',
+      imageUrl: 'assets/img/join.png',
       name: 'ProjectsComponent.join_Projects.title',
       language: 'JavaScript | HTML | CSS | Firebase ',
       description:  'ProjectsComponent.join_Projects.description',

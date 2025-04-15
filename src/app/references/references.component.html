@@ -1,7 +1,7 @@
 <div #refereceSection class="container">
   <section *ngFor="let section of sections; let i = index" [ngClass]="{'active': currentIndex === i}">
     <main>
-      <img src="./../../assets/img/purple_reference.png" alt="">
+      <img src="assets/img/purple_reference.png" alt="">
       <span>{{ section.text }}</span>
       <div>
         <h1>{{ section.title }}</h1>
@@ -16,10 +16,10 @@
 </div>
 
 <menu>
-  <img src="./../../assets/img/left.png" alt="" (click)="previousSection()" [ngClass]="{'disabled': currentIndex === 0}" />
+  <img src="assets/img/left.png" alt="" (click)="previousSection()" [ngClass]="{'disabled': currentIndex === 0}" />
   <p *ngFor="let section of sections; let i = index" [ngClass]="{'active': currentIndex === i}"></p>
   <img 
-    src="./../../assets/img/right.png" 
+    src="assets/img/right.png" 
     alt="" 
     (click)="nextSection()" 
     [ngClass]="{'disabled': currentIndex === sections.length - 1}" 

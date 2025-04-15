@@ -12,10 +12,10 @@ import { TranslateModule } from '@ngx-translate/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  currentLanguage: string = 'fr';
+  currentLanguage: string = 'en';
 
   constructor(private translate: TranslateService) {
-    this.translate.setDefaultLang('fr');
+    this.translate.setDefaultLang('en');
   }
 
   changeLanguage(lang: string) {

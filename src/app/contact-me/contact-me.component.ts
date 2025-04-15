@@ -23,8 +23,8 @@ export class ContactMeComponent {
     privacy: false,
   };
 
-  //mailTest = true;
-  mailTest = false;   // Uncomment this line to send real emails
+  mailTest = true;
+  //mailTest = false;   // Uncomment this line to send real emails
 
 
   onPrivacyChange(value: boolean, privacyControl: { control: { markAsTouched: () => void } }) {
@@ -35,7 +35,7 @@ export class ContactMeComponent {
   }
 
   post = {
-    endPoint: 'https://hamidou-diallo.com/sendMail.php',
+    endPoint: 'https://www.hamidoudiallo.de/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {
@@ -51,7 +51,6 @@ export class ContactMeComponent {
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
           next: (response: any) => {
-
             ngForm.resetForm();
           },
           error: (error: any) => {
@@ -74,12 +73,13 @@ export class ContactMeComponent {
 
   scrollToTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' })
-
-    // window.scrollTo({ top: 0, behavior: 'instant' })   <!-- window.scrollTo({ top: 0, behavior: 'instant' }) Empfehlung für legal notice -->
   }
 }
 
 /* 
     "success_message": "Your message has been sent successfully!",
     "error_message_send": "An error occurred while sending your message. Please try again later."
+
+    // window.scrollTo({ top: 0, behavior: 'instant' })   <!-- window.scrollTo({ top: 0, behavior: 'instant' }) Empfehlung für legal notice -->
+
 */
