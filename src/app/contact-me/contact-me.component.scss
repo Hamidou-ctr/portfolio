@@ -337,4 +337,31 @@ label {
   }
 }
 
+#successfully-sent-message-popup {
+  opacity: 0;
+  transform: translateX(100%); // Start: rechts außerhalb
+  transition: opacity 0.3s ease, transform 0.4s ease;
+  position: fixed;
+  top: 10rem;
+  right: 30px;
+  background-color: #4CAF50; // Standard: grün
+  color: white;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+  pointer-events: none;
+
+  &.visible {
+    opacity: 1;
+    transform: translateX(0); // Rein sliden
+    pointer-events: auto;
+  }
+
+  &.error {
+    background-color: #f44336; // rot für Fehler
+  }
+}
+
+
 @import './responsiv-contact-me';

@@ -71,8 +71,12 @@
     "privacy_policy_acknowledgment": "Ich habe gelesen die",
     "privacy_policy": "Datenschutzbestimmungen",
     "privacy_policy_agreement": "und stimme der beschriebenen Verarbeitung meiner Daten zu.",
-    "privacy_policy_error": "Bitte akzeptieren Sie die Datenschutzerklärung."
+    "privacy_policy_error": "Bitte akzeptieren Sie die Datenschutzerklärung.",
 
+
+
+    "message_sent_success": "Deine Nachricht wurde erfolgreich gesendet!",
+    "erorr-message_sent": "Fehler beim Senden der Nachricht. Bitte versuchen Sie es erneut."
   },
 
   "FooterComponent": {

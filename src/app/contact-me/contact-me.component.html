@@ -69,9 +69,9 @@
             type="email"
             id="email"
             name="email"
-            required
-            pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
+            pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
             #email="ngModel"
+            required
           />
           <span
             class="checkbox"
@@ -194,4 +194,12 @@
     alt=""
   />
   <div class="green-line"></div>
+
+
+  <div id="successfully-sent-message-popup" 
+     [class.visible]="showPopup" 
+     [class.error]="isErrorPopup">
+  <p>{{ isErrorPopup ? ("ContactComponent.erorr-message_sent" | translate) : ("ContactComponent.message_sent_success" | translate) }}</p>
+</div>
+
 </main>

@@ -70,7 +70,11 @@
     "privacy_policy_acknowledgment": "J'ai lu la",
     "privacy_policy": "Politique de confidentialité",
     "privacy_policy_agreement": "et j'accepte le traitement de mes données tel que décrit.",
-    "privacy_policy_error": "Veuillez accepter la politique de confidentialité."
+    "privacy_policy_error": "Veuillez accepter la politique de confidentialité.",
+
+
+    "message_sent_success": "Votre message a été envoyé avec succès !",
+    "erorr-message_sent": "Erreur lors de l'envoi du message. Veuillez réessayer."
 
   },
 

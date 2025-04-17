@@ -23,8 +23,11 @@ export class ContactMeComponent {
     privacy: false,
   };
 
-  mailTest = true;
-  //mailTest = false;   // Uncomment this line to send real emails
+  showPopup = false;
+  isErrorPopup = false;
+
+  //mailTest = true;
+  mailTest = false;   // Uncomment this line to send real emails
 
 
   onPrivacyChange(value: boolean, privacyControl: { control: { markAsTouched: () => void } }) {
@@ -35,7 +38,7 @@ export class ContactMeComponent {
   }
 
   post = {
-    endPoint: 'https://www.hamidoudiallo.de/sendMail.php',
+    endPoint: 'https://hamidou-diallo.com/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {
@@ -51,16 +54,13 @@ export class ContactMeComponent {
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
           next: (response: any) => {
+            this.showSuccessPopup();
             ngForm.resetForm();
+            ngForm.controls['privacy'].markAsUntouched();
           },
           error: (error: any) => {
             console.error(error);
-            console.log('Form submitted:', ngForm.submitted);
-            console.log('Form valid:', ngForm.form.valid);
-            console.log('Name valid:', ngForm.form.controls['name'].valid);
-            console.log('Email valid:', ngForm.form.controls['email'].valid);
-            console.log('Message valid:', ngForm.form.controls['message'].valid);
-            console.log('Privacy valid:', ngForm.form.controls['privacy'].valid);
+            this.showErrorPopup();
           },
           complete: () => console.info('send post complete'),
         });
@@ -74,12 +74,18 @@ export class ContactMeComponent {
   scrollToTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }
+
+
+  private showSuccessPopup(duration: number = 4000) {
+    this.showPopup = true;
+    setTimeout(() => {
+      this.showPopup = false;
+    }, duration);
+  }
+
+  private showErrorPopup(duration: number = 5000) {
+    this.isErrorPopup = true;
+    this.showPopup = true;
+    setTimeout(() => this.showPopup = false, duration);
+  }
 }
-
-/* 
-    "success_message": "Your message has been sent successfully!",
-    "error_message_send": "An error occurred while sending your message. Please try again later."
-
-    // window.scrollTo({ top: 0, behavior: 'instant' })   <!-- window.scrollTo({ top: 0, behavior: 'instant' }) Empfehlung für legal notice -->
-
-*/

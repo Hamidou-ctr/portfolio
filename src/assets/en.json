@@ -71,7 +71,11 @@
     "privacy_policy_acknowledgment": "I've read the",
     "privacy_policy": "Privacy Policy",
     "privacy_policy_agreement": "and agree to the processing of my data as outlined.",
-    "privacy_policy_error": "Please accept the privacy policy."
+    "privacy_policy_error": "Please accept the privacy policy.",
+
+
+    "message_sent_success": "Your message has been sent successfully!",
+    "erorr-message_sent": "Error sending message. Please try again."
     
   },
 

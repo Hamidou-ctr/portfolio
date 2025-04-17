@@ -30,21 +30,8 @@ switch ($_SERVER['REQUEST_METHOD']) {
         $headers[] = "From: noreply@mywebsite.com";
 
         mail($recipient, $subject, $message, implode("\r\n", $headers));
-        //echo json_encode(['success' => true]);  // das habe ich hinzugefügt   // Return a success response to the client  // Send a 200 OK response   
         break;
     default: //Reject any non POST or OPTIONS requests.
         header("Allow: POST", true, 405);
         exit;
 }
-
-// das hier ist neue code den ich hinzugefügt habe
-
-// echo json_encode(['success' => true]);  // das habe ich hinzugefügt   // Return a success response to the client  // Send a 200 OK response   
-
-/* 
-
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-
-*/
