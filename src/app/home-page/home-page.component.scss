@@ -176,9 +176,22 @@ a {
   font-weight: 500;
   transform: rotate(90deg);
   cursor: pointer;
-
+  margin-top: -100px;
+  animation: down 4s infinite;
   >img {
     transform: rotate(270deg);
+  }
+}
+
+@keyframes down {
+  0% {
+    transform: rotate(90deg) translateY(0);
+  }
+  50% {
+    transform: rotate(90deg) translatex(10px);
+  }
+  100% {
+    transform: rotate(90deg) translateY(0);
   }
 }
 
