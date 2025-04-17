@@ -25,16 +25,19 @@ section {
   }
 
   &::before {
+    background-image: url(./../../assets/img/purple_shadow_about\ me.png);
     content: "";
     position: absolute;
-    right: -140px;
-    width: 400px;
-    height: 400px;
-    background-image: url(./../../assets/img/purple_shadow_about\ me.png);
+    top: 6px;
+    right: -200px;
+    width: 550px;
+    height: 550px;
     background-size: cover;
     z-index: -1;
   }
 }
+
+
 
 h1 {
   font-size: clamp(2rem, 6vw, 8rem);
