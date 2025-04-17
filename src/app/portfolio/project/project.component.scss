@@ -4,7 +4,8 @@ section {
     align-items: center;
     padding: 20px;
     gap: 10%;
-    margin-top: -75px;
+    margin-top: -70px;
+
     &.left {
         flex-direction: row;
         text-align: justify;
@@ -45,7 +46,7 @@ h4 {
 
 p {
     font-weight: 400;
-    font-size: 16px;
+    font-size: 20px;
     color: #FFFFFF;
 }
 
@@ -83,6 +84,10 @@ p {
             margin-left: 10%;
         }
     }
+
+    section{
+        margin-top: -40px;
+    }
 }
 
 @media screen and (max-width: 927px) {
@@ -107,6 +112,7 @@ p {
         flex-direction: column;
         padding: 5%;
         margin-top: -24px;
+
         &.left {
             flex-direction: column;
             text-align-last: center;
@@ -123,11 +129,11 @@ p {
         width: 90%;
     }
 
-     .project-content {
+    .project-content {
         width: 100%;
         padding: 20px;
         margin-top: -15%;
-    } 
+    }
 
     .project-link {
         font-size: 23px;
@@ -135,18 +141,14 @@ p {
 }
 
 @media screen and (max-width: 401px) {
-    h1 {
+/*     h1 {
         font-size: 28px;
     }
 
     h4 {
         font-size: 20px;
     }
-
-    p {
-        font-size: 14px;
-    }
-
+ */
     .project-link {
         padding: 10px 20px 10px 20px;
         font-size: 20px;
@@ -166,9 +168,6 @@ p {
         font-size: 17px;
     }
 
-    p {
-        font-size: 12px;
-    }
 
     .project-link {
         padding: 8px 16px 8px 16px;
