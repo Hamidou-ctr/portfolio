@@ -39,4 +39,14 @@
   .go_up_button {
     margin-left: 80%;
   }
+
+  .checkbox-container {
+    .checkbox-container-error {
+      .custom-checkbox {
+        label {
+          font-size: clamp(1.3rem, 3vw,  3rem);
+        }
+      }
+    }
+  }
 }

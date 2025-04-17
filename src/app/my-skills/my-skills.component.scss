@@ -141,7 +141,7 @@ main {
 }
 
 span {
-  font-size: clamp(1rem, 1.5vw, 1.7rem);
+  font-size: clamp(1rem, 2vw, 1.7rem);
 }
 
 .content-show-desktop {
@@ -243,7 +243,7 @@ button {
   }
 
   span {
-    font-size: clamp(1rem, 3.5vw, 1.7rem);
+    font-size: clamp(0.88rem, 3.5vw, 1.7rem);
   }
 
   .show-desktop {
@@ -285,6 +285,8 @@ button {
   h2 {
     font-size: clamp(0.8rem, 3vw, 6rem);
   }
+
+
 }
 
 @media (min-width: 1440px) {
