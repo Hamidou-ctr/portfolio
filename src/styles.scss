@@ -6,6 +6,10 @@
   scroll-behavior: smooth;
 }
 
+html {
+  scroll-padding-top: 100px; /* Entspricht der Höhe Ihrer Navbar */
+}
+
 body {
   max-width: 1440px;
    display: flex;

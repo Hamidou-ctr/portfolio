@@ -151,6 +151,11 @@ main {
 a {
   color: #ffffff;
   text-decoration: none;
+
+  >img{
+    width: 50px;
+    height: auto;
+  }
 }
 
 .contact-info {

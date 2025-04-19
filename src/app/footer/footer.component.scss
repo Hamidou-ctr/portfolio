@@ -36,7 +36,7 @@ section {
 
 img {
   width: 30px;
-  height: 30px;
+  height: auto;
   top: 5px;
   left: 144px;
 }
@@ -75,9 +75,13 @@ span {
   }
 
   section {
-    gap: auto;
+    width: 50%;
   }
 
+  img {
+    width: 60px;
+  }
+  
   span {
     display: flex;
   }

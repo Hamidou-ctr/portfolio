@@ -12,6 +12,7 @@ import { TranslateModule } from '@ngx-translate/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
+  private readonly NAVBAR_OFFSET = 100; // Konstante für den Abstand
   currentLanguage: string = 'de';
 
   constructor(private translate: TranslateService) {
@@ -46,7 +47,13 @@ export class HeaderComponent implements OnInit {
     this.closeMenu();
     const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - this.NAVBAR_OFFSET;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
     }
   }
 }

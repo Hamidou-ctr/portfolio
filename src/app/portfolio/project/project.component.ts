@@ -27,7 +27,7 @@ export class ProjectComponent {
       language: 'JavaScript | HTML | CSS | Firebase ',
       description:  'ProjectsComponent.join_Projects.description',
       liveTestUrl: 'https://join.hamidoudiallo.de/',
-      githubUrl: 'https://github.com/Hamidou-ctr',
+      githubUrl: 'https://github.com/Hamidou-ctr/join_frontend',
     }
   ];
 }
