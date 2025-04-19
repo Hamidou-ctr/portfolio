@@ -18,7 +18,7 @@
       (ngSubmit)="onSubmit(contactForm)"
       #contactForm="ngForm"
     > 
-      <div>
+      <div class="contact-form__inputs">
         <div class="input-container">
           <input
             [(ngModel)]="contactData.name"
@@ -183,7 +183,7 @@
         value="submit"
         [disabled]="!contactForm.form.valid || !contactData.privacy"
       >
-        {{ "ContactComponent.send_button" | translate }} :)
+        {{ "ContactComponent.send_button" | translate }}
       </button>
     </form>
   </section>

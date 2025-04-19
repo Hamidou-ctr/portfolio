@@ -60,7 +60,7 @@
     "name_placeholder": "votre nom",
     "email_placeholder": "votre e-mail",
     "message_placeholder": "votre message",
-    "send_button": "Envoyer",
+    "send_button": "Envoyer Message :)",
 
 
     "name_error": "Votre nom est obligatoire",

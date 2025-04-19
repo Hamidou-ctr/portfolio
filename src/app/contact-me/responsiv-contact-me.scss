@@ -13,14 +13,14 @@
     gap: 2%;
     padding-right: 10%;
 
-    >h1 {
-      font-size: 350%;
+    >h1{
+      font-size: clamp(3rem, 13vw,  9rem);
     }
   }
 
   section {
     flex-direction: column;
-    gap: 20px;
+   // gap: 20px;
   }
 
   .contact-form {
@@ -39,14 +39,12 @@
   .go_up_button {
     margin-left: 80%;
   }
+}
 
-  .checkbox-container {
-    .checkbox-container-error {
-      .custom-checkbox {
-        label {
-          font-size: clamp(1.3rem, 3vw,  3rem);
-        }
-      }
+@media screen and (min-width: 1440px) {
+  header {
+    >h1{
+      font-size: 5rem;
     }
   }
 }
