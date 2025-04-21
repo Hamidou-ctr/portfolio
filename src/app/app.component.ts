@@ -1,6 +1,7 @@
 import { Component, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterOutlet, Router } from '@angular/router';
+import { RouterOutlet, Router, ActivatedRoute } from '@angular/router';
+import { AfterViewInit } from '@angular/core';
 import { HeaderComponent } from "./header/header.component";
 import { HomePageComponent } from './home-page/home-page.component';
 import { AboutMeComponent } from "./about-me/about-me.component";
@@ -17,10 +18,25 @@ import { FooterComponent } from './footer/footer.component';
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
-export class AppComponent {
+export class AppComponent implements AfterViewInit {
   title = 'Portfolio';
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private route: ActivatedRoute) {}
+
+  ngAfterViewInit(): void {
+    this.route.queryParams.subscribe((params) => {
+      const section = params['scrollTo'];
+      if (section) {
+        setTimeout(() => {
+          const el = document.getElementById(section);
+          if (el) {
+            const offset = el.getBoundingClientRect().top + window.pageYOffset - 100;
+            window.scrollTo({ top: offset, behavior: 'smooth' });
+          }
+        }, 10);
+      }
+    });
+  }
 
   isSpecialPage(): boolean {
     return this.router.url.includes('/privacy-policy') ||

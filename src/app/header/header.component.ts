@@ -1,6 +1,8 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 
+import { Router } from '@angular/router';
+
 import { TranslateService } from '@ngx-translate/core';
 import { TranslateModule } from '@ngx-translate/core';
 
@@ -12,10 +14,10 @@ import { TranslateModule } from '@ngx-translate/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  private readonly NAVBAR_OFFSET = 100; // Konstante für den Abstand
+  private readonly NAVBAR_OFFSET = 100; 
   currentLanguage: string = 'de';
 
-  constructor(private translate: TranslateService) {
+  constructor(private translate: TranslateService , private router: Router) {
     this.translate.setDefaultLang('de');
   }
 
@@ -45,14 +47,23 @@ export class HeaderComponent implements OnInit {
   scrollToSection(sectionId: string) {
     this.selectedSection = sectionId;
     this.closeMenu();
+
+    if (this.router.url === '/') {
+      this.smoothScroll(sectionId);
+    } else {
+      this.router.navigate(['/'], { queryParams: { scrollTo: sectionId } });
+    }
+  }
+  
+  private smoothScroll(sectionId: string) {
     const element = document.getElementById(sectionId);
     if (element) {
       const elementPosition = element.getBoundingClientRect().top;
       const offsetPosition = elementPosition + window.pageYOffset - this.NAVBAR_OFFSET;
-
+  
       window.scrollTo({
         top: offsetPosition,
-        behavior: 'smooth'
+        behavior: 'smooth',
       });
     }
   }

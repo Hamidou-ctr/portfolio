@@ -1,4 +1,4 @@
-<nav class="navbar-branding">
+<nav class="navbar-branding" [ngClass]="{ 'navbar-branding--active': !showMenu }">
   <h1 [class.hidden]="showMenu" class="clickable">Hamidou</h1>
 
   <div class="navbar">
