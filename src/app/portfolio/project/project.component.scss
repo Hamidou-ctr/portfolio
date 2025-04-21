@@ -5,6 +5,10 @@ section {
     padding: 20px;
     gap: 10%;
     margin-top: -70px;
+    font-size: 16px;
+    font-weight: 400;
+    padding-left: 8%;
+    padding-right: 8%;
 
     &.left {
         flex-direction: row;
@@ -45,8 +49,6 @@ h4 {
 }
 
 p {
-    font-weight: 400;
-    font-size: 20px;
     color: #FFFFFF;
 }
 
@@ -160,13 +162,7 @@ p {
 }
 
 @media screen and (max-width: 340px) {
-    h1 {
-        font-size: 24px;
-    }
-
-    h4 {
-        font-size: 17px;
-    }
+    
 
 
     .project-link {

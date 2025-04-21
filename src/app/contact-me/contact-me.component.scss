@@ -1,5 +1,5 @@
 #contact{
-  font-size: clamp(1.1rem, 2vw,  1.28rem);
+  font-size: clamp(1rem, 2vw,  1.28rem);
 }
 
 header {
@@ -45,20 +45,17 @@ main {
     color: white;
     font-family: Poppins;
     font-weight: 700;
-   // font-size: 32px;
-    line-height: 38.4px;
-    letter-spacing: 0%;
-    height: 38;
+    font-size: 32px;
   }
 }
 
 section {
   display: flex;
-  gap: 20px;
+  gap: 30px;
 
   >div {
     display: flex;
-    padding: 30px;
+    padding-left: 8%;
     gap: 10px;
   }
 }
