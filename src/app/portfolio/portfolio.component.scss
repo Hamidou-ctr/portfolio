@@ -76,6 +76,17 @@ main {
   }
 }
 
+@media screen and (max-width: 880px){
+  main {
+    >div {
+      >h1 {
+        font-size: 40px;
+      }
+
+    }
+  }
+}
+
 @media screen and (max-width: 820px) {
   main {
     >div {
@@ -88,6 +99,17 @@ main {
     }
     >p {
       margin-left: 20vw;
+    }
+  }
+}
+
+@media screen and (max-width: 350px){
+  main {
+    >div {
+      >h1 {
+        font-size: 40px;
+      }
+
     }
   }
 }
