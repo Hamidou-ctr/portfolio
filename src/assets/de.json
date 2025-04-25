@@ -25,10 +25,10 @@
   "SkillsComponent": {
     "skills": "Meine Fähigkeiten",
     "skills_description": "Ich beherrsche eine Vielzahl von Programmiersprachen und Frameworks, darunter HTML, CSS, JavaScript, React und mehr. Mein Fachwissen erstreckt sich auch auf responsives Design, um sicherzustellen, dass Anwendungen auf allen Geräten gut aussehen. Ich bin auch mit Versionskontrollsystemen wie Git vertraut, die eine effiziente Zusammenarbeit und Codeverwaltung ermöglichen.",
-    "skills_description2": "Auf der Suche nach",
-    "skills_description3": "einer weiteren Fähigkeit",
+    "skills_description2": "Suche nach",
+    "skills_description3": "weiteren Fähigkeit",
     "skills_description4": "Enthusiasmus für das Lernen neuer Technologien und Frameworks.",
-    "button_scroll_To_Reference": "Nehmen Sie Kontakt auf"
+    "button_scroll_To_Reference": "Schreib mir"
   },
 
   "PortfolioComponent": {

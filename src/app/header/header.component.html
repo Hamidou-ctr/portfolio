@@ -1,5 +1,5 @@
 <nav class="navbar-branding" [ngClass]="{ 'navbar-branding--active': !showMenu }">
-  <h1 [class.hidden]="showMenu" class="clickable">Hamidou</h1>
+  <h1 (click)="scrollToSection('home')" [class.hidden]="showMenu" class="clickable">Hamidou</h1>
 
   <div class="navbar">
     <div class="navbar-header">

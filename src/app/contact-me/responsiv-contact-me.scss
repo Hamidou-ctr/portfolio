@@ -37,13 +37,16 @@
   }
 
   main {
-    padding: 0 5%;
     &::before {
       width: 130%;
       height: 26%;
       left: -280px;
       bottom: -50px;
     }
+  }
+
+  section{
+    padding: 0 5%;
   }
 
   .go_up_button {
