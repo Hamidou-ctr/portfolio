@@ -87,14 +87,18 @@ main {
     font-size: clamp(3rem, 9vw, 9rem);
     //font-size: clamp(2rem, 9vw, 9rem);   // with france language
   }
+
   section {
     padding: 25px;
+
     > main {
       display: none;
     }
+
     menu {
       width: 100%;
     }
+    
     background-size: 280px;
   }
 }
