@@ -1,6 +1,5 @@
 @media screen and (max-width: 1000px) {
   main {
-    width: 100%;
     &::before {
       width: 90%;
       height: 60%;
@@ -11,7 +10,6 @@
 
 @media screen and (max-width: 800px) {
   header {
-
     gap: 2%;
     padding-right: 10%;
 
@@ -20,8 +18,7 @@
     }
 
     >h1 {
-      //font-size: clamp(3rem, 13vw,  9rem);
-      font-size: clamp(1.3rem, 6.5vw, 9rem);
+      font-size: clamp(3rem, 13vw, 9rem);
     }
   }
 
@@ -40,7 +37,6 @@
   }
 
   main {
-    width: 100%;
     &::before {
       width: 130%;
       height: 26%;
@@ -60,12 +56,16 @@
 
 @media screen and (min-width: 1440px) {
 
-  section {
-    max-width: 1440px;
-    width: 100%;
+  .contact-form {
+    max-width: 700px;
+  }
+
+  .contact-section__intro {
+    max-width: 700px;
   }
 
   header {
+
     width: 100%;
     >h1 {
       font-size: 4rem;
@@ -85,5 +85,14 @@
 
   .go_up_button {
     margin-left: 1330px;
+  }
+
+  section {
+
+    width: 100%;
+
+    >div {
+      padding-left: 20px;
+    }
   }
 }
