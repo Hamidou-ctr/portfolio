@@ -20,7 +20,8 @@ main {
     }
 
     >h1 {
-      font-size: 90px;
+      font-size: clamp(2rem, 4vw, 8rem);
+      //font-size: 90px;
       font-weight: 700;
       text-align: center;
     }
@@ -44,9 +45,9 @@ main {
     >div {
       gap: 20px;
 
-      >h1 {
+     /*  >h1 {
         font-size: 70px;
-      }
+      } */
 
       >span {
         width: 60%;
@@ -65,9 +66,9 @@ main {
         width: 50px;
       }
 
-      >h1 {
+    /*   >h1 {
         font-size: 50px;
-      }
+      } */
 
       >span {
         width: 60%;
@@ -76,7 +77,7 @@ main {
   }
 }
 
-@media screen and (max-width: 880px){
+/* @media screen and (max-width: 880px){
   main {
     >div {
       >h1 {
@@ -85,7 +86,7 @@ main {
 
     }
   }
-}
+} */
 
 @media screen and (max-width: 820px) {
   main {
@@ -93,9 +94,9 @@ main {
       gap: 10px;
       margin-left: 16vw;
 
-      >h1 {
-        font-size: 50px;
-      }
+       >h1 {
+        font-size: clamp(1.3rem, 6.5vw, 9rem);
+      } 
     }
     >p {
       margin-left: 20vw;
@@ -103,13 +104,24 @@ main {
   }
 }
 
-@media screen and (max-width: 350px){
+/* @media screen and (max-width: 350px){
   main {
     >div {
       >h1 {
         font-size: 40px;
       }
 
+    }
+  }
+} */
+
+
+@media screen and (min-width: 1440px) {
+  main{
+    >div {
+      >h1 {
+        font-size: 4rem;
+      }
     }
   }
 }

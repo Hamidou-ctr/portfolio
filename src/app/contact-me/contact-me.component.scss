@@ -15,7 +15,8 @@ header {
   }
 
   >h1 {
-    font-size: clamp(5rem, 5vw,  9rem);
+    font-size: clamp(2rem, 4vw, 8rem);
+    //font-size: clamp(5rem, 5vw,  9rem);
     font-weight: 700;
     line-height: 108px;
     text-align: center;

@@ -166,7 +166,7 @@ h2 {
   justify-content: center;
   align-items: center;
   white-space: nowrap;
-  font-size: clamp(1rem, 1.7vw, 2.9rem);
+  font-size: clamp(1rem, 2vw, 2.9rem);
   font-weight: 700;
 
   h2 {
@@ -290,9 +290,9 @@ button {
     }
   }
 
-  h2 {
+/*   h2 {
     font-size: clamp(0.8rem, 3vw, 6rem);
-  }
+  } */
 
 
 }
@@ -303,10 +303,10 @@ button {
   }
 
   h2 {
-    font-size: 1.8rem;
+    font-size: 2rem;
   }
 
   .bright-lavender-line {
-    margin-top: 6vw;
+    margin-top: 5vh;
   }
 }
