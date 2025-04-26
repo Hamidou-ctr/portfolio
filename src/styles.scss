@@ -14,8 +14,9 @@ html {
 }
 
 body {
-  max-width: 1440px;
-   display: flex;
+  //max-width: 1440px;
+  width: 100%;
+  display: flex;
   justify-content: center;
   align-items: center; 
   background-color: rgb(20,29,47);

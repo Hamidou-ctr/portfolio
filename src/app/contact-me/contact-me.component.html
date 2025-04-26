@@ -1,15 +1,20 @@
 <header id="contact-section">
   <p></p>
-  <h1> {{ "ContactComponent.contact" | translate }} </h1>
+  <h1>{{ "ContactComponent.contact" | translate }}</h1>
 </header>
 
 <main id="contact">
-  <section class="contact-section">
+  <section class="contact-section" >
     <div class="contact-section__intro">
-      <h1 class="contact-section__title"> {{ "ContactComponent.problem_to_solve" | translate }} </h1>
-      <p class="contact-section__description poppins-regular"> {{ "ContactComponent.message_prompt" | translate }} </p>
+      <h1 class="contact-section__title">
+        {{ "ContactComponent.problem_to_solve" | translate }}
+      </h1>
+      <p class="contact-section__description poppins-regular">
+        {{ "ContactComponent.message_prompt" | translate }}
+      </p>
       <p class="contact-section__description">
-        {{ "ContactComponent.need_frontend_developer" | translate }} <b> {{ "ContactComponent.contact_me" | translate }} </b>
+        {{ "ContactComponent.need_frontend_developer" | translate }}
+        <b> {{ "ContactComponent.contact_me" | translate }} </b>
       </p>
     </div>
 
@@ -17,7 +22,7 @@
       class="contact-form"
       (ngSubmit)="onSubmit(contactForm)"
       #contactForm="ngForm"
-    > 
+    >
       <div class="contact-form__inputs">
         <div class="input-container">
           <input
@@ -54,7 +59,9 @@
           </span>
         </div>
         @if(!name.valid && name.touched){
-        <span class="contact-form__error"> {{ "ContactComponent.name_error" | translate }} </span>
+        <span class="contact-form__error">
+          {{ "ContactComponent.name_error" | translate }}
+        </span>
         }
 
         <div class="input-container">
@@ -93,7 +100,9 @@
           </span>
         </div>
         @if(!email.valid && email.touched){
-        <span class="contact-form__error"> {{ "ContactComponent.email_error" | translate }} </span>
+        <span class="contact-form__error">
+          {{ "ContactComponent.email_error" | translate }}
+        </span>
         }
 
         <div class="input-container textarea-container">
@@ -104,7 +113,9 @@
               'contact-form__input--invalid': !message.valid && message.touched,
               'contact-form__input--valid': message.valid && message.touched
             }"
-            placeholder="{{ 'ContactComponent.message_placeholder' | translate }}"
+            placeholder="{{
+              'ContactComponent.message_placeholder' | translate
+            }}"
             id="message"
             name="message"
             required
@@ -131,7 +142,9 @@
           </span>
         </div>
         @if(!message.valid && message.touched){
-        <span class="contact-form__error"> {{ "ContactComponent.message_error" | translate }} </span>
+        <span class="contact-form__error">
+          {{ "ContactComponent.message_error" | translate }}
+        </span>
         }
       </div>
 
@@ -163,8 +176,12 @@
                 />
               </div>
               <span>
-                {{ "ContactComponent.privacy_policy_acknowledgment" | translate }}
-                <a routerLink="/privacy-policy" class="privacy-link"> {{ "ContactComponent.privacy_policy" | translate }} </a> 
+                {{
+                  "ContactComponent.privacy_policy_acknowledgment" | translate
+                }}
+                <a routerLink="/privacy-policy" class="privacy-link">
+                  {{ "ContactComponent.privacy_policy" | translate }}
+                </a>
                 {{ "ContactComponent.privacy_policy_agreement" | translate }}
               </span>
             </label>
@@ -195,11 +212,17 @@
   />
   <div class="green-line"></div>
 
-
-  <div id="successfully-sent-message-popup" 
-     [class.visible]="showPopup" 
-     [class.error]="isErrorPopup">
-  <p>{{ isErrorPopup ? ("ContactComponent.erorr-message_sent" | translate) : ("ContactComponent.message_sent_success" | translate) }}</p>
-</div>
-
+  <div
+    id="successfully-sent-message-popup"
+    [class.visible]="showPopup"
+    [class.error]="isErrorPopup"
+  >
+    <p>
+      {{
+        isErrorPopup
+          ? ("ContactComponent.erorr-message_sent" | translate)
+          : ("ContactComponent.message_sent_success" | translate)
+      }}
+    </p>
+  </div>
 </main>

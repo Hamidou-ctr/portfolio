@@ -107,6 +107,11 @@ main {
 }
 
 @media screen and (min-width: 1440px) {
+
+  section {
+    max-width: 1440px;
+  }
+
   h1{
     font-size: 4rem;
   }
