@@ -56,13 +56,13 @@
 
 @media screen and (min-width: 1440px) {
 
-  .contact-form {
+/*   .contact-form {
     max-width: 700px;
   }
 
   .contact-section__intro {
     max-width: 700px;
-  }
+  } */
 
   header {
 
@@ -70,16 +70,25 @@
     >h1 {
       font-size: 4rem;
     }
+
+    >p {
+      width: 40%;
+    }
   }
 
   main {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
     overflow: visible;
-    width: 100%;
+    max-width: 100vw;
 
     &::before {
       width: 100%;
       height: 70%;
-      //left: -380px;
     }
   }
 
@@ -87,9 +96,12 @@
     margin-left: 1330px;
   }
 
-  section {
+  .green-line {
+    width: 100vw;
+  }
 
-    width: 100%;
+  section {
+    max-width: 1440px;
 
     >div {
       padding-left: 20px;

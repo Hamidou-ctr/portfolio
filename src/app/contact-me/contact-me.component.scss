@@ -24,6 +24,7 @@ main {
   align-items: center;
   position: relative;
   overflow: hidden;
+  width: 100%;
 
   &::before {
     content: "";
@@ -48,10 +49,10 @@ main {
 section {
   display: flex;
   gap: 30px;
-
+  width: 100%;
   >div {
     display: flex;
-    padding-left: 8%;
+    padding-left: 5%;
     gap: 10px;
   }
 }
