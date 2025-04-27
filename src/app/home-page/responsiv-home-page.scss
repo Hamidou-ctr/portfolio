@@ -11,9 +11,9 @@
     }
   }
 
-  h1 {
-    font-size: 5vw;
-  }
+/*   h1 {
+    font-size: 4.7vw;
+  } */
 
   menu {
     margin-top: 5vh;
@@ -36,11 +36,11 @@
 
 @media screen and (max-width: 810px) {
 
-  h1 {
+/*   h1 {
     font-size: 4.5vw;
-  }
+  } */
 
-  menu {
+/*   menu {
     >div {
       >div {
         h3 {
@@ -48,11 +48,11 @@
         }
       }
     }
-  }
+  } */
 
-  .writing-mode-Inverse {
+/*   .writing-mode-Inverse {
     font-size: 2.5vw;
-  }
+  } */
 
   button {
     font-size: 2.8vw;
@@ -113,12 +113,16 @@
     }
   }
 
-  .background {
+  .overlay{
     &::before {
       height: 23vh;
       margin-top: 22vw;
     }
   }
+
+/*   .background {
+
+  } */
 
   h1 {
     font-size: 9vw;
@@ -208,12 +212,19 @@
 
 @media screen and (max-width: 630px) {
 
-  .background {
+/*   .overlay{
     &::before {
       height: 23vh;
       margin-top: 22vw;
     }
   }
+
+  .background {
+    &::before {
+      height: 23vh;
+      margin-top: 22vw;
+    }
+  } */
 
   .image-container {
     &::before {
@@ -242,13 +253,19 @@
 }
 
 @media screen and (max-width: 500px) {
-
-  .background {
+  .overlay{
     &::before {
       height: 25vh;
       margin-top: 45vw;
     }
   }
+
+/*   .background {
+    &::before {
+      height: 25vh;
+      margin-top: 45vw;
+    }
+  } */
 
   main {
     gap: 20px;
@@ -298,21 +315,36 @@
     }
   }
 
-  .background {
+  .overlay{
     &::before {
       height: 20vh;
       margin-top: 56vw;
     }
   }
+
+/*   .background {
+    &::before {
+      height: 20vh;
+      margin-top: 56vw;
+    }
+  } */
 }
 
 @media screen and (max-width: 385px) {
-  .background {
+
+  .overlay{
+    &::before {
+      height: 16vh;
+      margin-top: 74vw;
+    }
+  }
+
+/*   .background {
     &::before {
       height: 15vh;
       margin-top: 43vh;
     }
-  }
+  } */
 
   .image-container {
     &::before {
@@ -329,6 +361,25 @@
 @media screen and (min-width: 1440px) {
   h1 {
     font-size: 4.5rem;
+  }
+
+  .image-container {
+    &::before {
+      max-width: 1000px;
+      max-height: 560px;
+    }
+  }
+
+  main{
+    width: 100vw;
+    position: absolute;
+    margin-top: 90vh;
+    //margin-top: 874px;
+    right: 0;
+  }
+
+  .separator {
+    width: 40vw;
   }
 
   .writing-mode-Inverse {

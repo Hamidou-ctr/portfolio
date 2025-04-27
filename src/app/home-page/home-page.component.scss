@@ -1,14 +1,9 @@
-.background {
-  position: relative;
+.overlay{
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  width: 100%;
-  max-height: 100vh;
-  max-width: 1440px;
-  font-size: 23px;
-  font-weight: 400;
+  position: relative;
+  display: flex;
 
   &::before {
     content: "";
@@ -21,8 +16,35 @@
     height: 94vh;
     margin-top: 93vh;
     z-index: -1;
-    max-width: 1440px;
   }
+}
+
+
+.background {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  max-height: 100vh;
+  max-width: 1440px;
+  font-size: 23px;
+  font-weight: 400;
+
+/*   &::before {
+    content: "";
+    position: absolute;
+    background-image: url("./../../assets/img/hero_background1.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: bottom;
+    width: 100vw;
+    height: 94vh;
+    margin-top: 93vh;
+    z-index: -1;
+    max-width: 1440px;
+  } */
 }
 
 menu {
@@ -48,7 +70,7 @@ menu {
         font-weight: 400;
         white-space: nowrap;
         color: rgb(151, 71, 255);
-        font-size: 3.7vw;
+        font-size: 3.3vw;
       }
     }
   }
@@ -57,7 +79,8 @@ menu {
 h1 {
   font-weight: 700;
   white-space: nowrap;
-  font-size: 5vw;
+  //font-size: 4.8vw;
+  font-size: clamp(1rem, 4.3vw, 4rem);
 }
 
 .writing-mode-Inverse {
@@ -80,8 +103,10 @@ h1 {
   &::before {
     content: "";
     position: absolute;
-    width: 45vw;
-    height: 70vh;
+/*     width: 45vw;
+    height: 70vh;  */ 
+    width: 55vw;
+    height: 64vh;
     max-width: 700px;
     max-height: 700px;
     background-image: url("./../../assets/img/photo_shadows.png");

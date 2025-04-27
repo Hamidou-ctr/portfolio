@@ -37,7 +37,7 @@ section {
     height: 550px;
     background-size: cover;
     z-index: -1;
-    transition: all 0.3s ease; // nice smooth animation
+    //transition: all 0.3s ease; // nice smooth animation
   }
 
   &.large-screen::before {
@@ -121,10 +121,13 @@ main {
     padding-left: 20vw;
 
     &::before {
-      right: -65px;
-      top: -250px;
-      width: 582px;
-      height: 757px;
+      right: 0;
+      top: -150px;
+      //width: 680px;
+      //height: 757px;
+      width: 30vw;
+      height: 70vh;
+      background-size: cover;
     }
   }
 
