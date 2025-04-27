@@ -1,3 +1,11 @@
+.overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
 section {
     display: flex;
     justify-content: center;
@@ -87,7 +95,7 @@ p {
         }
     }
 
-    section{
+    section {
         margin-top: -40px;
     }
 }
@@ -143,7 +151,8 @@ p {
 }
 
 @media screen and (max-width: 401px) {
-/*     h1 {
+
+    /*     h1 {
         font-size: 28px;
     }
 
@@ -162,7 +171,7 @@ p {
 }
 
 @media screen and (max-width: 340px) {
-    
+
 
 
     .project-link {

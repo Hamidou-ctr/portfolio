@@ -1,14 +1,30 @@
-<section *ngFor="let project of projects; let i = index" [ngClass]="{'left': i % 2 === 0, 'right': i % 2 !== 0}">
-
-  <img [src]="project.imageUrl" alt="{{ project.name }}"/>
-  <div class="project-content">
-    <h1> {{ project.name | translate }} </h1>
-    <h4> {{ project.language }} </h4>
-    <p> {{ project.description | translate }} </p>
-    <span>
-      <a target="_blank" [href]="project.liveTestUrl" class="project-link" [ngClass]="{'test': true}"> {{ "ProjectsComponent.live_test_button" | translate }} </a>
-      <a target="_blank" [href]="project.githubUrl" class="project-link" [ngClass]="{'GitHub': true}">GitHub</a>
-    </span>
-  </div>
-
-</section>
+<div class="overlay">
+  <section
+    *ngFor="let project of projects; let i = index"
+    [ngClass]="{ left: i % 2 === 0, right: i % 2 !== 0 }"
+  >
+    <img [src]="project.imageUrl" alt="{{ project.name }}" />
+    <div class="project-content">
+      <h1>{{ project.name | translate }}</h1>
+      <h4>{{ project.language }}</h4>
+      <p>{{ project.description | translate }}</p>
+      <span>
+        <a
+          target="_blank"
+          [href]="project.liveTestUrl"
+          class="project-link"
+          [ngClass]="{ test: true }"
+        >
+          {{ "ProjectsComponent.live_test_button" | translate }}
+        </a>
+        <a
+          target="_blank"
+          [href]="project.githubUrl"
+          class="project-link"
+          [ngClass]="{ GitHub: true }"
+          >GitHub</a
+        >
+      </span>
+    </div>
+  </section>
+</div>
