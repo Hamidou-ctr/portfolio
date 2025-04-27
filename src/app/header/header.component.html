@@ -1,3 +1,5 @@
+<div class="overlay-background" >
+  
 <nav class="navbar-branding" [ngClass]="{ 'navbar-branding--active': !showMenu }">
   <h1 (click)="scrollToSection('home')" [class.hidden]="showMenu" class="clickable">Hamidou</h1>
 
@@ -56,6 +58,8 @@
     (click)="toggleMenu()"
   />
 </nav>
+
+</div>
 
 <div class="overlay" *ngIf="showMenu">
   <div class="overlay-header">
