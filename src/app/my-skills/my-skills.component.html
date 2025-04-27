@@ -1,19 +1,11 @@
 <section id="skills">
   <menu>
     <div>
-      <img
-        class="language-image"
-        src="assets/img/html_icons.png"
-        alt=""
-      />
+      <img class="language-image" src="assets/img/html_icons.png" alt="" />
       <p>HTML</p>
     </div>
     <div>
-      <img
-        class="language-image"
-        src="assets/img/css_icons.png"
-        alt=""
-      />
+      <img class="language-image" src="assets/img/css_icons.png" alt="" />
       <p>CSS</p>
     </div>
     <div>
@@ -33,43 +25,23 @@
       <p>TypeScript</p>
     </div>
     <div>
-      <img
-        class="language-image"
-        src="assets/img/angular_icons.png"
-        alt=""
-      />
+      <img class="language-image" src="assets/img/angular_icons.png" alt="" />
       <p>Angular</p>
     </div>
     <div>
-      <img
-        class="language-image"
-        src="assets/img/firebase_icons.png"
-        alt=""
-      />
+      <img class="language-image" src="assets/img/firebase_icons.png" alt="" />
       <p>Firebase</p>
     </div>
     <div>
-      <img
-        class="language-image"
-        src="assets/img/git_icons.png"
-        alt=""
-      />
+      <img class="language-image" src="assets/img/git_icons.png" alt="" />
       <p>Git</p>
     </div>
     <div>
-      <img
-        class="language-image"
-        src="assets/img/rest_api_icons.png"
-        alt=""
-      />
+      <img class="language-image" src="assets/img/rest_api_icons.png" alt="" />
       <p>Res Api</p>
     </div>
     <div>
-      <img
-        class="language-image"
-        src="assets/img/scrum_icons.png"
-        alt=""
-      />
+      <img class="language-image" src="assets/img/scrum_icons.png" alt="" />
       <p>Scrum</p>
     </div>
     <div>
@@ -81,38 +53,52 @@
       <p>Material Design</p>
     </div>
 
-    <div class="skill-item" (mouseenter)="isHovered = true" (mouseleave)="isHovered = false">
+    <div
+      class="skill-item"
+      (mouseenter)="isHovered = true"
+      (mouseleave)="isHovered = false"
+    >
       @if (!isHovered) {
-        <div class="skill-subitem1" >
-            <img class="continually-learning-image" src="assets/img/continually_learning_icons.png" alt="" />
-          <p>Continually learning</p>
-        </div>
+      <div class="skill-subitem1">
+        <img
+          class="continually-learning-image"
+          src="assets/img/continually_learning_icons.png"
+          alt=""
+        />
+        <p>Continually learning</p>
+      </div>
       } @else {
-        <div class="skill-subitem2" >
-          <img class="hovered-image" src="assets/img/Group 18.png" alt="" />
-          <img class="continually-learning-image"  src="assets/img/Icons s2.png" alt="" />
-          <p>Continually learning</p>
-        </div>
+      <div class="skill-subitem2">
+        <img class="hovered-image" src="assets/img/Group 18.png" alt="" />
+        <img
+          class="continually-learning-image"
+          src="assets/img/Icons s2.png"
+          alt=""
+        />
+        <p>Continually learning</p>
+      </div>
       }
     </div>
 
     <span class="show-mobile content-show-mobile">
       <h2>
-        {{"SkillsComponent.skills_description2" | translate }}
-        <h2> {{"SkillsComponent.skills_description3" | translate }}</h2>
+        {{ "SkillsComponent.skills_description2" | translate }}
+        <h2>{{ "SkillsComponent.skills_description3" | translate }}</h2>
         ?
       </h2>
-      <span> {{"SkillsComponent.skills_description4" | translate }} </span>
-      <button class="clickable" (click)="scrollToContactSection()"> {{"SkillsComponent.button_scroll_To_Reference" | translate }} </button>
+      <span> {{ "SkillsComponent.skills_description4" | translate }} </span>
+      <button class="clickable" (click)="scrollToContactSection()">
+        {{ "SkillsComponent.button_scroll_To_Reference" | translate }}
+      </button>
     </span>
   </menu>
 
   <main>
     <div class="content">
-      <h1>{{"SkillsComponent.skills" | translate }}</h1>
-      <span> {{"SkillsComponent.skills_description" | translate }} </span>
-      
-     <!--  Show that you have used a variety of front-end technologies in your
+      <h1>{{ "SkillsComponent.skills" | translate }}</h1>
+      <span> {{ "SkillsComponent.skills_description" | translate }} </span>
+
+      <!--  Show that you have used a variety of front-end technologies in your
       projects. 
       
         //"skills_description": "I am proficient in a variety of programming languages and frameworks, including HTML, CSS, JavaScript, React, and more. My expertise extends to responsive design, ensuring that applications look great on all devices. I am also familiar with version control systems like Git, which allows for efficient collaboration and code management.",
@@ -121,12 +107,14 @@
 
       <div class="show-desktop content-show-desktop">
         <h2>
-          {{"SkillsComponent.skills_description2" | translate }}
-          <h2> {{"SkillsComponent.skills_description3" | translate }}</h2>
+          {{ "SkillsComponent.skills_description2" | translate }}
+          <h2>{{ "SkillsComponent.skills_description3" | translate }}</h2>
           ?
         </h2>
-        <span> {{"SkillsComponent.skills_description4" | translate }} </span>
-        <button class="clickable" (click)="scrollToContactSection()"> {{"SkillsComponent.button_scroll_To_Reference" | translate }} </button>
+        <span> {{ "SkillsComponent.skills_description4" | translate }} </span>
+        <button class="clickable" (click)="scrollToContactSection()">
+          {{ "SkillsComponent.button_scroll_To_Reference" | translate }}
+        </button>
       </div>
     </div>
     <p class="bright-lavender-line"></p>
