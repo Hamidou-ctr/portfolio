@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Location } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
 
@@ -11,10 +11,14 @@ import { TranslateModule } from '@ngx-translate/core';
   templateUrl: './privacy-policy.component.html',
   styleUrl: './privacy-policy.component.scss'
 })
-export class PrivacyPolicyComponent {
+export class PrivacyPolicyComponent implements OnInit {
   constructor(private location: Location) {}
 
   goBack() {
     this.location.back();
+  }
+
+  ngOnInit(): void {
+    window.scrollTo(0, 0);  // Scrollt zum Seitenanfang
   }
 }

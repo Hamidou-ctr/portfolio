@@ -81,5 +81,55 @@
 
   "FooterComponent": {
     "footer_text": "All rights reserved © 2023"
-  }
+  },
+
+  "PrivacyPolicyComponent": {
+  "privacy_policy": "Privacy Policy",
+  "privacy_policy_description": "This privacy policy informs you about the nature, scope, and purpose of the processing of personal data within my online offering.",
+  "contact_information_heading": "1. Controller",
+  "contact_information_content": "Hamidou Diallo\nEmail:",
+  "collected_data_heading": "2. Collected Data",
+  "collected_data_content": "When visiting this website, no personal data is automatically collected. No cookies are set, and no tracking takes place.",
+  "contact_form_heading": "Contact Form",
+  "contact_form_content": "If you contact me via the contact form, the following data will be processed:\n– Name\n– Email address\n– Your message\n\nThis data is used exclusively to process your request and will not be shared with third parties.",
+  "legal_basis_heading": "3. Legal Basis of Processing",
+  "legal_basis_content": "The processing of your data is carried out in accordance with Art. 6(1)(b) GDPR (for the fulfillment of a contract or pre-contractual measures).",
+  "hosting_heading": "4. Hosting",
+  "hosting_content": "This website is hosted by Hetzner Online GmbH. The servers are located in Germany. Hetzner processes personal data only according to our instructions and within the framework of a data processing agreement in accordance with Art. 28 GDPR.",
+  "github_links_heading": "5. GitHub Links",
+  "github_links_content": "This website contains links to my GitHub profile. When you click on a GitHub link, you will be redirected to the GitHub platform (GitHub Inc., USA). No data is transferred from your side to GitHub through my website.",
+  "your_rights_heading": "6. Your Rights",
+  "your_rights_intro": "You have the right:",
+  "your_rights_list_1": "to access the stored personal data (Art. 15 GDPR),",
+  "your_rights_list_2": "to rectification of inaccurate data (Art. 16 GDPR),",
+  "your_rights_list_3": "to erasure (Art. 17 GDPR),",
+  "your_rights_list_4": "to restriction of processing (Art. 18 GDPR),",
+  "your_rights_list_5": "to data portability (Art. 20 GDPR),",
+  "your_rights_list_6": "to object to the processing (Art. 21 GDPR).",
+  "contact_me_text": "Please contact me at:",
+  "complaint_right_heading": "7. Right to Lodge a Complaint",
+  "complaint_right_content": "You have the right to lodge a complaint with the competent supervisory authority if you believe that the processing of your personal data violates the GDPR.",
+  "privacy_policy_changes_heading": "8. Changes to the Privacy Policy",
+  "privacy_policy_changes_content": "I reserve the right to amend this privacy policy in the event of changes to the website or legal requirements. Please check regularly for the current status.",
+  "last_updated": "Last updated: April 2025"
+},
+
+
+"LegalNoticeComponent": {
+  "legal_notice": "Legal Notice",
+  "provider_information_heading": "Information according to § 5 TMG",
+  "provider_information_content": "Hamidou Diallo\nEmail: hamiduguinea@gmail.com\nResidence: Germany",
+  "represented_by_heading": "Represented by",
+  "represented_by_content": "Hamidou Diallo",
+  "liability_heading": "Disclaimer",
+  "liability_content_heading_1": "Liability for Contents",
+  "liability_content_1": "The contents of this website were created with the utmost care. However, I cannot guarantee the accuracy, completeness, or up-to-dateness of the contents.",
+  "liability_content_heading_2": "Liability for Links",
+  "liability_content_2": "This website contains links to external third-party websites (e.g., GitHub), on whose content I have no influence. Therefore, I cannot assume any liability for these external contents. The respective provider or operator of the linked pages is always responsible for their content.",
+  "copyright_heading": "Copyright",
+  "copyright_content": "The content and works created by me on this website are subject to German copyright law. Contributions by third parties are marked as such. The duplication, editing, distribution, and any kind of use outside the limits of copyright law require my written consent.",
+  "last_updated": "Last updated: April 2025"
+}
+
+
 }

@@ -1,42 +1,41 @@
-
 <img
-(click)="goBack()"
-class="back-button clickable"
-src="assets/img/4. go_up_button.png"
-alt=""
+  (click)="goBack()"
+  class="back-button clickable"
+  src="assets/img/4. go_up_button.png"
+  alt=""
 />
 
 <section class="legal-notice">
-  <h1>Impressum</h1>
+  <h1>{{ "LegalNoticeComponent.legal_notice" | translate }}</h1>
 
-  <h2>Angaben gemäß § 5 TMG</h2>
+  <h2>{{ "LegalNoticeComponent.provider_information_heading" | translate }}</h2>
   <p>
-    Hamidou Diallo<br>
-    E-Mail: <a href="mailto:hamiduguinea@gmail.com">hamiduguinea&commat;gmail.com</a> <br>
-    Wohnort: Deutschland
+    {{ "LegalNoticeComponent.provider_information_content" | translate }}
   </p>
 
-  <h2>Vertreten durch</h2>
-  <p>Hamidou Diallo</p>
-
-  <h2>Haftungsausschluss</h2>
-
-  <h3>Haftung für Inhalte</h3>
+  <h2>{{ "LegalNoticeComponent.represented_by_heading" | translate }}</h2>
   <p>
-    Die Inhalte dieser Website wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte kann ich jedoch keine Gewähr übernehmen.
+    {{ "LegalNoticeComponent.represented_by_content" | translate }}
   </p>
 
-  <h3>Haftung für Links</h3>
+  <h2>{{ "LegalNoticeComponent.liability_heading" | translate }}</h2>
+
+  <h3>{{ "LegalNoticeComponent.liability_content_heading_1" | translate }}</h3>
   <p>
-    Diese Website enthält Links zu externen Webseiten Dritter (z. B. GitHub), auf deren Inhalte ich keinen Einfluss habe.
-    Daher kann ich für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich.
+    {{ "LegalNoticeComponent.liability_content_1" | translate }}
   </p>
 
-  <h2>Urheberrecht</h2>
+  <h3>{{ "LegalNoticeComponent.liability_content_heading_2" | translate }}</h3>
   <p>
-    Die durch mich erstellten Inhalte und Werke auf dieser Website unterliegen dem deutschen Urheberrecht.
-    Beiträge Dritter sind als solche gekennzeichnet. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen meiner schriftlichen Zustimmung.
+    {{ "LegalNoticeComponent.liability_content_2" | translate }}
   </p>
 
-  <p class="last-updated"><em>Letzte Aktualisierung: April 2025</em></p>
+  <h2>{{ "LegalNoticeComponent.copyright_heading" | translate }}</h2>
+  <p>
+    {{ "LegalNoticeComponent.copyright_content" | translate }}
+  </p>
+
+  <p class="last-updated">
+    <em>{{ "LegalNoticeComponent.last_updated" | translate }}</em>
+  </p>
 </section>

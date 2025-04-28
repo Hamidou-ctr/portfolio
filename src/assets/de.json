@@ -66,14 +66,10 @@
     "email_error": "Ihre E-Mail ist erforderlich",
     "message_error": "Ihre Nachricht ist leer",
 
-
-   
     "privacy_policy_acknowledgment": "Ich habe gelesen die",
     "privacy_policy": "Datenschutz bestimmungen",
     "privacy_policy_agreement": "und stimme der beschriebenen Verarbeitung meiner Daten zu.",
     "privacy_policy_error": "Bitte akzeptieren Sie die Datenschutzerklärung.",
-
-
 
     "message_sent_success": "Deine Nachricht wurde erfolgreich gesendet!",
     "erorr-message_sent": "Fehler beim Senden der Nachricht. Bitte versuchen Sie es erneut."
@@ -81,5 +77,54 @@
 
   "FooterComponent": {
     "footer_text": "Alle Rechte vorbehalten © 2023"
-  }
+  },
+
+  "PrivacyPolicyComponent": {
+    "privacy_policy": "Datenschutzerklärung",
+    "privacy_policy_description": "Diese Datenschutzerklärung klärt Sie über die Art, den Umfang und Zweck der Verarbeitung von personenbezogenen Daten innerhalb meines Onlineangebotes auf.",
+    "contact_information_heading": "1.Verantwortlicher",
+    "contact_information_content": "Hamidou Diallo\nE-Mail:",
+    "collected_data_heading": "2. Erhobene Daten",
+    "collected_data_content": "Beim Besuch dieser Website werden keine personenbezogenen Daten automatisch erfasst. Es werden keine Cookies gesetzt und es findet kein Tracking statt.",
+    "contact_form_heading": "Kontaktformular",
+    "contact_form_content": "Wenn Sie mich über das Kontaktformular kontaktieren, werden folgende Daten verarbeitet:\n– Name\n– E-Mail-Adresse\n– Ihre Nachricht\n\nDiese Daten werden ausschließlich zur Bearbeitung Ihrer Anfrage verwendet und nicht an Dritte weitergegeben.",
+    "legal_basis_heading": "3. Rechtsgrundlage der Verarbeitung",
+    "legal_basis_content": "Die Verarbeitung Ihrer Daten erfolgt gemäß Art. 6 Abs. 1 lit. b DSGVO (zur Erfüllung eines Vertrags oder vorvertraglicher Maßnahmen).",
+    "hosting_heading": "4. Hosting",
+    "hosting_content": "Diese Website wird bei Hetzner Online GmbH gehostet. Die Server befinden sich in Deutschland. Hetzner verarbeitet personenbezogene Daten nur nach unserer Weisung und im Rahmen eines Auftragsverarbeitungsvertrags gemäß Art. 28 DSGVO.",
+    "github_links_heading": "5. GitHub-Links",
+    "github_links_content": "Auf dieser Website sind Links zu meinem GitHub-Profil eingebettet. Beim Anklicken eines GitHub-Links werden Sie auf die Plattform von GitHub (GitHub Inc., USA) weitergeleitet. Es erfolgt dabei keine Datenübertragung von Ihrer Seite an GitHub über meine Website.",
+    "your_rights_heading": "6. Ihre Rechte",
+    "your_rights_intro": "Sie haben das Recht:",
+    "your_rights_list_1": "auf Auskunft über die gespeicherten personenbezogenen Daten (Art. 15 DSGVO),",
+    "your_rights_list_2": "auf Berichtigung unrichtiger Daten (Art. 16 DSGVO),",
+    "your_rights_list_3": "auf Löschung (Art. 17 DSGVO),",
+    "your_rights_list_4": "auf Einschränkung der Verarbeitung (Art. 18 DSGVO),",
+    "your_rights_list_5": "auf Datenübertragbarkeit (Art. 20 DSGVO),",
+    "your_rights_list_6": "auf Widerspruch gegen die Verarbeitung (Art. 21 DSGVO).",
+    "contact_me_text": "Bitte kontaktieren Sie mich hierzu unter:",
+    "complaint_right_heading": "7. Beschwerderecht",
+    "complaint_right_content": "Sie haben das Recht, sich bei der zuständigen Aufsichtsbehörde zu beschweren, wenn Sie der Meinung sind, dass die Verarbeitung Ihrer personenbezogenen Daten gegen die DSGVO verstößt.",
+    "privacy_policy_changes_heading": "8. Änderungen der Datenschutzerklärung",
+    "privacy_policy_changes_content": "Ich behalte mir vor, diese Datenschutzerklärung bei Änderungen an der Website oder gesetzlichen Vorgaben anzupassen. Bitte informieren Sie sich regelmäßig über den aktuellen Stand.",
+    "last_updated": "Letzte Aktualisierung: April 2025"
+  },
+
+
+  "LegalNoticeComponent": {
+  "legal_notice": "Impressum",
+  "provider_information_heading": "Angaben gemäß § 5 TMG",
+  "provider_information_content": "Hamidou Diallo\nE-Mail: hamiduguinea@gmail.com\nWohnort: Deutschland",
+  "represented_by_heading": "Vertreten durch",
+  "represented_by_content": "Hamidou Diallo",
+  "liability_heading": "Haftungsausschluss",
+  "liability_content_heading_1": "Haftung für Inhalte",
+  "liability_content_1": "Die Inhalte dieser Website wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte kann ich jedoch keine Gewähr übernehmen.",
+  "liability_content_heading_2": "Haftung für Links",
+  "liability_content_2": "Diese Website enthält Links zu externen Webseiten Dritter (z. B. GitHub), auf deren Inhalte ich keinen Einfluss habe. Daher kann ich für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich.",
+  "copyright_heading": "Urheberrecht",
+  "copyright_content": "Die durch mich erstellten Inhalte und Werke auf dieser Website unterliegen dem deutschen Urheberrecht. Beiträge Dritter sind als solche gekennzeichnet. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen meiner schriftlichen Zustimmung.",
+  "last_updated": "Letzte Aktualisierung: April 2025"
+}
+
 }
