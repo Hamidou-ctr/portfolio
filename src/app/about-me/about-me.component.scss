@@ -4,9 +4,12 @@ section {
   width: 100%;
   padding-left: 100px;
   position: relative;
+  max-width: 1440px;
+  margin: 0 auto;
 
   >menu {
     width: 50%;
+    max-width: 720px;
 
     >div {
       display: flex;
@@ -25,6 +28,7 @@ section {
     width: 50%;
     display: flex;
     justify-content: flex-start;
+    max-width: none;
   }
 
   &::before {
@@ -37,13 +41,6 @@ section {
     height: 550px;
     background-size: cover;
     z-index: -1;
-    //transition: all 0.3s ease; // nice smooth animation
-  }
-
-  &.large-screen::before {
-    width: 50%;
-    height: 100%;
-    background-size: cover;
   }
 }
 
@@ -82,23 +79,25 @@ main {
     border-radius: 50%;
     border: 4px solid #70e61c;
     margin-left: 30%;
+    max-width: none;
   }
 
   >p {
     border: 2px solid #70e61c;
     flex: 1;
     width: 100%;
+    max-width: none;
   }
 }
 
 @media screen and (max-width: 700px) {
-
   h1 {
     font-size: clamp(1.3rem, 6.5vw, 9rem);
   }
 
   section {
     padding: 25px;
+    max-width: none;
 
     >main {
       display: none;
@@ -106,6 +105,7 @@ main {
 
     menu {
       width: 100%;
+      max-width: none;
     }
 
     background-size: 280px;
@@ -113,21 +113,23 @@ main {
 }
 
 @media screen and (min-width: 1440px) {
-
   section {
-    justify-content: center;
+    justify-content: flex-end; // Bessere Verteilung des Platzes
     align-items: center;
     overflow: visible;
-    padding-left: 20vw;
+    padding-left: 100px; // Fester Wert statt vw
+    max-width: none;
+    position: relative;
 
     &::before {
       right: 0;
-      top: -150px;
-      //width: 680px;
-      //height: 757px;
+      top: -90px;
+      //width: 550px; // Fester Wert statt vw
+      //height: 757px; // Fester Wert statt vh
       width: 30vw;
       height: 70vh;
       background-size: cover;
+      max-width: none;
     }
   }
 
@@ -136,17 +138,24 @@ main {
     right: 0;
     top: 0;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end; // Rechts ausrichten
     align-items: center;
+    padding-right: 0; // Abstand vom rechten Rand
 
     >img {
       width: 375px;
-      height: auto;
-      margin-left: 80px;
+      height: 375px;
+      margin-left: 150px;
     }
   }
 
   h1 {
     font-size: 4rem;
+    max-width: 600px; // Etwas kleiner als 720px
+  }
+
+  menu {
+    max-width: 600px;
+    padding-left: 100px;
   }
 }
