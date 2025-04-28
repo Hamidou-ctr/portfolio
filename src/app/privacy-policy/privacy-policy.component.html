@@ -1,57 +1,82 @@
-<img
-(click)="goBack()"
-class="back-button clickable"
-src="assets/img/4. go_up_button.png"
-alt=""
-/>
-<section class="privacy-policy">
-  <h1>{{ "PrivacyPolicyComponent.privacy_policy" | translate }}</h1>
+<div class="overlay-background">
+  <div class="overlay">
+    <img
+      (click)="goBack()"
+      class="back-button clickable"
+      src="assets/img/4. go_up_button.png"
+      alt=""
+    />
+    <section class="privacy-policy">
+      <h1>{{ "PrivacyPolicyComponent.privacy_policy" | translate }}</h1>
 
-  <p>{{ "PrivacyPolicyComponent.privacy_policy_description" | translate }}</p>
+      <p>
+        {{ "PrivacyPolicyComponent.privacy_policy_description" | translate }}
+      </p>
 
-  <h2>{{ "PrivacyPolicyComponent.contact_information_heading" | translate }}</h2>
-  <p>
-    {{ "PrivacyPolicyComponent.contact_information_content" | translate }}<br />
-    <a href="mailto:hamiduguinea@gmail.com">hamiduguinea&commat;gmail.com</a>
-  </p>
+      <h2>
+        {{ "PrivacyPolicyComponent.contact_information_heading" | translate }}
+      </h2>
+      <p>
+        {{ "PrivacyPolicyComponent.contact_information_content" | translate
+        }}<br />
+        <a href="mailto:hamiduguinea@gmail.com"
+          >hamiduguinea&commat;gmail.com</a
+        >
+      </p>
 
-  <h2>{{ "PrivacyPolicyComponent.collected_data_heading" | translate }}</h2>
-  <p>{{ "PrivacyPolicyComponent.collected_data_content" | translate }}</p>
+      <h2>{{ "PrivacyPolicyComponent.collected_data_heading" | translate }}</h2>
+      <p>{{ "PrivacyPolicyComponent.collected_data_content" | translate }}</p>
 
-  <h3>{{ "PrivacyPolicyComponent.contact_form_heading" | translate }}</h3>
-  <p>{{ "PrivacyPolicyComponent.contact_form_content" | translate }}</p>
+      <h3>{{ "PrivacyPolicyComponent.contact_form_heading" | translate }}</h3>
+      <p>{{ "PrivacyPolicyComponent.contact_form_content" | translate }}</p>
 
-  <h2>{{ "PrivacyPolicyComponent.legal_basis_heading" | translate }}</h2>
-  <p>{{ "PrivacyPolicyComponent.legal_basis_content" | translate }}</p>
+      <h2>{{ "PrivacyPolicyComponent.legal_basis_heading" | translate }}</h2>
+      <p>{{ "PrivacyPolicyComponent.legal_basis_content" | translate }}</p>
 
-  <h2>{{ "PrivacyPolicyComponent.hosting_heading" | translate }}</h2>
-  <p>{{ "PrivacyPolicyComponent.hosting_content" | translate }}</p>
+      <h2>{{ "PrivacyPolicyComponent.hosting_heading" | translate }}</h2>
+      <p>{{ "PrivacyPolicyComponent.hosting_content" | translate }}</p>
 
-  <h2>{{ "PrivacyPolicyComponent.github_links_heading" | translate }}</h2>
-  <p>{{ "PrivacyPolicyComponent.github_links_content" | translate }}</p>
+      <h2>{{ "PrivacyPolicyComponent.github_links_heading" | translate }}</h2>
+      <p>{{ "PrivacyPolicyComponent.github_links_content" | translate }}</p>
 
-  <h2>{{ "PrivacyPolicyComponent.your_rights_heading" | translate }}</h2>
-  <p>{{ "PrivacyPolicyComponent.your_rights_intro" | translate }}</p>
+      <h2>{{ "PrivacyPolicyComponent.your_rights_heading" | translate }}</h2>
+      <p>{{ "PrivacyPolicyComponent.your_rights_intro" | translate }}</p>
 
-  <ul>
-    <li>{{ "PrivacyPolicyComponent.your_rights_list_1" | translate }}</li>
-    <li>{{ "PrivacyPolicyComponent.your_rights_list_2" | translate }}</li>
-    <li>{{ "PrivacyPolicyComponent.your_rights_list_3" | translate }}</li>
-    <li>{{ "PrivacyPolicyComponent.your_rights_list_4" | translate }}</li>
-    <li>{{ "PrivacyPolicyComponent.your_rights_list_5" | translate }}</li>
-    <li>{{ "PrivacyPolicyComponent.your_rights_list_6" | translate }}</li>
-  </ul>
+      <ul>
+        <li>{{ "PrivacyPolicyComponent.your_rights_list_1" | translate }}</li>
+        <li>{{ "PrivacyPolicyComponent.your_rights_list_2" | translate }}</li>
+        <li>{{ "PrivacyPolicyComponent.your_rights_list_3" | translate }}</li>
+        <li>{{ "PrivacyPolicyComponent.your_rights_list_4" | translate }}</li>
+        <li>{{ "PrivacyPolicyComponent.your_rights_list_5" | translate }}</li>
+        <li>{{ "PrivacyPolicyComponent.your_rights_list_6" | translate }}</li>
+      </ul>
 
-  <p>
-    {{ "PrivacyPolicyComponent.contact_me_text" | translate }}
-    <a href="mailto:hamiduguinea@gmail.com">hamiduguinea&commat;gmail.com</a>
-  </p>
+      <p>
+        {{ "PrivacyPolicyComponent.contact_me_text" | translate }}
+        <a href="mailto:hamiduguinea@gmail.com"
+          >hamiduguinea&commat;gmail.com</a
+        >
+      </p>
 
-  <h2>{{ "PrivacyPolicyComponent.complaint_right_heading" | translate }}</h2>
-  <p>{{ "PrivacyPolicyComponent.complaint_right_content" | translate }}</p>
+      <h2>
+        {{ "PrivacyPolicyComponent.complaint_right_heading" | translate }}
+      </h2>
+      <p>{{ "PrivacyPolicyComponent.complaint_right_content" | translate }}</p>
 
-  <h2>{{ "PrivacyPolicyComponent.privacy_policy_changes_heading" | translate }}</h2>
-  <p>{{ "PrivacyPolicyComponent.privacy_policy_changes_content" | translate }}</p>
+      <h2>
+        {{
+          "PrivacyPolicyComponent.privacy_policy_changes_heading" | translate
+        }}
+      </h2>
+      <p>
+        {{
+          "PrivacyPolicyComponent.privacy_policy_changes_content" | translate
+        }}
+      </p>
 
-  <p class="last-updated"><em>{{ "PrivacyPolicyComponent.last_updated" | translate }}</em></p>
-</section>
+      <p class="last-updated">
+        <em>{{ "PrivacyPolicyComponent.last_updated" | translate }}</em>
+      </p>
+    </section>
+  </div>
+</div>

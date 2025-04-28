@@ -1,3 +1,14 @@
+.overlay-background{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay{
+  max-width: 1440px;
+}
+
+
 .back-button {
   position: fixed;
   margin-top: 8rem;
@@ -99,5 +110,12 @@
       font-size: 1rem;
       margin-top: 1rem;
     }
+  }
+}
+
+
+@media screen and (min-width: 1440px) {
+  .back-button {
+    display: none;
   }
 }

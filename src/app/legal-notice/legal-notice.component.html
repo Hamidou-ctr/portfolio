@@ -1,41 +1,50 @@
-<img
-  (click)="goBack()"
-  class="back-button clickable"
-  src="assets/img/4. go_up_button.png"
-  alt=""
-/>
+<div class="overlay-background">
+  <div class="overlay">
+    <img
+      (click)="goBack()"
+      class="back-button clickable"
+      src="assets/img/4. go_up_button.png"
+      alt=""
+    />
 
-<section class="legal-notice">
-  <h1>{{ "LegalNoticeComponent.legal_notice" | translate }}</h1>
+    <section class="legal-notice">
+      <h1>{{ "LegalNoticeComponent.legal_notice" | translate }}</h1>
 
-  <h2>{{ "LegalNoticeComponent.provider_information_heading" | translate }}</h2>
-  <p>
-    {{ "LegalNoticeComponent.provider_information_content" | translate }}
-  </p>
+      <h2 class="provider-information">
+        {{ "LegalNoticeComponent.provider_information_heading" | translate }}
+      </h2>
+      <p [innerHTML]="'LegalNoticeComponent.provider_information_content' | translate"></p>
+      
 
-  <h2>{{ "LegalNoticeComponent.represented_by_heading" | translate }}</h2>
-  <p>
-    {{ "LegalNoticeComponent.represented_by_content" | translate }}
-  </p>
+      <h2>{{ "LegalNoticeComponent.represented_by_heading" | translate }}</h2>
+      <p>
+        {{ "LegalNoticeComponent.represented_by_content" | translate }}
+      </p>
 
-  <h2>{{ "LegalNoticeComponent.liability_heading" | translate }}</h2>
+      <h2>{{ "LegalNoticeComponent.liability_heading" | translate }}</h2>
 
-  <h3>{{ "LegalNoticeComponent.liability_content_heading_1" | translate }}</h3>
-  <p>
-    {{ "LegalNoticeComponent.liability_content_1" | translate }}
-  </p>
+      <h3>
+        {{ "LegalNoticeComponent.liability_content_heading_1" | translate }}
+      </h3>
+      <p>
+        {{ "LegalNoticeComponent.liability_content_1" | translate }}
+      </p>
 
-  <h3>{{ "LegalNoticeComponent.liability_content_heading_2" | translate }}</h3>
-  <p>
-    {{ "LegalNoticeComponent.liability_content_2" | translate }}
-  </p>
+      <h3>
+        {{ "LegalNoticeComponent.liability_content_heading_2" | translate }}
+      </h3>
+      <p>
+        {{ "LegalNoticeComponent.liability_content_2" | translate }}
+      </p>
 
-  <h2>{{ "LegalNoticeComponent.copyright_heading" | translate }}</h2>
-  <p>
-    {{ "LegalNoticeComponent.copyright_content" | translate }}
-  </p>
+      <h2>{{ "LegalNoticeComponent.copyright_heading" | translate }}</h2>
+      <p>
+        {{ "LegalNoticeComponent.copyright_content" | translate }}
+      </p>
 
-  <p class="last-updated">
-    <em>{{ "LegalNoticeComponent.last_updated" | translate }}</em>
-  </p>
-</section>
+      <p class="last-updated">
+        <em>{{ "LegalNoticeComponent.last_updated" | translate }}</em>
+      </p>
+    </section>
+  </div>
+</div>

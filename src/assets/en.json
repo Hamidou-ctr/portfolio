@@ -118,7 +118,8 @@
 "LegalNoticeComponent": {
   "legal_notice": "Legal Notice",
   "provider_information_heading": "Information according to § 5 TMG",
-  "provider_information_content": "Hamidou Diallo\nEmail: hamiduguinea@gmail.com\nResidence: Germany",
+  "provider_information_content": "Hamidou Diallo <br> Email: hamiduguinea@gmail.com <br> Residence: Germany",
+  "dispute_resolution_heading": "Dispute Resolution",
   "represented_by_heading": "Represented by",
   "represented_by_content": "Hamidou Diallo",
   "liability_heading": "Disclaimer",

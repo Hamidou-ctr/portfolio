@@ -114,7 +114,7 @@
   "LegalNoticeComponent": {
   "legal_notice": "Impressum",
   "provider_information_heading": "Angaben gemäß § 5 TMG",
-  "provider_information_content": "Hamidou Diallo\nE-Mail: hamiduguinea@gmail.com\nWohnort: Deutschland",
+  "provider_information_content": "Hamidou Diallo <br> E-Mail: hamiduguinea@gmail.com <br> Wohnort: Deutschland",
   "represented_by_heading": "Vertreten durch",
   "represented_by_content": "Hamidou Diallo",
   "liability_heading": "Haftungsausschluss",
