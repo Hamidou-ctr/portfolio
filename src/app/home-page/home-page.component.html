@@ -1,58 +1,93 @@
 <div class="overlay">
+  <div class="background" id="home">
+    <section>
+      <menu>
+        <div class="image-container">
+          <img  src="assets/img/profil1.png" alt="Profilbild" />
+        </div>
+  
+        <div class="intro">
+          <div class="intro-text">
+            <span class="writing-mode-Inverse"> <p>{{ "HomePageComponent.i" | translate}}</p> {{ "HomePageComponent.am" | translate}} </span>
+            <div class="name-title">
+              <h1>Hamidou Diallo</h1>
+              <h3>{{ "HomePageComponent.frontend_developer" | translate}}</h3>
+            </div>
+          </div>
+          <button class="clickable" (click)="scrollToContact()">
+            {{ "HomePageComponent.Let's_talk!" | translate }}
+          </button>
+        </div>
+      </menu>
+    </section>
 
+    <main class="contact-section">
+      <div class="contact-info">
+        <p class="separator"></p>
+        <div class="contact-buttons">
+          <a target="_blank" href="https://github.com/Hamidou-ctr">
+            <img src="assets/img/github_button.png" alt="GitHub" />
+          </a>
 
-<div class="background" id="home">
-  <section>
-    <menu>
-      <div class="image-container">
-        <img  src="assets/img/profil1.png" alt="Profilbild" />
+          <a href="mailto:hamiduguinea@gmail.com">
+            <img
+              (click)="scrollToContact()"
+              src="assets/img/email_button.png"
+              alt="Email"
+            />
+          </a>
+          <!--  <a target="_blank" href="#"><img src="assets/img/linkedin_button.png" alt="LinkedIn" /></a> -->
+
+          <a class="clickable email-link" href="mailto:hamiduguinea@gmail.com"
+            >hamiduguinea&#64;gmail.com</a
+          >
+        </div>
       </div>
+      <p class="scroll-down" (click)="scrollToBottom()">
+        {{ "HomePageComponent.scroll_down" | translate }}
+        <img
+          (click)="scrollToBottom()"
+          src="assets/img/scroll_down.png"
+          alt="Scroll down"
+        />
+      </p>
+    </main>
+  </div>
 
-      <div class="intro">
-        <div class="intro-text">
-          <span class="writing-mode-Inverse"> <span>{{ "HomePageComponent.i" | translate}}</span> {{ "HomePageComponent.am" | translate}} </span>
-          <div class="name-title">
-            <h1>Hamidou Diallo</h1>
-            <h3>{{ "HomePageComponent.frontend_developer" | translate}}</h3>
+  <span>
+    <p class="separator"></p>
+    <section>
+      <div class="contact-section">
+        <div class="contact-info">
+          <div class="contact-buttons">
+            <a target="_blank" href="https://github.com/Hamidou-ctr">
+              <img src="assets/img/github_button.png" alt="GitHub" />
+            </a>
+
+            <a href="mailto:hamiduguinea@gmail.com">
+              <img
+                (click)="scrollToContact()"
+                src="assets/img/email_button.png"
+                alt="Email"
+              />
+            </a>
+            <!--  <a target="_blank" href="#"><img src="assets/img/linkedin_button.png" alt="LinkedIn" /></a> -->
+
+            <a class="clickable email-link" href="mailto:hamiduguinea@gmail.com"
+              >hamiduguinea&#64;gmail.com</a
+            >
           </div>
         </div>
-        <button class="clickable" (click)="scrollToContact()">
-          {{ "HomePageComponent.Let's_talk!" | translate }}
-        </button>
+        <p class="scroll-down" (click)="scrollToBottom()">
+          {{ "HomePageComponent.scroll_down" | translate }}
+          <img
+            (click)="scrollToBottom()"
+            src="assets/img/scroll_down.png"
+            alt="Scroll down"
+          />
+        </p>
       </div>
-    </menu>
-  </section>
-
-  <main class="contact-section">
-    <div class="contact-info">
-      <p class="separator"></p>
-      <div class="contact-buttons">
-        <a target="_blank" href="https://github.com/Hamidou-ctr">
-          <img src="assets/img/github_button.png" alt="GitHub" />
-        </a>
-
-        <a href="mailto:hamiduguinea@gmail.com">
-          <img 
-          (click)="scrollToContact()"
-          src="assets/img/email_button.png"
-          alt="Email"
-        />
-        </a>
-      <!--  <a target="_blank" href="#"><img src="assets/img/linkedin_button.png" alt="LinkedIn" /></a> -->
-        
-        <a class="clickable email-link" href="mailto:hamiduguinea@gmail.com"
-          >hamiduguinea&#64;gmail.com</a
-        >
-      </div>
-    </div>
-    <p class="scroll-down" (click)="scrollToBottom()">
-      {{ "HomePageComponent.scroll_down" | translate}}
-      <img (click)="scrollToBottom()"
-        src="assets/img/scroll_down.png"
-        alt="Scroll down"
-      />
-    </p>
-  </main>
-</div>
-
+    </section>
+    <p class="separator" style="background-color: black; border: none;"></p>
+  </span>
 </div>
