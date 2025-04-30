@@ -93,7 +93,7 @@ div:hover .language-image {
 
 .language-image {
   width: 60px;
-  height: 60px;
+  height: auto;
 }
 
 @keyframes moveUpAndBack {
@@ -224,10 +224,11 @@ button {
   }
 
   menu {
-    max-width: 100%;
+    width: 100%;
     gap: 50px;
     margin-top: -30px;
     justify-content: center;
+    padding: 0 5% 0 5%;
 
     >div {
       width: 20%;
@@ -235,7 +236,7 @@ button {
 
       img {
         width: 80px;
-        height: 80px;
+        height: auto;
       }
     }
   }
@@ -306,7 +307,7 @@ button {
   }
 
   .content {
-    max-width: 471px;
+    max-width: 390px;
   }
 
   h1 {
