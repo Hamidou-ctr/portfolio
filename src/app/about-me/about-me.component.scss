@@ -122,14 +122,10 @@ main {
     position: relative;
 
     &::before {
-      right: 0;
-      top: -90px;
-      //width: 550px; // Fester Wert statt vw
-      //height: 757px; // Fester Wert statt vh
-      width: 30vw;
-      height: 70vh;
-      background-size: cover;
-      max-width: none;
+      right: 1vw;
+      width: 450px;
+      height: 450px;
+      background-position-x: 0px;
     }
   }
 

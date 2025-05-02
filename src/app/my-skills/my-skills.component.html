@@ -1,104 +1,136 @@
 <section id="skills">
-  <menu>
-    <div>
-      <img class="language-image" src="assets/img/html_icons.png" alt="" />
-      <p>HTML</p>
-    </div>
-    <div>
-      <img class="language-image" src="assets/img/css_icons.png" alt="" />
-      <p>CSS</p>
-    </div>
-    <div>
-      <img
-        class="language-image"
-        src="assets/img/javascript_icons.png"
-        alt=""
-      />
-      <p>JavaScript</p>
-    </div>
-    <div>
-      <img
-        class="language-image"
-        src="assets/img/typescript_icons.png"
-        alt=""
-      />
-      <p>TypeScript</p>
-    </div>
-    <div>
-      <img class="language-image" src="assets/img/angular_icons.png" alt="" />
-      <p>Angular</p>
-    </div>
-    <div>
-      <img class="language-image" src="assets/img/firebase_icons.png" alt="" />
-      <p>Firebase</p>
-    </div>
-    <div>
-      <img class="language-image" src="assets/img/git_icons.png" alt="" />
-      <p>Git</p>
-    </div>
-    <div>
-      <img class="language-image" src="assets/img/rest_api_icons.png" alt="" />
-      <p>Res Api</p>
-    </div>
-    <div>
-      <img class="language-image" src="assets/img/scrum_icons.png" alt="" />
-      <p>Scrum</p>
-    </div>
-    <div>
-      <img
-        class="language-image"
-        src="assets/img/material_design_icons.png"
-        alt=""
-      />
-      <p>Material Design</p>
-    </div>
+  <aside></aside>
 
-    <div
-      class="skill-item"
-      (mouseenter)="isHovered = true"
-      (mouseleave)="isHovered = false"
-    >
-      @if (!isHovered) {
-      <div class="skill-subitem1">
+  <div class="overlay-main">
+    <menu
+
+    data-aos="zoom-in-down"
+    data-aos-duration="1000"
+    data-aos-easing="ease-in-out"
+    data-aos-anchor-placement="top-center"
+  >
+      <div>
+        <img class="language-image" src="assets/img/html_icons.png" alt="" />
+        <p>HTML</p>
+      </div>
+      <div>
+        <img class="language-image" src="assets/img/css_icons.png" alt="" />
+        <p>CSS</p>
+      </div>
+      <div>
         <img
-          class="continually-learning-image"
-          src="assets/img/continually_learning_icons.png"
+          class="language-image"
+          src="assets/img/javascript_icons.png"
           alt=""
         />
-        <p>Continually learning</p>
+        <p>JavaScript</p>
       </div>
-      } @else {
-      <div class="skill-subitem2">
-        <img class="hovered-image" src="assets/img/Group 18.png" alt="" />
+      <div>
         <img
-          class="continually-learning-image"
-          src="assets/img/Icons s2.png"
+          class="language-image"
+          src="assets/img/typescript_icons.png"
           alt=""
         />
-        <p>Continually learning</p>
+        <p>TypeScript</p>
       </div>
-      }
-    </div>
+      <div>
+        <img class="language-image" src="assets/img/angular_icons.png" alt="" />
+        <p>Angular</p>
+      </div>
+      <div>
+        <img
+          class="language-image"
+          src="assets/img/firebase_icons.png"
+          alt=""
+        />
+        <p>Firebase</p>
+      </div>
+      <div>
+        <img class="language-image" src="assets/img/git_icons.png" alt="" />
+        <p>Git</p>
+      </div>
+      <div>
+        <img
+          class="language-image"
+          src="assets/img/rest_api_icons.png"
+          alt=""
+        />
+        <p>Res Api</p>
+      </div>
+      <div>
+        <img class="language-image" src="assets/img/scrum_icons.png" alt="" />
+        <p>Scrum</p>
+      </div>
+      <div>
+        <img
+          class="language-image"
+          src="assets/img/material_design_icons.png"
+          alt=""
+        />
+        <p>Material Design</p>
+      </div>
 
-    <span class="show-mobile content-show-mobile">
-      <h2>
-        {{ "SkillsComponent.skills_description2" | translate }}
-        <h2>{{ "SkillsComponent.skills_description3" | translate }}</h2>
-        ?
-      </h2>
-      <span> {{ "SkillsComponent.skills_description4" | translate }} </span>
-      <button class="clickable" (click)="scrollToContactSection()">
-        {{ "SkillsComponent.button_scroll_To_Reference" | translate }}
-      </button>
-    </span>
-  </menu>
+      <div
+        class="skill-item"
+        (mouseenter)="isHovered = true"
+        (mouseleave)="isHovered = false"
+      >
+        @if (!isHovered) {
+        <div class="skill-subitem1">
+          <img
+            class="continually-learning-image"
+            src="assets/img/continually_learning_icons.png"
+            alt=""
+          />
+          <p>Continually learning</p>
+        </div>
+        } @else {
+        <div class="skill-subitem2">
+          <img class="hovered-image" src="assets/img/Group 18.png" alt="" />
+          <img
+            class="continually-learning-image"
+            src="assets/img/Icons s2.png"
+            alt=""
+          />
+          <p>Continually learning</p>
+        </div>
+        }
+      </div>
 
-  <main>
-    <div class="content">
-      <h1>{{ "SkillsComponent.skills" | translate }}</h1>
-      <span> {{ "SkillsComponent.skills_description" | translate }} </span>
+      <span class="show-mobile content-show-mobile">
+        <h2
+          data-aos="flip-left"
+          data-aos-easing="ease-out-cubic"
+          data-aos-duration="2000"
+        >
+          {{ "SkillsComponent.skills_description2" | translate }}
+          <h2>{{ "SkillsComponent.skills_description3" | translate }}</h2>
+          ?
+        </h2>
+        <span> {{ "SkillsComponent.skills_description4" | translate }} </span>
+        <button
+          class="clickable"
+          (click)="scrollToContactSection()"
+          data-aos="flip-left"
+          data-aos-easing="ease-out-cubic"
+          data-aos-duration="2000"
+        >
+          {{ "SkillsComponent.button_scroll_To_Reference" | translate }}
+        </button>
+      </span>
+    </menu>
 
-      <!--  Show that you have used a variety of front-end technologies in your
+    <main
+    data-aos="fade-in-down"
+    data-aos-duration="1000"
+    data-aos-easing="ease-in-out"
+    data-aos-anchor-placement="top-center"
+  >
+      <div class="content">
+        <h1>{{ "SkillsComponent.skills" | translate }}</h1>
+        <span> {{ "SkillsComponent.skills_description" | translate }} </span>
+
+        <!--  Show that you have used a variety of front-end technologies in your
       projects. 
       
         //"skills_description": "I am proficient in a variety of programming languages and frameworks, including HTML, CSS, JavaScript, React, and more. My expertise extends to responsive design, ensuring that applications look great on all devices. I am also familiar with version control systems like Git, which allows for efficient collaboration and code management.",
@@ -106,17 +138,52 @@
       -->
 
       <div class="show-desktop content-show-desktop">
-        <h2>
-          {{ "SkillsComponent.skills_description2" | translate }}
-          <h2>{{ "SkillsComponent.skills_description3" | translate }}</h2>
-          ?
-        </h2>
-        <span> {{ "SkillsComponent.skills_description4" | translate }} </span>
-        <button class="clickable" (click)="scrollToContactSection()">
-          {{ "SkillsComponent.button_scroll_To_Reference" | translate }}
-        </button>
+        <h2
+          data-aos="flip-left"
+          data-aos-easing="ease-out-cubic"
+          data-aos-duration="2000"
+        >
+            {{ "SkillsComponent.skills_description2" | translate }}
+            <h2>{{ "SkillsComponent.skills_description3" | translate }}</h2>
+            ?
+          </h2>
+          <span> {{ "SkillsComponent.skills_description4" | translate }} </span>
+          <button
+          class="clickable"
+          (click)="scrollToContactSection()"
+          data-aos="flip-left"
+          data-aos-easing="ease-out-cubic"
+          data-aos-duration="2000"
+        >
+            {{ "SkillsComponent.button_scroll_To_Reference" | translate }}
+          </button>
+        </div>
       </div>
-    </div>
-    <p class="bright-lavender-line"></p>
-  </main>
+      <p class="bright-lavender-line" ></p>
+    </main>
+  </div>
+  <dl class="bright-lavender-line-max"  ></dl>
 </section>
+
+
+
+
+<!-- 
+
+ 
+
+
+
+      
+
+
+
+     
+
+
+
+
+
+            
+
+-->

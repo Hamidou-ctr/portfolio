@@ -151,39 +151,23 @@ p {
 }
 
 @media screen and (max-width: 401px) {
-
-    /*     h1 {
-        font-size: 28px;
-    }
-
-    h4 {
-        font-size: 20px;
-    }
- */
     .project-link {
         padding: 10px 20px 10px 20px;
         font-size: 20px;
     }
-
-    /* .project-content{
-        //margin-top: -50%;
-    } */
 }
 
 @media screen and (max-width: 340px) {
-
-
-
     .project-link {
         padding: 8px 16px 8px 16px;
         font-size: 17px;
     }
-
 }
-
 
 @media screen and (min-width: 1440px) {
     section {
         max-width: 1440px;
+        padding-left: 4%;
+        padding-right: 4%;
     }
 }

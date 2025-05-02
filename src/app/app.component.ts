@@ -9,6 +9,7 @@ import { MySkillsComponent } from "./my-skills/my-skills.component";
 import { PortfolioComponent } from "./portfolio/portfolio.component";
 import { ContactMeComponent } from "./contact-me/contact-me.component";
 import { FooterComponent } from './footer/footer.component';
+import * as AOS from 'aos'; // Import AOS
 
 @Component({
   selector: 'app-root',
@@ -23,6 +24,8 @@ export class AppComponent implements AfterViewInit {
   constructor(private router: Router, private route: ActivatedRoute) {}
 
   ngAfterViewInit(): void {
+    AOS.init();
+
     this.route.queryParams.subscribe((params) => {
       const section = params['scrollTo'];
       if (section) {
@@ -35,6 +38,7 @@ export class AppComponent implements AfterViewInit {
         }, 10);
       }
     });
+    setTimeout(() => AOS.refresh(), 300);
   }
 
   isSpecialPage(): boolean {

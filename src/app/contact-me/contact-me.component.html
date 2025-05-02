@@ -1,11 +1,11 @@
-<header id="contact-section">
+<header id="contact-section"  data-aos="fade-down"> 
   <p></p>
   <h1>{{ "ContactComponent.contact" | translate }}</h1>
 </header>
 
 <main id="contact">
   <section class="contact-section" >
-    <div class="contact-section__intro">
+    <div class="contact-section__intro"  data-aos="fade-up-right" >
       <h1 class="contact-section__title">
         {{ "ContactComponent.problem_to_solve" | translate }}
       </h1>
@@ -22,6 +22,8 @@
       class="contact-form"
       (ngSubmit)="onSubmit(contactForm)"
       #contactForm="ngForm"
+
+      data-aos="fade-up"
     >
       <div class="contact-form__inputs">
         <div class="input-container">
@@ -199,6 +201,12 @@
         type="submit"
         value="submit"
         [disabled]="!contactForm.form.valid || !contactData.privacy"
+
+
+        data-aos="flip-left"
+        data-aos-easing="ease-out-cubic"
+        data-aos-duration="2000"
+        
       >
         {{ "ContactComponent.send_button" | translate }}
       </button>

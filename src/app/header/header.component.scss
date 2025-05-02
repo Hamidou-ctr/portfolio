@@ -1,12 +1,13 @@
-.overlay-background{
+.overlay-main {
   width: 100%;
   height: 109.03px;
   display: flex;
   justify-content: center;
-  align-items: center;
   background-color: rgb(20, 29, 47);
   z-index: 10;
   position: fixed;
+  top: 0;
+  left: 0;
 }
 
 nav {
@@ -19,9 +20,6 @@ nav {
   padding-left: 5%;
   padding-right: 6%;
   gap: 20%;
-  position: fixed;
-  top: 0;
-  background-color: rgb(20, 29, 47);
   z-index: 10;
   box-sizing: border-box;
   color: #FFFFFF;
@@ -30,7 +28,9 @@ nav {
   font-size: 23px;
 }
 
-.navbar{
+// Der Rest deines SCSS bleibt gleich...
+
+.navbar {
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -42,14 +42,14 @@ h1 {
   font-size: clamp(2rem, 4vw, 7rem);
 }
 
-.navbar-header{
+.navbar-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 16px;
 }
 
-.navbar-footer{
+.navbar-footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -91,18 +91,18 @@ img {
 .overlay {
   display: none;
 }
-span{
-  
+
+span {
+
   &.active {
     color: greenyellow;
   }
 }
-.overlay-divider{
+
+.overlay-divider {
   display: flex;
   flex-direction: column;
   gap: 48px;
-
-
   font-size: 2.5rem;
   font-weight: 500;
   line-height: 1.5rem;
@@ -128,19 +128,19 @@ button {
   }
 }
 
-@media screen and (max-width: 1050px){
+@media screen and (max-width: 1050px) {
   nav {
     padding-right: 5%;
   }
 }
 
-@media screen and (max-width: 800px){
+@media screen and (max-width: 800px) {
   nav {
     padding: 37px 4% 37px 24px;
     gap: 5%;
   }
 
-  .navbar{
+  .navbar {
     width: 70%;
     justify-content: flex-end;
   }
@@ -150,11 +150,12 @@ button {
   nav {
     gap: 5%;
   }
+
   .navbar {
     gap: 5%;
   }
 
-  .navbar-header{
+  .navbar-header {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -186,6 +187,7 @@ button {
 
   a {
     font-size: 2rem;
+
     &:hover {
       color: #FFFFFF;
     }
@@ -229,6 +231,13 @@ button {
 }
 
 @media screen and (min-width: 1400px) {
+
+  .overlay-background {
+    position: relative;
+    background-color: rgb(20, 29, 47);
+
+  }
+
   nav {
     gap: 100px;
     padding-left: 50px;

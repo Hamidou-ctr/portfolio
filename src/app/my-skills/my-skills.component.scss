@@ -1,12 +1,15 @@
+aside {
+  display: none;
+}
+
+.bright-lavender-line-max{
+  display: none;
+}
+
 section {
   display: flex;
-  justify-content: center;
-  padding-left: 100px;
-  gap: 13%;
-  margin-top: 70px;
   position: relative;
-  font-size: 16px;
-  font-weight: 400;
+  width: 100%;
 
   &::before {
     content: "";
@@ -21,6 +24,16 @@ section {
     background-position-x: 506px;
     background-position-y: 0px;
   }
+}
+
+.overlay-main {
+  display: flex;
+  justify-content: center;
+  padding-left: 100px;
+  gap: 13%;
+  margin-top: 70px;
+  font-size: 16px;
+  font-weight: 400;
 }
 
 h1 {
@@ -189,7 +202,7 @@ button {
 }
 
 @media screen and (max-width: 870px) {
-  section {
+  .overlay-main {
     flex-direction: column-reverse;
     align-items: center;
     padding: 0;
@@ -286,9 +299,8 @@ button {
 
 @media (min-width: 1440px) {
   section {
-    max-width: 100vw;
-    gap: 18%;
-    padding-left: 23vw;
+    display: flex;
+    width: 100%;
 
     &::before {
       width: 576px;
@@ -298,16 +310,11 @@ button {
     }
   }
 
-  menu {
-    max-width: 664px;
-  }
-
-  main {
-    width: 100%;
-  }
-
-  .content {
-    max-width: 390px;
+  .overlay-main {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1400px;
+    padding-left: 30px;
   }
 
   h1 {
@@ -319,8 +326,28 @@ button {
   }
 
   .bright-lavender-line {
-    margin-top: 5vh;
+   display: none;
+  }
+
+  main{
+    justify-content: flex-end;
+    padding-right: 20px;
+  }
+
+  aside {
+    display: flex;
     width: 100%;
     flex: 1;
+    height: 4px;
+    margin-top: 130px;
+  }
+
+  .bright-lavender-line-max{
+    display: flex;
+    width: 100%;
+    flex: 1;
+    height: 4px;
+    background-color: #9747ff;
+    margin-top: 130px;
   }
 }

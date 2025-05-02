@@ -1,6 +1,18 @@
+section{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+menu{
+  display: none;
+  width: 35%;
+  height: 5vh;
+}
+
 main {
   display: flex;
-  width: 100vw;
+  width: 100%;
   flex-direction: column;
   justify-content: flex-end;
   font-size: 16px;
@@ -86,11 +98,29 @@ main {
 }
 
 @media screen and (min-width: 1440px) {
+
+  menu{
+    display: flex;
+  }
+
+  main {
+    width: 65%;
+
+    >div{
+      margin-left: 0;
+    }
+
+
+  }
   main{
     >div {
       >h1 {
         font-size: 4rem;
       }
+    }
+
+    >p {
+      margin-left: 0;
     }
   }
 }
