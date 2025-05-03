@@ -20,8 +20,8 @@ span {
     background-size: 100% 100%;
     background-position: bottom;
     width: 100%;
-    height: 94vh;
-    margin-top: 93vh;
+    height: 100vh;
+    margin-top: 83vh;
     z-index: -1;
     max-width: none !important;
   }
@@ -233,7 +233,7 @@ a {
     &::before {
       width: 450px;
       height: 400px;
-      top: 28vh;
+      top: 38vh;
       left: 50%;
       transform: translate(-50%, -50%);
     }
@@ -249,7 +249,7 @@ a {
     }
 
     >img {
-      height: 72vh;
+      height: 70vh;
     }
   }
 
@@ -262,15 +262,13 @@ a {
 
   .image-container {
     &::before {
-      width: 400px;
-      height: 400px;
-      top: 28vh;
+      top: 24vh;
       left: 50%;
       transform: translate(-50%, -50%);
     }
 
     >img {
-      height: 60vh;
+      height: 55vh;
     }
   }
 }
@@ -286,28 +284,29 @@ a {
 
   .image-container {
     &::before {
-      width: 400px;
+      width: 420px;
       height: 400px;
       top: 28vh;
       left: 50%;
       transform: translate(-50%, -50%);
     }
 
-    >img {
-      height: 60vh;
-    }
   }
 
-  menu{
-    justify-content: center;
+  menu {
+    div{
+      div{
+        margin-top: 20px;
+      }
+    }
   }
 }
 
 @media screen and (max-width: 855px) {
   .image-container {
     &::before {
-      width: 80vw;
-      top: 40vh;
+      width: 65vw;
+      top: 26vh;
 
     }
 
@@ -316,13 +315,7 @@ a {
     }
   }
 
-  menu{
-    >div{
-      >div{
-        margin-top: 18px;
-      }
-    }
-  }
+
 }
 
 @media screen and (max-width: 810px) {
@@ -362,6 +355,9 @@ a {
   main {
     >div {
       margin-top: 30px;
+      >div{
+        margin-top: 17px;
+      }
     }
   }
 }
