@@ -1,14 +1,13 @@
-.overlay-background{
+.overlay-background {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.overlay{
+.overlay {
   max-width: 1440px;
-  min-height: 100vh;
+  min-height: calc(100vh - 400px);
 }
-
 
 .back-button {
   position: fixed;
@@ -29,6 +28,7 @@
   0% {
     transform: rotate(-25deg);
   }
+
   100% {
     transform: rotate(25deg);
   }
@@ -92,6 +92,7 @@
   .back-button {
     left: 85%;
   }
+
   .privacy-policy {
     margin-top: 2rem;
     padding: 1rem;

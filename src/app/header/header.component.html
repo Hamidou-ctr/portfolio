@@ -70,7 +70,9 @@
 
 <div class="overlay" *ngIf="showMenu">
   <div class="overlay-header">
-    <h1>Hamidou</h1>
+    <h1
+    (click)="scrollToSection('home')"
+    >Hamidou</h1>
     <img
       class="close clickable"
       (click)="toggleMenu()"
