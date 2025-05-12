@@ -1,4 +1,9 @@
 {
+  "AppComponent": {
+      "tablet_orientation_warning":  "🔄 Please rotate your tablet to landscape mode for the best view."
+    },
+
+
   "HeaderComponent": {
     "ABOUT_ME": "About me",
     "SKILLS": "Skills",

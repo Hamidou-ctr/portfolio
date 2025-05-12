@@ -1,3 +1,67 @@
+<section id="home" class="home-section">
+  <main class="main-content">
+
+    <img src="assets/img/profil1.png" alt="Profilbild" class="profile-image" />
+
+    <div class="intro-container">
+      <div class="intro-text">
+        <span class="intro-paragraphs">
+          <p class="intro-greeting">{{ "HomePageComponent.i" | translate }}</p>
+          <span class="intro-verb">{{
+            "HomePageComponent.am" | translate
+          }}</span>
+        </span>
+        <div class="name-title">
+          <h1 class="name">Hamidou Diallo</h1>
+          <h3 class="title">
+            {{ "HomePageComponent.frontend_developer" | translate }}
+          </h3>
+        </div>
+      </div>
+      <button class="clickable contact-button" (click)="scrollToContact()">
+        {{ "HomePageComponent.Let's_talk!" | translate }}
+      </button>
+    </div>
+  </main>
+
+  <menu class="social-menu">
+    <p class="menu-placeholder-left"></p>
+    <div class="social-section">
+      <div class="social-links">
+        <a target="_blank" href="https://github.com/Hamidou-ctr" class="github-link">
+          <img src="assets/img/github_button.png" alt="GitHub" class="github-icon"/>
+        </a>
+        <a href="mailto:hamiduguinea@gmail.com" class="email-link">
+          <img (click)="scrollToContact()" src="assets/img/email_button.png" alt="Email" class="email-icon"/>
+        </a>
+        <a class="clickable email-address" href="mailto:hamiduguinea@gmail.com">
+          hamiduguinea&#64;gmail.com
+        </a>
+      </div>
+
+      <p class="scroll-down" (click)="scrollToBottom()">
+        {{ "HomePageComponent.scroll_down" | translate }}
+        <img
+          (click)="scrollToBottom()"
+          src="assets/img/scroll_down.png"
+          alt="Scroll down"
+          class="scroll-icon"
+        />
+      </p>
+    </div>
+
+    <p class="menu-placeholder-right"></p>
+  </menu>
+</section>
+
+
+
+
+
+
+
+<!-- 
+
 <div class="overlay">
   <div class="background" id="home">
     <section class="section-overlay">
@@ -39,7 +103,7 @@
               alt="Email"
             />
           </a>
-          <!--  <a target="_blank" href="#"><img src="assets/img/linkedin_button.png" alt="LinkedIn" /></a> -->
+            <a target="_blank" href="#"><img src="assets/img/linkedin_button.png" alt="LinkedIn" /></a> 
 
           <a class="clickable email-link" href="mailto:hamiduguinea@gmail.com"
             >hamiduguinea&#64;gmail.com</a
@@ -74,7 +138,7 @@
                 alt="Email"
               />
             </a>
-            <!--  <a target="_blank" href="#"><img src="assets/img/linkedin_button.png" alt="LinkedIn" /></a> -->
+              <a target="_blank" href="#"><img src="assets/img/linkedin_button.png" alt="LinkedIn" /></a>
 
             <a class="clickable email-link" href="mailto:hamiduguinea@gmail.com"
               >hamiduguinea&#64;gmail.com</a
@@ -94,3 +158,6 @@
     <p class="separator" style="background-color: black; border: none;"></p>
   </span>
 </div>
+
+
+-->

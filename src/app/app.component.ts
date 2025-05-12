@@ -9,7 +9,7 @@ import { MySkillsComponent } from "./my-skills/my-skills.component";
 import { PortfolioComponent } from "./portfolio/portfolio.component";
 import { ContactMeComponent } from "./contact-me/contact-me.component";
 import { FooterComponent } from './footer/footer.component';
-import * as AOS from 'aos'; // Import AOS
+import * as AOS from 'aos';
 
 @Component({
   selector: 'app-root',

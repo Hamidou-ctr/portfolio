@@ -1,4 +1,8 @@
 {
+  "AppComponent": {
+    "tablet_orientation_warning": "🔄 Bitte drehen Sie Ihr Tablet ins Querformat für die beste Ansicht."
+  },
+
   "HeaderComponent": {
     "ABOUT_ME": "Über mich",
     "SKILLS": "Fähigkeiten",
