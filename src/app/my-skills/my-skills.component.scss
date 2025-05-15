@@ -313,7 +313,7 @@ button {
   .overlay-main {
     display: flex;
     justify-content: space-between;
-    max-width: 1400px;
+    max-width: 100%;
     padding-left: 30px;
   }
 
@@ -329,14 +329,19 @@ button {
    display: none;
   }
 
+  menu{
+    max-width: 700px;
+  }
+
   main{
     justify-content: flex-end;
     padding-right: 20px;
+    max-width: 700px;
   }
 
   aside {
     display: flex;
-    width: 100%;
+    width: calc(100vw - 1439px);
     flex: 1;
     height: 4px;
     margin-top: 130px;

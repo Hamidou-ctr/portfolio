@@ -25,7 +25,8 @@ main {
   position: relative;
   overflow: hidden;
   width: 100%;
-
+  border-bottom: #70e71a solid 4px;
+  padding-bottom: 50px;
   &::before {
     content: "";
     position: absolute;

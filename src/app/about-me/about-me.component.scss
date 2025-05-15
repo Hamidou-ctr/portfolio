@@ -4,7 +4,7 @@ section {
   width: 100%;
   padding-left: 100px;
   position: relative;
-  max-width: 1440px;
+  width: 100%;
   margin: 0 auto;
 
   >menu {
@@ -120,7 +120,7 @@ main {
     padding-left: 100px; // Fester Wert statt vw
     max-width: none;
     position: relative;
-
+    width: 100% !important;
     &::before {
       right: 1vw;
       width: 450px;
