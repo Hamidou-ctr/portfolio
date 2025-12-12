@@ -38,7 +38,7 @@ export class ContactMeComponent {
   }
 
   post = {
-    endPoint: 'https://hamidou-diallo.com/sendMail.php',
+    endPoint: 'https://www.hamidoudiallo.de/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {

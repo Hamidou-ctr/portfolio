@@ -51,6 +51,11 @@
       "description": "Gemeinsam mit anderen Ausbildungsteilnehmern habe ich ein webbasiertes Aufgabenverwaltungstool entwickelt, das vom Kanban-System inspiriert ist. Mit HTML, CSS, JavaScript und Firebase haben wir eine kollaborative App mit Drag-and-Drop-Funktionalität und Aufgabenverteilung nach Benutzer und Kategorie erstellt. Git wurde für die Versionskontrolle und die Koordination der Teamarbeit verwendet."
     },
 
+    "da_bubble_Projects": {
+      "title": "Da-Bubble",
+      "description": "Gemeinsam mit anderen Ausbildungsteilnehmern habe ich eine Slack-ähnliche App entwickelt. Sie revolutioniert die Teamkommunikation und Zusammenarbeit durch eine intuitive Benutzeroberfläche, Echtzeitnachrichten und eine übersichtliche Kanalstruktur."
+    },
+
     "live_test_button": "Live-Test"
   },
 
@@ -114,21 +119,19 @@
     "last_updated": "Letzte Aktualisierung: April 2025"
   },
 
-
   "LegalNoticeComponent": {
-  "legal_notice": "Impressum",
-  "provider_information_heading": "Angaben gemäß § 5 TMG",
-  "provider_information_content": "Hamidou Diallo <br> E-Mail: hamiduguinea@gmail.com <br> Wohnort: Deutschland",
-  "represented_by_heading": "Vertreten durch",
-  "represented_by_content": "Hamidou Diallo",
-  "liability_heading": "Haftungsausschluss",
-  "liability_content_heading_1": "Haftung für Inhalte",
-  "liability_content_1": "Die Inhalte dieser Website wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte kann ich jedoch keine Gewähr übernehmen.",
-  "liability_content_heading_2": "Haftung für Links",
-  "liability_content_2": "Diese Website enthält Links zu externen Webseiten Dritter (z. B. GitHub), auf deren Inhalte ich keinen Einfluss habe. Daher kann ich für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich.",
-  "copyright_heading": "Urheberrecht",
-  "copyright_content": "Die durch mich erstellten Inhalte und Werke auf dieser Website unterliegen dem deutschen Urheberrecht. Beiträge Dritter sind als solche gekennzeichnet. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen meiner schriftlichen Zustimmung.",
-  "last_updated": "Letzte Aktualisierung: April 2025"
-}
-
+    "legal_notice": "Impressum",
+    "provider_information_heading": "Angaben gemäß § 5 TMG",
+    "provider_information_content": "Hamidou Diallo <br> E-Mail: hamiduguinea@gmail.com <br> Wohnort: Deutschland",
+    "represented_by_heading": "Vertreten durch",
+    "represented_by_content": "Hamidou Diallo",
+    "liability_heading": "Haftungsausschluss",
+    "liability_content_heading_1": "Haftung für Inhalte",
+    "liability_content_1": "Die Inhalte dieser Website wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte kann ich jedoch keine Gewähr übernehmen.",
+    "liability_content_heading_2": "Haftung für Links",
+    "liability_content_2": "Diese Website enthält Links zu externen Webseiten Dritter (z. B. GitHub), auf deren Inhalte ich keinen Einfluss habe. Daher kann ich für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich.",
+    "copyright_heading": "Urheberrecht",
+    "copyright_content": "Die durch mich erstellten Inhalte und Werke auf dieser Website unterliegen dem deutschen Urheberrecht. Beiträge Dritter sind als solche gekennzeichnet. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen meiner schriftlichen Zustimmung.",
+    "last_updated": "Letzte Aktualisierung: April 2025"
+  }
 }

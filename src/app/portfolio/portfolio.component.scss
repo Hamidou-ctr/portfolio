@@ -2,6 +2,7 @@ section{
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 50px;
 }
 
 menu{
@@ -78,6 +79,12 @@ main {
         width: 60%;
       }
     }
+  }
+}
+
+@media screen and (max-width: 830px) {
+  section{
+    margin-bottom: 0px;
   }
 }
 
