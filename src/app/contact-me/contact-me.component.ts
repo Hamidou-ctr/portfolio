@@ -6,11 +6,10 @@ import { TranslateModule } from '@ngx-translate/core';
 import { RouterLink } from '@angular/router';
 
 @Component({
-  selector: 'app-contact-me',
-  standalone: true,
-  imports: [CommonModule, TranslateModule, FormsModule, RouterLink],
-  templateUrl: './contact-me.component.html',
-  styleUrls: ['./contact-me.component.scss']
+    selector: 'app-contact-me',
+    imports: [CommonModule, TranslateModule, FormsModule, RouterLink],
+    templateUrl: './contact-me.component.html',
+    styleUrls: ['./contact-me.component.scss']
 })
 export class ContactMeComponent {
 

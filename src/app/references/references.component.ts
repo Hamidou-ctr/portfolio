@@ -4,11 +4,10 @@ import { ViewChild, ElementRef } from '@angular/core';
 import { service } from '../service/service.component';
 
 @Component({
-  selector: 'app-references',
-  standalone: true,
-  imports: [CommonModule],
-  templateUrl: './references.component.html',
-  styleUrl: './references.component.scss'
+    selector: 'app-references',
+    imports: [CommonModule],
+    templateUrl: './references.component.html',
+    styleUrl: './references.component.scss'
 })
 export class ReferencesComponent {
   @ViewChild('refereceSection') refereceSection!: ElementRef;
