@@ -6,10 +6,10 @@ import { TranslateModule } from '@ngx-translate/core';
 import { RouterLink } from '@angular/router';
 
 @Component({
-    selector: 'app-contact-me',
-    imports: [CommonModule, TranslateModule, FormsModule, RouterLink],
-    templateUrl: './contact-me.component.html',
-    styleUrls: ['./contact-me.component.scss']
+  selector: 'app-contact-me',
+  imports: [CommonModule, TranslateModule, FormsModule, RouterLink],
+  templateUrl: './contact-me.component.html',
+  styleUrls: ['./contact-me.component.scss']
 })
 export class ContactMeComponent {
 
@@ -41,32 +41,40 @@ export class ContactMeComponent {
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {
-        'Content-Type': 'text/plain',
-        responseType: 'text',
-        console: true,
+        'Content-Type': 'application/json',
+        'Accept': 'application/json',
       },
+      responseType: 'json' as const
     },
   };
 
   onSubmit(ngForm: NgForm) {
     if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
-      this.http.post(this.post.endPoint, this.post.body(this.contactData))
+      this.http.post(this.post.endPoint, this.post.body(this.contactData), this.post.options)
         .subscribe({
           next: (response: any) => {
-            this.showSuccessPopup();
-            ngForm.resetForm();
-            ngForm.controls['privacy'].markAsUntouched();
+            if (response.success) {
+              this.showSuccessPopup();
+              ngForm.resetForm();
+              if (ngForm.controls['privacy']) {
+                ngForm.controls['privacy'].markAsUntouched();
+              }
+            } else {
+              this.showErrorPopup();
+            }
           },
           error: (error: any) => {
-            console.error(error);
             this.showErrorPopup();
-          },
-          complete: () => console.info('send post complete'),
+          }
         });
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
-
+      // Testmodus
+      console.log('Test mode - form would be submitted');
+      this.showSuccessPopup();
       ngForm.resetForm();
-      ngForm.controls['privacy'].markAsUntouched();
+      if (ngForm.controls['privacy']) {
+        ngForm.controls['privacy'].markAsUntouched();
+      }
     }
   }
 
