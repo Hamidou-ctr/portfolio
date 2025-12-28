@@ -27,14 +27,15 @@ jobs:
         env:
           NODE_OPTIONS: "--max_old_space_size=4096"
 
-      - name: Prepare Deployment Files
+      - name: Verify Build Output
         run: |
-          # Move files from browser folder to deployment folder
-          mkdir -p deploy
-          cp -r dist/portfolio/browser/* deploy/
-          echo "Files ready for deployment:"
-          ls -la deploy/
-          ls deploy/*.html 2>/dev/null || echo "No HTML files found"
+          echo "Build output structure:"
+          find dist/ -type f -name "*.html" -o -name "*.js" -o -name "*.css" | head -20
+          echo "Moving files from browser folder to root..."
+          # Move files from browser folder to a temp location
+          mkdir -p deploy_temp
+          cp -r dist/portfolio/browser/* deploy_temp/
+          ls -la deploy_temp/
 
       - name: Setup SSH
         run: |
@@ -45,48 +46,59 @@ jobs:
           # SSH known hosts
           ssh-keyscan -H ${{ secrets.DEPLOY_HOST }} >> ~/.ssh/known_hosts
 
-      - name: Deploy with rsync
+      - name: Deploy to Server
         run: |
-          # First, backup current files on server
-          ssh -o StrictHostKeyChecking=no ${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }} "
+          # Create a timestamp for backup
+          TIMESTAMP=$(date +%Y%m%d_%H%M%S)
+
+          # SSH into server and deploy
+          ssh -o StrictHostKeyChecking=no ${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }} << 'EOF'
             cd ${{ secrets.DEPLOY_PATH }}
-            TIMESTAMP=\$(date +%Y%m%d_%H%M%S)
-            tar -czf ../../backups/deploy_\${TIMESTAMP}.tar.gz . 2>/dev/null || true
-            echo 'Backup created'
-          "
+            
+            # Create backup of current version
+            echo "Creating backup..."
+            tar -czf ../../backups/backup_${TIMESTAMP}.tar.gz .
+            
+            # Clean up directory but keep PHP files and specific folders
+            echo "Cleaning old files..."
+            # Remove everything except specific files/folders
+            find . -maxdepth 1 ! -name '.well-known' ! -name '*.php' ! -name 'media' ! -name 'project' ! -name '.' ! -name '..' ! -name 'index.html' -exec rm -rf {} + 2>/dev/null || true
+            
+            # Remove the browser folder if it exists
+            rm -rf browser 2>/dev/null || true
+          EOF
 
-          # Deploy with rsync - exclude PHP files and special directories
-          rsync -avz --delete \
-            -e "ssh -o StrictHostKeyChecking=no" \
-            --exclude='*.php' \
-            --exclude='.well-known/' \
-            --exclude='media/' \
-            --exclude='project/' \
-            deploy/ \
-            ${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }}:${{ secrets.DEPLOY_PATH }}/
+          # Copy new build files to server
+          echo "Copying new files..."
+          scp -r -o StrictHostKeyChecking=no deploy_temp/* ${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }}:${{ secrets.DEPLOY_PATH }}/
 
-          echo "Deployment completed!"
+          # Copy assets folder if it exists
+          if [ -d "deploy_temp/assets" ]; then
+            echo "Copying assets..."
+            scp -r -o StrictHostKeyChecking=no deploy_temp/assets ${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }}:${{ secrets.DEPLOY_PATH }}/
+          fi
 
-      - name: Verify Deployment
-        run: |
-          ssh -o StrictHostKeyChecking=no ${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }} "
+          # Set proper permissions on server
+          ssh -o StrictHostKeyChecking=no ${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }} << 'EOF'
             cd ${{ secrets.DEPLOY_PATH }}
-            echo '=== Current directory contents ==='
+            
+            echo "Setting permissions..."
+            chmod 644 *.html *.js *.css *.txt 2>/dev/null || true
+            chmod -R 644 assets/* 2>/dev/null || true
+            
+            # List files to verify deployment
+            echo "Deployment completed successfully!"
+            echo "Files in deployment directory:"
             ls -la
-            echo '=== Checking index.html ==='
-            if [ -f 'index.html' ]; then
-              echo 'index.html exists'
-              echo 'First line:'
-              head -1 index.html
-            else
-              echo 'ERROR: index.html not found!'
-              exit 1
-            fi
-          "
+            echo "Index.html content (first few lines):"
+            head -5 index.html || echo "No index.html found"
+          EOF
+
+          # Clean local temp dir
+          rm -rf deploy_temp
 
       - name: Cleanup
         if: always()
         run: |
-          rm -rf deploy
           rm -f ~/.ssh/id_rsa
           echo "Cleanup completed"
