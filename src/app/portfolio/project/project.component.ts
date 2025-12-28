@@ -26,7 +26,7 @@ export class ProjectComponent {
       name: 'ProjectsComponent.Pollo_Loco_Projects.title',
       language: 'JavaScript | HTML | CSS',
       description: 'ProjectsComponent.Pollo_Loco_Projects.description',
-      liveTestUrl: 'https://hamidou-diallo.com/all-projects/pollo-loco/',
+      liveTestUrl: 'https://pollo-loco.hamidoudiallo.de/',
       githubUrl: 'https://github.com/Hamidou-ctr/pollo-loco',
     },
 
