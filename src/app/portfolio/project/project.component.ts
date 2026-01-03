@@ -2,15 +2,13 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 
-
 @Component({
-    selector: 'app-project',
-    imports: [CommonModule, TranslateModule],
-    templateUrl: './project.component.html',
-    styleUrl: './project.component.scss'
+  selector: 'app-project',
+  imports: [CommonModule, TranslateModule],
+  templateUrl: './project.component.html',
+  styleUrl: './project.component.scss',
 })
 export class ProjectComponent {
-
   projects = [
     {
       imageUrl: 'assets/img/join.png',
@@ -19,7 +17,7 @@ export class ProjectComponent {
       description: 'ProjectsComponent.join_Projects.description',
       liveTestUrl: 'https://join.hamidoudiallo.de/',
       githubUrl: 'https://github.com/Hamidou-ctr/join_frontend',
-    }, 
+    },
 
     {
       imageUrl: 'assets/img/pollo_loco.png',
@@ -38,6 +36,5 @@ export class ProjectComponent {
       liveTestUrl: 'https://da-babble.hamidoudiallo.de/intro',
       githubUrl: 'https://github.com/alessandro-arg/da-bubble',
     },
-
   ];
 }

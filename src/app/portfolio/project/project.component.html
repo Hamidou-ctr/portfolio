@@ -3,30 +3,25 @@
     *ngFor="let project of projects; let i = index"
     [ngClass]="{ left: i % 2 === 0, right: i % 2 !== 0 }"
   >
-    <img [src]="project.imageUrl" alt="{{ project.name }}"
-
-    data-aos="flip-left"
-     data-aos-easing="ease-out-cubic"
-     data-aos-duration="1000"
-    
+    <img
+      [src]="project.imageUrl"
+      alt="{{ project.name }}"
+      data-aos="flip-left"
+      data-aos-easing="ease-out-cubic"
+      data-aos-duration="1000"
     />
-    <div class="project-content"
-    
-    data-aos="fade-up"
-     data-aos-anchor-placement="center-up"
-    
+    <div
+      class="project-content"
+      data-aos="fade-up"
+      data-aos-anchor-placement="center-up"
     >
       <h1>{{ project.name | translate }}</h1>
       <h4>{{ project.language }}</h4>
       <p>{{ project.description | translate }}</p>
-      <span 
-      
-
-
-      data-aos="flip-left"
-     data-aos-easing="ease-out-cubic"
-     data-aos-duration="1000"
-      
+      <span
+        data-aos="flip-left"
+        data-aos-easing="ease-out-cubic"
+        data-aos-duration="1000"
       >
         <a
           target="_blank"
