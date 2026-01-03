@@ -36,7 +36,7 @@ export class ProjectComponent {
       language: 'Angular | TypeScript | Firebase',
       description: 'ProjectsComponent.da_bubble_Projects.description',
       liveTestUrl: 'https://da-babble.hamidoudiallo.de/intro',
-      githubUrl: 'https://github.com/Hamidou-ctr/DA-Bubble',
+      githubUrl: 'https://github.com/alessandro-arg/da-bubble',
     },
 
   ];
