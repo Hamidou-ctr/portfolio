@@ -11,7 +11,7 @@ import { TranslateModule } from '@ngx-translate/core';
 export class ProjectComponent {
   projects = [
     {
-      imageUrl: 'assets/img/join.png',
+      imageUrl: 'assets/img/join.svg',
       name: 'ProjectsComponent.join_Projects.title',
       language: 'JavaScript | HTML | CSS | Firebase ',
       description: 'ProjectsComponent.join_Projects.description',
@@ -20,7 +20,7 @@ export class ProjectComponent {
     },
 
     {
-      imageUrl: 'assets/img/pollo_loco.png',
+      imageUrl: 'assets/img/Pollo_loco.svg',
       name: 'ProjectsComponent.Pollo_Loco_Projects.title',
       language: 'JavaScript | HTML | CSS',
       description: 'ProjectsComponent.Pollo_Loco_Projects.description',
@@ -29,7 +29,7 @@ export class ProjectComponent {
     },
 
     {
-      imageUrl: 'assets/img/da_bubble.png',
+      imageUrl: 'assets/img/da-babble.svg',
       name: 'ProjectsComponent.da_bubble_Projects.title',
       language: 'Angular | TypeScript | Firebase',
       description: 'ProjectsComponent.da_bubble_Projects.description',
