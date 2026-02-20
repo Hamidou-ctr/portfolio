@@ -7,14 +7,13 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { AboutMeComponent } from "./about-me/about-me.component";
 import { MySkillsComponent } from "./my-skills/my-skills.component";
 import { PortfolioComponent } from "./portfolio/portfolio.component";
-import { ReferencesComponent } from "./references/references.component";
 import { ContactMeComponent } from "./contact-me/contact-me.component";
 import { FooterComponent } from './footer/footer.component';
 import * as AOS from 'aos';
 
 @Component({
     selector: 'app-root',
-    imports: [CommonModule, RouterOutlet, HeaderComponent, HomePageComponent, AboutMeComponent, MySkillsComponent, PortfolioComponent, ReferencesComponent, ContactMeComponent, FooterComponent],
+    imports: [CommonModule, RouterOutlet, HeaderComponent, HomePageComponent, AboutMeComponent, MySkillsComponent, PortfolioComponent, ContactMeComponent, FooterComponent],
     templateUrl: './app.component.html',
     styleUrl: './app.component.scss'
 })
