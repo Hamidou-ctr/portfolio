@@ -1,0 +1,27 @@
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/"
+
+    schedule:
+      interval: "weekly"
+
+    open-pull-requests-limit: 5
+
+    commit-message:
+      prefix: "deps"
+
+    labels:
+      - "dependencies"
+
+    groups:
+      angular:
+        patterns:
+          - "@angular*"
+
+      dev-dependencies:
+        dependency-type: "development"
+
+    ignore:
+      - dependency-name: "@angular*"
+        update-types: ["version-update:semver-major"]
