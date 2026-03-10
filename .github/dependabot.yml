@@ -25,3 +25,10 @@ updates:
     ignore:
       - dependency-name: "@angular*"
         update-types: ["version-update:semver-major"]
+      - dependency-name: "typescript"
+        versions: [">=5.9"] 
+
+        cooldown:
+          semver-major-days: 30
+          semver-minor-days: 7
+          semver-patch-days: 3

@@ -26,7 +26,7 @@ export class HeaderComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.currentLanguage = this.translate.getDefaultLang();
+     this.currentLanguage = this.translate.getDefaultLang() ?? this.currentLanguage;
   }
 
   showMenu = false;
