@@ -3,6 +3,12 @@ name: Angular CI
 on:
   push:
     branches: [ main ]
+    paths:
+      - "src/**"
+      - "angular.json"
+      - "package.json"
+      - "package-lock.json"
+      - ".github/workflows/angular-ci.yml"
   pull_request:
     branches: [ main ]
 
@@ -34,3 +40,11 @@ jobs:
 
       - name: Build project
         run: npm run build
+
+      - name: Cache node modules
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.npm
+            node_modules
+          key: ${{ runner.os }}-node-${{ hashFiles('package-lock.json') }}
