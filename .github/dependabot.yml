@@ -23,10 +23,13 @@ updates:
         dependency-type: "development"
 
     ignore:
-      - dependency-name: "@angular*"
-        update-types: ["version-update:semver-major"]
-      - dependency-name: "typescript"
-        versions: [">=5.9"] 
+      - dependency-name: "*" # Alle Abhängigkeiten ignorieren
+        update-types:
+          [
+            "version-update:semver-major",
+            "version-update:semver-minor",
+            "version-update:semver-patch",
+          ]
 
         cooldown:
           semver-major-days: 30
