@@ -8,6 +8,11 @@
   position: fixed;
   top: 0;
   left: 0;
+
+  
+    background-color: #e5d9d9;
+    color: aqua;
+  
 }
 
 nav {
@@ -22,8 +27,8 @@ nav {
   gap: 20%;
   z-index: 10;
   box-sizing: border-box;
-  color: #FFFFFF;
-  font-family: 'Poppins', sans-serif;
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-size: 23px;
 }
@@ -62,22 +67,22 @@ a {
   text-wrap: nowrap;
 
   &:hover {
-    color: #70E61C;
+    color: #70e61c;
     cursor: pointer;
   }
 
   &.active {
-    color: #70E61C;
+    color: #70e61c;
     text-decoration: none;
 
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       left: 0;
       bottom: -2px;
       width: 100%;
       height: 3px;
-      background-color: #9747FF;
+      background-color: #9747ff;
     }
   }
 }
@@ -94,7 +99,6 @@ img {
 }
 
 span {
-
   &.active {
     color: greenyellow;
   }
@@ -119,7 +123,7 @@ button {
   cursor: pointer;
 
   &:hover {
-    background-color: #9747FF;
+    background-color: #9747ff;
     color: black;
   }
 
@@ -190,7 +194,7 @@ button {
     font-size: 2rem;
 
     &:hover {
-      color: #FFFFFF;
+      color: #ffffff;
     }
   }
 }
@@ -198,8 +202,6 @@ button {
 .hidden {
   display: none;
 }
-
-
 
 .overlay-header {
   position: absolute;
@@ -210,7 +212,7 @@ button {
   padding: 37px 24px 37px 24px;
   gap: 40%;
 
-  >p {
+  > p {
     color: white;
     font-size: 24px;
     margin-left: 16px;
@@ -228,15 +230,13 @@ button {
   line-height: 27.6px;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 @media screen and (min-width: 1400px) {
-
   .overlay-background {
     position: relative;
     background-color: rgb(20, 29, 47);
-
   }
 
   nav {
@@ -256,5 +256,4 @@ button {
   button {
     font-size: 2rem;
   }
-
 }
