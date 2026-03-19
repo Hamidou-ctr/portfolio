@@ -1,0 +1,24 @@
+version: 2
+
+updates:
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+
+    # Nur sichere Updates (keine Breaking Changes)
+    versioning-strategy: increase-if-necessary
+
+    # Limit damit nicht zu viele PRs kommen
+    open-pull-requests-limit: 5
+
+    # WICHTIG: Angular schützen
+    ignore:
+      - dependency-name: "@angular/*"
+      - dependency-name: "typescript"
+
+    commit-message:
+      prefix: "deps"
+
+    labels:
+      - "dependencies"
