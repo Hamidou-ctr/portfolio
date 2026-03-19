@@ -14,8 +14,8 @@ export const appConfig: ApplicationConfig = {
     provideTranslateService({
       loader: provideTranslateHttpLoader({
         prefix: 'assets/',
-        suffix: '.json'
-      })
-    })
-  ]
+        suffix: '.json',
+      }),
+    }),
+  ],
 };
