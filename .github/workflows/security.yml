@@ -1,0 +1,22 @@
+name: Security Audit
+
+on:
+  push:
+    branches: [main, master]
+  schedule:
+    - cron: "0 0 * * 0" # einmal pro Woche
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 20.19.6
+
+      - run: npm ci
+
+      - run: npm audit --audit-level=high || true
