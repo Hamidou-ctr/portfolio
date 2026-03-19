@@ -62,7 +62,6 @@
     "message_placeholder": "votre message",
     "send_button": "Envoyer Message :)",
 
-
     "name_error": "Votre nom est obligatoire",
     "email_error": "Votre e-mail est obligatoire",
     "message_error": "Votre message est vide",
@@ -72,10 +71,8 @@
     "privacy_policy_agreement": "et j'accepte le traitement de mes données tel que décrit.",
     "privacy_policy_error": "Veuillez accepter la politique de confidentialité.",
 
-
     "message_sent_success": "Votre message a été envoyé avec succès !",
     "erorr-message_sent": "Erreur lors de l'envoi du message. Veuillez réessayer."
-
   },
 
   "FooterComponent": {

@@ -1,10 +1,10 @@
 {
-    "/sendMail": {
-      "target": "https://www.hamidoudiallo.de",
-      "secure": true,
-      "changeOrigin": true,
-      "pathRewrite": {
-        "^/sendMail": "/sendMail.php"
-      }
+  "/sendMail": {
+    "target": "https://www.hamidoudiallo.de",
+    "secure": true,
+    "changeOrigin": true,
+    "pathRewrite": {
+      "^/sendMail": "/sendMail.php"
     }
   }
+}
