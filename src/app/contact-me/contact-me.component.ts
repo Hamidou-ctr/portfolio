@@ -9,10 +9,9 @@ import { RouterLink } from '@angular/router';
   selector: 'app-contact-me',
   imports: [CommonModule, TranslateModule, FormsModule, RouterLink],
   templateUrl: './contact-me.component.html',
-  styleUrls: ['./contact-me.component.scss']
+  styleUrls: ['./contact-me.component.scss'],
 })
 export class ContactMeComponent {
-
   http = inject(HttpClient);
 
   contactData = {
@@ -26,10 +25,12 @@ export class ContactMeComponent {
   isErrorPopup = false;
 
   //mailTest = true;
-  mailTest = false;   // Uncomment this line to send real emails
+  mailTest = false; // Uncomment this line to send real emails
 
-
-  onPrivacyChange(value: boolean, privacyControl: { control: { markAsTouched: () => void } }) {
+  onPrivacyChange(
+    value: boolean,
+    privacyControl: { control: { markAsTouched: () => void } },
+  ) {
     this.contactData.privacy = value;
     if (privacyControl) {
       privacyControl.control.markAsTouched();
@@ -37,6 +38,18 @@ export class ContactMeComponent {
   }
 
   post = {
+    endPoint: 'https://formspree.io/f/xqeywbok',
+    body: (payload: any) => payload, // ✅ WICHTIG
+    options: {
+      headers: {
+        Accept: 'application/json',
+      },
+      responseType: 'json' as const,
+    },
+  };
+
+  /* 
+    post = {
     endPoint: 'https://www.hamidoudiallo.de/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
@@ -47,7 +60,47 @@ export class ContactMeComponent {
       responseType: 'json' as const
     },
   };
+  */
 
+  onSubmit(ngForm: NgForm) {
+    if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
+      this.http
+        .post(
+          this.post.endPoint,
+          this.post.body(this.contactData),
+          this.post.options,
+        )
+        .subscribe({
+          next: () => {
+            // ✅ Formspree gibt nicht immer success zurück → wir nehmen einfach Erfolg
+            this.isErrorPopup = false;
+            this.showSuccessPopup();
+
+            ngForm.resetForm();
+
+            if (ngForm.controls['privacy']) {
+              ngForm.controls['privacy'].markAsUntouched();
+            }
+          },
+          error: () => {
+            this.isErrorPopup = true;
+            this.showErrorPopup();
+          },
+        });
+    } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
+      console.log('Test mode');
+      this.isErrorPopup = false;
+      this.showSuccessPopup();
+
+      ngForm.resetForm();
+
+      if (ngForm.controls['privacy']) {
+        ngForm.controls['privacy'].markAsUntouched();
+      }
+    }
+  }
+
+  /* 
   onSubmit(ngForm: NgForm) {
     if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
       this.http.post(this.post.endPoint, this.post.body(this.contactData), this.post.options)
@@ -77,11 +130,11 @@ export class ContactMeComponent {
       }
     }
   }
+  */
 
   scrollToTop() {
-    window.scrollTo({ top: 0, behavior: 'smooth' })
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }
-
 
   private showSuccessPopup(duration: number = 4000) {
     this.showPopup = true;
@@ -93,6 +146,6 @@ export class ContactMeComponent {
   private showErrorPopup(duration: number = 5000) {
     this.isErrorPopup = true;
     this.showPopup = true;
-    setTimeout(() => this.showPopup = false, duration);
+    setTimeout(() => (this.showPopup = false), duration);
   }
 }
