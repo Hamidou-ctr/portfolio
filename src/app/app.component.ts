@@ -14,7 +14,7 @@ import * as AOS from 'aos';
 
 @Component({
     selector: 'app-root',
-    imports: [CommonModule, RouterOutlet, HeaderComponent, HomePageComponent, AboutMeComponent, MySkillsComponent, PortfolioComponent, ContactMeComponent, FooterComponent],
+    imports: [CommonModule, RouterOutlet, HeaderComponent, HomePageComponent, AboutMeComponent, MySkillsComponent, PortfolioComponent, ReferencesComponent, ContactMeComponent, FooterComponent],
     templateUrl: './app.component.html',
     styleUrl: './app.component.scss'
 })
