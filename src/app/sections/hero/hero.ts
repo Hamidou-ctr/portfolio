@@ -10,7 +10,7 @@ import { PROFILE } from '../../core/data/profile.data';
   template: `
     <section
       id="hero"
-      class="relative flex min-h-[calc(100svh_-_6rem)] scroll-mt-24 flex-col overflow-hidden bg-navy-900 text-white"
+      class="relative flex min-h-[calc(100svh-6rem)] scroll-mt-24 flex-col overflow-hidden bg-navy-900 text-white"
     >
       <img
         src="assets/img/hero_background2.png"
@@ -19,10 +19,10 @@ import { PROFILE } from '../../core/data/profile.data';
         class="pointer-events-none absolute inset-x-0 bottom-0 z-10 h-[28%] w-full"
       />
 
-      <div class="relative mx-auto flex w-full max-w-[1440px] flex-1 flex-col px-8">
+      <div class="relative mx-auto flex w-full max-w-360 flex-1 flex-col px-8">
         <div class="grid flex-1 gap-8 pt-10 md:grid-cols-2 md:pt-16">
           <div class="flex justify-center self-start md:pt-16">
-            <div class="relative w-full max-w-[280px] sm:max-w-[400px] md:max-w-[680px]">
+            <div class="relative w-full max-w-70 sm:max-w-100 md:max-w-170">
               <img
                 src="assets/img/photo_shadows.png"
                 alt=""
@@ -84,7 +84,7 @@ import { PROFILE } from '../../core/data/profile.data';
 
       <div class="absolute inset-x-0 bottom-10 z-20 flex items-center gap-4 md:gap-6">
         <div
-          class="h-0.5 w-[max(2rem,calc((100%_-_1440px)/2_+_2rem))] flex-none bg-violet-500"
+          class="h-0.5 w-[max(2rem,calc((100%-1440px)/2+2rem))] flex-none bg-violet-500"
           aria-hidden="true"
         ></div>
         <a [href]="profile.github" target="_blank" rel="noopener" aria-label="GitHub">

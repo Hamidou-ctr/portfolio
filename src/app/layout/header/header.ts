@@ -9,7 +9,7 @@ import { PROFILE } from '../../core/data/profile.data';
   imports: [RouterLink, NgOptimizedImage],
   template: `
     <header class="sticky top-0 z-50 bg-navy-900 text-white">
-      <div class="mx-auto flex h-24 max-w-[1440px] items-center justify-between px-8">
+      <div class="mx-auto flex h-24 max-w-360 items-center justify-between px-8">
         <a routerLink="/" class="font-heading text-[28px] font-bold" (click)="closeMenu()">
           {{ firstName() }}
         </a>

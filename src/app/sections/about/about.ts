@@ -7,50 +7,49 @@ import { PROFILE } from '../../core/data/profile.data';
   selector: 'app-about',
   imports: [NgOptimizedImage],
   template: `
-    <section id="about" class="scroll-mt-20 bg-navy-900 py-20 text-white md:py-28">
-      <div class="mx-auto grid max-w-6xl gap-12 px-6 md:grid-cols-2 md:items-center lg:px-10">
-        <div>
-          <h2 class="font-heading text-3xl font-bold sm:text-4xl">{{ t().about.eyebrow }}</h2>
-          <p class="mt-4 text-white/70">{{ t().about.intro }}</p>
+    <section
+      id="about"
+      class="relative scroll-mt-24 overflow-hidden bg-navy-900 pb-24 pt-10 text-white md:pt-12"
+    >
+      <div class="mx-auto grid max-w-360 gap-16 px-8 md:grid-cols-2 md:items-center">
+        <div class="max-w-141">
+          <h2 class="font-heading text-4xl font-bold leading-none sm:text-5xl lg:text-[64px]">
+            {{ t().about.eyebrow }}
+          </h2>
+          <p class="mt-6 text-lg md:text-xl">{{ t().about.intro }}</p>
 
-          <ul class="mt-8 space-y-5">
-            @for (bullet of t().about.bullets; track bullet) {
-              <li class="flex gap-3">
-                <span
-                  class="mt-0.5 flex h-6 w-6 flex-none items-center justify-center rounded-full bg-accent-400/15 text-accent-400"
-                  aria-hidden="true"
-                >
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2.5"
-                    class="h-3.5 w-3.5"
-                  >
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-                  </svg>
-                </span>
-                <span class="text-sm text-white/70">{{ bullet }}</span>
+          <ul class="mt-10 flex flex-col gap-10 md:mt-12 md:gap-12">
+            @for (bullet of t().about.bullets; track $index; let i = $index) {
+              <li class="flex items-center gap-6 md:gap-8">
+                <img
+                  [ngSrc]="'assets/img/' + icons[i] + '.png'"
+                  width="48"
+                  height="48"
+                  alt=""
+                  class="h-10 w-10 flex-none"
+                />
+                <p class="max-w-122 text-lg md:text-xl">{{ bullet }}</p>
               </li>
             }
           </ul>
         </div>
 
-        <div class="flex justify-center md:justify-end">
-          <div class="relative h-56 w-56 sm:h-72 sm:w-72">
-            <div class="absolute -inset-16 -z-10" aria-hidden="true">
-              <img
-                src="assets/img/purple-shadow-about.png"
-                alt=""
-                loading="lazy"
-                decoding="async"
-                class="h-full w-full object-contain"
-              />
-            </div>
+        <div class="flex justify-center">
+          <div class="relative h-60 w-60 sm:h-75 sm:w-75 lg:h-90 lg:w-90">
             <img
-              ngSrc="assets/img/profil1.png"
+              src="assets/img/purple-shadow-about.png"
+              alt=""
+              aria-hidden="true"
+              class="pointer-events-none absolute left-1/2 top-1/2 z-0 h-130 w-250 max-w-none -translate-y-1/2 object-fill"
+            />
+            <div
+              aria-hidden="true"
+              class="absolute left-full top-1/2 z-0 h-0.75 w-screen -translate-y-1/2 bg-accent-400"
+            ></div>
+            <img
+              ngSrc="assets/img/profil2.png"
               fill
-              class="rounded-full object-cover ring-4 ring-accent-400/60"
+              class="z-10 rounded-full border-[3px] border-accent-400 object-cover"
               [alt]="'Portrait of ' + profile.name"
             />
           </div>
@@ -63,4 +62,5 @@ export class About {
   private readonly languageService = inject(LanguageService);
   protected readonly t = this.languageService.t;
   protected readonly profile = PROFILE;
+  protected readonly icons = ['location', 'bulb_desktop', 'puzzle_desktop'];
 }

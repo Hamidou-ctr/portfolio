@@ -78,11 +78,11 @@ export const TRANSLATIONS: Record<Lang, Translation> = {
     about: {
       eyebrow: 'About me',
       intro:
-        'Write some information about yourself that is IT related. Why are you passionate about coding? What is your source of inspiration for improving your programming skills?',
+        "Hi, I'm a german speaking Frontend Developer living in Wuppertal. Motivated by the limitless opportunities within IT, I am excited about crafting visually captivating and intuitive websites and applications.",
       bullets: [
-        'Where are you located? Are you open to different ways of working, such as working remotely or even relocating?',
-        'Show that you are open-minded. Are you enthusiastic about learning new technologies and continually improving your skills?',
-        'A brief description of your problem-solving approach. Do you learn from each challenge as you search for the most efficient or elegant solution? Keywords: analytical thinking, creativity, persistence and collaboration.',
+        'Flexible in terms of working environments, I can work effectively both on-site in Wuppertal and remotely.',
+        'I am open-minded and always looking for personal challenges to constantly improve my knowledge and skills.',
+        "In my profession, programming isn't just about writing code; it's a creative form of problem-solving. I take pride in my ability to distill complex technical challenges into simple, user-friendly solutions. This way, I help you achieve your goals and bring your visions to life.",
       ],
     },
     skills: {
@@ -157,11 +157,11 @@ export const TRANSLATIONS: Record<Lang, Translation> = {
     about: {
       eyebrow: 'Über mich',
       intro:
-        'Schreibe hier etwas über dich mit IT-Bezug. Warum begeisterst du dich fürs Programmieren? Was inspiriert dich, deine Programmierfähigkeiten zu verbessern?',
+        'Hi, ich bin ein deutschsprachiger Frontend-Entwickler aus Wuppertal. Motiviert durch die grenzenlosen Möglichkeiten der IT begeistert es mich, visuell ansprechende und intuitive Websites und Anwendungen zu gestalten.',
       bullets: [
-        'Wo bist du ansässig? Bist du offen für verschiedene Arbeitsmodelle, z. B. Remote-Arbeit oder einen Umzug?',
-        'Zeige, dass du aufgeschlossen bist. Bist du begeistert davon, neue Technologien zu lernen und dich stetig weiterzuentwickeln?',
-        'Eine kurze Beschreibung deines Lösungsansatzes. Lernst du aus jeder Herausforderung auf der Suche nach der effizientesten oder elegantesten Lösung? Stichworte: analytisches Denken, Kreativität, Ausdauer und Teamarbeit.',
+        'Flexibel im Arbeitsumfeld: Ich kann sowohl vor Ort in Wuppertal als auch remote effektiv arbeiten.',
+        'Ich bin aufgeschlossen und suche stets nach persönlichen Herausforderungen, um mein Wissen und meine Fähigkeiten kontinuierlich zu erweitern.',
+        'In meinem Beruf ist Programmieren nicht nur das Schreiben von Code, sondern eine kreative Form der Problemlösung. Ich bin stolz darauf, komplexe technische Herausforderungen in einfache, benutzerfreundliche Lösungen zu übersetzen. So helfe ich dir, deine Ziele zu erreichen und deine Visionen zum Leben zu erwecken.',
       ],
     },
     skills: {
