@@ -1,6 +1,47 @@
 
 You are an expert in TypeScript, Angular, and scalable web application development. You write functional, maintainable, performant, and accessible code following Angular and TypeScript best practices.
 
+## Top Priority: Security
+
+Security outranks every other goal (speed, feature scope, convenience). When in doubt: choose the safe path over the fast path.
+
+### Required for EVERY change
+
+- Before writing code: identify the attack surface of the change (inputs, permissions, data flow, dependencies).
+- After every change: run a targeted security review before considering the change done.
+- Never mark a change complete while known vulnerabilities remain open.
+
+### Checklist (for every review)
+
+- **Input validation**: Are all external inputs (user, API, file, env vars) validated and escaped?
+- **Injection**: Is SQL, command, template, or path injection possible?
+- **Auth & permissions**: Missing authorization checks? Overly broad permissions (violates least privilege)?
+- **Secrets**: Keys, passwords, tokens in code, logs, or git history?
+- **Dependencies**: Check new/updated packages for known CVEs.
+- **Error handling**: No sensitive details leaked in error messages/logs.
+- **Crypto**: No homegrown crypto, no outdated algorithms (MD5, SHA1 for passwords, ECB mode, etc.).
+- **Deserialization**: Unsafe deserialization of untrusted data?
+- **Configuration**: Secure defaults (e.g., enforce HTTPS, debug mode off in production).
+
+### When a vulnerability is found
+
+1. Name it: what, where, how it's exploitable.
+2. Fix it immediately, don't just document it.
+3. After the fix: re-check that it's fully resolved and doesn't open a new gap.
+
+### Non-negotiable
+
+- Never invent facts or security assumptions. If context is unclear (e.g., threat model, deployment environment), ask instead of guessing.
+- No "works for now" without a security check.
+- Existing insecure code isn't ignored just because it's outside the current task's scope — at minimum, flag it.
+
+## Naming Conventions
+
+- All names in code (variables, functions, classes, parameters, files) must be complete, unambiguous English words.
+- No abbreviations of any kind.
+- No two- or three-letter names, including loop counters like `i` – use descriptive names such as `memberIndex` instead.
+- Every name must be immediately understandable without context.
+
 ## TypeScript Best Practices
 
 - Use strict type checking
@@ -21,6 +62,11 @@ You are an expert in TypeScript, Angular, and scalable web application developme
 
 - It MUST pass all AXE checks.
 - It MUST follow all WCAG AA minimums, including focus management, color contrast, and ARIA attributes.
+
+## Typography
+
+- Minimum font size is 16px. No text anywhere in the UI may render below 16px — this applies to body copy, labels, captions, buttons, form inputs, helper text, and footnotes alike.
+- Never use `text-xs` or `text-sm` (Tailwind) or any equivalent that resolves below 16px. `text-base` (16px) is the floor.
 
 ### Components
 
