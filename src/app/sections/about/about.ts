@@ -7,24 +7,30 @@ import { PROFILE } from '../../core/data/profile.data';
   selector: 'app-about',
   imports: [NgOptimizedImage],
   template: `
-    <section id="about" class="scroll-mt-20 bg-[#141D2F] py-20 md:py-28">
+    <section id="about" class="scroll-mt-20 bg-navy-900 py-20 text-white md:py-28">
       <div class="mx-auto grid max-w-6xl gap-12 px-6 md:grid-cols-2 md:items-center lg:px-10">
         <div>
-          <h2 class="font-heading text-3xl font-bold text-ink sm:text-4xl">{{ t().about.eyebrow }}</h2>
-          <p class="mt-4 text-muted">{{ t().about.intro }}</p>
+          <h2 class="font-heading text-3xl font-bold sm:text-4xl">{{ t().about.eyebrow }}</h2>
+          <p class="mt-4 text-white/70">{{ t().about.intro }}</p>
 
           <ul class="mt-8 space-y-5">
             @for (bullet of t().about.bullets; track bullet) {
               <li class="flex gap-3">
                 <span
-                  class="mt-0.5 flex h-6 w-6 flex-none items-center justify-center rounded-full bg-accent-400/15 text-accent-600"
+                  class="mt-0.5 flex h-6 w-6 flex-none items-center justify-center rounded-full bg-accent-400/15 text-accent-400"
                   aria-hidden="true"
                 >
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="h-3.5 w-3.5">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    class="h-3.5 w-3.5"
+                  >
                     <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
                   </svg>
                 </span>
-                <span class="text-sm text-muted">{{ bullet }}</span>
+                <span class="text-sm text-white/70">{{ bullet }}</span>
               </li>
             }
           </ul>
@@ -33,7 +39,13 @@ import { PROFILE } from '../../core/data/profile.data';
         <div class="flex justify-center md:justify-end">
           <div class="relative h-56 w-56 sm:h-72 sm:w-72">
             <div class="absolute -inset-16 -z-10" aria-hidden="true">
-              <img ngSrc="assets/img/purple-shadow-about.png" fill class="object-contain" alt="" />
+              <img
+                src="assets/img/purple-shadow-about.png"
+                alt=""
+                loading="lazy"
+                decoding="async"
+                class="h-full w-full object-contain"
+              />
             </div>
             <img
               ngSrc="assets/img/profil1.png"

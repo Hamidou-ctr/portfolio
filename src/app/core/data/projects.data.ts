@@ -23,14 +23,16 @@ export const PROJECTS: readonly Project[] = [
   {
     name: 'Simple CRM',
     tags: ['Angular', 'Firebase'],
-    description: 'A very simple Customer Relationship Management system working with full CRUD functionality.',
+    description:
+      'A very simple Customer Relationship Management system working with full CRUD functionality.',
     liveUrl: '#',
     githubUrl: '#',
   },
   {
     name: 'Pokédex',
     tags: ['JavaScript', 'HTML', 'CSS', 'API'],
-    description: 'Based on the PokéAPI, a simple library that provides and catalogues Pokémon information.',
+    description:
+      'Based on the PokéAPI, a simple library that provides and catalogues Pokémon information.',
     liveUrl: '#',
     githubUrl: '#',
     previewSrc: 'assets/img/pokedex.png',

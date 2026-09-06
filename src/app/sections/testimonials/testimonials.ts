@@ -16,8 +16,12 @@ import { AvatarPlaceholder } from '../../shared/avatar-placeholder/avatar-placeh
             </button>
           }
 
-          <div class="relative flex-1 rounded-3xl border-2 border-accent-400 p-8 text-center sm:p-10">
-            <span class="absolute left-6 top-2 font-heading text-6xl text-accent-400/30" aria-hidden="true"
+          <div
+            class="relative flex-1 rounded-3xl border-2 border-accent-400 p-8 text-center sm:p-10"
+          >
+            <span
+              class="absolute left-6 top-2 font-heading text-6xl text-accent-400/30"
+              aria-hidden="true"
               >&ldquo;</span
             >
 
@@ -27,7 +31,9 @@ import { AvatarPlaceholder } from '../../shared/avatar-placeholder/avatar-placeh
               <div class="h-14 w-14">
                 <app-avatar-placeholder class="h-full w-full rounded-full ring-2 ring-violet-400" />
               </div>
-              <p class="text-sm font-semibold text-ink">{{ active().author }} &middot; {{ active().role }}</p>
+              <p class="text-sm font-semibold text-ink">
+                {{ active().author }} &middot; {{ active().role }}
+              </p>
             </div>
 
             @if (testimonials.length > 1) {

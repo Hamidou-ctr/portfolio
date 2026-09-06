@@ -24,7 +24,13 @@ import { LanguageService } from '../../core/i18n/language.service';
           @if (submitted()) {
             <div class="rounded-2xl border border-accent-400/40 bg-white/5 p-8" role="status">
               <div class="flex items-center gap-2">
-                <img ngSrc="assets/img/done_contact_my.png" width="25" height="26" alt="" class="h-5 w-5" />
+                <img
+                  ngSrc="assets/img/done_contact_my.png"
+                  width="25"
+                  height="26"
+                  alt=""
+                  class="h-5 w-5"
+                />
                 <h3 class="font-heading text-xl font-bold text-accent-400">
                   {{ t().contact.successTitle }}
                 </h3>

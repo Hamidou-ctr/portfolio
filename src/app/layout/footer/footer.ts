@@ -10,8 +10,17 @@ import { BrandLogo } from '../../shared/brand-logo/brand-logo';
   imports: [RouterLink, BrandLogo, NgOptimizedImage],
   template: `
     <footer class="relative overflow-hidden bg-navy-950 py-10 text-white/60">
-      <div class="pointer-events-none absolute inset-x-0 bottom-0 z-0 h-64 opacity-50" aria-hidden="true">
-        <img ngSrc="assets/img/purple_shadow_footer.png" fill class="object-contain" alt="" />
+      <div
+        class="pointer-events-none absolute inset-x-0 bottom-0 z-0 h-64 opacity-50"
+        aria-hidden="true"
+      >
+        <img
+          src="assets/img/purple_shadow_footer.png"
+          alt=""
+          loading="lazy"
+          decoding="async"
+          class="h-full w-full object-contain"
+        />
       </div>
 
       <div class="relative mx-auto flex max-w-6xl flex-col items-center gap-6 px-6 lg:px-10">
@@ -26,13 +35,31 @@ import { BrandLogo } from '../../shared/brand-logo/brand-logo';
           <p class="text-sm">&copy; {{ year }} {{ profile.name }}</p>
           <div class="flex items-center gap-4">
             <a [href]="profile.github" target="_blank" rel="noopener" aria-label="GitHub">
-              <img ngSrc="assets/img/github_button.png" width="30" height="30" alt="" class="h-5 w-5" />
+              <img
+                ngSrc="assets/img/github_button.png"
+                width="30"
+                height="30"
+                alt=""
+                class="h-5 w-5"
+              />
             </a>
             <a [href]="profile.linkedin" target="_blank" rel="noopener" aria-label="LinkedIn">
-              <img ngSrc="assets/img/linkedin_button.png" width="30" height="31" alt="" class="h-5 w-5" />
+              <img
+                ngSrc="assets/img/linkedin_button.png"
+                width="30"
+                height="31"
+                alt=""
+                class="h-5 w-5"
+              />
             </a>
             <a [href]="'mailto:' + profile.email" aria-label="Email">
-              <img ngSrc="assets/img/email_button.png" width="30" height="31" alt="" class="h-5 w-5" />
+              <img
+                ngSrc="assets/img/email_button.png"
+                width="30"
+                height="31"
+                alt=""
+                class="h-5 w-5"
+              />
             </a>
           </div>
         </div>

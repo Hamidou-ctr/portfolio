@@ -9,8 +9,17 @@ import { SKILLS, ADDITIONAL_SKILLS } from '../../core/data/skills.data';
   imports: [RouterLink, NgOptimizedImage],
   template: `
     <section id="skills" class="relative scroll-mt-20 overflow-hidden bg-slate-50 py-20 md:py-28">
-      <div class="pointer-events-none absolute -left-40 top-10 z-0 h-[600px] w-[600px] opacity-60" aria-hidden="true">
-        <img ngSrc="assets/img/green_shadow_skills_portfolio.png" fill class="object-contain" alt="" />
+      <div
+        class="pointer-events-none absolute -left-40 top-10 z-0 h-[600px] w-[600px] opacity-60"
+        aria-hidden="true"
+      >
+        <img
+          src="assets/img/green_shadow_skills_portfolio.png"
+          alt=""
+          loading="lazy"
+          decoding="async"
+          class="h-full w-full object-contain"
+        />
       </div>
 
       <div class="relative mx-auto max-w-6xl px-6 text-center lg:px-10">
@@ -19,9 +28,16 @@ import { SKILLS, ADDITIONAL_SKILLS } from '../../core/data/skills.data';
 
         <ul class="mt-10 flex flex-wrap items-center justify-center gap-4">
           @for (skill of skills; track skill.name) {
-            <li class="flex items-center gap-2 rounded-full border border-slate-200 bg-white px-4 py-2 shadow-sm">
+            <li
+              class="flex items-center gap-2 rounded-full border border-slate-200 bg-white px-4 py-2 shadow-sm"
+            >
               @if (skill.icon === 'supabase') {
-                <svg viewBox="0 0 24 24" fill="currentColor" class="h-5 w-5 text-violet-500" aria-hidden="true">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  class="h-5 w-5 text-violet-500"
+                  aria-hidden="true"
+                >
                   <path d="M13 2 4 14h7l-1 8 9-12h-7l1-8z" />
                 </svg>
               } @else {
@@ -36,7 +52,9 @@ import { SKILLS, ADDITIONAL_SKILLS } from '../../core/data/skills.data';
               <span class="text-sm font-medium text-ink">{{ skill.name }}</span>
             </li>
           }
-          <li class="flex items-center gap-2 rounded-full bg-navy-900 px-4 py-2 text-white shadow-sm">
+          <li
+            class="flex items-center gap-2 rounded-full bg-navy-900 px-4 py-2 text-white shadow-sm"
+          >
             <img
               ngSrc="assets/img/continually_learning_icons.png"
               width="60"

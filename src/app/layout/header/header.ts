@@ -16,10 +16,18 @@ import { BrandLogo } from '../../shared/brand-logo/brand-logo';
         </a>
 
         <nav class="hidden items-center gap-8 md:flex" aria-label="Main">
-          <a routerLink="/" fragment="about" class="text-sm font-medium text-white/80 transition hover:text-white">
+          <a
+            routerLink="/"
+            fragment="about"
+            class="text-sm font-medium text-white/80 transition hover:text-white"
+          >
             {{ t().nav.about }}
           </a>
-          <a routerLink="/" fragment="skills" class="text-sm font-medium text-white/80 transition hover:text-white">
+          <a
+            routerLink="/"
+            fragment="skills"
+            class="text-sm font-medium text-white/80 transition hover:text-white"
+          >
             {{ t().nav.skills }}
           </a>
           <a
@@ -70,9 +78,21 @@ import { BrandLogo } from '../../shared/brand-logo/brand-logo';
             (click)="menuOpen.set(!menuOpen())"
           >
             @if (!menuOpen()) {
-              <img ngSrc="assets/img/burger_menu.png" width="32" height="31" alt="" class="h-6 w-6" />
+              <img
+                ngSrc="assets/img/burger_menu.png"
+                width="32"
+                height="31"
+                alt=""
+                class="h-6 w-6"
+              />
             } @else {
-              <img ngSrc="assets/img/close_medium.png" width="35" height="32" alt="" class="h-6 w-6" />
+              <img
+                ngSrc="assets/img/close_medium.png"
+                width="35"
+                height="32"
+                alt=""
+                class="h-6 w-6"
+              />
             }
           </button>
         </div>
@@ -97,7 +117,11 @@ import { BrandLogo } from '../../shared/brand-logo/brand-logo';
             {{ t().nav.contact }}
           </a>
 
-          <div class="flex items-center gap-2 pt-2 text-xl" role="group" [attr.aria-label]="t().nav.langName">
+          <div
+            class="flex items-center gap-2 pt-2 text-xl"
+            role="group"
+            [attr.aria-label]="t().nav.langName"
+          >
             <button
               type="button"
               [class.text-accent-400]="lang() === 'en'"

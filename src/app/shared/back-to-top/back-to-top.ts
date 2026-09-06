@@ -12,7 +12,7 @@ import { Component, inject, signal } from '@angular/core';
         class="fixed bottom-6 right-6 z-40 rounded-full shadow-lg transition hover:-translate-y-0.5"
         (click)="scrollToTop()"
       >
-        <img ngSrc="assets/img/go_up_button.png" width="39" height="39" alt="" class="h-10 w-10" />
+        <img ngSrc="assets/img/go-up-button.png" width="39" height="39" alt="" class="h-10 w-10" />
       </button>
     }
   `,
