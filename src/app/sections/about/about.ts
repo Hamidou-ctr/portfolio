@@ -34,7 +34,7 @@ import { PROFILE } from '../../core/data/profile.data';
           </ul>
         </div>
 
-        <div class="flex justify-center">
+        <div class="hidden md:flex justify-center">
           <div class="relative h-60 w-60 sm:h-75 sm:w-75 lg:h-90 lg:w-90">
             <img
               src="assets/img/purple-shadow-about.png"
