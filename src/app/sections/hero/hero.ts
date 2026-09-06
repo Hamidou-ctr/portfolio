@@ -16,7 +16,7 @@ import { PROFILE } from '../../core/data/profile.data';
       <div
         class="relative mx-auto grid w-full max-w-6xl gap-10 px-6 py-16 md:grid-cols-2 md:items-center lg:px-10"
       >
-        <div class="order-1 flex justify-center md:order-none md:justify-start">
+        <div class="order-1 flex justify-center md:order-0 md:justify-start">
           <div class="relative h-64 w-52 sm:h-80 sm:w-64 md:h-96 md:w-80">
             <img
               ngSrc="assets/img/profil1.png"
@@ -28,7 +28,7 @@ import { PROFILE } from '../../core/data/profile.data';
           </div>
         </div>
 
-        <div class="order-2 text-center md:order-none md:text-left">
+        <div class="order-2 text-center md:order-0 md:text-left">
           <p class="mb-2 text-sm font-medium uppercase tracking-widest text-white/60">
             {{ t().hero.iAm }}
           </p>
