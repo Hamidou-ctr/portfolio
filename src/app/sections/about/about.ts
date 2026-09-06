@@ -13,10 +13,10 @@ import { PROFILE } from '../../core/data/profile.data';
     >
       <div class="mx-auto grid max-w-360 gap-16 px-8 md:grid-cols-2 md:items-center">
         <div class="max-w-141">
-          <h2 class="font-heading text-4xl font-bold leading-none sm:text-5xl lg:text-[64px]">
+          <h2 class="font-heading text-3xl font-bold leading-none sm:text-5xl lg:text-[64px]">
             {{ t().about.eyebrow }}
           </h2>
-          <p class="mt-6 text-lg md:text-xl">{{ t().about.intro }}</p>
+          <p class="mt-6 text-base md:text-xl">{{ t().about.intro }}</p>
 
           <ul class="mt-10 flex flex-col gap-10 md:mt-12 md:gap-12">
             @for (bullet of t().about.bullets; track $index; let i = $index) {
@@ -26,9 +26,9 @@ import { PROFILE } from '../../core/data/profile.data';
                   width="48"
                   height="48"
                   alt=""
-                  class="h-10 w-10 flex-none"
+                  class="h-8 w-8 flex-none md:h-10 md:w-10"
                 />
-                <p class="max-w-122 text-lg md:text-xl">{{ bullet }}</p>
+                <p class="max-w-122 text-base md:text-xl">{{ bullet }}</p>
               </li>
             }
           </ul>

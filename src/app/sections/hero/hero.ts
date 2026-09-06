@@ -10,19 +10,19 @@ import { PROFILE } from '../../core/data/profile.data';
   template: `
     <section
       id="hero"
-      class="relative flex min-h-[calc(100svh-6rem)] scroll-mt-24 flex-col overflow-hidden bg-navy-900 text-white"
+      class="relative flex min-h-[calc(100svh-5rem)] scroll-mt-20 flex-col md:min-h-[calc(100svh-6rem)] md:scroll-mt-24 overflow-hidden bg-navy-900 text-white"
     >
       <img
         src="assets/img/hero_background2.png"
         alt=""
         aria-hidden="true"
-        class="pointer-events-none absolute inset-x-0 bottom-0 z-10 h-[28%] w-full"
+        class="pointer-events-none absolute inset-x-0 bottom-0 z-10 h-[48%] w-full md:h-[28%]"
       />
 
       <div class="relative mx-auto flex w-full max-w-360 flex-1 flex-col px-8">
-        <div class="grid flex-1 gap-8 pt-10 md:grid-cols-2 md:pt-16">
+        <div class="grid flex-1 gap-6 pt-4 md:grid-cols-2 md:gap-8 md:pt-16">
           <div class="flex justify-center self-start md:pt-16">
-            <div class="relative w-full max-w-70 sm:max-w-100 md:max-w-170">
+            <div class="relative w-full max-w-95 sm:max-w-105 md:max-w-170">
               <img
                 src="assets/img/photo_shadows.png"
                 alt=""
@@ -56,7 +56,7 @@ import { PROFILE } from '../../core/data/profile.data';
                   {{ profile.name }}
                 </h1>
                 <p
-                  class="mt-1 text-2xl uppercase leading-tight text-violet-500 sm:text-3xl lg:text-[40px]"
+                  class="mt-1 text-xl uppercase leading-tight text-violet-500 sm:text-3xl lg:text-[40px]"
                 >
                   {{ t().hero.role }}
                 </p>
@@ -66,7 +66,7 @@ import { PROFILE } from '../../core/data/profile.data';
             <a
               routerLink="/"
               fragment="contact"
-              class="mt-8 rounded-lg bg-accent-400 px-6 py-3.5 text-lg font-medium text-white transition hover:bg-accent-300 md:text-xl"
+              class="mt-8 rounded-lg bg-accent-400 px-6 py-3 text-base font-medium text-white transition hover:bg-accent-300 md:py-3.5 md:text-xl"
             >
               {{ t().hero.cta }}
             </a>
@@ -82,9 +82,9 @@ import { PROFILE } from '../../core/data/profile.data';
         </a>
       </div>
 
-      <div class="absolute inset-x-0 bottom-10 z-20 flex items-center gap-4 md:gap-6">
+      <div class="absolute inset-x-0 bottom-10 z-20 flex items-center gap-5 md:gap-6">
         <div
-          class="h-0.5 w-[max(2rem,calc((100%-1440px)/2+2rem))] flex-none bg-violet-500"
+          class="h-0.5 w-[max(5rem,calc((100%-1440px)/2+2rem))] flex-none bg-violet-500"
           aria-hidden="true"
         ></div>
         <a [href]="profile.github" target="_blank" rel="noopener" aria-label="GitHub">
@@ -96,7 +96,22 @@ import { PROFILE } from '../../core/data/profile.data';
           class="flex items-center gap-3 md:gap-4"
         >
           <img ngSrc="assets/img/email_button.png" width="30" height="31" alt="" class="h-8 w-8" />
-          <span class="text-base md:text-lg">{{ profile.email }}</span>
+          <span class="hidden text-lg md:inline">{{ profile.email }}</span>
+        </a>
+        <a
+          [href]="profile.linkedin"
+          target="_blank"
+          rel="noopener"
+          aria-label="LinkedIn"
+          class="md:hidden"
+        >
+          <img
+            ngSrc="assets/img/linkedin_button.png"
+            width="30"
+            height="31"
+            alt=""
+            class="h-8 w-8"
+          />
         </a>
       </div>
     </section>

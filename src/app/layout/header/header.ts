@@ -9,8 +9,12 @@ import { PROFILE } from '../../core/data/profile.data';
   imports: [RouterLink, NgOptimizedImage],
   template: `
     <header class="sticky top-0 z-50 bg-navy-900 text-white">
-      <div class="mx-auto flex h-24 max-w-360 items-center justify-between px-8">
-        <a routerLink="/" class="font-heading text-[28px] font-bold" (click)="closeMenu()">
+      <div class="mx-auto flex h-20 max-w-360 items-center justify-between px-6 md:h-24 md:px-8">
+        <a
+          routerLink="/"
+          class="font-heading text-2xl font-bold md:text-[28px]"
+          (click)="closeMenu()"
+        >
           {{ firstName() }}
         </a>
 
@@ -78,48 +82,36 @@ import { PROFILE } from '../../core/data/profile.data';
       @if (menuOpen()) {
         <nav
           id="mobile-nav"
-          class="fixed inset-x-0 top-24 bottom-0 z-40 flex flex-col justify-center gap-8 bg-slate-600 px-12 md:hidden"
+          class="fixed inset-x-0 top-20 bottom-0 z-40 flex flex-col items-center justify-center bg-slate-600 md:hidden"
           aria-label="Mobile"
         >
-          <a class="text-2xl" routerLink="/" fragment="about" (click)="closeMenu()">
-            {{ t().nav.about }}
-          </a>
-          <a class="text-2xl" routerLink="/" fragment="skills" (click)="closeMenu()">
-            {{ t().nav.skills }}
-          </a>
-          <a class="text-2xl" routerLink="/" fragment="portfolio" (click)="closeMenu()">
-            {{ t().nav.portfolio }}
-          </a>
-          <a class="text-2xl" routerLink="/" fragment="contact" (click)="closeMenu()">
-            {{ t().nav.contact }}
-          </a>
+          <div class="flex w-44 flex-col gap-10 text-xl">
+            <a routerLink="/" fragment="about" (click)="closeMenu()">{{ t().nav.about }}</a>
+            <a routerLink="/" fragment="skills" (click)="closeMenu()">{{ t().nav.skills }}</a>
+            <a routerLink="/" fragment="portfolio" (click)="closeMenu()">{{ t().nav.portfolio }}</a>
+            <a routerLink="/" fragment="contact" (click)="closeMenu()">{{ t().nav.contact }}</a>
 
-          <div
-            class="flex items-center gap-2 pt-2 text-xl"
-            role="group"
-            [attr.aria-label]="t().nav.langName"
-          >
-            <button
-              type="button"
-              [class.text-accent-400]="lang() === 'en'"
-              [class.font-bold]="lang() === 'en'"
-              [class.text-white/60]="lang() !== 'en'"
-              [attr.aria-pressed]="lang() === 'en'"
-              (click)="languageService.setLang('en')"
-            >
-              EN
-            </button>
-            <span class="text-white/40">/</span>
-            <button
-              type="button"
-              [class.text-accent-400]="lang() === 'de'"
-              [class.font-bold]="lang() === 'de'"
-              [class.text-white/60]="lang() !== 'de'"
-              [attr.aria-pressed]="lang() === 'de'"
-              (click)="languageService.setLang('de')"
-            >
-              DE
-            </button>
+            <div class="flex items-center gap-2" role="group" [attr.aria-label]="t().nav.langName">
+              <button
+                type="button"
+                [class.text-accent-400]="lang() === 'en'"
+                [class.text-white/70]="lang() !== 'en'"
+                [attr.aria-pressed]="lang() === 'en'"
+                (click)="languageService.setLang('en')"
+              >
+                EN
+              </button>
+              <span class="text-white/70">/</span>
+              <button
+                type="button"
+                [class.text-accent-400]="lang() === 'de'"
+                [class.text-white/70]="lang() !== 'de'"
+                [attr.aria-pressed]="lang() === 'de'"
+                (click)="languageService.setLang('de')"
+              >
+                DE
+              </button>
+            </div>
           </div>
         </nav>
       }
