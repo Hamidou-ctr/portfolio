@@ -3,54 +3,37 @@ import { Component, effect, inject, signal } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { LanguageService } from '../../core/i18n/language.service';
 import { PROFILE } from '../../core/data/profile.data';
-import { BrandLogo } from '../../shared/brand-logo/brand-logo';
 
 @Component({
   selector: 'app-header',
-  imports: [RouterLink, BrandLogo, NgOptimizedImage],
+  imports: [RouterLink, NgOptimizedImage],
   template: `
-    <header class="sticky top-0 z-50 bg-navy-900">
-      <div class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4 lg:px-10">
-        <a routerLink="/" class="text-xl text-white" (click)="closeMenu()">
-          <app-brand-logo [name]="firstName()" />
+    <header class="sticky top-0 z-50 bg-navy-900 text-white">
+      <div class="mx-auto flex h-24 max-w-[1440px] items-center justify-between px-8">
+        <a routerLink="/" class="font-heading text-[28px] font-bold" (click)="closeMenu()">
+          {{ firstName() }}
         </a>
 
-        <nav class="hidden items-center gap-8 md:flex" aria-label="Main">
-          <a
-            routerLink="/"
-            fragment="about"
-            class="text-sm font-medium text-white/80 transition hover:text-white"
-          >
-            {{ t().nav.about }}
-          </a>
-          <a
-            routerLink="/"
-            fragment="skills"
-            class="text-sm font-medium text-white/80 transition hover:text-white"
-          >
-            {{ t().nav.skills }}
-          </a>
-          <a
-            routerLink="/"
-            fragment="portfolio"
-            class="text-sm font-medium text-white/80 transition hover:text-white"
-          >
-            {{ t().nav.portfolio }}
-          </a>
-        </nav>
+        <div class="hidden items-center gap-16 md:flex">
+          <nav class="flex items-center gap-4 text-xl font-semibold" aria-label="Main">
+            <a routerLink="/" fragment="about" class="transition hover:text-accent-400">
+              {{ t().nav.about }}
+            </a>
+            <a routerLink="/" fragment="skills" class="transition hover:text-accent-400">
+              {{ t().nav.skills }}
+            </a>
+            <a routerLink="/" fragment="portfolio" class="transition hover:text-accent-400">
+              {{ t().nav.portfolio }}
+            </a>
+          </nav>
 
-        <div class="flex items-center gap-3">
-          <div
-            class="hidden items-center gap-1 rounded-full bg-navy-800 p-1 text-xs font-semibold sm:flex"
-            role="group"
-            [attr.aria-label]="t().nav.langName"
-          >
+          <div class="flex items-center gap-2" role="group" [attr.aria-label]="t().nav.langName">
             <button
               type="button"
-              class="rounded-full px-3 py-1 transition"
+              class="flex h-8 min-w-8 items-center justify-center rounded border px-1.5 text-sm font-semibold transition"
               [class.bg-accent-400]="lang() === 'de'"
-              [class.text-navy-950]="lang() === 'de'"
-              [class.text-white]="lang() !== 'de'"
+              [class.border-accent-400]="lang() === 'de'"
+              [class.border-white/50]="lang() !== 'de'"
               [attr.aria-pressed]="lang() === 'de'"
               (click)="languageService.setLang('de')"
             >
@@ -58,62 +41,56 @@ import { BrandLogo } from '../../shared/brand-logo/brand-logo';
             </button>
             <button
               type="button"
-              class="rounded-full px-3 py-1 transition"
+              class="flex h-8 min-w-8 items-center justify-center rounded border px-1.5 text-sm font-semibold transition"
               [class.bg-accent-400]="lang() === 'en'"
-              [class.text-navy-950]="lang() === 'en'"
-              [class.text-white]="lang() !== 'en'"
+              [class.border-accent-400]="lang() === 'en'"
+              [class.border-white/50]="lang() !== 'en'"
               [attr.aria-pressed]="lang() === 'en'"
               (click)="languageService.setLang('en')"
             >
               EN
             </button>
           </div>
-
-          <button
-            type="button"
-            class="inline-flex h-10 w-10 items-center justify-center rounded-lg text-white md:hidden"
-            aria-controls="mobile-nav"
-            [attr.aria-expanded]="menuOpen()"
-            aria-label="Toggle navigation menu"
-            (click)="menuOpen.set(!menuOpen())"
-          >
-            @if (!menuOpen()) {
-              <img
-                ngSrc="assets/img/burger_menu.png"
-                width="32"
-                height="31"
-                alt=""
-                class="h-6 w-6"
-              />
-            } @else {
-              <img
-                ngSrc="assets/img/close_medium.png"
-                width="35"
-                height="32"
-                alt=""
-                class="h-6 w-6"
-              />
-            }
-          </button>
         </div>
+
+        <button
+          type="button"
+          class="inline-flex h-10 w-10 items-center justify-center rounded-lg md:hidden"
+          aria-controls="mobile-nav"
+          [attr.aria-expanded]="menuOpen()"
+          aria-label="Toggle navigation menu"
+          (click)="menuOpen.set(!menuOpen())"
+        >
+          @if (!menuOpen()) {
+            <img ngSrc="assets/img/burger_menu.png" width="32" height="31" alt="" class="h-6 w-6" />
+          } @else {
+            <img
+              ngSrc="assets/img/close_medium.png"
+              width="35"
+              height="32"
+              alt=""
+              class="h-6 w-6"
+            />
+          }
+        </button>
       </div>
 
       @if (menuOpen()) {
         <nav
           id="mobile-nav"
-          class="fixed inset-x-0 top-16 bottom-0 z-40 flex flex-col justify-center gap-8 bg-slate-600 px-12 md:hidden"
+          class="fixed inset-x-0 top-24 bottom-0 z-40 flex flex-col justify-center gap-8 bg-slate-600 px-12 md:hidden"
           aria-label="Mobile"
         >
-          <a class="text-2xl text-white" routerLink="/" fragment="about" (click)="closeMenu()">
+          <a class="text-2xl" routerLink="/" fragment="about" (click)="closeMenu()">
             {{ t().nav.about }}
           </a>
-          <a class="text-2xl text-white" routerLink="/" fragment="skills" (click)="closeMenu()">
+          <a class="text-2xl" routerLink="/" fragment="skills" (click)="closeMenu()">
             {{ t().nav.skills }}
           </a>
-          <a class="text-2xl text-white" routerLink="/" fragment="portfolio" (click)="closeMenu()">
+          <a class="text-2xl" routerLink="/" fragment="portfolio" (click)="closeMenu()">
             {{ t().nav.portfolio }}
           </a>
-          <a class="text-2xl text-white" routerLink="/" fragment="contact" (click)="closeMenu()">
+          <a class="text-2xl" routerLink="/" fragment="contact" (click)="closeMenu()">
             {{ t().nav.contact }}
           </a>
 
