@@ -10,7 +10,7 @@ import { SKILLS, ADDITIONAL_SKILLS } from '../../core/data/skills.data';
   template: `
     <section id="skills" class="relative scroll-mt-20 overflow-hidden bg-slate-50 py-20 md:py-28">
       <div
-        class="pointer-events-none absolute -left-40 top-10 z-0 h-[600px] w-[600px] opacity-60"
+        class="pointer-events-none absolute -left-40 top-10 z-0 h-150 w-150 opacity-60"
         aria-hidden="true"
       >
         <img

@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
   selector: 'app-avatar-placeholder',
   template: `
     <div
-      class="flex h-full w-full items-center justify-center bg-gradient-to-br from-navy-700 to-navy-900"
+      class="flex h-full w-full items-center justify-center bg-linear-gradient-to-br from-navy-700 to-navy-900"
       role="img"
       aria-hidden="true"
     >

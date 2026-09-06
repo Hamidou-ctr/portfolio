@@ -10,7 +10,7 @@ import { ProjectPreview } from '../../shared/project-preview/project-preview';
   template: `
     <section id="portfolio" class="relative scroll-mt-20 overflow-hidden bg-white py-20 md:py-28">
       <div
-        class="pointer-events-none absolute -right-32 top-0 z-0 h-[600px] w-[600px] opacity-70"
+        class="pointer-events-none absolute -right-32 top-0 z-0 h-150 w-150 opacity-70"
         aria-hidden="true"
       >
         <img

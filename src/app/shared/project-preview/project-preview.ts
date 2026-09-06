@@ -4,7 +4,7 @@ import { Component, computed, input } from '@angular/core';
   selector: 'app-project-preview',
   template: `
     <div
-      class="flex h-full w-full items-center justify-center bg-gradient-to-br from-violet-500 via-violet-600 to-navy-900"
+      class="flex h-full w-full items-center justify-center bg-linear-to-br from-violet-500 via-violet-600 to-navy-900"
       role="img"
       aria-hidden="true"
     >
