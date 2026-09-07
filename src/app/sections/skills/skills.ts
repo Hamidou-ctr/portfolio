@@ -23,7 +23,7 @@ import { SKILLS, ADDITIONAL_SKILLS } from '../../core/data/skills.data';
         class="relative mx-auto grid max-w-360 gap-12 px-6 md:grid-cols-[1.1fr_1fr] md:gap-x-16 md:px-8"
       >
         <div class="md:col-start-2 md:row-start-1">
-          <div class="text-right">
+          <div class="text-center md:text-right">
             <div class="relative inline-block">
               <h2 class="font-heading text-3xl font-bold leading-none sm:text-5xl lg:text-[64px]">
                 {{ t().skills.title }}

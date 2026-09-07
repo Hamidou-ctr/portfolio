@@ -27,14 +27,12 @@ import { ProjectPreview } from '../../shared/project-preview/project-preview';
 
       <div class="relative mx-auto max-w-360 px-6 md:px-8">
         <div class="text-center">
-          <div class="relative inline-block">
+          <div class="flex items-center justify-center gap-4 md:gap-6">
+            <span aria-hidden="true" class="h-0.75 w-8 flex-none bg-violet-500 md:w-36"></span>
             <h2 class="font-heading text-3xl font-bold leading-none sm:text-5xl lg:text-[64px]">
               {{ t().portfolio.title }}
             </h2>
-            <span
-              aria-hidden="true"
-              class="absolute right-full top-1/2 mr-6 h-0.75 w-screen -translate-y-1/2 bg-violet-500"
-            ></span>
+            <span aria-hidden="true" class="h-0.75 w-8 flex-none bg-violet-500 md:w-36"></span>
           </div>
           <p class="mx-auto mt-4 max-w-xl text-base md:text-lg">{{ t().portfolio.subtitle }}</p>
         </div>
