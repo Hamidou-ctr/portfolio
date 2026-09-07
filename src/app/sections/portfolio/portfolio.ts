@@ -8,78 +8,94 @@ import { ProjectPreview } from '../../shared/project-preview/project-preview';
   selector: 'app-portfolio',
   imports: [ProjectPreview, NgOptimizedImage],
   template: `
-    <section id="portfolio" class="relative scroll-mt-20 overflow-hidden bg-white py-20 md:py-28">
-      <div
-        class="pointer-events-none absolute -right-32 top-0 z-0 h-150 w-150 opacity-70"
+    <section
+      id="portfolio"
+      class="relative scroll-mt-20 overflow-hidden bg-navy-900 py-20 text-white md:scroll-mt-24 md:py-28"
+    >
+      <img
+        src="assets/img/green_shadow_skills_portfolio.png"
+        alt=""
         aria-hidden="true"
-      >
-        <img
-          src="assets/img/purple_shadow_portfolio.png"
-          alt=""
-          loading="lazy"
-          decoding="async"
-          class="h-full w-full object-contain"
-        />
-      </div>
+        class="pointer-events-none absolute top-0 -left-30 z-0 w-80 max-w-none md:-top-72 md:-left-40 md:w-140"
+      />
+      <img
+        src="assets/img/purple_shadow_portfolio.png"
+        alt=""
+        aria-hidden="true"
+        class="pointer-events-none absolute top-1/3 -left-40 z-0 w-100 max-w-none md:-left-60 md:w-180"
+      />
 
-      <div class="relative mx-auto max-w-6xl px-6 text-center lg:px-10">
-        <h2 class="font-heading text-3xl font-bold text-ink sm:text-4xl">
-          {{ t().portfolio.title }}
-        </h2>
-        <p class="mx-auto mt-4 max-w-xl text-muted">{{ t().portfolio.subtitle }}</p>
-      </div>
+      <div class="relative mx-auto max-w-360 px-6 md:px-8">
+        <div class="text-center">
+          <div class="relative inline-block">
+            <h2 class="font-heading text-3xl font-bold leading-none sm:text-5xl lg:text-[64px]">
+              {{ t().portfolio.title }}
+            </h2>
+            <span
+              aria-hidden="true"
+              class="absolute right-full top-1/2 mr-6 h-0.75 w-screen -translate-y-1/2 bg-violet-500"
+            ></span>
+          </div>
+          <p class="mx-auto mt-4 max-w-xl text-base md:text-lg">{{ t().portfolio.subtitle }}</p>
+        </div>
 
-      <ul class="relative mx-auto mt-16 flex max-w-6xl flex-col gap-20 px-6 lg:px-10">
-        @for (project of projects; track project.name) {
-          <li class="grid items-center gap-10 md:grid-cols-2">
-            <div
-              class="relative aspect-square overflow-hidden rounded-2xl bg-slate-50 shadow-lg shadow-slate-200/60"
+        <ul class="mt-16 flex flex-col gap-20 md:mt-24 md:gap-28">
+          @for (project of projects; track project.name; let odd = $odd) {
+            <li
+              class="flex flex-col items-center gap-8 md:flex-row md:gap-12"
+              [class]="odd ? 'md:flex-row-reverse' : ''"
             >
-              @if (project.previewSrc && project.previewSrc.endsWith('.svg')) {
-                <img
-                  [src]="project.previewSrc"
-                  [alt]="project.name"
-                  class="h-full w-full object-contain p-8"
-                />
-              } @else if (project.previewSrc) {
-                <img
-                  [ngSrc]="project.previewSrc"
-                  fill
-                  class="object-contain p-8"
-                  [alt]="project.name"
-                />
-              } @else {
-                <app-project-preview [name]="project.name" class="h-full w-full" />
-              }
-            </div>
-
-            <div class="text-left">
-              <h3 class="font-heading text-2xl font-bold text-violet-500">{{ project.name }}</h3>
-              <p class="mt-2 text-sm font-medium text-accent-600">{{ project.tags.join(' | ') }}</p>
-              <p class="mt-4 text-muted">{{ project.description }}</p>
-
-              <div class="mt-6 flex flex-wrap gap-3">
-                <a
-                  [href]="project.liveUrl"
-                  target="_blank"
-                  rel="noopener"
-                  class="rounded-full bg-violet-500 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-violet-600"
-                >
-                  {{ t().portfolio.liveTest }}
-                </a>
-                <a
-                  [href]="project.githubUrl"
-                  target="_blank"
-                  rel="noopener"
-                  class="rounded-full border border-slate-300 px-5 py-2.5 text-sm font-semibold text-ink transition hover:border-slate-400"
-                >
-                  {{ t().portfolio.github }}
-                </a>
+              <div class="w-full max-w-100 flex-none md:w-1/2 md:max-w-none">
+                @if (project.previewSrc && project.previewSrc.endsWith('.svg')) {
+                  <img [src]="project.previewSrc" [alt]="project.name" class="h-auto w-full" />
+                } @else if (project.previewSrc) {
+                  <img
+                    [ngSrc]="project.previewSrc"
+                    width="339"
+                    height="339"
+                    [alt]="project.name"
+                    class="h-auto w-full"
+                  />
+                } @else {
+                  <app-project-preview [name]="project.name" class="aspect-square rounded-2xl" />
+                }
               </div>
-            </div>
-          </li>
-        }
-      </ul>
+
+              <div class="text-center md:w-1/2" [class]="odd ? 'md:text-right' : 'md:text-left'">
+                <h3 class="font-heading text-2xl font-bold text-violet-500 md:text-3xl">
+                  {{ project.name }}
+                </h3>
+                <p class="mt-1 text-base text-accent-400 md:text-lg">
+                  {{ project.tags.join(' | ') }}
+                </p>
+                <p class="mt-4 text-base">{{ project.description }}</p>
+
+                <div
+                  class="mt-6 flex flex-wrap justify-center gap-4"
+                  [class]="odd ? 'md:justify-end' : 'md:justify-start'"
+                >
+                  <a
+                    [href]="project.liveUrl"
+                    target="_blank"
+                    rel="noopener"
+                    class="rounded-lg bg-violet-500 px-6 py-2.5 text-base font-medium text-white transition hover:bg-violet-600"
+                  >
+                    {{ t().portfolio.liveTest }}
+                  </a>
+                  <a
+                    [href]="project.githubUrl"
+                    target="_blank"
+                    rel="noopener"
+                    class="rounded-lg border border-white px-6 py-2.5 text-base font-medium text-white transition hover:bg-white/10"
+                  >
+                    {{ t().portfolio.github }}
+                  </a>
+                </div>
+              </div>
+            </li>
+          }
+        </ul>
+      </div>
     </section>
   `,
 })
