@@ -10,13 +10,13 @@ import { SKILLS, ADDITIONAL_SKILLS } from '../../core/data/skills.data';
   template: `
     <section
       id="skills"
-      class="relative scroll-mt-20 overflow-hidden bg-navy-900 py-20 text-white md:scroll-mt-24 md:py-28"
+      class="relative scroll-mt-20 overflow-x-clip bg-navy-900 py-20 text-white md:scroll-mt-24 md:py-28"
     >
       <img
         src="assets/img/green_shadow_skills_portfolio.png"
         alt=""
         aria-hidden="true"
-        class="pointer-events-none absolute top-1/2 -left-28 z-0 w-72 max-w-none -translate-y-1/2 md:top-auto md:-bottom-80 md:-left-40 md:w-140 md:translate-y-0"
+        class="pointer-events-none absolute -bottom-40 -left-28 z-0 w-80 max-w-none md:-bottom-80 md:-left-40 md:w-140"
       />
 
       <div

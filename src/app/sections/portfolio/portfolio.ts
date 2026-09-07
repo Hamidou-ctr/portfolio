@@ -10,14 +10,8 @@ import { ProjectPreview } from '../../shared/project-preview/project-preview';
   template: `
     <section
       id="portfolio"
-      class="relative scroll-mt-20 overflow-hidden bg-navy-900 py-20 text-white md:scroll-mt-24 md:py-28"
+      class="relative scroll-mt-20 overflow-hidden py-20 text-white md:scroll-mt-24 md:py-28"
     >
-      <img
-        src="assets/img/green_shadow_skills_portfolio.png"
-        alt=""
-        aria-hidden="true"
-        class="pointer-events-none absolute top-0 -left-30 z-0 w-80 max-w-none md:-top-72 md:-left-40 md:w-140"
-      />
       <img
         src="assets/img/purple_shadow_portfolio.png"
         alt=""
@@ -32,7 +26,7 @@ import { ProjectPreview } from '../../shared/project-preview/project-preview';
             <h2 class="font-heading text-3xl font-bold leading-none sm:text-5xl lg:text-[64px]">
               {{ t().portfolio.title }}
             </h2>
-            <span aria-hidden="true" class="h-0.75 w-8 flex-none bg-violet-500 md:w-36"></span>
+            <span aria-hidden="true" class="h-0.75 w-32 flex-none bg-violet-500 md:w-36"></span>
           </div>
           <p class="mx-auto mt-4 max-w-xl text-base md:text-lg">{{ t().portfolio.subtitle }}</p>
         </div>
