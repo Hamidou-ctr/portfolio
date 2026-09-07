@@ -23,6 +23,7 @@ export interface Translation {
     title: string;
     subtitle: string;
     learningBadge: string;
+    learningTooltip: string;
     lookingTitle: string;
     lookingHighlight: string;
     lookingText: string;
@@ -90,8 +91,9 @@ export const TRANSLATIONS: Record<Lang, Translation> = {
       title: 'My skills',
       subtitle: 'Show that you have used a variety of front-end technologies in your projects.',
       learningBadge: 'Continually learning',
+      learningTooltip: 'I have a special interest in learning',
       lookingTitle: 'Looking for',
-      lookingHighlight: 'another skill?',
+      lookingHighlight: 'another skill',
       lookingText: 'Reveal enthusiasm for learning new technologies and frameworks.',
       cta: 'Get in touch',
     },
@@ -171,8 +173,9 @@ export const TRANSLATIONS: Record<Lang, Translation> = {
       subtitle:
         'Zeige, dass du in deinen Projekten verschiedene Frontend-Technologien eingesetzt hast.',
       learningBadge: 'Ständig am Lernen',
+      learningTooltip: 'Besonders interessiert mich das Lernen von',
       lookingTitle: 'Auf der Suche nach',
-      lookingHighlight: 'einem weiteren Skill?',
+      lookingHighlight: 'einem weiteren Skill',
       lookingText: 'Zeige Begeisterung dafür, neue Technologien und Frameworks zu lernen.',
       cta: 'Kontakt aufnehmen',
     },

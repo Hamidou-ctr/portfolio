@@ -22,17 +22,21 @@ import { SKILLS, ADDITIONAL_SKILLS } from '../../core/data/skills.data';
       <div
         class="relative mx-auto grid max-w-360 gap-12 px-6 md:grid-cols-[1.1fr_1fr] md:gap-x-16 md:px-8"
       >
-        <div class="text-center md:col-start-2 md:row-start-1 md:text-left">
-          <div class="relative inline-block">
-            <h2 class="font-heading text-3xl font-bold leading-none sm:text-5xl lg:text-[64px]">
-              {{ t().skills.title }}
-            </h2>
-            <span
-              aria-hidden="true"
-              class="absolute left-full top-1/2 ml-6 hidden h-0.75 w-screen -translate-y-1/2 bg-violet-500 md:block"
-            ></span>
+        <div class="md:col-start-2 md:row-start-1">
+          <div class="text-right">
+            <div class="relative inline-block">
+              <h2 class="font-heading text-3xl font-bold leading-none sm:text-5xl lg:text-[64px]">
+                {{ t().skills.title }}
+              </h2>
+              <span
+                aria-hidden="true"
+                class="absolute left-full top-1/2 ml-6 h-0.75 w-screen -translate-y-1/2 bg-violet-500"
+              ></span>
+            </div>
           </div>
-          <p class="mx-auto mt-4 max-w-md text-base md:mx-0 md:text-lg">
+          <p
+            class="mx-auto mt-4 max-w-md text-center text-base md:mr-0 md:ml-auto md:text-right md:text-lg"
+          >
             {{ t().skills.subtitle }}
           </p>
         </div>
@@ -63,10 +67,14 @@ import { SKILLS, ADDITIONAL_SKILLS } from '../../core/data/skills.data';
                   class="h-15 w-15 object-contain"
                 />
               }
-              <span class="text-base">{{ skill.name }}</span>
+              <span class="text-base font-semibold">{{ skill.name }}</span>
             </li>
           }
-          <li class="flex flex-col items-center gap-2 text-center text-accent-400">
+          <li
+            class="group relative flex flex-col items-center gap-2 text-center"
+            tabindex="0"
+            aria-describedby="learning-tooltip"
+          >
             <img
               ngSrc="assets/img/continually_learning_icons.png"
               width="60"
@@ -74,16 +82,28 @@ import { SKILLS, ADDITIONAL_SKILLS } from '../../core/data/skills.data';
               alt=""
               class="h-15 w-15 object-contain"
             />
-            <span class="text-base">{{ t().skills.learningBadge }}</span>
+            <span class="text-base font-semibold">{{ t().skills.learningBadge }}</span>
+            <div
+              id="learning-tooltip"
+              role="tooltip"
+              class="pointer-events-none absolute bottom-full left-1/2 z-10 mb-2 w-52 -translate-x-1/2 rounded-2xl bg-white p-4 text-navy-900 opacity-0 shadow-lg transition group-hover:opacity-100 group-focus-within:opacity-100"
+            >
+              <p class="text-base">{{ t().skills.learningTooltip }}</p>
+              <p class="mt-2 flex justify-center gap-4 text-base font-semibold">
+                <span>React</span>
+                <span>Vue.js</span>
+              </p>
+            </div>
           </li>
         </ul>
 
-        <div class="text-center md:col-start-2 md:row-start-2 md:text-left">
+        <div class="text-center md:col-start-2 md:row-start-2 md:text-right">
           <h3 class="font-heading text-2xl font-bold md:text-3xl">
             {{ t().skills.lookingTitle }}
-            <span class="text-accent-400">{{ t().skills.lookingHighlight }}</span>
+            <span class="text-violet-500">{{ t().skills.lookingHighlight }}</span
+            >?
           </h3>
-          <p class="mx-auto mt-3 max-w-md text-base md:mx-0 md:text-lg">
+          <p class="mx-auto mt-3 max-w-md text-base md:mr-0 md:ml-auto md:text-lg">
             {{ t().skills.lookingText }}
           </p>
           <a
