@@ -89,10 +89,16 @@ import { SKILLS, ADDITIONAL_SKILLS } from '../../core/data/skills.data';
               class="pointer-events-none absolute bottom-full left-1/2 z-10 mb-2 w-52 -translate-x-1/2 rounded-2xl bg-white p-4 text-navy-900 opacity-0 shadow-lg transition group-hover:opacity-100 group-focus-within:opacity-100"
             >
               <p class="text-base">{{ t().skills.learningTooltip }}</p>
-              <p class="mt-2 flex justify-center gap-4 text-base font-semibold">
-                <span>React</span>
-                <span>Vue.js</span>
-              </p>
+              <div class="mt-3 flex justify-center gap-6 text-base font-semibold">
+                <span class="flex flex-col items-center gap-1">
+                  <img src="assets/img/react.svg" alt="" class="h-7 w-7" />
+                  React
+                </span>
+                <span class="flex flex-col items-center gap-1">
+                  <img src="assets/img/vue-Js.svg" alt="" class="h-7 w-7" />
+                  Vue.js
+                </span>
+              </div>
             </div>
           </li>
         </ul>
