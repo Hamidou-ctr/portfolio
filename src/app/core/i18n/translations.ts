@@ -39,7 +39,8 @@ export interface Translation {
     eyebrow: string;
     heading: string;
     text: string;
-    highlight: string;
+    needPrefix: string;
+    needHighlight: string;
     nameLabel: string;
     emailLabel: string;
     messageLabel: string;
@@ -47,7 +48,9 @@ export interface Translation {
     emailRequired: string;
     emailInvalid: string;
     messageRequired: string;
-    privacyLabel: string;
+    privacyBefore: string;
+    privacyLink: string;
+    privacyAfter: string;
     privacyRequired: string;
     submit: string;
     successTitle: string;
@@ -108,16 +111,18 @@ export const TRANSLATIONS: Record<Lang, Translation> = {
       eyebrow: 'Contact',
       heading: 'Got a problem to solve?',
       text: 'Encourage people to contact you and describe what role you are interested in. Show that you will add value to their projects through your work.',
-      highlight: 'Need a Frontend developer? Contact me!',
+      needPrefix: 'Need a Frontend developer?',
+      needHighlight: 'Contact me!',
       nameLabel: 'Your name',
       emailLabel: 'Your email',
       messageLabel: 'Your message',
-      nameRequired: 'Please enter your name.',
-      emailRequired: 'Please enter your email.',
+      nameRequired: 'Your name is required.',
+      emailRequired: 'Your email is required.',
       emailInvalid: 'Please enter a valid email address.',
-      messageRequired: 'Please enter a message.',
-      privacyLabel:
-        "I've read the privacy policy and agree to the processing of my data as outlined.",
+      messageRequired: 'Your message is required.',
+      privacyBefore: "I've read the ",
+      privacyLink: 'privacy policy',
+      privacyAfter: ' and agree to the processing of my data as outlined.',
       privacyRequired: 'Please accept the privacy policy.',
       submit: 'Send message :)',
       successTitle: 'Message sent!',
@@ -190,7 +195,8 @@ export const TRANSLATIONS: Record<Lang, Translation> = {
       eyebrow: 'Kontakt',
       heading: 'Hast du ein Problem zu lösen?',
       text: 'Ermutige Besucher:innen, dich zu kontaktieren, und beschreibe, für welche Rolle du dich interessierst. Zeige, welchen Mehrwert du für ihre Projekte schaffen kannst.',
-      highlight: 'Brauchst du einen Frontend-Entwickler? Melde dich!',
+      needPrefix: 'Brauchst du einen Frontend-Entwickler?',
+      needHighlight: 'Melde dich!',
       nameLabel: 'Dein Name',
       emailLabel: 'Deine E-Mail',
       messageLabel: 'Deine Nachricht',
@@ -198,8 +204,9 @@ export const TRANSLATIONS: Record<Lang, Translation> = {
       emailRequired: 'Bitte gib deine E-Mail-Adresse ein.',
       emailInvalid: 'Bitte gib eine gültige E-Mail-Adresse ein.',
       messageRequired: 'Bitte gib eine Nachricht ein.',
-      privacyLabel:
-        'Ich habe die Datenschutzerklärung gelesen und stimme der beschriebenen Verarbeitung meiner Daten zu.',
+      privacyBefore: 'Ich habe die ',
+      privacyLink: 'Datenschutzerklärung',
+      privacyAfter: ' gelesen und stimme der beschriebenen Verarbeitung meiner Daten zu.',
       privacyRequired: 'Bitte akzeptiere die Datenschutzerklärung.',
       submit: 'Nachricht senden :)',
       successTitle: 'Nachricht gesendet!',
