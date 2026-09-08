@@ -14,10 +14,10 @@ import { AvatarPlaceholder } from '../../shared/avatar-placeholder/avatar-placeh
         aria-label="Testimonials"
       >
         <img
-          src="assets/img/green_shadow_skills_portfolio.png"
+          src="assets/img/green_shadow_reference.svg"
           alt=""
           aria-hidden="true"
-          class="pointer-events-none absolute -top-40 -right-40 z-0 w-80 max-w-none rotate-180 md:-top-60 md:-right-60 md:w-140"
+          class="pointer-events-none rotate-68 absolute top-0 -right-20 z-0 h-auto w-70 sm:w-80 sm:-top-10 sm:-right-35 max-w-none md:-top-20  md:w-90 md:-right-58 xl:w-110  2xl:w-120 2xl:h-80 2xl:top-10 2xl:-right-20 "
         />
 
         <div class="relative mx-auto max-w-360 px-6 md:px-8">
@@ -39,7 +39,7 @@ import { AvatarPlaceholder } from '../../shared/avatar-placeholder/avatar-placeh
                 src="assets/img/purple_reference.png"
                 alt=""
                 aria-hidden="true"
-                class="absolute -top-8 -left-2 z-10 w-16 bg-navy-900 md:-top-10 md:-left-8 md:w-24 lg:-left-16"
+                class="absolute -top-8 -left-2 z-10 w-16 bg-navy-900 md:-top-9 md:-left-8 md:w-22 lg:-left-14"
               />
               <div
                 class="rounded-3xl border-[3px] border-accent-400 px-6 pt-8 pb-8 md:px-12 md:pt-10 md:pb-10 lg:min-h-68 lg:px-24 lg:pt-12 lg:pb-12"
