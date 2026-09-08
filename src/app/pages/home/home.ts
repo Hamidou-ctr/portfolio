@@ -7,11 +7,10 @@ import { Skills } from '../../sections/skills/skills';
 import { Portfolio } from '../../sections/portfolio/portfolio';
 import { Testimonials } from '../../sections/testimonials/testimonials';
 import { Contact } from '../../sections/contact/contact';
-import { BackToTop } from '../../shared/back-to-top/back-to-top';
 
 @Component({
   selector: 'app-home',
-  imports: [Header, Footer, Hero, About, Skills, Portfolio, Testimonials, Contact, BackToTop],
+  imports: [Header, Footer, Hero, About, Skills, Portfolio, Testimonials, Contact],
   template: `
     <a href="#main" class="sr-only-focusable">Skip to content</a>
     <app-header />
@@ -24,7 +23,6 @@ import { BackToTop } from '../../shared/back-to-top/back-to-top';
       <app-contact />
     </main>
     <app-footer />
-    <app-back-to-top />
   `,
 })
 export class Home {}

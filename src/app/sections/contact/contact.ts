@@ -3,12 +3,13 @@ import { Component, inject, signal } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { RouterLink } from '@angular/router';
 import { LanguageService } from '../../core/i18n/language.service';
+import { BackToTop } from '../../shared/back-to-top/back-to-top';
 
 type ContactField = 'name' | 'email' | 'message' | 'privacyAccepted';
 
 @Component({
   selector: 'app-contact',
-  imports: [ReactiveFormsModule, NgOptimizedImage, RouterLink],
+  imports: [ReactiveFormsModule, NgOptimizedImage, RouterLink, BackToTop],
   template: `
     <section
       id="contact"
@@ -217,6 +218,10 @@ type ContactField = 'name' | 'email' | 'message' | 'privacyAccepted';
                 </div>
               </form>
             }
+
+            <div class="mt-10 flex justify-end md:mt-14">
+              <app-back-to-top />
+            </div>
           </div>
         </div>
       </div>
