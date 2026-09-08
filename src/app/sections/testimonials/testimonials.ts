@@ -22,7 +22,9 @@ import { AvatarPlaceholder } from '../../shared/avatar-placeholder/avatar-placeh
 
         <div class="relative mx-auto max-w-360 px-6 md:px-8">
           <div class="flex flex-col items-center gap-10 md:flex-row md:justify-center md:gap-14">
-            <div class="relative order-1 h-36 w-36 md:order-2 md:h-68 md:w-68">
+            <div
+              class="relative order-1 h-36 w-36 flex-none md:order-2 md:h-48 md:w-48 lg:h-68 lg:w-68"
+            >
               <div
                 aria-hidden="true"
                 class="absolute left-full top-1/2 h-0.75 w-screen -translate-y-1/2 bg-violet-500"
@@ -32,20 +34,20 @@ import { AvatarPlaceholder } from '../../shared/avatar-placeholder/avatar-placeh
               />
             </div>
 
-            <div class="relative order-2 w-full max-w-215 md:order-1">
+            <div class="relative order-2 w-full max-w-215 md:order-1 md:min-w-0 md:flex-1">
               <img
                 src="assets/img/purple_reference.png"
                 alt=""
                 aria-hidden="true"
-                class="absolute -top-8 -left-2 z-10 w-16 bg-navy-900 md:-top-10 md:-left-16 md:w-24"
+                class="absolute -top-8 -left-2 z-10 w-16 bg-navy-900 md:-top-10 md:-left-8 md:w-24 lg:-left-16"
               />
               <div
-                class="rounded-3xl border-[3px] border-accent-400 px-6 pt-8 pb-8 md:min-h-68 md:px-24 md:pt-12 md:pb-12"
+                class="rounded-3xl border-[3px] border-accent-400 px-6 pt-8 pb-8 md:px-12 md:pt-10 md:pb-10 lg:min-h-68 lg:px-24 lg:pt-12 lg:pb-12"
               >
-                <p class="text-base md:text-xl">{{ active().quote }}</p>
+                <p class="text-base lg:text-xl">{{ active().quote }}</p>
                 <div class="mt-8 flex flex-col gap-2 md:mt-10 md:flex-row md:items-center md:gap-4">
-                  <span aria-hidden="true" class="h-0.5 w-14 bg-violet-500 md:w-96"></span>
-                  <span class="text-base md:text-lg">
+                  <span aria-hidden="true" class="h-0.5 w-14 bg-violet-500 md:flex-1"></span>
+                  <span class="text-base md:whitespace-nowrap lg:text-lg">
                     {{ active().author }} - {{ active().role }}
                   </span>
                 </div>
