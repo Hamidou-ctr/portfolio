@@ -9,7 +9,7 @@ import { BrandLogo } from '../../shared/brand-logo/brand-logo';
   selector: 'app-footer',
   imports: [RouterLink, BrandLogo, NgOptimizedImage],
   template: `
-    <footer class="border-t-[3px] border-accent-400 bg-navy-900 py-16 text-white md:py-24">
+    <footer class="bg-navy-900 py-16 text-white md:py-24">
       <div
         class="mx-auto flex max-w-360 flex-col items-center gap-8 px-6 md:grid md:grid-cols-3 md:items-center md:px-8"
       >

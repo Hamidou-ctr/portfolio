@@ -12,7 +12,7 @@ type ContactField = 'name' | 'email' | 'message' | 'privacyAccepted';
   template: `
     <section
       id="contact"
-      class="relative scroll-mt-20 overflow-hidden pt-16 pb-24 text-white md:scroll-mt-24 md:pt-20 md:pb-32"
+      class="relative scroll-mt-20 border-b-[3px] border-accent-400 overflow-hidden pt-16 pb-24 text-white md:scroll-mt-24 md:pt-20 md:pb-32"
     >
       <img
         src="assets/img/purple_shadow_contact.png"
