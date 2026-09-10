@@ -1,15 +1,14 @@
-import { NgOptimizedImage } from '@angular/common';
+import { DOCUMENT, NgOptimizedImage } from '@angular/common';
 import { Component, inject, signal } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { RouterLink } from '@angular/router';
 import { LanguageService } from '../../core/i18n/language.service';
-import { BackToTop } from '../../shared/back-to-top/back-to-top';
 
 type ContactField = 'name' | 'email' | 'message' | 'privacyAccepted';
 
 @Component({
   selector: 'app-contact',
-  imports: [ReactiveFormsModule, NgOptimizedImage, RouterLink, BackToTop],
+  imports: [ReactiveFormsModule, NgOptimizedImage, RouterLink],
   template: `
     <section
       id="contact"
@@ -220,7 +219,20 @@ type ContactField = 'name' | 'email' | 'message' | 'privacyAccepted';
             }
 
             <div class="mt-10 flex justify-end md:mt-14">
-              <app-back-to-top />
+              <button
+                type="button"
+                aria-label="Back to top"
+                class="rounded-full transition hover:-translate-y-0.5 focus-visible:ring-2 focus-visible:ring-accent-400"
+                (click)="scrollToTop()"
+              >
+                <img
+                  ngSrc="assets/img/go-up-button.png"
+                  width="39"
+                  height="39"
+                  alt=""
+                  class="h-10 w-10"
+                />
+              </button>
             </div>
           </div>
         </div>
@@ -231,6 +243,7 @@ type ContactField = 'name' | 'email' | 'message' | 'privacyAccepted';
 export class Contact {
   private readonly languageService = inject(LanguageService);
   protected readonly t = this.languageService.t;
+  private readonly document = inject(DOCUMENT);
 
   private readonly fb = inject(FormBuilder);
   protected readonly submitted = signal(false);
@@ -268,5 +281,9 @@ export class Contact {
       return;
     }
     this.submitted.set(true);
+  }
+
+  protected scrollToTop(): void {
+    this.document.defaultView?.scrollTo({ top: 0, behavior: 'smooth' });
   }
 }
