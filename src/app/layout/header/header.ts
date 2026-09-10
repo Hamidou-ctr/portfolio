@@ -1,5 +1,5 @@
 import { DOCUMENT, NgOptimizedImage } from '@angular/common';
-import { Component, effect, inject, signal } from '@angular/core';
+import { Component, DestroyRef, afterNextRender, effect, inject, signal } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { LanguageService } from '../../core/i18n/language.service';
 import { PROFILE } from '../../core/data/profile.data';
@@ -20,14 +20,47 @@ import { PROFILE } from '../../core/data/profile.data';
 
         <div class="hidden items-center gap-16 md:flex">
           <nav class="flex items-center gap-4 text-xl font-semibold" aria-label="Main">
-            <a routerLink="/" fragment="about" class="transition hover:text-accent-400">
+            <a
+              routerLink="/"
+              fragment="about"
+              class="relative pb-1 transition hover:text-accent-400"
+              [attr.aria-current]="activeSection() === 'about' ? 'true' : null"
+            >
               {{ t().nav.about }}
+              @if (activeSection() === 'about') {
+                <span
+                  class="absolute inset-x-0 -bottom-0.5 h-0.5 bg-accent-400"
+                  aria-hidden="true"
+                ></span>
+              }
             </a>
-            <a routerLink="/" fragment="skills" class="transition hover:text-accent-400">
+            <a
+              routerLink="/"
+              fragment="skills"
+              class="relative pb-1 transition hover:text-accent-400"
+              [attr.aria-current]="activeSection() === 'skills' ? 'true' : null"
+            >
               {{ t().nav.skills }}
+              @if (activeSection() === 'skills') {
+                <span
+                  class="absolute inset-x-0 -bottom-0.5 h-0.5 bg-accent-400"
+                  aria-hidden="true"
+                ></span>
+              }
             </a>
-            <a routerLink="/" fragment="portfolio" class="transition hover:text-accent-400">
+            <a
+              routerLink="/"
+              fragment="portfolio"
+              class="relative pb-1 transition hover:text-accent-400"
+              [attr.aria-current]="activeSection() === 'portfolio' ? 'true' : null"
+            >
               {{ t().nav.portfolio }}
+              @if (activeSection() === 'portfolio') {
+                <span
+                  class="absolute inset-x-0 -bottom-0.5 h-0.5 bg-accent-400"
+                  aria-hidden="true"
+                ></span>
+              }
             </a>
           </nav>
 
@@ -124,12 +157,54 @@ export class Header {
   protected readonly lang = this.languageService.currentLang;
   protected readonly menuOpen = signal(false);
   protected readonly firstName = signal(PROFILE.name.split(' ')[0]);
+  protected readonly activeSection = signal<string | null>(null);
 
   private readonly document = inject(DOCUMENT);
+  private readonly destroyRef = inject(DestroyRef);
+
+  private static readonly OBSERVED_SECTION_IDS = ['about', 'skills', 'portfolio'];
 
   constructor() {
     effect(() => {
       this.document.body.classList.toggle('overflow-hidden', this.menuOpen());
+    });
+
+    afterNextRender(() => {
+      const sections = Header.OBSERVED_SECTION_IDS.map((id) =>
+        this.document.getElementById(id),
+      ).filter((section): section is HTMLElement => section !== null);
+
+      if (sections.length === 0) {
+        return;
+      }
+
+      const intersectionRatioBySectionId = new Map<string, number>();
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          for (const entry of entries) {
+            intersectionRatioBySectionId.set(
+              entry.target.id,
+              entry.isIntersecting ? entry.intersectionRatio : 0,
+            );
+          }
+
+          let mostVisibleSectionId: string | null = null;
+          let highestRatio = 0;
+          for (const [sectionId, ratio] of intersectionRatioBySectionId) {
+            if (ratio > highestRatio) {
+              highestRatio = ratio;
+              mostVisibleSectionId = sectionId;
+            }
+          }
+
+          this.activeSection.set(mostVisibleSectionId);
+        },
+        { rootMargin: '-40% 0px -55% 0px', threshold: [0, 0.25, 0.5, 0.75, 1] },
+      );
+
+      sections.forEach((section) => observer.observe(section));
+      this.destroyRef.onDestroy(() => observer.disconnect());
     });
   }
 
