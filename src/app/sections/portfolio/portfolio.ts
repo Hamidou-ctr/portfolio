@@ -26,7 +26,7 @@ import { ProjectPreview } from '../../shared/project-preview/project-preview';
             <h2 class="font-heading text-3xl font-bold leading-none sm:text-5xl lg:text-[64px]">
               {{ t().portfolio.title }}
             </h2>
-            <span aria-hidden="true" class="h-0.75 w-32 flex-none bg-violet-500 md:w-36"></span>
+            <span aria-hidden="true" class="h-0.75 w-8 flex-none bg-violet-500 md:w-36"></span>
           </div>
           <p class="mx-auto mt-4 max-w-xl text-base md:text-lg">{{ t().portfolio.subtitle }}</p>
         </div>
@@ -70,7 +70,7 @@ import { ProjectPreview } from '../../shared/project-preview/project-preview';
                     [href]="project.liveUrl"
                     target="_blank"
                     rel="noopener"
-                    class="rounded-lg bg-violet-500 px-6 py-2.5 text-base font-medium text-white transition hover:bg-violet-600"
+                    class="rounded-lg bg-violet-500 px-6 py-2.5 text-base font-medium text-white transition hover:bg-[#0ee707]"
                   >
                     {{ t().portfolio.liveTest }}
                   </a>
@@ -78,7 +78,7 @@ import { ProjectPreview } from '../../shared/project-preview/project-preview';
                     [href]="project.githubUrl"
                     target="_blank"
                     rel="noopener"
-                    class="rounded-lg border border-white px-6 py-2.5 text-base font-medium text-white transition hover:bg-white/10"
+                    class="rounded-lg border border-[#0ee707] px-6 py-2.5 text-base font-medium text-white transition hover:bg-[#0ee707]"
                   >
                     {{ t().portfolio.github }}
                   </a>
