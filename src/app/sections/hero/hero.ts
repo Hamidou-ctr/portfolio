@@ -29,7 +29,7 @@ import { PROFILE } from '../../core/data/profile.data';
                 aria-hidden="true"
                 class="pointer-events-none absolute left-1/2 top-[-6%] w-[75%] -translate-x-1/2"
               />
-              <div class="relative md:max-h-[calc(100svh-17rem)] md:overflow-hidden">
+              <div class="relative max-h-[44svh] overflow-hidden md:max-h-[calc(100svh-17rem)]">
                 <img
                   ngSrc="assets/img/profil1.png"
                   width="940"
