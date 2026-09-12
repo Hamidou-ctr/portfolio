@@ -13,7 +13,10 @@ import { PROFILE } from '../../core/data/profile.data';
       class="relative flex min-h-[calc(100svh-5rem)] scroll-mt-20 flex-col md:min-h-[calc(100svh-6rem)] md:scroll-mt-24 overflow-hidden bg-navy-900 text-white"
     >
       <img
-        src="assets/img/hero_background2.png"
+        ngSrc="assets/img/hero_background2.png"
+        width="1440"
+        height="879"
+        priority
         alt=""
         aria-hidden="true"
         class="pointer-events-none absolute inset-x-0 bottom-0 z-10 h-[48%] w-full md:h-[28%]"
