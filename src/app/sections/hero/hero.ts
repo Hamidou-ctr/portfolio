@@ -13,7 +13,7 @@ import { PROFILE } from '../../core/data/profile.data';
       class="relative flex min-h-[calc(100svh-5rem)] scroll-mt-20 flex-col md:min-h-[calc(100svh-6rem)] md:scroll-mt-24 overflow-hidden bg-navy-900 text-white"
     >
       <img
-        ngSrc="assets/img/hero_background2.png"
+        ngSrc="assets/img/hero_background1.png"
         width="1440"
         height="879"
         priority
@@ -54,7 +54,7 @@ import { PROFILE } from '../../core/data/profile.data';
               </span>
               <div>
                 <h1
-                  class="font-heading text-[32px] font-bold leading-none sm:text-5xl lg:text-[64px]"
+                  class="font-heading whitespace-nowrap text-[30px] font-bold leading-none sm:text-5xl lg:text-[64px]"
                 >
                   {{ profile.name }}
                 </h1>
@@ -78,7 +78,7 @@ import { PROFILE } from '../../core/data/profile.data';
 
         <a
           routerLink="/"
-          fragment="about"
+          fragment="contact"
           class="absolute bottom-10 right-24 z-20 hidden text-lg [writing-mode:vertical-rl] transition hover:text-accent-400 lg:block"
         >
           {{ t().hero.scrollDown }} <span aria-hidden="true">&rarr;</span>
