@@ -1,5 +1,5 @@
 import { NgOptimizedImage } from '@angular/common';
-import { Component, inject } from '@angular/core';
+import { Component, DestroyRef, afterNextRender, inject, signal } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { LanguageService } from '../../core/i18n/language.service';
 import { PROFILE } from '../../core/data/profile.data';
@@ -12,15 +12,57 @@ import { PROFILE } from '../../core/data/profile.data';
       id="hero"
       class="relative flex min-h-[calc(100svh-5rem)] scroll-mt-20 flex-col md:min-h-[calc(100svh-6rem)] md:scroll-mt-24 overflow-hidden bg-navy-900 text-white"
     >
-      <img
-        ngSrc="assets/img/hero_background1.png"
-        width="1440"
-        height="879"
-        priority
-        alt=""
-        aria-hidden="true"
-        class="pointer-events-none absolute inset-x-0 bottom-0 z-10 h-[48%] w-full md:h-[28%]"
-      />
+      @if (viewportWidth() < 540) {
+        <img
+          ngSrc="assets/img/hero_background2.png"
+          width="1440"
+          height="879"
+          priority
+          alt=""
+          aria-hidden="true"
+          class="pointer-events-none absolute inset-x-0 bottom-0 z-10 w-full h-[75vh] min-[250px]:h-[77vh] min-[340px]:h-[74vh] min-[440px]:h-[70vh] min-[539px]:h-[65vh]"
+        />
+      } @else if (viewportWidth() < 768) {
+        <img
+          ngSrc="assets/img/hero_background2.png"
+          width="1442"
+          height="1079"
+          priority
+          alt=""
+          aria-hidden="true"
+          class="pointer-events-none absolute inset-x-0 bottom-0 z-10 h-[67vh] w-full"
+        />
+      } @else if (viewportWidth() < 1200) {
+        <img
+          ngSrc="assets/img/hero_background2.png"
+          width="1440"
+          height="879"
+          priority
+          alt=""
+          aria-hidden="true"
+          class="pointer-events-none absolute inset-x-0 bottom-0 z-10 w-full h-[63vh] min-[800px]:h-[60vh] min-[1000px]:h-[50vh]"
+        />
+      } @else if (viewportWidth() < 1440) {
+        <img
+          ngSrc="assets/img/hero_background1.png"
+          width="1440"
+          height="879"
+          priority
+          alt=""
+          aria-hidden="true"
+          class="pointer-events-none absolute inset-x-0 bottom-0 z-10 w-full h-[60vh] min-[1200px]:h-[47vh] min-[1300px]:h-[40vh]"
+        />
+      } @else {
+        <img
+          ngSrc="assets/img/hero_background1.png"
+          width="1440"
+          height="879"
+          priority
+          alt=""
+          aria-hidden="true"
+          class="pointer-events-none absolute inset-x-0 bottom-0 z-10 h-[35vh] w-full"
+        />
+      }
 
       <div class="relative mx-auto flex w-full max-w-360 flex-1 flex-col px-8">
         <div class="grid flex-1 content-start gap-6 pt-4 md:grid-cols-2 md:gap-8 md:pt-16">
@@ -40,16 +82,14 @@ import { PROFILE } from '../../core/data/profile.data';
                   width="940"
                   height="1174"
                   priority
-                  class="h-auto w-full"
+                  class="h-auto w-full -z-100"
                   [alt]="'Portrait of ' + profile.name"
                 />
               </div>
             </div>
           </div>
 
-          <div
-            class="relative z-20 flex flex-col items-center justify-center pb-28 md:pb-0 md:pt-24"
-          >
+          <div class="relative z-20 flex flex-col items-center justify-center md:pb-0 md:pt-24">
             <div class="flex items-center gap-4">
               <span class="rotate-180 text-xl [writing-mode:vertical-rl] md:text-2xl">
                 {{ t().hero.iAm }}
@@ -126,4 +166,21 @@ export class Hero {
   private readonly languageService = inject(LanguageService);
   protected readonly t = this.languageService.t;
   protected readonly profile = PROFILE;
+
+  protected readonly viewportWidth = signal(0);
+
+  private readonly destroyRef = inject(DestroyRef);
+
+  constructor() {
+    afterNextRender(() => {
+      this.viewportWidth.set(window.innerWidth);
+
+      const updateViewportWidth = (): void => {
+        this.viewportWidth.set(window.innerWidth);
+      };
+
+      window.addEventListener('resize', updateViewportWidth);
+      this.destroyRef.onDestroy(() => window.removeEventListener('resize', updateViewportWidth));
+    });
+  }
 }
