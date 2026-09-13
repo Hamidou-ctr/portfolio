@@ -26,7 +26,7 @@ import { PROFILE } from '../../core/data/profile.data';
                   width="48"
                   height="48"
                   alt=""
-                  class="h-8 w-8 flex-none md:h-10 md:w-10"
+                  class="h-20 w-20 flex-none md:h-28 md:w-25"
                 />
                 <p class="max-w-122 text-base md:text-xl">{{ bullet }}</p>
               </li>
