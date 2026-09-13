@@ -45,13 +45,13 @@ import { SKILLS, ADDITIONAL_SKILLS } from '../../core/data/skills.data';
           class="grid grid-cols-3 gap-x-4 gap-y-8 md:col-start-1 md:row-span-2 md:row-start-1 md:grid-cols-4 md:gap-y-10 md:self-center"
         >
           @for (skill of skills; track skill.name) {
-            <li class="flex flex-col items-center gap-2 text-center">
+            <li class="group flex flex-col items-center gap-2 text-center">
               <img
                 [ngSrc]="'assets/img/' + skill.icon + '_icons.' + (skill.iconExtension ?? 'png')"
                 width="60"
                 height="60"
                 alt=""
-                class="h-15 w-15 object-contain"
+                class="h-15 w-15 object-contain group-hover:animate-icon-bounce"
               />
               <span class="text-base font-semibold">{{ skill.name }}</span>
             </li>
@@ -68,7 +68,7 @@ import { SKILLS, ADDITIONAL_SKILLS } from '../../core/data/skills.data';
               alt=""
               class="h-15 w-15 object-contain"
             />
-            <span class="text-base text-violet-500 font-semibold">{{
+            <span class="text-base text-violet-500 group-hover:text-white font-semibold">{{
               t().skills.learningBadge
             }}</span>
             <div
