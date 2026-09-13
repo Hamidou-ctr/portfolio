@@ -6,7 +6,7 @@ export const SKILLS: readonly Skill[] = [
   { name: 'JavaScript', icon: 'javascript' },
   { name: 'TypeScript', icon: 'typescript' },
   { name: 'Angular', icon: 'angular' },
-  { name: 'Supabase', icon: 'supabase' },
+  { name: 'Supabase', icon: 'supabase', iconExtension: 'svg' },
   { name: 'Git', icon: 'git' },
   { name: 'REST API', icon: 'rest_api' },
 ];

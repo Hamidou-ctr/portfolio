@@ -46,23 +46,13 @@ import { SKILLS, ADDITIONAL_SKILLS } from '../../core/data/skills.data';
         >
           @for (skill of skills; track skill.name) {
             <li class="flex flex-col items-center gap-2 text-center">
-              @if (skill.icon === 'supabase') {
-                <img
-                  ngSrc="assets/img/supabase.svg"
-                  width="60"
-                  height="60"
-                  alt=""
-                  class="h-15 w-15 object-contain"
-                />
-              } @else {
-                <img
-                  [ngSrc]="'assets/img/' + skill.icon + '_icons.png'"
-                  width="60"
-                  height="60"
-                  alt=""
-                  class="h-15 w-15 object-contain"
-                />
-              }
+              <img
+                [ngSrc]="'assets/img/' + skill.icon + '_icons.' + (skill.iconExtension ?? 'png')"
+                width="60"
+                height="60"
+                alt=""
+                class="h-15 w-15 object-contain"
+              />
               <span class="text-base font-semibold">{{ skill.name }}</span>
             </li>
           }
