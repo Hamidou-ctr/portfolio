@@ -47,17 +47,13 @@ import { SKILLS, ADDITIONAL_SKILLS } from '../../core/data/skills.data';
           @for (skill of skills; track skill.name) {
             <li class="flex flex-col items-center gap-2 text-center">
               @if (skill.icon === 'supabase') {
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                  stroke-linejoin="round"
-                  class="h-15 w-15"
-                  aria-hidden="true"
-                >
-                  <path d="M13 2 4 14h7l-1 8 9-12h-7l1-8z" />
-                </svg>
+                <img
+                  ngSrc="assets/img/supabase.svg"
+                  width="60"
+                  height="60"
+                  alt=""
+                  class="h-15 w-15 object-contain"
+                />
               } @else {
                 <img
                   [ngSrc]="'assets/img/' + skill.icon + '_icons.png'"
@@ -82,7 +78,7 @@ import { SKILLS, ADDITIONAL_SKILLS } from '../../core/data/skills.data';
               alt=""
               class="h-15 w-15 object-contain"
             />
-            <span class="text-base font-semibold">{{ t().skills.learningBadge }}</span>
+            <span class="text-base text-violet-500 font-semibold">{{ t().skills.learningBadge }}</span>
             <div
               id="learning-tooltip"
               role="tooltip"
