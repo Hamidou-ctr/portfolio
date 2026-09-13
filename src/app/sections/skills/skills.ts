@@ -16,7 +16,7 @@ import { SKILLS, ADDITIONAL_SKILLS } from '../../core/data/skills.data';
         src="assets/img/green_shadow_skills_portfolio.png"
         alt=""
         aria-hidden="true"
-        class="pointer-events-none absolute -bottom-40 -left-28 z-0 w-80 max-w-none md:-bottom-80 md:-left-40 md:w-140"
+        class="pointer-events-none absolute -bottom-40 -left-28 z-0 w-80 max-w-none md:-bottom-80 md:-left-40 md:w-140 xl:w-160 xl:-bottom-96 xl:left-0"
       />
 
       <div
