@@ -23,9 +23,11 @@ import { PROFILE } from '../../core/data/profile.data';
       />
 
       <div class="relative mx-auto flex w-full max-w-360 flex-1 flex-col px-8">
-        <div class="grid flex-1 gap-6 pt-4 md:grid-cols-2 md:gap-8 md:pt-16">
-          <div class="flex justify-center self-start md:pt-16">
-            <div class="relative w-full max-w-95 sm:max-w-105 md:max-w-170">
+        <div class="grid flex-1 content-start gap-6 pt-4 md:grid-cols-2 md:gap-8 md:pt-16">
+          <div
+            class="mx-[calc(50%-50vw)] flex w-screen justify-center self-start md:mx-0 md:w-auto md:pt-16"
+          >
+            <div class="relative w-full sm:max-w-105 md:max-w-170">
               <img
                 src="assets/img/photo_shadows.png"
                 alt=""
