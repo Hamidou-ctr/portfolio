@@ -78,7 +78,9 @@ import { SKILLS, ADDITIONAL_SKILLS } from '../../core/data/skills.data';
               alt=""
               class="h-15 w-15 object-contain"
             />
-            <span class="text-base text-violet-500 font-semibold">{{ t().skills.learningBadge }}</span>
+            <span class="text-base text-violet-500 font-semibold">{{
+              t().skills.learningBadge
+            }}</span>
             <div
               id="learning-tooltip"
               role="tooltip"
