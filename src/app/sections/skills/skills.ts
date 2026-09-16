@@ -3,10 +3,11 @@ import { Component, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { LanguageService } from '../../core/i18n/language.service';
 import { SKILLS, ADDITIONAL_SKILLS } from '../../core/data/skills.data';
+import { ScrollReveal } from '../../shared/scroll-reveal/scroll-reveal';
 
 @Component({
   selector: 'app-skills',
-  imports: [RouterLink, NgOptimizedImage],
+  imports: [RouterLink, NgOptimizedImage, ScrollReveal],
   template: `
     <section
       id="skills"
@@ -24,7 +25,7 @@ import { SKILLS, ADDITIONAL_SKILLS } from '../../core/data/skills.data';
       >
         <div class="md:col-start-2 md:row-start-1">
           <div class="text-center md:text-right">
-            <div class="relative inline-block">
+            <div class="relative inline-block" [once]="false" [appScrollReveal]="'fade-up'" [delay]="300">
               <h2 class="font-heading text-3xl font-bold leading-none sm:text-5xl lg:text-[64px]">
                 {{ t().skills.title }}
               </h2>
@@ -36,6 +37,7 @@ import { SKILLS, ADDITIONAL_SKILLS } from '../../core/data/skills.data';
           </div>
           <p
             class="mx-auto mt-4 max-w-md text-center text-base md:mr-0 md:ml-auto md:text-right md:text-lg"
+            [once]="false" [appScrollReveal]="'fade-left'" [delay]="300"
           >
             {{ t().skills.subtitle }}
           </p>
@@ -43,6 +45,7 @@ import { SKILLS, ADDITIONAL_SKILLS } from '../../core/data/skills.data';
 
         <ul
           class="grid grid-cols-3 gap-x-4 gap-y-8 md:col-start-1 md:row-span-2 md:row-start-1 md:grid-cols-4 md:gap-y-10 md:self-center"
+          [once]="false" [appScrollReveal]="'fade-right'" [delay]="300"
         >
           @for (skill of skills; track skill.name) {
             <li class="group flex flex-col items-center gap-2 text-center">
@@ -50,10 +53,11 @@ import { SKILLS, ADDITIONAL_SKILLS } from '../../core/data/skills.data';
                 [ngSrc]="'assets/img/' + skill.icon + '_icons.' + (skill.iconExtension ?? 'png')"
                 width="60"
                 height="60"
-                alt=""
+                alt="{{ skill.name }}"
                 class="h-15 w-15 object-contain group-hover:animate-icon-bounce"
+                [once]="false" [appScrollReveal]="'zoom-in'" [delay]="300"
               />
-              <span class="text-base font-semibold">{{ skill.name }}</span>
+              <span class="text-base font-semibold" [once]="false" [appScrollReveal]="'fade-up'" [delay]="300">{{ skill.name }}</span>
             </li>
           }
           <li
@@ -67,8 +71,9 @@ import { SKILLS, ADDITIONAL_SKILLS } from '../../core/data/skills.data';
               height="60"
               alt=""
               class="h-15 w-15 object-contain"
+              [once]="false" [appScrollReveal]="'zoom-in'" [delay]="300"
             />
-            <span class="text-base text-violet-500 group-hover:text-white font-semibold">{{
+            <span class="text-base text-violet-500 group-hover:text-white font-semibold" [once]="false" [appScrollReveal]="'fade-up'" [delay]="300">{{
               t().skills.learningBadge
             }}</span>
             <div
@@ -92,18 +97,19 @@ import { SKILLS, ADDITIONAL_SKILLS } from '../../core/data/skills.data';
         </ul>
 
         <div class="text-center md:col-start-2 md:row-start-2 md:text-right">
-          <h3 class="font-heading text-2xl font-bold md:text-3xl">
+          <h3 class="font-heading text-2xl font-bold md:text-3xl" [once]="false" [appScrollReveal]="'fade-up'" [delay]="300">
             {{ t().skills.lookingTitle }}
             <span class="text-violet-500">{{ t().skills.lookingHighlight }}</span
             >?
           </h3>
-          <p class="mx-auto mt-3 max-w-md text-base md:mr-0 md:ml-auto md:text-lg">
+          <p class="mx-auto mt-3 max-w-md text-base md:mr-0 md:ml-auto md:text-lg" [once]="false" [appScrollReveal]="'fade-left'" [delay]="300">
             {{ t().skills.lookingText }}
           </p>
           <a
             routerLink="/"
             fragment="contact"
             class="mt-8 inline-block rounded-lg bg-accent-400 px-6 py-3 text-base font-medium text-white transition hover:bg-accent-300 md:py-3.5 md:text-xl"
+            [once]="false" [appScrollReveal]="'zoom-in'" [delay]="300"
           >
             {{ t().skills.cta }}
           </a>
