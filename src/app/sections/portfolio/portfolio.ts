@@ -3,10 +3,11 @@ import { Component, inject } from '@angular/core';
 import { LanguageService } from '../../core/i18n/language.service';
 import { PROJECTS } from '../../core/data/projects.data';
 import { ProjectPreview } from '../../shared/project-preview/project-preview';
+import { ScrollReveal } from '../../shared/scroll-reveal/scroll-reveal';
 
 @Component({
   selector: 'app-portfolio',
-  imports: [ProjectPreview, NgOptimizedImage],
+  imports: [ProjectPreview, NgOptimizedImage, ScrollReveal],
   template: `
     <section
       id="portfolio"
@@ -39,6 +40,8 @@ import { ProjectPreview } from '../../shared/project-preview/project-preview';
             <li
               class="flex flex-col items-center gap-8 md:flex-row md:gap-12"
               [class]="odd ? 'md:flex-row-reverse' : ''"
+              [once]="false" [delay]="300"
+              [appScrollReveal]="odd ? 'fade-left' : 'fade-right'"
             >
               <div class="w-full max-w-100 flex-none md:w-1/2 md:max-w-none">
                 @if (project.previewSrc && project.previewSrc.endsWith('.svg')) {

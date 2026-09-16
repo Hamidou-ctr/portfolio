@@ -2,17 +2,18 @@ import { NgOptimizedImage } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { LanguageService } from '../../core/i18n/language.service';
 import { PROFILE } from '../../core/data/profile.data';
+import { ScrollReveal } from '../../shared/scroll-reveal/scroll-reveal';
 
 @Component({
   selector: 'app-about',
-  imports: [NgOptimizedImage],
+  imports: [NgOptimizedImage, ScrollReveal],
   template: `
     <section
       id="about"
       class="relative scroll-mt-24 overflow-hidden bg-navy-900 pb-24 pt-10 text-white md:pt-12"
     >
       <div class="mx-auto grid max-w-360 gap-16 px-8 md:grid-cols-2 md:items-center">
-        <div class="max-w-141">
+        <div class="max-w-141"  [once]="false" [appScrollReveal]="'zoom-in'" [delay]="300">
           <h2 class="font-heading text-3xl font-bold leading-none sm:text-5xl lg:text-[64px]">
             {{ t().about.eyebrow }}
           </h2>
@@ -34,7 +35,7 @@ import { PROFILE } from '../../core/data/profile.data';
           </ul>
         </div>
 
-        <div class="hidden md:flex justify-center">
+        <div class="hidden md:flex justify-center" [once]="false" [appScrollReveal]="'fade-left'" [delay]="300">
           <div class="relative h-60 w-60 sm:h-75 sm:w-75 lg:h-90 lg:w-90">
             <img
               src="assets/img/purple-shadow-about.png"

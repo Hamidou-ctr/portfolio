@@ -66,6 +66,47 @@ html {
   .animate-icon-bounce {
     animation: none;
   }
+
+  .scroll-reveal {
+    transition: none;
+    opacity: 1;
+    translate: 0 0;
+    scale: 1;
+  }
+}
+
+.scroll-reveal {
+  opacity: 0;
+  transition:
+    opacity 0.6s ease-out,
+    translate 0.6s ease-out,
+    scale 0.6s ease-out;
+}
+
+.scroll-reveal[data-scroll-reveal-effect='fade-up'] {
+  translate: 0 20rem;
+}
+
+.scroll-reveal[data-scroll-reveal-effect='fade-down'] {
+  translate: 0 -20rem;
+}
+
+.scroll-reveal[data-scroll-reveal-effect='fade-left'] {
+  translate: 20rem 0;
+}
+
+.scroll-reveal[data-scroll-reveal-effect='fade-right'] {
+  translate: -20rem 0;
+}
+
+.scroll-reveal[data-scroll-reveal-effect='zoom-in'] {
+  scale: 0.1;
+}
+
+.scroll-reveal.scroll-reveal-visible {
+  opacity: 1;
+  translate: 0 0;
+  scale: 1;
 }
 
 body {
