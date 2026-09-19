@@ -150,7 +150,7 @@ jobs:
             # contains no PHP, so a pattern protects them without naming them here.
             --exclude=/.well-known/
             --exclude='/*.php'
-            --rsh="ssh -i $ssh_directory/private_key -o IdentitiesOnly=yes -o UserKnownHostsFile=$ssh_directory/known_hosts -o StrictHostKeyChecking=yes -o HostKeyAlgorithms=$host_key_algorithm -o BatchMode=yes -o ConnectTimeout=20"
+            --rsh="ssh -i $ssh_directory/private_key -o IdentitiesOnly=yes -o UserKnownHostsFile=$ssh_directory/known_hosts -o StrictHostKeyChecking=yes -o HostKeyAlgorithms='$host_key_algorithm' -o BatchMode=yes -o ConnectTimeout=20"
           )
 
           if [ "$DRY_RUN" = "true" ]; then
