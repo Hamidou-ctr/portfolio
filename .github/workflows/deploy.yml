@@ -120,7 +120,7 @@ jobs:
           host_key="$(awk '
             {
               for (i = 1; i <= NF; i++) {
-                if ($i ~ /^(ssh-ed25519|ecdsa-sha2-nistp(256|384|521)|ssh-rsa)$/ && (i + 1) <= NF) {
+                if ($i ~ /^(ssh-[A-Za-z0-9@.+-]+|ecdsa-[A-Za-z0-9@.+-]+)$/ && (i + 1) <= NF && $(i + 1) ~ /^[A-Za-z0-9+/=]+$/) {
                   print $i " " $(i + 1)
                   exit
                 }
