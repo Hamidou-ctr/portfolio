@@ -92,11 +92,11 @@ html {
 }
 
 .scroll-reveal[data-scroll-reveal-effect='fade-left'] {
-  translate: 30rem 0;
+  translate: 10rem 0;
 }
 
 .scroll-reveal[data-scroll-reveal-effect='fade-right'] {
-  translate: -30rem 0;
+  translate: -10rem 0;
 }
 
 .scroll-reveal[data-scroll-reveal-effect='zoom-in'] {
