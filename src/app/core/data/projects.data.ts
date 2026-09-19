@@ -42,8 +42,8 @@ export const PROJECTS: readonly Project[] = [
     tags: ['Angular', 'TypeScript', 'Firebase'],
     description:
       'A Slack clone app that revolutionizes team communication with an intuitive interface, real-time messaging and robust channel organization.',
-    liveUrl: '#',
-    githubUrl: '#',
+    liveUrl: 'https://da-babble.hamidoudiallo.de/intro',
+    githubUrl: 'https://github.com/alessandro-arg/da-bubble',
     previewSrc: 'assets/img/da-babble.svg',
   },
 ];
