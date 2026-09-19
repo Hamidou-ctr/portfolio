@@ -16,18 +16,18 @@ export const PROJECTS: readonly Project[] = [
     tags: ['JavaScript', 'HTML', 'CSS'],
     description:
       'A simple jump-and-run game based on an object-oriented approach. Collect coins and tabasco bottles, dodge chickens and defeat the endboss to save the day.',
-    liveUrl: '#',
-    githubUrl: '#',
+    liveUrl: 'https://pollo-loco.hamidoudiallo.de/',
+    githubUrl: 'https://github.com/Hamidou-ctr/pollo-loco',
     previewSrc: 'assets/img/Pollo_loco.svg',
   },
-  {
+ /*  {
     name: 'Simple CRM',
     tags: ['Angular', 'Firebase'],
     description:
       'A very simple Customer Relationship Management system working with full CRUD functionality.',
     liveUrl: '#',
     githubUrl: '#',
-  },
+  }, */
   {
     name: 'Pokédex',
     tags: ['JavaScript', 'HTML', 'CSS', 'API'],
