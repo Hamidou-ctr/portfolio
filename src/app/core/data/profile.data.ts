@@ -9,6 +9,6 @@ export interface Profile {
 export const PROFILE: Profile = {
   name: 'Hamidou Diallo',
   email: 'hamiduguinea@gmail.com',
-  github: '#',
+  github: 'https://github.com/Hamidou-ctr',
   linkedin: '#',
 };

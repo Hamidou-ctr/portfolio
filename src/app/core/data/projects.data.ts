@@ -6,9 +6,9 @@ export const PROJECTS: readonly Project[] = [
     name: 'Join',
     tags: ['Angular', 'TypeScript', 'HTML', 'CSS', 'Firebase'],
     description:
-      'Task manager inspired by the Kanban system. Create and organize tasks using drag and drop functions, assign users and categories.',
-    liveUrl: '#',
-    githubUrl: '#',
+      'Together with other training participants, I co-developed a web-based task management tool inspired by the Kanban system. Using HTML, CSS, JavaScript, and Firebase, we built a collaborative app with drag-and-drop functionality and task assignment by user and category. Git was used for version control and teamwork coordination.',
+    liveUrl: 'https://join.hamidoudiallo.de/login.html',
+    githubUrl: 'https://github.com/Hamidou-ctr/join',
     previewSrc: 'assets/img/join.svg',
   },
   {
