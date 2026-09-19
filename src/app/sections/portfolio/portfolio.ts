@@ -35,7 +35,7 @@ import { ScrollReveal } from '../../shared/scroll-reveal/scroll-reveal';
             class="absolute left-full top-1/2 h-0.75 w-screen -translate-y-1/2 bg-violet-500"
           ></span>
         </div>
-        <p class="mx-auto mt-4 text-base md:text-lg">{{ t().portfolio.subtitle }}</p>
+        <p class="mx-auto mt-4 pl-24 sm:pl-62 md:pl-80 lg:pl-98 text-base md:text-lg">{{ t().portfolio.subtitle }}</p>
       </div>
 
       <div class="relative mx-auto max-w-360 px-6 md:px-8">
