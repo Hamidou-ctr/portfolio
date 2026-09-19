@@ -14,7 +14,7 @@ import { Contact } from '../../sections/contact/contact';
   template: `
     <a href="#main" class="sr-only-focusable">Skip to content</a>
     <app-header />
-    <main id="main" class="relative">
+    <main id="main" class="relative bg-[#141D2F]">
       <app-hero />
       <app-about />
       <app-skills />
