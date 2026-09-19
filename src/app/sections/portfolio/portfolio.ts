@@ -40,10 +40,13 @@ import { ScrollReveal } from '../../shared/scroll-reveal/scroll-reveal';
             <li
               class="flex flex-col items-center gap-8 md:flex-row md:gap-12"
               [class]="odd ? 'md:flex-row-reverse' : ''"
-              [once]="false" [delay]="300"
-              [appScrollReveal]="odd ? 'fade-left' : 'fade-right'"
             >
-              <div class="w-full max-w-100 flex-none md:w-1/2 md:max-w-none">
+              <div
+                class="w-full max-w-100 flex-none md:w-1/2 md:max-w-none"
+                [once]="false"
+                [delay]="300"
+                [appScrollReveal]="odd ? 'fade-left' : 'fade-right'"
+              >
                 @if (project.previewSrc && project.previewSrc.endsWith('.svg')) {
                   <img [src]="project.previewSrc" [alt]="project.name" class="h-auto w-full" />
                 } @else if (project.previewSrc) {
@@ -59,7 +62,13 @@ import { ScrollReveal } from '../../shared/scroll-reveal/scroll-reveal';
                 }
               </div>
 
-              <div class="text-center md:w-1/2" [class]="odd ? 'md:text-right' : 'md:text-left'">
+              <div
+                class="text-center md:w-1/2"
+                [class]="odd ? 'md:text-right' : 'md:text-left'"
+                [once]="false"
+                [delay]="300"
+                [appScrollReveal]="odd ? 'fade-right' : 'fade-left'"
+              >
                 <h3 class="font-heading text-2xl font-bold text-violet-500 md:text-3xl">
                   {{ project.name }}
                 </h3>
