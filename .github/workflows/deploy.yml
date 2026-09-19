@@ -120,7 +120,7 @@ jobs:
           host_key="$(awk '
             {
               for (i = 1; i <= NF; i++) {
-                if ($i ~ /^(ssh-ed25519|ecdsa-sha2-nistp(256|384|521)|ssh-rsa)$/ && (i + 1) <= NF && $(i + 1) ~ /^[A-Za-z0-9+/=]+$/) {
+                if ($i ~ /^(ssh-[A-Za-z0-9@.+-]+|ecdsa-[A-Za-z0-9@.+-]+)$/ && (i + 1) <= NF && $(i + 1) ~ /^[A-Za-z0-9+/=]+$/) {
                   print $i " " $(i + 1)
                   exit
                 }
@@ -132,6 +132,13 @@ jobs:
             exit 1
           fi
           host_key_algorithm="${host_key%% *}"
+          case "$host_key_algorithm" in
+            ssh-ed25519|ecdsa-sha2-nistp256|ecdsa-sha2-nistp384|ecdsa-sha2-nistp521|ssh-rsa) ;;
+            *)
+              echo "::error::DEPLOY_KNOWN_HOSTS contains an unsupported host key algorithm."
+              exit 1
+              ;;
+          esac
           printf '%s %s\n' "$DEPLOY_HOST" "$host_key" > "$ssh_directory/known_hosts"
 
           # Public information: compare with the fingerprint you verified on the server.
@@ -150,7 +157,7 @@ jobs:
             # contains no PHP, so a pattern protects them without naming them here.
             --exclude=/.well-known/
             --exclude='/*.php'
-            --rsh="ssh -i $ssh_directory/private_key -o IdentitiesOnly=yes -o UserKnownHostsFile=$ssh_directory/known_hosts -o StrictHostKeyChecking=yes -o HostKeyAlgorithms='$host_key_algorithm' -o BatchMode=yes -o ConnectTimeout=20"
+            --rsh="ssh -i $ssh_directory/private_key -o IdentitiesOnly=yes -o UserKnownHostsFile=$ssh_directory/known_hosts -o StrictHostKeyChecking=yes -o HostKeyAlgorithms=$host_key_algorithm -o BatchMode=yes -o ConnectTimeout=20"
           )
 
           if [ "$DRY_RUN" = "true" ]; then
