@@ -114,7 +114,18 @@ jobs:
           ssh_directory="$(mktemp -d)"
           trap 'rm -rf "$ssh_directory"' EXIT
           printf '%s\n' "$DEPLOY_SSH_KEY_POSTDEPLOY" > "$ssh_directory/private_key"
-          printf '%s\n' "$DEPLOY_KNOWN_HOSTS" > "$ssh_directory/known_hosts"
+
+          # Pin the ed25519 host key to DEPLOY_HOST. Only the key itself is trusted, so
+          # it does not matter whether the pasted line names the server by IP or domain.
+          host_key="$(grep -oE -m 1 'ssh-ed25519 [A-Za-z0-9+/=]+' <<< "$DEPLOY_KNOWN_HOSTS" || true)"
+          if [ -z "$host_key" ]; then
+            echo "::error::DEPLOY_KNOWN_HOSTS contains no ssh-ed25519 host key. Create it with: ssh-keyscan -t ed25519 <host>"
+            exit 1
+          fi
+          printf '%s %s\n' "$DEPLOY_HOST" "$host_key" > "$ssh_directory/known_hosts"
+
+          # Public information: compare with the fingerprint you verified on the server.
+          ssh-keygen -lf "$ssh_directory/known_hosts"
 
           rsync_arguments=(
             --recursive
@@ -129,7 +140,7 @@ jobs:
             # contains no PHP, so a pattern protects them without naming them here.
             --exclude=/.well-known/
             --exclude='/*.php'
-            --rsh="ssh -i $ssh_directory/private_key -o IdentitiesOnly=yes -o UserKnownHostsFile=$ssh_directory/known_hosts -o StrictHostKeyChecking=yes -o BatchMode=yes -o ConnectTimeout=20"
+            --rsh="ssh -i $ssh_directory/private_key -o IdentitiesOnly=yes -o UserKnownHostsFile=$ssh_directory/known_hosts -o StrictHostKeyChecking=yes -o HostKeyAlgorithms=ssh-ed25519 -o BatchMode=yes -o ConnectTimeout=20"
           )
 
           if [ "$DRY_RUN" = "true" ]; then
