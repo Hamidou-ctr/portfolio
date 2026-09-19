@@ -44,15 +44,6 @@ import { BrandLogo } from '../../shared/brand-logo/brand-logo';
               class="h-8 w-8"
             />
           </a>
-          <a [href]="profile.linkedin" target="_blank" rel="noopener" aria-label="LinkedIn">
-            <img
-              ngSrc="assets/img/linkedin_button.png"
-              width="30"
-              height="31"
-              alt=""
-              class="h-8 w-8"
-            />
-          </a>
         </div>
 
         <a routerLink="/legal-notice" class="text-base transition hover:text-accent-400 md:hidden">

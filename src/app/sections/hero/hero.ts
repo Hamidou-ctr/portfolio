@@ -143,21 +143,6 @@ import { PROFILE } from '../../core/data/profile.data';
           <img ngSrc="assets/img/email_button.png" width="30" height="31" alt="" class="h-8 w-8" />
           <span class="hidden text-lg md:inline">{{ profile.email }}</span>
         </a>
-        <a
-          [href]="profile.linkedin"
-          target="_blank"
-          rel="noopener"
-          aria-label="LinkedIn"
-          class="md:hidden"
-        >
-          <img
-            ngSrc="assets/img/linkedin_button.png"
-            width="30"
-            height="31"
-            alt=""
-            class="h-8 w-8"
-          />
-        </a>
       </div>
     </section>
   `,

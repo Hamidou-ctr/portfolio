@@ -20,7 +20,11 @@ import { ScrollReveal } from '../../shared/scroll-reveal/scroll-reveal';
         class="pointer-events-none absolute top-1/3 -left-40 z-0 w-100 max-w-none md:-left-60 md:w-180"
       />
 
-      <div class="text-center">
+      <div class="text-center"
+      [once]="false"
+          [appScrollReveal]="'zoom-in'"
+          [delay]="300"
+      >
         <div class="relative inline-flex items-center gap-4 md:gap-6">
           <span aria-hidden="true" class="h-0.75 w-8 flex-none bg-violet-500 md:w-36"></span>
           <h2 class="font-heading text-3xl font-bold leading-none sm:text-5xl lg:text-[64px]">
@@ -31,7 +35,7 @@ import { ScrollReveal } from '../../shared/scroll-reveal/scroll-reveal';
             class="absolute left-full top-1/2 h-0.75 w-screen -translate-y-1/2 bg-violet-500"
           ></span>
         </div>
-        <p class="mx-auto mt-4 max-w-xl text-base md:text-lg">{{ t().portfolio.subtitle }}</p>
+        <p class="mx-auto mt-4 text-base md:text-lg">{{ t().portfolio.subtitle }}</p>
       </div>
 
       <div class="relative mx-auto max-w-360 px-6 md:px-8">
