@@ -23,8 +23,11 @@ type ContactField = 'name' | 'email' | 'message' | 'privacyAccepted';
       />
 
       <div class="relative mx-auto max-w-360 px-6 md:px-8">
-        <div class="text-left md:text-center"
-             [once]="false" [appScrollReveal]="'zoom-in'" [delay]="300"
+        <div
+          class="text-left md:text-center"
+          [once]="false"
+          [appScrollReveal]="'zoom-in'"
+          [delay]="300"
         >
           <div class="relative inline-block">
             <h2 class="font-heading text-4xl font-bold leading-none sm:text-5xl lg:text-[64px]">
@@ -38,9 +41,7 @@ type ContactField = 'name' | 'email' | 'message' | 'privacyAccepted';
         </div>
 
         <div class="mt-10 grid gap-10 md:mt-16 md:grid-cols-[1fr_1.2fr] md:gap-16 lg:gap-24">
-          <div
-          [once]="false" [appScrollReveal]="'fade-right'" [delay]="300"
-          >
+          <div [once]="false" [appScrollReveal]="'fade-right'" [delay]="300">
             <h3 class="font-heading text-2xl font-bold md:text-3xl">{{ t().contact.heading }}</h3>
             <p class="mt-5 text-base md:text-lg">{{ t().contact.text }}</p>
             <p class="mt-5 text-base md:text-lg">
@@ -65,8 +66,14 @@ type ContactField = 'name' | 'email' | 'message' | 'privacyAccepted';
                 <p class="mt-2 text-base">{{ t().contact.successText }}</p>
               </div>
             } @else {
-              <form [formGroup]="form" (ngSubmit)="submit()" novalidate class="space-y-6"
-              [once]="false" [appScrollReveal]="'fade-left'" [delay]="300"
+              <form
+                [formGroup]="form"
+                (ngSubmit)="submit()"
+                novalidate
+                class="space-y-6"
+                [once]="false"
+                [appScrollReveal]="'fade-left'"
+                [delay]="300"
               >
                 <div>
                   <label for="name" class="sr-only">{{ t().contact.nameLabel }}</label>
@@ -76,7 +83,7 @@ type ContactField = 'name' | 'email' | 'message' | 'privacyAccepted';
                       type="text"
                       formControlName="name"
                       [placeholder]="t().contact.nameLabel"
-                      class="w-full rounded-lg border-2 bg-transparent py-3 pr-12 pl-6 text-base text-white outline-none transition placeholder:text-white/70 focus:border-violet-400"
+                      class="focus-ring-none w-full rounded-lg border-2 bg-transparent py-3 pr-12 pl-6 text-base text-white outline-none transition placeholder:text-white/70 focus:border-violet-400 hover:border-color:[#70E61C]"
                       [class]="borderClass('name')"
                       [attr.aria-invalid]="isInvalid('name')"
                       [attr.aria-describedby]="isInvalid('name') ? 'name-error' : null"
@@ -114,7 +121,7 @@ type ContactField = 'name' | 'email' | 'message' | 'privacyAccepted';
                       type="email"
                       formControlName="email"
                       [placeholder]="t().contact.emailLabel"
-                      class="w-full rounded-lg border-2 bg-transparent py-3 pr-12 pl-6 text-base text-white outline-none transition placeholder:text-white/70 focus:border-violet-400"
+                      class="focus-ring-none w-full rounded-lg border-2 bg-transparent py-3 pr-12 pl-6 text-base text-white outline-none transition placeholder:text-white/70 focus:border-violet-400 hover:border-color:[#70E61C]"
                       [class]="borderClass('email')"
                       [attr.aria-invalid]="isInvalid('email')"
                       [attr.aria-describedby]="isInvalid('email') ? 'email-error' : null"
@@ -155,7 +162,7 @@ type ContactField = 'name' | 'email' | 'message' | 'privacyAccepted';
                       id="message"
                       formControlName="message"
                       [placeholder]="t().contact.messageLabel"
-                      class="h-44 w-full resize-y rounded-lg border-2 bg-transparent py-3 pr-12 pl-6 text-base text-white outline-none transition placeholder:text-white/70 focus:border-violet-400 md:h-50"
+                      class="focus-ring-none h-44 w-full resize-y rounded-lg border-2 bg-transparent py-3 pr-12 pl-6 text-base text-white outline-none transition placeholder:text-white/70 focus:border-violet-400 hover:border-color:[#70E61C] md:h-50"
                       [class]="borderClass('message')"
                       [attr.aria-invalid]="isInvalid('message')"
                       [attr.aria-describedby]="isInvalid('message') ? 'message-error' : null"

@@ -152,6 +152,12 @@ body::-webkit-scrollbar-thumb {
   outline-offset: 2px;
 }
 
+/* opts an element out of the global focus-visible ring when it already has its own
+   visible focus indicator (e.g. a border-color change) */
+.focus-ring-none:focus-visible {
+  outline: none;
+}
+
 /* visually hidden but reachable for assistive tech / skip link */
 .sr-only-focusable {
   position: absolute;
