@@ -13,7 +13,7 @@ import { ScrollReveal } from '../../shared/scroll-reveal/scroll-reveal';
       class="relative scroll-mt-24 overflow-hidden bg-navy-900 pb-24 pt-10 text-white md:pt-12"
     >
       <div class="mx-auto grid max-w-360 gap-16 px-8 md:grid-cols-2 md:items-center">
-        <div class="max-w-141"  [once]="false" [appScrollReveal]="'zoom-in'" [delay]="300">
+        <div class="max-w-141" [once]="false" [appScrollReveal]="'zoom-in'" [delay]="300">
           <h2 class="font-heading text-3xl font-bold leading-none sm:text-5xl lg:text-[64px]">
             {{ t().about.eyebrow }}
           </h2>
@@ -21,7 +21,7 @@ import { ScrollReveal } from '../../shared/scroll-reveal/scroll-reveal';
 
           <ul class="mt-10 flex flex-col gap-10 md:mt-12 md:gap-12">
             @for (bullet of t().about.bullets; track $index; let i = $index) {
-              <li class="flex items-center gap-6 md:gap-8">
+              <li class="flex items-start gap-6 md:gap-8">
                 <img
                   [ngSrc]="'assets/img/' + icons[i] + '.png'"
                   width="48"
@@ -35,7 +35,12 @@ import { ScrollReveal } from '../../shared/scroll-reveal/scroll-reveal';
           </ul>
         </div>
 
-        <div class="hidden md:flex justify-center" [once]="false" [appScrollReveal]="'fade-left'" [delay]="300">
+        <div
+          class="hidden md:flex justify-center"
+          [once]="false"
+          [appScrollReveal]="'fade-left'"
+          [delay]="300"
+        >
           <div class="relative h-60 w-60 sm:h-75 sm:w-75 lg:h-90 lg:w-90">
             <img
               src="assets/img/purple-shadow-about.png"
