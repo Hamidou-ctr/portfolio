@@ -2,10 +2,11 @@ import { NgOptimizedImage } from '@angular/common';
 import { Component, computed, signal } from '@angular/core';
 import { TESTIMONIALS } from '../../core/data/testimonials.data';
 import { AvatarPlaceholder } from '../../shared/avatar-placeholder/avatar-placeholder';
+import { ScrollReveal } from '../../shared/scroll-reveal/scroll-reveal';
 
 @Component({
   selector: 'app-testimonials',
-  imports: [AvatarPlaceholder, NgOptimizedImage],
+  imports: [AvatarPlaceholder, NgOptimizedImage, ScrollReveal],
   template: `
     @if (testimonials.length > 0) {
       <section
@@ -24,6 +25,7 @@ import { AvatarPlaceholder } from '../../shared/avatar-placeholder/avatar-placeh
           <div class="flex flex-col items-center gap-10 md:flex-row md:justify-center md:gap-14">
             <div
               class="relative order-1 h-36 w-36 flex-none md:order-2 md:h-48 md:w-48 lg:h-68 lg:w-68"
+              [once]="false" [appScrollReveal]="'fade-left'" [delay]="300"
             >
               <div
                 aria-hidden="true"
@@ -34,7 +36,9 @@ import { AvatarPlaceholder } from '../../shared/avatar-placeholder/avatar-placeh
               />
             </div>
 
-            <div class="relative order-2 w-full max-w-215 md:order-1 md:min-w-0 md:flex-1">
+            <div class="relative order-2 w-full max-w-215 md:order-1 md:min-w-0 md:flex-1"
+              [once]="false" [appScrollReveal]="'fade-right'" [delay]="300"
+            >
               <img
                 src="assets/img/purple_reference.png"
                 alt=""
