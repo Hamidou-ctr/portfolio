@@ -191,7 +191,7 @@ type ContactField = 'name' | 'email' | 'message' | 'privacyAccepted';
                       id="privacy"
                       type="checkbox"
                       formControlName="privacyAccepted"
-                      class="mt-0.5 h-5 w-5 flex-none appearance-none bg-[url('/assets/img/default.png')] bg-contain bg-center bg-no-repeat checked:bg-[url('/assets/img/checked.png')]"
+                      class="mt-0.5 h-6 w-6 flex-none appearance-none bg-[url('/assets/img/default.png')] bg-contain bg-center bg-no-repeat checked:bg-[url('/assets/img/checked.png')]"
                       [attr.aria-invalid]="isInvalid('privacyAccepted')"
                       [attr.aria-describedby]="
                         isInvalid('privacyAccepted') ? 'privacy-error' : null
