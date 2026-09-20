@@ -19,6 +19,8 @@ import { LanguageService } from '../../core/i18n/language.service';
           </section>
         }
       </div>
+
+      <p class="mt-10 text-muted">{{ t().legal.lastUpdated }}</p>
     </main>
     <app-footer />
   `,

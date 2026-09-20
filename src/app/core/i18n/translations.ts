@@ -64,6 +64,7 @@ export interface Translation {
   legal: {
     title: string;
     sections: { heading: string; body: string }[];
+    lastUpdated: string;
   };
 }
 
@@ -140,18 +141,31 @@ export const TRANSLATIONS: Record<Lang, Translation> = {
       title: 'Legal Notice',
       sections: [
         {
-          heading: 'Information according to § 5 TMG',
-          body: 'Replace this with your name, address and, if applicable, your business registration details.',
+          heading: 'Information according to § 5 DDG',
+          body: 'Hamidou Diallo \nOberstraße 18 \n42107 Wuppertal \nGermany',
         },
         {
           heading: 'Contact',
-          body: 'Phone: your phone number\nEmail: your email address',
+          body: 'Email: hamiduguinea@gmail.com\nContact form: available in the Contact section of the home page',
         },
         {
-          heading: 'Disclaimer',
-          body: 'Placeholder legal text. Replace with your own liability, copyright and content notices before publishing this site.',
+          heading: 'Dispute Resolution',
+          body: 'I am neither willing nor obliged to participate in dispute resolution proceedings before a consumer arbitration board.',
+        },
+        {
+          heading: 'Liability for Contents',
+          body: 'The contents of this website were created with the utmost care. However, I cannot guarantee the accuracy, completeness, or up-to-dateness of the contents.',
+        },
+        {
+          heading: 'Liability for Links',
+          body: 'This website contains links to external third-party websites (e.g., GitHub), on whose content I have no influence. Therefore, I cannot assume any liability for these external contents. The respective provider or operator of the linked pages is always responsible for their content.',
+        },
+        {
+          heading: 'Copyright',
+          body: 'The content and works created by me on this website are subject to German copyright law. Contributions by third parties are marked as such. The duplication, editing, distribution, and any kind of use outside the limits of copyright law require my written consent.',
         },
       ],
+      lastUpdated: 'Last updated: September 2026',
     },
   },
   de: {
@@ -227,18 +241,31 @@ export const TRANSLATIONS: Record<Lang, Translation> = {
       title: 'Impressum',
       sections: [
         {
-          heading: 'Angaben gemäß § 5 TMG',
-          body: 'Ersetze diesen Platzhalter durch deinen Namen, deine Anschrift und ggf. deine Gewerbedaten.',
+          heading: 'Angaben gemäß § 5 DDG',
+          body: 'Hamidou Diallo\nOberstraße 18\n42107 Wuppertal\nDeutschland',
         },
         {
           heading: 'Kontakt',
-          body: 'Telefon: deine Telefonnummer\nE-Mail: deine E-Mail-Adresse',
+          body: 'E-Mail: hamiduguinea@gmail.com\nKontaktformular: im Bereich Kontakt auf der Startseite',
         },
         {
-          heading: 'Haftungsausschluss',
-          body: 'Platzhaltertext. Ersetze diesen Abschnitt vor der Veröffentlichung durch deine eigenen Haftungs-, Urheberrechts- und Inhaltshinweise.',
+          heading: 'Verbraucherstreitbeilegung',
+          body: 'Ich bin nicht bereit und nicht verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.',
+        },
+        {
+          heading: 'Haftung für Inhalte',
+          body: 'Die Inhalte dieser Website wurden mit größtmöglicher Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte kann ich jedoch keine Gewähr übernehmen.',
+        },
+        {
+          heading: 'Haftung für Links',
+          body: 'Diese Website enthält Links zu externen Websites Dritter (z. B. GitHub), auf deren Inhalte ich keinen Einfluss habe. Deshalb kann ich für diese fremden Inhalte keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich.',
+        },
+        {
+          heading: 'Urheberrecht',
+          body: 'Die von mir erstellten Inhalte und Werke auf dieser Website unterliegen dem deutschen Urheberrecht. Beiträge Dritter sind als solche gekennzeichnet. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechts bedürfen meiner schriftlichen Zustimmung.',
         },
       ],
+      lastUpdated: 'Stand: September 2026',
     },
   },
 };
