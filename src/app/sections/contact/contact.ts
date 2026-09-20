@@ -211,7 +211,7 @@ const SUCCESS_POPUP_DURATION_IN_MILLISECONDS = 5_000;
                     {{ t().contact.privacyBefore
                     }}<a
                       routerLink="/legal-notice"
-                      class="text-violet-400 underline underline-offset-2 hover:text-violet-300"
+                      class="text-violet-400 hover:underline"
                       >{{ t().contact.privacyLink }}</a
                     >{{ t().contact.privacyAfter }}
                   </label>
@@ -270,7 +270,7 @@ const SUCCESS_POPUP_DURATION_IN_MILLISECONDS = 5_000;
         <div
           animate.enter="animate-success-popup-enter"
           animate.leave="animate-success-popup-leave"
-          class="w-full max-w-md rounded-lg border-2 border-accent-400 bg-navy-800 p-8 text-white shadow-2xl"
+          class="w-full max-w-md rounded-lg border-2 border-accent-400 bg-accent-400 p-8 text-white shadow-2xl"
         >
           <div class="flex items-center gap-3">
             <img
