@@ -136,10 +136,10 @@ jobs:
             --delay-updates
             --delete-delay
             --chmod=D755,F644
-            # Files that exist only on the server must survive --delete. The build
-            # contains no PHP, so a pattern protects them without naming them here.
+            # The certificate challenge directory exists only on the server and must
+            # survive --delete. Everything else that is not part of the build is removed,
+            # so a stray file, for example a planted script, does not outlive a deployment.
             --exclude=/.well-known/
-            --exclude='/*.php'
             --rsh="ssh -i $ssh_directory/private_key -o IdentitiesOnly=yes -o UserKnownHostsFile=$ssh_directory/known_hosts -o StrictHostKeyChecking=yes -o HostKeyAlgorithms=ssh-ed25519 -o BatchMode=yes -o ConnectTimeout=20"
           )
 

@@ -53,6 +53,8 @@ export interface Translation {
     privacyAfter: string;
     privacyRequired: string;
     submit: string;
+    sending: string;
+    sendError: string;
     successTitle: string;
     successText: string;
   };
@@ -125,6 +127,9 @@ export const TRANSLATIONS: Record<Lang, Translation> = {
       privacyAfter: ' and agree to the processing of my data as outlined.',
       privacyRequired: 'Please accept the privacy policy.',
       submit: 'Send message :)',
+      sending: 'Sending ...',
+      sendError:
+        'Your message could not be sent. Please try again in a moment or write to me directly by email.',
       successTitle: 'Message sent!',
       successText: "Thanks for reaching out - I'll get back to you as soon as possible.",
     },
@@ -209,6 +214,9 @@ export const TRANSLATIONS: Record<Lang, Translation> = {
       privacyAfter: ' gelesen und stimme der beschriebenen Verarbeitung meiner Daten zu.',
       privacyRequired: 'Bitte akzeptiere die Datenschutzerklärung.',
       submit: 'Nachricht senden :)',
+      sending: 'Wird gesendet ...',
+      sendError:
+        'Deine Nachricht konnte nicht gesendet werden. Bitte versuche es gleich noch einmal oder schreib mir direkt per E-Mail.',
       successTitle: 'Nachricht gesendet!',
       successText: 'Danke für deine Nachricht - ich melde mich so schnell wie möglich zurück.',
     },

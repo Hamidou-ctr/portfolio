@@ -1,11 +1,14 @@
 import { DOCUMENT, NgOptimizedImage } from '@angular/common';
-import { Component, inject, signal } from '@angular/core';
+import { Component, DestroyRef, computed, inject, signal } from '@angular/core';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { RouterLink } from '@angular/router';
+import { ContactService } from '../../core/contact/contact.service';
 import { LanguageService } from '../../core/i18n/language.service';
 import { ScrollReveal } from '../../shared/scroll-reveal/scroll-reveal';
 
 type ContactField = 'name' | 'email' | 'message' | 'privacyAccepted';
+type ContactStatus = 'idle' | 'sending' | 'failed' | 'sent';
 
 @Component({
   selector: 'app-contact',
@@ -51,7 +54,7 @@ type ContactField = 'name' | 'email' | 'message' | 'privacyAccepted';
           </div>
 
           <div>
-            @if (submitted()) {
+            @if (status() === 'sent') {
               <div class="rounded-lg border border-accent-400 p-8" role="status">
                 <div class="flex items-center gap-3">
                   <img
@@ -75,6 +78,18 @@ type ContactField = 'name' | 'email' | 'message' | 'privacyAccepted';
                 [appScrollReveal]="'fade-left'"
                 [delay]="300"
               >
+                <!-- Honeypot: invisible for people, bots fill it and are dropped in submit(). -->
+                <div class="sr-only" aria-hidden="true">
+                  <label for="website">Leave this field empty</label>
+                  <input
+                    id="website"
+                    type="text"
+                    formControlName="website"
+                    tabindex="-1"
+                    autocomplete="off"
+                  />
+                </div>
+
                 <div>
                   <label for="name" class="sr-only">{{ t().contact.nameLabel }}</label>
                   <div class="relative">
@@ -82,6 +97,7 @@ type ContactField = 'name' | 'email' | 'message' | 'privacyAccepted';
                       id="name"
                       type="text"
                       formControlName="name"
+                      [attr.maxlength]="maximumLength.name"
                       [placeholder]="t().contact.nameLabel"
                       class="focus-ring-none w-full rounded-lg border-2 bg-transparent py-3 pr-12 pl-6 text-base text-white outline-none transition placeholder:text-white/70 focus:border-violet-400 hover:border-color:[#70E61C]"
                       [class]="borderClass('name')"
@@ -120,6 +136,7 @@ type ContactField = 'name' | 'email' | 'message' | 'privacyAccepted';
                       id="email"
                       type="email"
                       formControlName="email"
+                      [attr.maxlength]="maximumLength.email"
                       [placeholder]="t().contact.emailLabel"
                       class="focus-ring-none w-full rounded-lg border-2 bg-transparent py-3 pr-12 pl-6 text-base text-white outline-none transition placeholder:text-white/70 focus:border-violet-400 hover:border-color:[#70E61C]"
                       [class]="borderClass('email')"
@@ -161,6 +178,7 @@ type ContactField = 'name' | 'email' | 'message' | 'privacyAccepted';
                     <textarea
                       id="message"
                       formControlName="message"
+                      [attr.maxlength]="maximumLength.message"
                       [placeholder]="t().contact.messageLabel"
                       class="focus-ring-none h-44 w-full resize-y rounded-lg border-2 bg-transparent py-3 pr-12 pl-6 text-base text-white outline-none transition placeholder:text-white/70 focus:border-violet-400 hover:border-color:[#70E61C] md:h-50"
                       [class]="borderClass('message')"
@@ -221,12 +239,17 @@ type ContactField = 'name' | 'email' | 'message' | 'privacyAccepted';
                 </div>
 
                 <div class="pt-2 text-center">
+                  @if (status() === 'failed') {
+                    <p role="alert" class="mb-4 text-base text-red-500">
+                      {{ t().contact.sendError }}
+                    </p>
+                  }
                   <button
                     type="submit"
-                    [disabled]="form.invalid"
+                    [disabled]="form.invalid || isSending()"
                     class="rounded-lg bg-accent-400 px-10 py-4 text-lg font-medium text-white transition hover:bg-accent-300 disabled:cursor-not-allowed disabled:bg-slate-400 disabled:text-white/80 md:text-xl"
                   >
-                    {{ t().contact.submit }}
+                    {{ submitLabel() }}
                   </button>
                 </div>
               </form>
@@ -260,13 +283,41 @@ export class Contact {
   private readonly document = inject(DOCUMENT);
 
   private readonly fb = inject(FormBuilder);
-  protected readonly submitted = signal(false);
+  private readonly contactService = inject(ContactService);
+  private readonly destroyRef = inject(DestroyRef);
+
+  protected readonly status = signal<ContactStatus>('idle');
+  protected readonly isSending = computed(() => this.status() === 'sending');
+  protected readonly submitLabel = computed(() =>
+    this.isSending() ? this.t().contact.sending : this.t().contact.submit,
+  );
+
+  protected readonly maximumLength = { name: 100, email: 254, message: 5000 } as const;
 
   protected readonly form = this.fb.nonNullable.group({
-    name: ['', Validators.required],
-    email: ['', [Validators.required, Validators.email]],
-    message: ['', Validators.required],
+    name: [
+      '',
+      [
+        Validators.required,
+        Validators.pattern(/\S/),
+        Validators.maxLength(this.maximumLength.name),
+      ],
+    ],
+    email: [
+      '',
+      [Validators.required, Validators.email, Validators.maxLength(this.maximumLength.email)],
+    ],
+    message: [
+      '',
+      [
+        Validators.required,
+        Validators.pattern(/\S/),
+        Validators.maxLength(this.maximumLength.message),
+      ],
+    ],
     privacyAccepted: [false, Validators.requiredTrue],
+    // Honeypot: stays empty for people, see submit().
+    website: '',
   });
 
   protected isInvalid(controlName: ContactField): boolean {
@@ -294,7 +345,25 @@ export class Contact {
       this.form.markAllAsTouched();
       return;
     }
-    this.submitted.set(true);
+    if (this.isSending()) {
+      return;
+    }
+
+    const { name, email, message, website } = this.form.getRawValue();
+    if (website !== '') {
+      // Only a bot fills the invisible field. Act as if it worked and send nothing.
+      this.status.set('sent');
+      return;
+    }
+
+    this.status.set('sending');
+    this.contactService
+      .send({ name, email, message })
+      .pipe(takeUntilDestroyed(this.destroyRef))
+      .subscribe({
+        next: () => this.status.set('sent'),
+        error: () => this.status.set('failed'),
+      });
   }
 
   protected scrollToTop(): void {
