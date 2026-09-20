@@ -24,12 +24,13 @@ import { PROFILE } from '../../core/data/profile.data';
               routerLink="/"
               fragment="about"
               class="relative pb-1 transition hover:text-accent-400"
+              [class.text-accent-400]="activeSection() === 'about'"
               [attr.aria-current]="activeSection() === 'about' ? 'true' : null"
             >
               {{ t().nav.about }}
               @if (activeSection() === 'about') {
                 <span
-                  class="absolute inset-x-0 -bottom-0.5 h-0.5 bg-accent-400"
+                  class="absolute inset-x-0 -bottom-0.5 h-0.5 bg-violet-400"
                   aria-hidden="true"
                 ></span>
               }
@@ -38,12 +39,13 @@ import { PROFILE } from '../../core/data/profile.data';
               routerLink="/"
               fragment="skills"
               class="relative pb-1 transition hover:text-accent-400"
+              [class.text-accent-400]="activeSection() === 'skills'"
               [attr.aria-current]="activeSection() === 'skills' ? 'true' : null"
             >
               {{ t().nav.skills }}
               @if (activeSection() === 'skills') {
                 <span
-                  class="absolute inset-x-0 -bottom-0.5 h-0.5 bg-accent-400"
+                  class="absolute inset-x-0 -bottom-0.5 h-0.5 bg-violet-400"
                   aria-hidden="true"
                 ></span>
               }
@@ -52,12 +54,13 @@ import { PROFILE } from '../../core/data/profile.data';
               routerLink="/"
               fragment="portfolio"
               class="relative pb-1 transition hover:text-accent-400"
+              [class.text-accent-400]="activeSection() === 'portfolio'"
               [attr.aria-current]="activeSection() === 'portfolio' ? 'true' : null"
             >
               {{ t().nav.portfolio }}
               @if (activeSection() === 'portfolio') {
                 <span
-                  class="absolute inset-x-0 -bottom-0.5 h-0.5 bg-accent-400"
+                  class="absolute inset-x-0 -bottom-0.5 h-0.5 bg-violet-400"
                   aria-hidden="true"
                 ></span>
               }
