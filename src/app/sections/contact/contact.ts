@@ -224,7 +224,7 @@ type ContactField = 'name' | 'email' | 'message' | 'privacyAccepted';
                   <button
                     type="submit"
                     [disabled]="form.invalid"
-                    class="rounded-lg bg-accent px-10 py-4 text-lg font-medium text-white transition hover:bg-accent-300 disabled:cursor-not-allowed disabled:bg-slate-400 disabled:text-white/80 md:text-xl"
+                    class="rounded-lg bg-accent-400 px-10 py-4 text-lg font-medium text-white transition hover:bg-accent-300 disabled:cursor-not-allowed disabled:bg-slate-400 disabled:text-white/80 md:text-xl"
                   >
                     {{ t().contact.submit }}
                   </button>
