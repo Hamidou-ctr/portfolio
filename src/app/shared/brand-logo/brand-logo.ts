@@ -7,7 +7,7 @@ import { Component, computed, input } from '@angular/core';
     <span class="relative text-accent-400">
       {{ suffix() }}
       <span
-        class="absolute -top-1.5 left-1/2 h-1.5 w-1.5 -translate-x-1/2 rounded-full bg-violet-400"
+        class="absolute left-[-63%] h-3 w-3 -translate-x-1/2 rounded-full bg-[#7C28BD]"
         aria-hidden="true"
       ></span>
     </span>
