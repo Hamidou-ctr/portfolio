@@ -115,7 +115,7 @@ import { PROFILE } from '../../core/data/profile.data';
             <a
               routerLink="/"
               fragment="contact"
-              class="mt-8 rounded-lg bg-accent-400 px-6 py-3 text-base font-medium text-navy-950 transition hover:bg-accent-300 md:py-3.5 md:text-xl"
+              class="mt-8 rounded-lg bg-accent-400 px-6 py-3 text-base font-medium transition hover:bg-violet-600 hover:scale-105 md:py-3.5 md:text-xl"
             >
               {{ t().hero.cta }}
             </a>

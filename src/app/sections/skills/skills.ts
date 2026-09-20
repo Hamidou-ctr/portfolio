@@ -108,7 +108,7 @@ import { ScrollReveal } from '../../shared/scroll-reveal/scroll-reveal';
           <a
             routerLink="/"
             fragment="contact"
-            class="mt-8 inline-block rounded-lg bg-accent-400 px-6 py-3 text-base font-medium text-navy-950 transition hover:bg-accent-300 md:py-3.5 md:text-xl"
+            class="mt-8 inline-block rounded-lg bg-accent-400 px-6 py-3 text-base font-medium transition hover:bg-violet-600 md:py-3.5 md:text-xl"
             [once]="false" [appScrollReveal]="'zoom-in'" [delay]="300"
           >
             {{ t().skills.cta }}

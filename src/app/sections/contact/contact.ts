@@ -232,7 +232,7 @@ const SUCCESS_POPUP_DURATION_IN_MILLISECONDS = 5_000;
                 <button
                   type="submit"
                   [disabled]="form.invalid || isSending()"
-                  class="rounded-lg bg-accent-400 px-10 py-4 text-lg font-medium text-navy-950 transition hover:bg-accent-300 disabled:cursor-not-allowed disabled:bg-slate-400 disabled:text-white/80 md:text-xl"
+                  class="rounded-lg bg-accent-400 px-10 py-4 text-lg font-medium transition hover:bg-violet-600 disabled:cursor-not-allowed disabled:bg-slate-400 disabled:text-white/80 md:text-xl"
                 >
                   {{ submitLabel() }}
                 </button>
