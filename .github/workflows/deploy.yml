@@ -4,7 +4,7 @@
 #   DEPLOY_HOST                 address of the server
 #   DEPLOY_PATH                 site directory, e.g. /home/<site-user>/htdocs/<domain>
 #   DEPLOY_SSH_KEY_POSTDEPLOY   private SSH key of the deploy user
-#   DEPLOY_KNOWN_HOSTS          pinned host key, output of: ssh-keyscan -t ed25519 <DEPLOY_HOST>
+#   DEPLOY_KNOWN_HOSTS          pinned host key, output of: ssh-keyscan -t ed25519,ecdsa,rsa <DEPLOY_HOST>
 
 name: Deploy
 
@@ -115,13 +115,23 @@ jobs:
           trap 'rm -rf "$ssh_directory"' EXIT
           printf '%s\n' "$DEPLOY_SSH_KEY_POSTDEPLOY" > "$ssh_directory/private_key"
 
-          # Pin the ed25519 host key to DEPLOY_HOST. Only the key itself is trusted, so
+          # Pin the host key to DEPLOY_HOST. Only the key itself is trusted, so
           # it does not matter whether the pasted line names the server by IP or domain.
-          host_key="$(grep -oE -m 1 'ssh-ed25519 [A-Za-z0-9+/=]+' <<< "$DEPLOY_KNOWN_HOSTS" || true)"
+          host_key="$(awk '
+            {
+              for (i = 1; i <= NF; i++) {
+                if ($i ~ /^(ssh-ed25519|ecdsa-sha2-nistp256|ecdsa-sha2-nistp384|ecdsa-sha2-nistp521|ssh-rsa)$/ && (i + 1) <= NF && $(i + 1) ~ /^[A-Za-z0-9+\/=]+$/ && length($(i + 1)) > 20) {
+                  print $i " " $(i + 1)
+                  exit
+                }
+              }
+            }
+          ' <<< "$DEPLOY_KNOWN_HOSTS")"
           if [ -z "$host_key" ]; then
-            echo "::error::DEPLOY_KNOWN_HOSTS contains no ssh-ed25519 host key. Create it with: ssh-keyscan -t ed25519 <host>"
+            echo "::error::DEPLOY_KNOWN_HOSTS contains no supported host key (ssh-ed25519, ecdsa-sha2-nistp{256,384,521}, ssh-rsa). Create it with: ssh-keyscan -t ed25519,ecdsa,rsa <host>"
             exit 1
           fi
+          host_key_algorithm="${host_key%% *}"
           printf '%s %s\n' "$DEPLOY_HOST" "$host_key" > "$ssh_directory/known_hosts"
 
           # Public information: compare with the fingerprint you verified on the server.
@@ -140,7 +150,7 @@ jobs:
             # contains no PHP, so a pattern protects them without naming them here.
             --exclude=/.well-known/
             --exclude='/*.php'
-            --rsh="ssh -i $ssh_directory/private_key -o IdentitiesOnly=yes -o UserKnownHostsFile=$ssh_directory/known_hosts -o StrictHostKeyChecking=yes -o HostKeyAlgorithms=ssh-ed25519 -o BatchMode=yes -o ConnectTimeout=20"
+            --rsh="ssh -i $ssh_directory/private_key -o IdentitiesOnly=yes -o UserKnownHostsFile=$ssh_directory/known_hosts -o StrictHostKeyChecking=yes -o HostKeyAlgorithms=$host_key_algorithm -o BatchMode=yes -o ConnectTimeout=20"
           )
 
           if [ "$DRY_RUN" = "true" ]; then
