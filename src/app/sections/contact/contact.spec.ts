@@ -44,6 +44,11 @@ function findElement<ElementType extends HTMLElement>(
   return element as ElementType;
 }
 
+/** The live region is always in the DOM, so an empty text means that no popup is showing. */
+function readStatusText(fixture: ComponentFixture<Contact>): string {
+  return findElement(fixture, '[role="status"]').textContent ?? '';
+}
+
 function setValue(fixture: ComponentFixture<Contact>, selector: string, value: string): void {
   const element = findElement<HTMLInputElement | HTMLTextAreaElement>(fixture, selector);
   element.value = value;
@@ -73,12 +78,13 @@ describe('Contact', () => {
       TestBed.inject(HttpTestingController).verify();
     } finally {
       // A failing verify() would otherwise skip Angular's own cleanup and break later tests too.
+      vi.useRealTimers();
       vi.unstubAllGlobals();
       TestBed.resetTestingModule();
     }
   });
 
-  it('sends the message and shows the success message after the service accepted it', () => {
+  it('sends the message, empties the form and shows the success popup', () => {
     const { fixture, controller } = createComponent();
     fillValidForm(fixture);
 
@@ -86,8 +92,57 @@ describe('Contact', () => {
     controller.expectOne(ENDPOINT_URL).flush('');
     fixture.detectChanges();
 
-    expect(findElement(fixture, '[role="status"]').textContent).toContain(texts.successTitle);
-    expect(fixture.nativeElement.querySelector('form')).toBeNull();
+    expect(readStatusText(fixture)).toContain(texts.successTitle);
+    expect(readStatusText(fixture)).toContain(texts.successText);
+    // The form stays on screen, but without the text of the message that was just sent.
+    expect(findElement<HTMLInputElement>(fixture, '#name').value).toBe('');
+    expect(findElement<HTMLInputElement>(fixture, '#email').value).toBe('');
+    expect(findElement<HTMLTextAreaElement>(fixture, '#message').value).toBe('');
+    expect(findElement<HTMLInputElement>(fixture, '#privacy').checked).toBe(false);
+    expect(fixture.nativeElement.querySelector('[role="alert"]')).toBeNull();
+    expect(fixture.nativeElement.querySelector('#name-error')).toBeNull();
+    expect(findElement<HTMLButtonElement>(fixture, 'button[type="submit"]').disabled).toBe(true);
+  });
+
+  it('hides the success popup again after a few seconds', () => {
+    vi.useFakeTimers();
+    const { fixture, controller } = createComponent();
+    fillValidForm(fixture);
+    submitForm(fixture);
+    controller.expectOne(ENDPOINT_URL).flush('');
+    fixture.detectChanges();
+    expect(readStatusText(fixture)).toContain(texts.successTitle);
+
+    vi.advanceTimersByTime(4_999);
+    fixture.detectChanges();
+    expect(readStatusText(fixture)).toContain(texts.successTitle);
+
+    vi.advanceTimersByTime(1);
+    fixture.detectChanges();
+    expect(readStatusText(fixture)).not.toContain(texts.successTitle);
+  });
+
+  it('restarts the popup timer when a second message is sent while the popup is showing', () => {
+    vi.useFakeTimers();
+    const { fixture, controller } = createComponent();
+    fillValidForm(fixture);
+    submitForm(fixture);
+    controller.expectOne(ENDPOINT_URL).flush('');
+    fixture.detectChanges();
+
+    vi.advanceTimersByTime(3_000);
+    fillValidForm(fixture);
+    submitForm(fixture);
+    controller.expectOne(ENDPOINT_URL).flush('');
+    fixture.detectChanges();
+
+    vi.advanceTimersByTime(3_000);
+    fixture.detectChanges();
+    expect(readStatusText(fixture)).toContain(texts.successTitle);
+
+    vi.advanceTimersByTime(2_000);
+    fixture.detectChanges();
+    expect(readStatusText(fixture)).not.toContain(texts.successTitle);
   });
 
   it('disables the button and shows the sending label while the request is pending', () => {
@@ -123,7 +178,7 @@ describe('Contact', () => {
     fixture.detectChanges();
 
     expect(findElement(fixture, '[role="alert"]').textContent).toContain(texts.sendError);
-    expect(fixture.nativeElement.querySelector('[role="status"]')).toBeNull();
+    expect(readStatusText(fixture)).not.toContain(texts.successTitle);
     expect(findElement<HTMLTextAreaElement>(fixture, '#message').value).toBe('Hello Hamidou');
     expect(findElement<HTMLButtonElement>(fixture, 'button[type="submit"]').disabled).toBe(false);
   });
@@ -135,11 +190,11 @@ describe('Contact', () => {
     submitForm(fixture);
 
     expect(findElement(fixture, '[role="alert"]').textContent).toContain(texts.sendError);
-    expect(fixture.nativeElement.querySelector('[role="status"]')).toBeNull();
+    expect(readStatusText(fixture)).not.toContain(texts.successTitle);
     controller.expectNone(() => true);
   });
 
-  it('sends nothing when a bot filled the invisible field', () => {
+  it('sends nothing when a bot filled the invisible field, but acts as if it worked', () => {
     const { fixture, controller } = createComponent();
     fillValidForm(fixture);
     setValue(fixture, '#website', 'https://spam.example.test');
@@ -147,6 +202,7 @@ describe('Contact', () => {
     submitForm(fixture);
 
     controller.expectNone(() => true);
+    expect(readStatusText(fixture)).toContain(texts.successTitle);
   });
 
   it('sends nothing while required fields are missing', () => {
@@ -155,7 +211,7 @@ describe('Contact', () => {
     submitForm(fixture);
 
     controller.expectNone(() => true);
-    expect(fixture.nativeElement.querySelector('[role="status"]')).toBeNull();
+    expect(readStatusText(fixture)).not.toContain(texts.successTitle);
   });
 
   it('does not accept a message that consists of spaces only', () => {
