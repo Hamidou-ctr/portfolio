@@ -53,7 +53,7 @@ import { ScrollReveal } from '../../shared/scroll-reveal/scroll-reveal';
                 [ngSrc]="'assets/img/' + skill.icon + '_icons.' + (skill.iconExtension ?? 'png')"
                 width="60"
                 height="60"
-                alt="{{ skill.name }}"
+                alt=""
                 class="h-15 w-15 object-contain group-hover:animate-icon-bounce"
                 [once]="false" [appScrollReveal]="'zoom-in'" [delay]="300"
               />
@@ -73,7 +73,7 @@ import { ScrollReveal } from '../../shared/scroll-reveal/scroll-reveal';
               class="h-15 w-15 object-contain"
               [once]="false" [appScrollReveal]="'zoom-in'" [delay]="300"
             />
-            <span class="text-base text-violet-500 group-hover:text-white font-semibold" [once]="false" [appScrollReveal]="'fade-up'" [delay]="300">{{
+            <span class="text-base text-violet-400 group-hover:text-white font-semibold" [once]="false" [appScrollReveal]="'fade-up'" [delay]="300">{{
               t().skills.learningBadge
             }}</span>
             <div
@@ -108,7 +108,7 @@ import { ScrollReveal } from '../../shared/scroll-reveal/scroll-reveal';
           <a
             routerLink="/"
             fragment="contact"
-            class="mt-8 inline-block rounded-lg bg-accent-400 px-6 py-3 text-base font-medium text-white transition hover:bg-accent-300 md:py-3.5 md:text-xl"
+            class="mt-8 inline-block rounded-lg bg-accent-400 px-6 py-3 text-base font-medium text-navy-950 transition hover:bg-accent-300 md:py-3.5 md:text-xl"
             [once]="false" [appScrollReveal]="'zoom-in'" [delay]="300"
           >
             {{ t().skills.cta }}

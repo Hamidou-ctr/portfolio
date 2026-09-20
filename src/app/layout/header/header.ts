@@ -67,8 +67,9 @@ import { PROFILE } from '../../core/data/profile.data';
           <div class="flex items-center gap-2" role="group" [attr.aria-label]="t().nav.langName">
             <button
               type="button"
-              class="flex h-8 min-w-8 items-center justify-center rounded border px-1.5 text-sm font-semibold transition"
+              class="flex h-8 min-w-8 items-center justify-center rounded border px-1.5 text-base font-semibold transition"
               [class.bg-accent-400]="lang() === 'de'"
+              [class.text-navy-950]="lang() === 'de'"
               [class.border-accent-400]="lang() === 'de'"
               [class.border-white/50]="lang() !== 'de'"
               [attr.aria-pressed]="lang() === 'de'"
@@ -78,8 +79,9 @@ import { PROFILE } from '../../core/data/profile.data';
             </button>
             <button
               type="button"
-              class="flex h-8 min-w-8 items-center justify-center rounded border px-1.5 text-sm font-semibold transition"
+              class="flex h-8 min-w-8 items-center justify-center rounded border px-1.5 text-base font-semibold transition"
               [class.bg-accent-400]="lang() === 'en'"
+              [class.text-navy-950]="lang() === 'en'"
               [class.border-accent-400]="lang() === 'en'"
               [class.border-white/50]="lang() !== 'en'"
               [attr.aria-pressed]="lang() === 'en'"

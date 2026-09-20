@@ -110,7 +110,7 @@ const SUCCESS_POPUP_DURATION_IN_MILLISECONDS = 5_000;
                   }
                 </div>
                 @if (isInvalid('name')) {
-                  <p id="name-error" class="mt-2 text-base text-red-500">
+                  <p id="name-error" class="mt-2 text-base text-red-400">
                     {{ t().contact.nameRequired }}
                   </p>
                 }
@@ -149,7 +149,7 @@ const SUCCESS_POPUP_DURATION_IN_MILLISECONDS = 5_000;
                   }
                 </div>
                 @if (isInvalid('email')) {
-                  <p id="email-error" class="mt-2 text-base text-red-500">
+                  <p id="email-error" class="mt-2 text-base text-red-400">
                     {{
                       form.controls.email.errors?.['required']
                         ? t().contact.emailRequired
@@ -191,7 +191,7 @@ const SUCCESS_POPUP_DURATION_IN_MILLISECONDS = 5_000;
                   }
                 </div>
                 @if (isInvalid('message')) {
-                  <p id="message-error" class="mt-2 text-base text-red-500">
+                  <p id="message-error" class="mt-2 text-base text-red-400">
                     {{ t().contact.messageRequired }}
                   </p>
                 }
@@ -211,13 +211,13 @@ const SUCCESS_POPUP_DURATION_IN_MILLISECONDS = 5_000;
                     {{ t().contact.privacyBefore
                     }}<a
                       routerLink="/legal-notice"
-                      class="text-violet-400 underline-offset-2 hover:underline"
+                      class="text-violet-400 underline underline-offset-2 hover:text-violet-300"
                       >{{ t().contact.privacyLink }}</a
                     >{{ t().contact.privacyAfter }}
                   </label>
                 </div>
                 @if (isInvalid('privacyAccepted')) {
-                  <p id="privacy-error" class="mt-2 text-base text-red-500">
+                  <p id="privacy-error" class="mt-2 text-base text-red-400">
                     {{ t().contact.privacyRequired }}
                   </p>
                 }
@@ -225,14 +225,14 @@ const SUCCESS_POPUP_DURATION_IN_MILLISECONDS = 5_000;
 
               <div class="pt-2 text-center">
                 @if (status() === 'failed') {
-                  <p role="alert" class="mb-4 text-base text-red-500">
+                  <p role="alert" class="mb-4 text-base text-red-400">
                     {{ t().contact.sendError }}
                   </p>
                 }
                 <button
                   type="submit"
                   [disabled]="form.invalid || isSending()"
-                  class="rounded-lg bg-accent-400 px-10 py-4 text-lg font-medium text-white transition hover:bg-accent-300 disabled:cursor-not-allowed disabled:bg-slate-400 disabled:text-white/80 md:text-xl"
+                  class="rounded-lg bg-accent-400 px-10 py-4 text-lg font-medium text-navy-950 transition hover:bg-accent-300 disabled:cursor-not-allowed disabled:bg-slate-400 disabled:text-white/80 md:text-xl"
                 >
                   {{ submitLabel() }}
                 </button>

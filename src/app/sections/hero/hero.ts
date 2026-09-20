@@ -105,7 +105,7 @@ import { PROFILE } from '../../core/data/profile.data';
                   {{ profile.name }}
                 </h1>
                 <p
-                  class="mt-1 text-xl uppercase leading-tight text-violet-500 sm:text-3xl lg:text-[40px]"
+                  class="mt-1 text-xl uppercase leading-tight text-violet-400 sm:text-3xl sm:text-violet-500 lg:text-[40px]"
                 >
                   {{ t().hero.role }}
                 </p>
@@ -115,7 +115,7 @@ import { PROFILE } from '../../core/data/profile.data';
             <a
               routerLink="/"
               fragment="contact"
-              class="mt-8 rounded-lg bg-accent-400 px-6 py-3 text-base font-medium text-white transition hover:bg-accent-300 md:py-3.5 md:text-xl"
+              class="mt-8 rounded-lg bg-accent-400 px-6 py-3 text-base font-medium text-navy-950 transition hover:bg-accent-300 md:py-3.5 md:text-xl"
             >
               {{ t().hero.cta }}
             </a>
