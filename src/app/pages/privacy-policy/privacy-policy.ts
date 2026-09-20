@@ -5,19 +5,20 @@ import { LanguageService } from '../../core/i18n/language.service';
 import { LegalDocument } from '../../shared/legal-document/legal-document';
 
 @Component({
-  selector: 'app-legal-notice',
+  selector: 'app-privacy-policy',
   imports: [Header, Footer, LegalDocument],
   template: `
     <app-header />
     <app-legal-document
-      [title]="t().legal.title"
-      [sections]="t().legal.sections"
-      [lastUpdated]="t().legal.lastUpdated"
+      [title]="t().privacy.title"
+      [introduction]="t().privacy.introduction"
+      [sections]="t().privacy.sections"
+      [lastUpdated]="t().privacy.lastUpdated"
     />
     <app-footer />
   `,
 })
-export class LegalNotice {
+export class PrivacyPolicy {
   private readonly languageService = inject(LanguageService);
   protected readonly t = this.languageService.t;
 }

@@ -1,5 +1,5 @@
 import { NgOptimizedImage } from '@angular/common';
-import { Component, inject } from '@angular/core';
+import { Component, computed, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { LanguageService } from '../../core/i18n/language.service';
 import { PROFILE } from '../../core/data/profile.data';
@@ -15,12 +15,13 @@ import { BrandLogo } from '../../shared/brand-logo/brand-logo';
       >
         <div class="flex flex-col items-center gap-2 md:items-start">
           <span class="text-4xl md:text-5xl"><app-brand-logo [name]="firstName" /></span>
-          <a
-            routerLink="/legal-notice"
-            class="hidden text-base transition hover:text-accent-400 md:block"
-          >
-            {{ t().footer.legalNotice }}
-          </a>
+          <div class="hidden gap-6 md:flex">
+            @for (link of legalLinks(); track link.path) {
+              <a [routerLink]="link.path" class="text-base transition hover:text-accent-400">
+                {{ link.label }}
+              </a>
+            }
+          </div>
         </div>
 
         <p class="text-center text-xl md:text-2xl">&copy; {{ profile.name }} {{ year }}</p>
@@ -46,9 +47,13 @@ import { BrandLogo } from '../../shared/brand-logo/brand-logo';
           </a>
         </div>
 
-        <a routerLink="/legal-notice" class="text-base transition hover:text-accent-400 md:hidden">
-          {{ t().footer.legalNotice }}
-        </a>
+        <div class="flex flex-wrap justify-center gap-x-6 gap-y-2 md:hidden">
+          @for (link of legalLinks(); track link.path) {
+            <a [routerLink]="link.path" class="text-base transition hover:text-accent-400">
+              {{ link.label }}
+            </a>
+          }
+        </div>
       </div>
     </footer>
   `,
@@ -56,6 +61,10 @@ import { BrandLogo } from '../../shared/brand-logo/brand-logo';
 export class Footer {
   private readonly languageService = inject(LanguageService);
   protected readonly t = this.languageService.t;
+  protected readonly legalLinks = computed(() => [
+    { path: '/legal-notice', label: this.t().footer.legalNotice },
+    { path: '/privacy-policy', label: this.t().footer.privacyPolicy },
+  ]);
   protected readonly profile = PROFILE;
   protected readonly firstName = PROFILE.name.split(' ')[0];
   protected readonly year = new Date().getFullYear();

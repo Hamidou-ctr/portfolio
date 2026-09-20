@@ -210,7 +210,7 @@ const SUCCESS_POPUP_DURATION_IN_MILLISECONDS = 5_000;
                   <label for="privacy" class="text-base">
                     {{ t().contact.privacyBefore
                     }}<a
-                      routerLink="/legal-notice"
+                      routerLink="/privacy-policy"
                       class="text-violet-400 hover:underline"
                       >{{ t().contact.privacyLink }}</a
                     >{{ t().contact.privacyAfter }}

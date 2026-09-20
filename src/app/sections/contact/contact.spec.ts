@@ -239,4 +239,11 @@ describe('Contact', () => {
     expect(honeypot.tabIndex).toBe(-1);
     expect(honeypot.closest('[aria-hidden="true"]')).not.toBeNull();
   });
+
+  it('links the consent checkbox to the privacy policy, not to the legal notice', () => {
+    const { fixture } = createComponent();
+
+    const privacyLink = findElement<HTMLAnchorElement>(fixture, 'label[for="privacy"] a');
+    expect(privacyLink.getAttribute('href')).toBe('/privacy-policy');
+  });
 });
