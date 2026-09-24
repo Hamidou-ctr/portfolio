@@ -33,8 +33,8 @@ export const PROJECTS: readonly Project[] = [
     tags: ['JavaScript', 'HTML', 'CSS', 'API'],
     description:
       'Based on the PokéAPI, a simple library that provides and catalogues Pokémon information.',
-    liveUrl: '#',
-    githubUrl: '#',
+    liveUrl: 'https://pokemon.hamidoudiallo.de/',
+    githubUrl: 'https://github.com/Hamidou-ctr/Pokemon',
     previewSrc: 'assets/img/pokedex.png',
   },
   {
