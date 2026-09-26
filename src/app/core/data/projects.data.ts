@@ -20,14 +20,6 @@ export const PROJECTS: readonly Project[] = [
     githubUrl: 'https://github.com/Hamidou-ctr/pollo-loco',
     previewSrc: 'assets/img/Pollo_loco.svg',
   },
- /*  {
-    name: 'Simple CRM',
-    tags: ['Angular', 'Firebase'],
-    description:
-      'A very simple Customer Relationship Management system working with full CRUD functionality.',
-    liveUrl: '#',
-    githubUrl: '#',
-  }, */
   {
     name: 'Pokédex',
     tags: ['JavaScript', 'HTML', 'CSS', 'API'],
@@ -46,7 +38,7 @@ export const PROJECTS: readonly Project[] = [
     githubUrl: 'https://github.com/alessandro-arg/da-bubble',
     previewSrc: 'assets/img/da-babble.svg',
   },
-  {
+  /* {
     name: 'ARGW',
     tags: ['Angular', 'TypeScript', 'Django', 'PostgreSQL'],
     description:
@@ -54,5 +46,5 @@ export const PROJECTS: readonly Project[] = [
     liveUrl: 'https://argw.hamidoudiallo.de/',
     githubUrl: 'https://github.com/Hamidou-ctr',
     previewSrc: 'assets/img/argw.webp',
-  },
+  }, */
 ];
