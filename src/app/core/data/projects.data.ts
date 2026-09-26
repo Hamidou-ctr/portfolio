@@ -46,4 +46,13 @@ export const PROJECTS: readonly Project[] = [
     githubUrl: 'https://github.com/alessandro-arg/da-bubble',
     previewSrc: 'assets/img/da-babble.svg',
   },
+  {
+    name: 'ARGW',
+    tags: ['Angular', 'TypeScript', 'Django', 'PostgreSQL'],
+    description:
+      'A full-stack member portal for a German association with a public website, role-based accounts with an approval flow, meeting attendance, membership payments, events with tasks and in-app notifications. Built with an Angular frontend and a Django REST backend using cookie-based JWT authentication.',
+    liveUrl: 'https://argw.hamidoudiallo.de/',
+    githubUrl: 'https://github.com/Hamidou-ctr',
+    previewSrc: 'assets/img/argw.webp',
+  },
 ];

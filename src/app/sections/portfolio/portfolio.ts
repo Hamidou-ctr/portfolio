@@ -93,14 +93,16 @@ import { ScrollReveal } from '../../shared/scroll-reveal/scroll-reveal';
                   >
                     {{ t().portfolio.liveTest }}
                   </a>
-                  <a
-                    [href]="project.githubUrl"
-                    target="_blank"
-                    rel="noopener"
-                    class="rounded-lg border border-[#0ee707] px-6 py-2.5 text-base font-medium text-white transition hover:bg-[#0ee707]"
-                  >
-                    {{ t().portfolio.github }}
-                  </a>
+                  @if (project.githubUrl; as githubUrl) {
+                    <a
+                      [href]="githubUrl"
+                      target="_blank"
+                      rel="noopener"
+                      class="rounded-lg border border-[#0ee707] px-6 py-2.5 text-base font-medium text-white transition hover:bg-[#0ee707]"
+                    >
+                      {{ t().portfolio.github }}
+                    </a>
+                  }
                 </div>
               </div>
             </li>
